@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: var(--secondary-clr);
+ /*  background-color: var(--secondary-clr); */
 }
 
 :root {
@@ -24,6 +24,17 @@ body {
   --primary-clr-3: #B9E4C9;
   --secondary-clr: #FD5523;
   --clr: #FFFBE6; */
+}
+
+::selection {
+  background-color: var(--accent-clr-2);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-image: url("/icons/seamless.jpg");
+  background-repeat: repeat;
+  background-size: 600px;
 }
 
 
@@ -103,6 +114,7 @@ nav {
   background-color: var(--secondary-clr);
   padding: 10px 20px;
   font-size: 16px;
+  transition: all 150ms ease-out;
 }
 
 .dropdown_menu li:hover {
@@ -124,4 +136,14 @@ nav {
   100% {
     transform: scaleY(1);
   }
+}
+
+
+/* HOME PAGE */
+
+.home-page__main {
+  background-color: var(--secondary-clr);
+  max-width: 1280px;
+  min-width: 1024px;
+  margin-inline: auto;
 }
