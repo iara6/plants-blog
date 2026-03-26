@@ -2,6 +2,7 @@
 // component imports
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import BackToTop from "../components/BackToTop.astro";
 
 // style import
 import "../styles/styles.css";
@@ -12,8 +13,8 @@ import "../styles/styles.css";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+		<link rel="icon" href="public/favicon.ico" />
 		<!-- <meta name="generator" content={Astro.generator} /> -->
 		<title>Plants</title>
 	</head>
@@ -22,5 +23,6 @@ import "../styles/styles.css";
 		<slot />
     <!-- <slot>Some Text</slot> -->
     <Footer />
+    <BackToTop />
 	</body>
 </html>
