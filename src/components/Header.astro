@@ -3,8 +3,10 @@
 ---
 
 <header>
-  <div  class="menu-container">
+  <div class="header-bg-wrapper">
     <img class="header-bg" src="/images/backgrounds/header-bg.jpg" alt="">
+  </div>
+  <div  class="menu-container">
     <nav>
       <div>
         <img class="logo-img" src="/images/logos/test-logo.jpg" alt="">
@@ -61,10 +63,86 @@
           </ul>
         </li>
       </ul>
+
+        <button class="switch-button">
+    <span><i class="fa-solid fa-moon"></i></span>
+    <span><i class="fa-solid fa-sun"></i></span>
+    <span class="switch"></span>
+  </button>
     </nav>
   </div>
+  
+
+
 <!--   <div>
     <img src="/icons/test-logo.svg" height="100px" alt="logo">
   </div>
   <p>Header Content</p> -->
 </header>
+
+<style>
+  .switch-button {
+  position: relative;
+  height: 1.7rem;
+  width: 3.5rem;
+  border-radius: 0.8rem;
+  border: none;
+  background-color: lightblue;
+  transition: all 250ms ease-in-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+} 
+
+.switch-button:hover {
+  background-color: lightgray;
+}
+
+.switch-button span {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: green;
+  cursor: pointer;
+}
+
+.switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 0.8rem;
+  background-color: pink;
+  outline: 1px solid brown;
+  transition: all 250ms ease-out;
+  z-index: 10;
+}
+
+.slide .switch {
+  left: 50%;
+}
+
+
+</style>
+
+<script>
+/* Parallax effect */
+
+  const bg = document.querySelector('.header-bg');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    bg.style.transform = `translateY(${scrollY * 0.3}px)`;
+  });
+
+
+/* Dark mode button 
+********************/
+  const switchBtn = document.querySelector('.switch-button');
+
+  switchBtn.addEventListener('click', () => {
+    const darkModeOn = switchBtn.classList.toggle('slide');
+    document.documentElement.classList.toggle('dark-mode', darkModeOn); /* toggle('class', condition);documentElement returns <html> */
+  });
+</script>

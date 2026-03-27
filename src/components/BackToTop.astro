@@ -8,6 +8,34 @@
   </a>
 </div>
 
+<style>
+  .back-to-top-button {
+  /*  position: sticky;
+    left: 100%;
+    bottom: 1.25rem;
+    margin-top: -2rem;
+    margin-right: 1.25rem; */
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 50px;
+    filter: opacity(40%);
+    transition: all 100ms linear;
+
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .back-to-top-button:hover {
+    filter: opacity(100%);
+  }
+
+  .back-to-top-button img {
+    height: 50px;
+    width: 50px;
+  }
+</style>
+
 <script>
   const backToTopBtn = document.querySelector('.back-to-top-button');
 

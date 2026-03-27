@@ -49,22 +49,23 @@ html::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url("/icons/seamless.jpg");
+  background-image: url("/images/backgrounds/seamless.jpg");
   background-repeat: repeat;
   background-size: 600px;
   opacity: 0.7;
   z-index: -1;
 }
 
-/* HEADER */
-.logo-img {
-  width: 80px;
-  display: block;
+/********* 
+  HEADER 
+**********/
+.header-bg-wrapper {
+   position: relative;
+  height: 300px;
+  overflow: hidden;
 }
-.menu-container {
-  position: relative;
-}
-.menu-container::before {
+
+.header-bg-wrapper::before {
   background: linear-gradient(to bottom, rgba(4, 119, 201, 0.1) 20%,rgba(124, 17, 145, 0.2) 90%);
 
   content: '';
@@ -73,14 +74,31 @@ html::before {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 2;
 }
+
+.logo-img {
+  width: 80px;
+  display: block;
+}
+.menu-container {
+  position: relative;
+  z-index: 3;
+   /* height: 300px;
+  overflow: hidden; */
+}
+
 
 .header-bg {
   width: 100%;
-  height: 300px;
+  /* height: 300px; */
+  height: 100%;
   object-fit: cover;
   display: block;
   object-position: center;
+
+  transform: translateY(0);
+  will-change: transform;
 }
 
 nav {
@@ -90,6 +108,7 @@ nav {
   background-color: var(--primary-clr);
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .menu {
@@ -183,12 +202,10 @@ nav {
   }
 }
 
-/********************** 
-  SLIDE-IN TOP HEADER 
-***********************/
 
-
-/* HOME PAGE */
+/************
+  HOME PAGE 
+************/
 
 .home-page__main {
   background-color: var(--secondary-clr);
@@ -197,34 +214,3 @@ nav {
   margin-inline: auto;
 }
 
-
-
-/********************
-  BACK-TO-TOP button
-*********************/
-
-.back-to-top-button {
- /*  position: sticky;
-  left: 100%;
-  bottom: 1.25rem;
-  margin-top: -2rem;
-  margin-right: 1.25rem; */
-  position: fixed;
-  bottom: 1.25rem;
-  right: 1.25rem;
-  width: 50px;
-  filter: opacity(40%);
-  transition: all 100ms linear;
-
-  opacity: 0;
-  visibility: hidden;
-}
-
-.back-to-top-button:hover {
-  filter: opacity(100%);
-}
-
-.back-to-top-button img {
-  height: 50px;
-  width: 50px;
-}
