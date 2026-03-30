@@ -26,6 +26,15 @@ body {
   --clr: #FFFBE6; */
 }
 
+.dark-mode {
+  --primary-clr: #40170b;
+  --primary-clr-dark: #d3bbbd; 
+  --secondary-clr: #1f0f0c;
+
+  --accent-clr: #b71037; 
+  --accent-clr-2: #2fd7aa; 
+}
+
 ::selection {
   background-color: var(--accent-clr-2);
 }
@@ -56,151 +65,6 @@ html::before {
   z-index: -1;
 }
 
-/********* 
-  HEADER 
-**********/
-.header-bg-wrapper {
-   position: relative;
-  height: 300px;
-  overflow: hidden;
-}
-
-.header-bg-wrapper::before {
-  background: linear-gradient(to bottom, rgba(4, 119, 201, 0.1) 20%,rgba(124, 17, 145, 0.2) 90%);
-
-  content: '';
-  position:absolute;
-  top:0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-}
-
-.logo-img {
-  width: 80px;
-  display: block;
-}
-.menu-container {
-  position: relative;
-  z-index: 3;
-   /* height: 300px;
-  overflow: hidden; */
-}
-
-
-.header-bg {
-  width: 100%;
-  /* height: 300px; */
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  object-position: center;
-
-  transform: translateY(0);
-  will-change: transform;
-}
-
-nav {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--primary-clr);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-}
-
-.dropdown {
-  padding: 20px 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--primary-clr-dark);
-  background-color: var(--primary-clr);
-  position: relative;
-  font-size: 18px;
-  perspective: 1000px;
-  z-index: 100;
-}
-
-.dropdown::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  transform-origin: bottom center;
-  height: 4px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--accent-clr-2);
-  transition: transform 250ms ease-out;
-}
-
-.dropdown:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom center;
-}
-
-/* .dropdown:hover {
-  background: var(--accent-clr-2);
-  cursor: pointer;
-  border: 2px solid red;
-}
- */
-.dropdown:hover .dropdown_menu li {
-  display: block;
-}
-
-.dropdown_menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  perspective: 1000px;
-  z-index: -1;
-
-  display: none;
-
-  animation: growDown 300ms ease-in-out forwards;
-  transform-origin: top center;
-}
-
-.dropdown_menu li {
-  display: block;
-  opacity: 1;
-  color: var(--primary-clr-dark);
-  background-color: var(--secondary-clr);
-  padding: 10px 20px;
-  font-size: 16px;
-  transition: all 150ms ease-out;
-}
-
-.dropdown_menu li:hover {
-  background-color: var(--accent-clr);
-  color: var(--secondary-clr);
-}
-
-.dropdown:hover .dropdown_menu {
-  display: block;
-}
-
-@keyframes growDown {
-  0% {
-    transform: scaleY(0);
-  }
-  80% {
-    transform: scaleY(1.1);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
 
 
 /************
