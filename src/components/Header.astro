@@ -8,12 +8,12 @@
   </div>
   <div  class="menu-container">
     <nav>
-      <div>
+      <a href="/">
         <img class="logo-img" src="/images/logos/test-logo.jpg" alt="">
-      </div>
+      </a>
       <ul class="menu">
         <li class="dropdown">
-          Section 1
+          <a class="section-link" href="#">Section 1</a>
           <ul class="dropdown_menu">
             <li class="dropdown_item-1"><a href="#">Item 1</a></li>
             <li class="dropdown_item-1"><a href="#">Item 2</a></li>
@@ -23,7 +23,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          Section 2
+          <a class="section-link" href="#">Section 2</a>
           <ul class="dropdown_menu">
             <li class="dropdown_item-1"><a href="#">Item 1</a></li>
             <li class="dropdown_item-1"><a href="#">Item 2</a></li>
@@ -33,7 +33,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          Section 3
+          <a class="section-link" href="#">Section 3</a>
           <ul class="dropdown_menu">
             <li class="dropdown_item-1"><a href="#">Item 1</a></li>
             <li class="dropdown_item-1"><a href="#">Item 2</a></li>
@@ -43,7 +43,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          Section 4
+          <a class="section-link" href="#">Section 4</a>
           <ul class="dropdown_menu">
             <li class="dropdown_item-1"><a href="#">Item 1</a></li>
             <li class="dropdown_item-1"><a href="#">Item 2</a></li>
@@ -53,7 +53,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          Section 5
+          <a class="section-link" href="#">Section 5</a>
           <ul class="dropdown_menu">
             <li class="dropdown_item-1"><a href="#">Item 1</a></li>
             <li class="dropdown_item-1"><a href="#">Item 2</a></li>
@@ -152,7 +152,7 @@ nav {
 }
 
 .dropdown {
-  padding: 20px 40px;
+  /* padding: 20px 40px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,6 +162,8 @@ nav {
   font-size: 18px;
   perspective: 1000px;
   z-index: 100;
+  /* cursor: pointer; */
+  border: 1px solid red;
 }
 
 .dropdown::after {
@@ -185,6 +187,19 @@ nav {
 .dropdown:hover .dropdown_menu {
   display: block;
 }
+
+.section-link,
+.dropdown_menu a {
+  display: block;
+  text-decoration: none;
+  color: var(--primary-clr-dark);
+  width: 100%;
+}
+.section-link {
+border: 1px solid blue;
+padding: 20px 40px;
+}
+
 
 .dropdown_menu {
   position: absolute;
@@ -214,15 +229,11 @@ nav {
 .dropdown_menu li:hover {
   background-color: var(--accent-clr);
   color: var(--secondary-clr);
-}
+} 
 
-.dropdown_menu a {
-  display: block;
-  text-decoration: none;
-  color: var(--primary-clr-dark);
-  border: 1px solid green;
-  padding: 0.5rem 1rem;
-  width: 100%;
+.dropdown_menu a { 
+border: 1px solid green;
+padding: 0.5rem 1rem;
 }
 
 @keyframes growDown {
@@ -303,11 +314,23 @@ window.addEventListener('scroll', () => {
 /******************
   Dark mode button 
 *******************/
-
+let darkModeOn = JSON.parse(localStorage.getItem('mode')) || false;
 const switchBtn = document.querySelector('.switch-button');
 
+if (darkModeOn) {
+  document.documentElement.classList.add('dark-mode');
+  switchBtn.classList.add('slide');
+}
+
 switchBtn.addEventListener('click', () => {
-  const darkModeOn = switchBtn.classList.toggle('slide');
-  document.documentElement.classList.toggle('dark-mode', darkModeOn); /* toggle('class', condition);documentElement returns <html> */
+  darkModeOn = !darkModeOn;
+  document.documentElement.classList.toggle('dark-mode', darkModeOn);
+  switchBtn.classList.toggle('slide', darkModeOn);
+
+  localStorage.setItem('mode', JSON.stringify(darkModeOn));
+  // toggle('class', condition); documentElement returns <html>
 });
+
+
 </script>
+

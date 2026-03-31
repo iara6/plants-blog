@@ -19,6 +19,8 @@ body {
   --accent-clr: #EF476F;
   --accent-clr-2: #06D6A0;
 
+  --selection-clr: #bce5bc; 
+
  /*  --primary-clr: #356859;
   --primary-clr-2: #37966F;
   --primary-clr-3: #B9E4C9;
@@ -33,10 +35,13 @@ body {
 
   --accent-clr: #b71037; 
   --accent-clr-2: #2fd7aa; 
+
+  --selection-clr: #175217; 
 }
 
 ::selection {
-  background-color: var(--accent-clr-2);
+  background-color: var(--selection-clr);
+  color: var(--primary-clr-dark);
 }
 
 /* html {
@@ -52,6 +57,14 @@ html {
   scroll-behavior: smooth;
   background-color: var(--secondary-clr);
   position: relative;
+  
+ /*  font-family: "IBM Plex Sans", sans-serif; */
+  font-family: "Onest", sans-serif;
+ /*  font-family: "Golos Text", sans-serif; */
+ /* font-family: "Commissioner", sans-serif; */
+ /* 
+ font-family: "Geologica", sans-serif; */
+
 }
 
 html::before {
@@ -61,7 +74,7 @@ html::before {
   background-image: url("/images/backgrounds/seamless.jpg");
   background-repeat: repeat;
   background-size: 600px;
-  opacity: 0.7;
+  opacity: 0.4;
   z-index: -1;
 }
 
