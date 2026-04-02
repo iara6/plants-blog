@@ -117,6 +117,63 @@
         </li>
       </ul>
     </li>
+    <li class="nav-toggle-menu__option">
+      <span class="nav-toggle-menu__option-title">
+        Section 3 <i class="fa-solid fa-chevron-down"></i>
+      </span>
+      <ul class="nav-toggle-div__expandable">
+        <li>
+          Item 1
+        </li>
+        <li>
+          Item 2
+        </li>
+        <li>
+          Item 3
+        </li>
+        <li>
+          Item 4
+        </li>
+      </ul>
+    </li>
+    <li class="nav-toggle-menu__option">
+      <span class="nav-toggle-menu__option-title">
+        Section 4 <i class="fa-solid fa-chevron-down"></i>
+      </span>
+      <ul class="nav-toggle-div__expandable">
+        <li>
+          Item 1
+        </li>
+        <li>
+          Item 2
+        </li>
+        <li>
+          Item 3
+        </li>
+        <li>
+          Item 4
+        </li>
+      </ul>
+    </li>
+     <li class="nav-toggle-menu__option">
+      <span class="nav-toggle-menu__option-title">
+        Section 5 <i class="fa-solid fa-chevron-down"></i>
+      </span>
+      <ul class="nav-toggle-div__expandable">
+      <li>
+      Item 1
+      </li>
+      <li>
+      Item 2
+      </li>
+      <li>
+      Item 3
+      </li>
+      <li>
+      Item 4
+      </li>
+      </ul>
+    </li>
   </div>
 
 
@@ -309,18 +366,18 @@ padding: 0.5rem 1rem;
   display: block;
   width: 100%;
   height: 3px;
-  background-color: black;
+  background-color: var(--primary-clr-dark);
   transition: 200ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .nav-toggle-button.change span:first-child {
-  transform: translate(0, 7px) rotate(45deg);
+  transform: translate(0, 7.5px) rotate(45deg);
 }
 .nav-toggle-button.change span:nth-child(2) {
   opacity: 0;
 }
 .nav-toggle-button.change span:last-child {
-  transform: translate(0, -7px) rotate(-45deg);
+  transform: translate(0, -7.5px) rotate(-45deg);
   width: 100%;
 }
 
@@ -334,7 +391,8 @@ padding: 0.5rem 1rem;
 .nav-toggle-menu-container {
   padding: 2rem;
   border-top: 1px solid black;
-  background-color: white;
+  color: var(--primary-clr-dark);
+  background-color: var(--primary-clr);
   width: 100%;
   max-height: calc(100vh - 300px);
   overflow-y: scroll;
@@ -344,10 +402,14 @@ padding: 0.5rem 1rem;
   top: 300px;
 
   transition: opacity 0.25s ease-out, visibility 0.25s ease-out;
-  /* opacity: 0;
-  visibility: hidden; */
+  border: 2px solid red;
+  opacity: 0;
+  visibility: hidden;
 }
 
+.nav-toggle-menu-container li {
+  list-style: none;
+}
 
 .nav-toggle-menu-container .nav-toggle-menu__option-title {
   display: flex;
@@ -360,6 +422,56 @@ padding: 0.5rem 1rem;
   cursor: pointer;
   transform: translateX(-30px);
   transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.nav-toggle-menu-container li:nth-child(1) .nav-toggle-menu__option-title,
+.nav-toggle-menu-container li:nth-child(1) .nav-toggle-div__expandable {
+  transition-delay: 0ms;
+}
+
+.nav-toggle-menu-container li:nth-child(2) .nav-toggle-menu__option-title,
+.nav-toggle-menu-container li:nth-child(2) .nav-toggle-div__expandable {
+  transition-delay: 30ms;
+}
+.nav-toggle-menu-container li:nth-child(3) .nav-toggle-menu__option-title,
+.nav-toggle-menu-container li:nth-child(3) .nav-toggle-div__expandable {
+  transition-delay: 60ms;
+}
+.nav-toggle-menu-container li:nth-child(4) .nav-toggle-menu__option-title,
+.nav-toggle-menu-container li:nth-child(4) .nav-toggle-div__expandable {
+  transition-delay: 90ms;
+}
+.nav-toggle-menu-container li:nth-child(5) .nav-toggle-menu__option-title,
+.nav-toggle-menu-container li:nth-child(5) .nav-toggle-div__expandable {
+  transition-delay: 120ms;
+}
+
+.nav-toggle-menu-container .nav-toggle-menu__option-title.translateX,
+.nav-toggle-menu-container .nav-toggle-div__expandable.translateX  {
+  transform: translateX(0);
+}
+
+.nav-toggle-menu-container .nav-toggle-menu__option-title:hover,
+.nav-toggle-div__expandable li:hover {
+  color: rgb(108, 108, 114);
+}
+
+.nav-toggle-div__expandable {
+  transform: translateX(-30px);
+  transition: max-height 400ms cubic-bezier(0.87, 0, 0.13, 1), opacity 300ms linear, transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  max-height: 0;
+  text-align: left;
+  white-space: nowrap;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.show-hide-content .nav-toggle-div__expandable {
+  opacity: 1;
+}
+
+.show-hide-content .nav-toggle-menu__option-title i {
+  transform: rotate(180deg);
 }
 
 /******************
@@ -442,6 +554,79 @@ switchBtn.addEventListener('click', () => {
   localStorage.setItem('mode', JSON.stringify(darkModeOn));
   // toggle('class', condition); documentElement returns <html>
 });
+
+/************************************
+  Animated menu icon (hamburger to X)
+  Toggle menu
+*************************************/
+const toggleBtn = document.querySelector('.nav-toggle-button');
+const navToggleMenu = document.querySelector('.nav-toggle-menu-container');
+const navToggleMenuOptions = document.querySelectorAll('.nav-toggle-menu__option-title');
+/* const headerDiv = document.querySelector('.header-div'); */
+const navToggleInsideOptions = document.querySelectorAll('.nav-toggle-div__expandable');
+
+toggleBtn.addEventListener('click', () => {
+  toggleBtn.classList.toggle('change');
+  navToggleMenu.classList.toggle('open-nav-toggle-menu');
+
+  navToggleMenuOptions.forEach(option => {
+    option.classList.toggle('translateX');
+  });
+
+  navToggleInsideOptions.forEach(option => {
+    option.classList.toggle('translateX');
+  });
+
+  if (navToggleMenu.classList.contains('open-nav-toggle-menu')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+});
+
+window.addEventListener('click', (event) => {
+   const clickednavToggleMenu = navToggleMenu.contains(event.target);
+  const clickedtoggleBtn = toggleBtn.contains(event.target);
+
+  if (!clickednavToggleMenu && !clickedtoggleBtn) {
+    toggleBtn.classList.remove('change');
+    navToggleMenu.classList.remove('open-nav-toggle-menu');
+
+    navToggleMenuOptions.forEach(option => {
+      option.classList.remove('translateX');
+    });
+
+    navToggleInsideOptions.forEach(option => {
+      option.classList.remove('translateX');
+    });
+
+    document.body.style.overflow = '';
+  }
+});
+
+
+/********************************
+ Toggle menu: expandable content
+*********************************/
+
+const collapsibleMenuOptions = document.querySelectorAll('.nav-toggle-menu__option-title');
+
+collapsibleMenuOptions.forEach(option => {
+  const collapsibleContainer = option.parentElement;
+  const insideContent = collapsibleContainer.querySelector('.nav-toggle-div__expandable');
+
+  option.addEventListener('click', () => {
+    collapsibleContainer.classList.toggle('show-hide-content');
+
+    if (collapsibleContainer.classList.contains('show-hide-content')) {
+      let fullHeight = insideContent.scrollHeight + "px";
+      insideContent.style.maxHeight = fullHeight;
+    } else {
+      insideContent.style.maxHeight = "0px";
+    };
+  });
+});
+
 
 
 </script>
