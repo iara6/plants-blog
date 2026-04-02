@@ -6,7 +6,7 @@
   <div class="header-bg-wrapper">
     <img class="header-bg" src="/images/backgrounds/header-bg.jpg" alt="">
   </div>
-  <div  class="menu-container">
+  <div class="menu-container">
     <nav>
       <a href="/">
         <img class="logo-img" src="/images/logos/test-logo.jpg" alt="">
@@ -64,20 +64,64 @@
         </li>
       </ul>
 
-        <button class="switch-button">
-    <span><i class="fa-solid fa-moon"></i></span>
-    <span><i class="fa-solid fa-sun"></i></span>
-    <span class="switch"></span>
-  </button>
+      <div class="nav-toggle-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <button class="switch-button">
+        <span><i class="fa-solid fa-moon"></i></span>
+        <span><i class="fa-solid fa-sun"></i></span>
+        <span class="switch"></span>
+      </button>
     </nav>
   </div>
   
-
-
-<!--   <div>
-    <img src="/icons/test-logo.svg" height="100px" alt="logo">
+  <div class="nav-toggle-menu-container">
+    <li class="nav-toggle-menu__option">
+      <span class="nav-toggle-menu__option-title">
+        Section 1 <i class="fa-solid fa-chevron-down"></i>
+      </span>
+      <ul class="nav-toggle-div__expandable">
+        <li>
+          Item 1
+        </li>
+        <li>
+          Item 2
+        </li>
+        <li>
+          Item 3
+        </li>
+        <li>
+          Item 4
+        </li>
+      </ul>
+    </li>
+    <li class="nav-toggle-menu__option">
+      <span class="nav-toggle-menu__option-title">
+        Section 2 <i class="fa-solid fa-chevron-down"></i>
+      </span>
+      <ul class="nav-toggle-div__expandable">
+        <li>
+          Item 1
+        </li>
+        <li>
+          Item 2
+        </li>
+        <li>
+          Item 3
+        </li>
+        <li>
+          Item 4
+        </li>
+      </ul>
+    </li>
   </div>
-  <p>Header Content</p> -->
+
+
+ 
+  
 </header>
 
 <style>
@@ -136,7 +180,7 @@ html.dark-mode .header-bg {
   will-change: transform;
 }
 
-nav {
+.menu-container nav {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -248,7 +292,75 @@ padding: 0.5rem 1rem;
   }
 }
 
+.nav-toggle-button {
+ /*  display: none; */
+  display: flex;  /*  */
+  flex-direction: column;
+  gap: 4.5px;
+  width: 20px;
+ /*  height: 34px; */
+  box-sizing: content-box;
+  padding: 6px;
+  cursor: pointer;
+  border: 1px solid red;
+}
 
+.nav-toggle-button span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  transition: 200ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.nav-toggle-button.change span:first-child {
+  transform: translate(0, 7px) rotate(45deg);
+}
+.nav-toggle-button.change span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle-button.change span:last-child {
+  transform: translate(0, -7px) rotate(-45deg);
+  width: 100%;
+}
+
+.nav-toggle-menu-container.open-nav-toggle-menu {
+  visibility: visible;
+  opacity: 1;
+  z-index: 100;
+}
+
+
+.nav-toggle-menu-container {
+  padding: 2rem;
+  border-top: 1px solid black;
+  background-color: white;
+  width: 100%;
+  max-height: calc(100vh - 300px);
+  overflow-y: scroll;
+
+  position: fixed;
+  left: 0;
+  top: 300px;
+
+  transition: opacity 0.25s ease-out, visibility 0.25s ease-out;
+  /* opacity: 0;
+  visibility: hidden; */
+}
+
+
+.nav-toggle-menu-container .nav-toggle-menu__option-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+ 
+  padding: 1rem 0;
+  cursor: pointer;
+  transform: translateX(-30px);
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
 
 /******************
   Dark mode button 
