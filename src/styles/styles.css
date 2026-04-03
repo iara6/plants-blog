@@ -26,6 +26,9 @@ body {
   --primary-clr-3: #B9E4C9;
   --secondary-clr: #FD5523;
   --clr: #FFFBE6; */
+
+  --max-width: 1440px;
+  --content-width: 1280px;
 }
 
 .dark-mode {
@@ -57,7 +60,7 @@ html {
   scroll-behavior: smooth;
   background-color: var(--secondary-clr);
   position: relative;
-  
+  transition: all 250ms ease;
  /*  font-family: "IBM Plex Sans", sans-serif; */
   font-family: "Onest", sans-serif;
  /*  font-family: "Golos Text", sans-serif; */
@@ -86,8 +89,9 @@ html::before {
 
 .home-page__main {
   background-color: var(--secondary-clr);
-  max-width: 1280px;
-  min-width: 1024px;
+  max-width: var(--max-width);
+  padding-inline: 3rem;
+  /* min-width: 1024px; */
   margin-inline: auto;
 }
 

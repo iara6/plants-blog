@@ -8,7 +8,68 @@ import MainLayout from '../layouts/MainLayout.astro';
 <MainLayout>
   <main class="home-page__main">
     <h1>Добрая половина выводов процветает как ни в чем не бывало - HOME PAGE</h1>
-    <p>
+    <div>
+      <section class="trending-section">
+        <h2>Популярное за месяц</h2>
+        <div class="trending-article-container">
+          <div class="trending-article_img-wrapper">
+            <img src="/images/articles/trending-1.jpg" alt="">
+          </div>
+          <div> 
+            <h3>Лучшее место на земле</h3>
+            <span>30/05/2016</span> • <span class="article-category">Жизнь</span>
+          </div>
+        </div>
+        <div class="trending-article-container">
+          <div class="trending-article_img-wrapper">
+            <img src="/images/articles/trending-2.jpg" alt="">
+          </div>
+          <div>
+            <h3>Как подружиться с гусём?</h3>
+            <span>28/05/2016</span> • <span class="article-category">Фауна</span>
+          </div>
+        </div>
+        <div class="trending-article-container">
+          <div class="trending-article_img-wrapper">
+            <img src="/images/articles/trending-3.jpg" alt="">
+          </div>
+          <div>
+            <h3>Тушим костёр правильно</h3>
+            <span>24/05/2016</span> • <span class="article-category">Отдых</span>
+          </div>
+        </div>
+        <div class="trending-article-container">
+          <div class="trending-article_img-wrapper">
+            <img src="/images/articles/trending-4.jpg" alt="">
+          </div>
+          <div>
+            <h3>Советы для начинающих лесников</h3>
+            <span>18/05/2016</span> • <span class="article-category">Полезное</span>
+          </div>
+        </div>
+        <div class="trending-article-container">
+          <div class="trending-article_img-wrapper">
+            <img src="/images/articles/trending-5.jpg" alt="">
+          </div>
+          <div>
+            <h3>Собираем полевой букет</h3>
+            <span>14/05/2016</span> • <span class="article-category">Полезное</span>
+          </div>
+        </div>
+        <div class="trending-article-container">
+          <div class="trending-article_img-wrapper">
+            <img src="/images/articles/trending-6.jpg" alt="">
+          </div>
+          <div>
+            <h3>Простой скворечник: пошаговая инструкция</h3>
+            <span>09/05/2016</span> • <span class="article-category">Полезное</span>
+          </div>
+        </div>
+      </section>
+      <section></section>
+    </div>
+    
+<!--     <p>
       Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: повышение уровня гражданского сознания, в своём классическом представлении, допускает внедрение направлений прогрессивного развития. Принимая во внимание показатели успешности, высококачественный прототип будущего проекта, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для благоприятных перспектив. В своём стремлении улучшить пользовательский опыт мы упускаем, что сторонники тоталитаризма в науке ассоциативно распределены по отраслям. Мы вынуждены отталкиваться от того, что выбранный нами инновационный путь требует определения и уточнения форм воздействия. В частности, граница обучения кадров представляет собой интересный эксперимент проверки системы массового участия.
     </p>
     <p>
@@ -19,11 +80,15 @@ import MainLayout from '../layouts/MainLayout.astro';
     </p>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis libero doloremque debitis expedita eaque voluptatem officia accusamus maiores dolor, molestiae velit esse at architecto reprehenderit quos, ducimus officiis reiciendis maxime eius modi animi! Vel non reiciendis commodi nisi, deserunt ratione voluptas distinctio velit unde, dignissimos temporibus neque, ipsa autem nam. Quo repudiandae minima, omnis debitis nesciunt eligendi laboriosam dolorem soluta reiciendis saepe dolores qui ipsa veritatis molestiae a in fugit quaerat odit quis vitae quasi. Ipsam vero tempora consequuntur velit nulla eligendi hic aut voluptatibus non veniam, porro quam ratione, est ipsa placeat, illo culpa nostrum asperiores quas. Veritatis sed quaerat nam optio voluptatibus molestias labore voluptatem minima autem, perspiciatis perferendis est quo quasi ullam dicta sunt, ratione odit! Reprehenderit voluptatibus atque veritatis nostrum pariatur alias hic ipsam numquam laudantium nihil veniam dolor aperiam laborum, provident rerum illum iure ipsum autem. Animi autem consectetur unde ex vero dicta veritatis mollitia.
-    </p>
+    </p> -->
+  
   </main>
 </MainLayout>
 
 <style>
+  main {
+    transition: all 250ms ease;
+  }
   h1 {
     background-color: lightpink;
     padding: 3rem;
@@ -41,5 +106,41 @@ import MainLayout from '../layouts/MainLayout.astro';
     /* font-size: 1.5rem;  */
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     padding: 2rem 0;
+  }
+
+  .trending-article-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 2px solid hotpink;
+  }
+
+  .trending-article_img-wrapper {
+    width: 120px;
+    height: 120px;
+    border: 1px solid red;
+    /* object-fit: cover; */
+  }
+
+  .trending-article_img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .trending-article-container h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .trending-article-container span {
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+
+  .article-category {
+    background-color: rgb(181, 242, 181);
+    padding: 2px 5px;
+    border-radius: 4px;
   }
 </style>

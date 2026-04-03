@@ -245,6 +245,7 @@ html.dark-mode .header-bg {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  transition: all 250ms ease;
 }
 
 .menu {
@@ -297,8 +298,8 @@ html.dark-mode .header-bg {
   width: 100%;
 }
 .section-link {
-border: 1px solid blue;
-padding: 20px 40px;
+  border: 1px solid blue;
+  padding: 20px 40px;
 }
 
 
@@ -333,8 +334,8 @@ padding: 20px 40px;
 } 
 
 .dropdown_menu a { 
-border: 1px solid green;
-padding: 0.5rem 1rem;
+  border: 1px solid green;
+  padding: 0.5rem 1rem;
 }
 
 @keyframes growDown {
@@ -350,8 +351,8 @@ padding: 0.5rem 1rem;
 }
 
 .nav-toggle-button {
- /*  display: none; */
-  display: flex;  /*  */
+  display: none;
+  /* display: flex; */
   flex-direction: column;
   gap: 4.5px;
   width: 20px;
@@ -402,9 +403,11 @@ padding: 0.5rem 1rem;
   top: 300px;
 
   transition: opacity 0.25s ease-out, visibility 0.25s ease-out;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   opacity: 0;
   visibility: hidden;
+
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.14);
 }
 
 .nav-toggle-menu-container li {
@@ -517,6 +520,15 @@ padding: 0.5rem 1rem;
 
 .slide .switch {
   left: 50%;
+}
+
+@media screen and (max-width:1200px) {
+  .nav-toggle-button {
+    display: flex;
+  }
+  .menu {
+    display: none;
+  }
 }
 
 
