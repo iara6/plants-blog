@@ -71,8 +71,10 @@
       </div>
 
       <button class="switch-button">
-        <span><i class="fa-solid fa-moon"></i></span>
-        <span><i class="fa-solid fa-sun"></i></span>
+        <!-- <span><i class="fa-solid fa-moon"></i></span>
+        <span><i class="fa-solid fa-sun"></i></span> -->
+        <span><img src="/icons/moon2.svg" alt=""></span>
+        <span><img src="/icons/sun2.svg" alt=""></span>
         <span class="switch"></span>
       </button>
     </nav>
@@ -388,7 +390,6 @@ html.dark-mode .header-bg {
   z-index: 100;
 }
 
-
 .nav-toggle-menu-container {
   padding: 2rem;
   border-top: 1px solid black;
@@ -486,7 +487,7 @@ html.dark-mode .header-bg {
   width: 3.5rem;
   border-radius: 0.8rem;
   border: none;
-  background-color: lightblue;
+  background-color: rgb(32, 125, 156);
   transition: all 250ms ease-in-out;
 
   display: flex;
@@ -498,11 +499,19 @@ html.dark-mode .header-bg {
   background-color: lightgray;
 }
 
-.switch-button span {
+/* .switch-button span {
   display: inline-block;
   font-size: 1.1rem;
   color: green;
   cursor: pointer;
+} */
+
+.switch-button span img {
+  cursor: pointer;
+  /* border: 1px solid red; */
+  display: block;
+  width: 23px;
+  height: 23px;
 }
 
 .switch {
@@ -516,6 +525,7 @@ html.dark-mode .header-bg {
   outline: 1px solid brown;
   transition: all 250ms ease-out;
   z-index: 10;
+  cursor: pointer;
 }
 
 .slide .switch {

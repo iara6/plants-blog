@@ -87,11 +87,3 @@ html::before {
   HOME PAGE 
 ************/
 
-.home-page__main {
-  background-color: var(--secondary-clr);
-  max-width: var(--max-width);
-  padding-inline: 3rem;
-  /* min-width: 1024px; */
-  margin-inline: auto;
-}
-
