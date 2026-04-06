@@ -67,13 +67,41 @@ import MainLayout from '../layouts/MainLayout.astro';
         </div>
       </section>
       <section class="main-articles-section">
-        <div class="main-article-container">
-          <div class="main-article_img-wrapper">
-            <img src="/images/articles/trending-1.jpg" alt="">
+        <div class="main-articles-section__highlight">
+          <div class="main-highlight-container">
+            <div class="main-highlight_img-wrapper">
+              <img src="/images/articles/trending-1.jpg" alt="">
+            </div>
+            <div>
+              <h3>Лучшее место на земле</h3>
+              <span class="main-highlight-description">В своём стремлении улучшить пользовательский опыт мы упускаем, что непосредственные участники технического прогресса ограничены исключительно образом мышления. Но глубокий уровень погружения играет определяющее значение для экономической целесообразности принимаемых решений.</span>
+            </div>
           </div>
-          <div>
-            <h3>Лучшее место на земле</h3>
-            <span>30/05/2016</span> • <span class="article-category">Жизнь</span>
+        </div>
+        <div class="main-articles-section__other">
+          <div class="main-other-container">
+            <div class="main-other_img-wrapper">
+              <img src="/images/articles/trending-2.jpg" alt="">
+            </div>
+            <div>
+              <h3>Лучшее место на земле</h3>
+            </div>
+          </div>
+          <div class="main-other-container">
+            <div class="main-other_img-wrapper">
+              <img src="/images/articles/trending-3.jpg" alt="">
+            </div>
+            <div>
+              <h3>Лучшее место на земле</h3>
+            </div>
+          </div>
+          <div class="main-other-container">
+            <div class="main-other_img-wrapper">
+              <img src="/images/articles/trending-4.jpg" alt="">
+            </div>
+            <div>
+              <h3>Лучшее место на земле</h3>
+            </div>
           </div>
         </div>
       </section>
@@ -97,17 +125,18 @@ import MainLayout from '../layouts/MainLayout.astro';
 
 <style>
   .home-main{
-  background-color: var(--secondary-clr);
-  max-width: var(--max-width);
-  padding-inline: 3rem;
-  /* min-width: 1024px; */
-  margin-inline: auto;
-  transition: all 250ms ease;
+    background-color: var(--secondary-clr);
+    max-width: var(--max-width);
+    padding-inline: 1rem;
+    /* min-width: 1024px; */
+    margin-inline: auto;
+    transition: all 250ms ease;
   }
 
-
   .home-main__articles-container {
-
+    display: grid;
+    grid-template-columns: 0.35fr 1fr;
+    gap: 2rem;
   }
 
   h1 {
@@ -139,13 +168,15 @@ import MainLayout from '../layouts/MainLayout.astro';
   }
 
   .trending-article_img-wrapper {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     border: 1px solid red;
+    aspect-ratio: 1 / 1;
     /* object-fit: cover; */
   }
 
   .trending-article_img-wrapper img {
+    /* add to each width="110" height="110" */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -166,4 +197,57 @@ import MainLayout from '../layouts/MainLayout.astro';
     padding: 2px 5px;
     border-radius: 4px;
   }
+
+  .main-articles-section {
+    display: grid;
+    grid-template-columns: 2fr 1.1fr;
+    gap: 1.5rem;
+  }
+
+/*   .main-article-container {
+    border: 2px solid lawngreen;
+  } */
+ 
+  .main-highlight_img-wrapper {
+    /* width: 600px; */
+    width: 100%;
+    height: 600px;
+   /*  height: 110px; */
+    /* border: 1px solid red; */
+    /* aspect-ratio: 1 / 1; */
+    /* object-fit: cover; */
+  }
+  .main-highlight_img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .main-highlight-container h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+  .main-highlight-description {
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+
+  .main-articles-section__other {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid red;
+  }
+
+  .main-other_img-wrapper {
+    /* width: 280px; */
+    width: 100%;
+    height: 200px;
+  }
+  .main-other_img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   }
 </style>
