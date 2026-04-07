@@ -162,18 +162,18 @@
         Section 5 <i class="fa-solid fa-chevron-down"></i>
       </span>
       <ul class="nav-toggle-div__expandable">
-      <li>
-      Item 1
-      </li>
-      <li>
-      Item 2
-      </li>
-      <li>
-      Item 3
-      </li>
-      <li>
-      Item 4
-      </li>
+        <li>
+        Item 1
+        </li>
+        <li>
+        Item 2
+        </li>
+        <li>
+        Item 3
+        </li>
+        <li>
+        Item 4
+        </li>
       </ul>
     </li>
   </div>
@@ -188,6 +188,9 @@
 /********* 
   HEADER 
 **********/
+header {
+  margin-bottom: 2rem;
+}
 .header-bg-wrapper {
   position: relative;
   height: 300px;
@@ -399,9 +402,11 @@ html.dark-mode .header-bg {
   max-height: calc(100vh - 300px);
   overflow-y: scroll;
 
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   left: 0;
   top: 300px;
+  /* top: 0; */
 
   transition: opacity 0.25s ease-out, visibility 0.25s ease-out;
   /* border: 2px solid red; */
