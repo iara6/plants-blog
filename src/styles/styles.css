@@ -62,11 +62,11 @@ html {
   position: relative;
   transition: all 250ms ease;
  /*  font-family: "IBM Plex Sans", sans-serif; */
-  font-family: "Onest", sans-serif;
+  /* font-family: "Onest", sans-serif; */
+
  /*  font-family: "Golos Text", sans-serif; */
- /* font-family: "Commissioner", sans-serif; */
- /* 
- font-family: "Geologica", sans-serif; */
+ font-family: "Commissioner", sans-serif;
+ /* font-family: "Geologica", sans-serif; */
 
 }
 
