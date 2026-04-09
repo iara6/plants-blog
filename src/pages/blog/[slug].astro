@@ -1,21 +1,34 @@
 ---
-import { getCollection } from "astro:content";
 import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 
-export async function getStaticPaths() {
-  const posts = await getCollection("posts");
+// load ALL markdown files in this folder
+const posts = await Astro.glob("./*.md");
 
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: { post },
-  }));
+// build static routes
+export async function getStaticPaths() {
+  return posts.map((post) => {
+    const slug = post.file.split("/").pop().replace(".md", "");
+
+    return {
+      params: { slug },
+      props: { post },
+    };
+  });
 }
 
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { frontmatter, Content } = await post.render();
 ---
 
-<BlogPostLayout>
-  <h1>{post.data.title}</h1>
-  <Content />
+<BlogPostLayout frontmatter={frontmatter}>
+  <main class="post-container">
+    <h1>{frontmatter.title}</h1>
+
+    <img
+      src={frontmatter.image.src}
+      alt={frontmatter.image.alt}
+    />
+
+    <Content />
+  </main>
 </BlogPostLayout>

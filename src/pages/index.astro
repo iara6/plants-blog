@@ -6,7 +6,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 
 <!-- <MainLayout /> -->
 <MainLayout>
-  <main class="home-main">
+  <main class="content-container">
    <!--  <h1>Добрая половина выводов процветает как ни в чем не бывало - HOME PAGE</h1> -->
     <div class="home-main__articles-container">
       <section class="trending-section">
@@ -181,14 +181,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 </MainLayout>
 
 <style>
-  .home-main{
-    background-color: var(--secondary-clr);
-    max-width: var(--max-width);
-    padding: 1.5rem;
-    /* min-width: 1024px; */
-    margin-inline: auto;
-    transition: all 250ms ease;
-  }
+ 
 
   .home-main__articles-container {
     display: grid;

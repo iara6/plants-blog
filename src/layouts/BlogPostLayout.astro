@@ -7,6 +7,8 @@ import SlideInHeader from "../components/SlideInHeader.astro";
 
 // style import
 import "../styles/styles.css";
+
+const { post } = Astro.props;
 ---
 
 <!doctype html>
@@ -15,11 +17,10 @@ import "../styles/styles.css";
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
-		<link rel="icon" href="public/favicon.ico" />
+		<link rel="icon" href="/favicon.ico" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
@@ -34,7 +35,13 @@ import "../styles/styles.css";
 	<body>
     <SlideInHeader />
     <Header />
-		<slot />
+    <main class="post-container">
+<!--      {post?.data?.image && (
+  <img src={post.data.image.src} alt={post.data.image.alt} />
+)} -->
+
+      <slot />
+    </main>
     <!-- <slot>Some Text</slot> -->
     <Footer />
     <BackToTop />
