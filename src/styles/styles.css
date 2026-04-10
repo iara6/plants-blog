@@ -117,3 +117,8 @@ html::before {
   display: block;
   margin: 0 auto;
 }
+
+.post-container ol {
+  border: 2px solid lime;
+  padding-left: 3rem;
+}

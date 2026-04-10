@@ -1,21 +1,11 @@
----
-
----
-
 <div class="back-to-top-button">
-  <a href="#">
-    <!-- <img src="/icons/circle-arrow-up-solid-full.svg" alt="Back to top"> -->
+  <button>
     <i class="fa-solid fa-circle-up"></i>
-  </a>
+  </button>
 </div>
 
 <style>
   .back-to-top-button {
-  /*  position: sticky;
-    left: 100%;
-    bottom: 1.25rem;
-    margin-top: -2rem;
-    margin-right: 1.25rem; */
     position: fixed;
     bottom: 1.25rem;
     right: 1.25rem;
@@ -25,15 +15,30 @@
 
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
+  }
+
+  .back-to-top-button.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .back-to-top-button button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .back-to-top-button:hover {
     filter: opacity(100%);
-  }
-
-  .back-to-top-button img {
-    height: 50px;
-    width: 50px;
   }
 
   .back-to-top-button i {
@@ -46,15 +51,13 @@
   const backToTopBtn = document.querySelector('.back-to-top-button');
 
   function btnVisibleOnScroll() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      backToTopBtn.style.opacity = 1;
-      backToTopBtn.style.visibility = "visible";
-    } else {
-      backToTopBtn.style.opacity = 0;
-      backToTopBtn.style.visibility = "hidden";
-    }
+    backToTopBtn.classList.toggle('visible', window.scrollY > 100);
   };
 
   window.addEventListener('scroll', btnVisibleOnScroll);
+
+  backToTopBtn.addEventListener('click', (e) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 </script>
 
