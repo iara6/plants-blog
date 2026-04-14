@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
-title: Another title
-date: 2026-11-28
+title: Another title Post 3
+date: 2025-11-28
 author: Victoria Greenfelder
 image: {
   src: "/images/articles/trending-3.jpg",

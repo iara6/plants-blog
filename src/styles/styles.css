@@ -131,3 +131,9 @@ html::before {
 /* .post-container__content {
 
 } */
+
+/* .post-container__sidebar aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+} */

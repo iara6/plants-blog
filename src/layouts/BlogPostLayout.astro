@@ -13,6 +13,26 @@ import { formatBlogPosts } from "../js/utils";
 import "../styles/styles.css";
 
 /* const { post } = Astro.props; */
+const { frontmatter } = Astro.props;
+const { title, description, date, category, author, image } = frontmatter;
+
+const allPosts = Object.values(
+  import.meta.glob("../pages/blog/*.md", { eager: true })
+);
+
+// const allPosts = await Astro.glob("../pages/blog/*.md"); DEPRECATED
+const formattedPosts = formatBlogPosts(allPosts, {
+  sortByDate: false,
+});
+const relatedPosts = formattedPosts
+  .filter(
+    (post) =>
+      post.frontmatter.category.toLowerCase() === category.toLowerCase() &&
+      post.frontmatter.title !== title
+  )
+  .slice(0, 3);
+
+  
 ---
 
 <!doctype html>
@@ -47,16 +67,14 @@ import "../styles/styles.css";
         <slot />
       </div>
       <div class="post-container__sidebar">
-        <h3 class="h3">Похожие статьи</h3>
-
-        <!--   {
+        {
         relatedPosts.length > 0 && (
-          <aside class="container" aria-label="Related posts">
+          <aside aria-label="Related posts">
             <h2 class="h3">Похожие статьи</h2>
             <RelatedPosts {relatedPosts} />
           </aside>
-        )
-      } -->
+          )
+        }
       </div>
 
     </main>

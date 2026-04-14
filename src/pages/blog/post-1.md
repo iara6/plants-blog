@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
-title: This is a really cool title
-date: 2026-11-25
+title: This is a really cool title Post 1
+date: 2025-11-25
 author: Victoria Greenfelder
 image: {
   src: "/images/articles/trending-1.jpg",
