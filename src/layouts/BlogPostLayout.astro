@@ -4,6 +4,10 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import BackToTop from "../components/BackToTop.astro";
 import SlideInHeader from "../components/SlideInHeader.astro";
+import RelatedPosts from "../components/RelatedPosts.astro";
+
+// utils imports
+import { formatBlogPosts } from "../js/utils";
 
 // style import
 import "../styles/styles.css";
@@ -39,8 +43,22 @@ import "../styles/styles.css";
 <!--      {post?.data?.image && (
   <img src={post.data.image.src} alt={post.data.image.alt} />
 )} -->
+      <div class="post-container__content">
+        <slot />
+      </div>
+      <div class="post-container__sidebar">
+        <h3 class="h3">Похожие статьи</h3>
 
-      <slot />
+        <!--   {
+        relatedPosts.length > 0 && (
+          <aside class="container" aria-label="Related posts">
+            <h2 class="h3">Похожие статьи</h2>
+            <RelatedPosts {relatedPosts} />
+          </aside>
+        )
+      } -->
+      </div>
+
     </main>
     <!-- <slot>Some Text</slot> -->
     <Footer />

@@ -93,6 +93,11 @@ html::before {
   transition: all 250ms ease;
 }
 
+.post-container {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 300px);
+}
+
 
 /* post styles */
 
@@ -122,3 +127,7 @@ html::before {
   border: 2px solid lime;
   padding-left: 3rem;
 }
+
+/* .post-container__content {
+
+} */
