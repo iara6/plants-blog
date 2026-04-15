@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import BackToTop from "../components/BackToTop.astro";
 import SlideInHeader from "../components/SlideInHeader.astro";
+import PostHeader from "../components/PostHeader.astro";
 import RelatedPosts from "../components/RelatedPosts.astro";
 
 // utils imports
@@ -57,13 +58,14 @@ const relatedPosts = formattedPosts
 		<title>Plants</title>
 	</head>
 	<body>
-    <SlideInHeader />
+    <!-- <SlideInHeader /> -->
     <Header />
     <main class="post-container">
 <!--      {post?.data?.image && (
   <img src={post.data.image.src} alt={post.data.image.alt} />
 )} -->
       <div class="post-container__content">
+        <PostHeader {title} {date} {category} {author} />
         <slot />
       </div>
       <div class="post-container__sidebar">

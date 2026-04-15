@@ -8,17 +8,25 @@ const { relatedPosts } = Astro.props;
 {
   relatedPosts.map((post) => (
     <div class="related-post">
+      <a href={post.url}>
+        <img class="related-post-image" src={post.frontmatter.image.src} alt={post.frontmatter.image.alt}>
+      </a>
       <h3>
         <a href={post.url}>{post.frontmatter.title}</a>
       </h3>
       <span>
-        <a href={`/author/${slugify(post.frontmatter.author)}/`}>{post.frontmatter.author}</a> •
+        <a href={`/author/${slugify(post.frontmatter.author)}/`}>{post.frontmatter.author}</a> • <span>{post.frontmatter.category}</span>
       </span>
     </div>
   ))
 }
 
 <style>
+  .related-post-image {
+    height: 280px;
+    width: 100%;
+    object-fit: cover;
+  }
   .related-post {
     border-bottom: 1px solid rgb(153, 152, 152, 0.5);
     padding: 1rem 0.5rem;
