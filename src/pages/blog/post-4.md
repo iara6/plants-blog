@@ -1,15 +1,21 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
-title: Very nice title Post 4
+title: Советы для начинающих лесников Post 4
 date: 2025-11-15
-author: Victoria Greenfelder
+author: {
+  name: "Дмитрий Ковалев",
+  slug: "dmitrij-kovalev"
+}
 image: {
   src: "/images/articles/trending-4.jpg",
   alt: "A picture of something",
 }
 description: Sometimes really awesome and incredible.
 draft: false
-category: General
+category: {
+  name: "Полезное",
+  slug: "poleznoe"
+}
 ---
 
 - [Have you ever seen the rain?](#have-you-ever-seen-the-rain)

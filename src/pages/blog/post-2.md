@@ -1,15 +1,21 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
-title: Another title Post 2
+title: Как подружиться с гусём? Post 2
 date: 2025-11-28
-author: Victoria Greenfelder
+author: {
+  name: "Виктория Чижова",
+  slug: "victoria-chizhova"
+}
 image: {
   src: "/images/articles/trending-2.jpg",
   alt: "A picture of something",
 }
 description: Sometimes you just run out of ideas for sample blog posts. It’s no one’s fault, it’s just the way it is.
 draft: false
-category: General
+category: {
+  name: "Полезное",
+  slug: "poleznoe"
+}
 ---
 
 - [Have you ever seen the rain?](#have-you-ever-seen-the-rain)

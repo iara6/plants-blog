@@ -1,15 +1,21 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
-title: This is a really cool title Post 1
+title: Лучшее место на земле Post 1
 date: 2025-11-25
-author: Victoria Greenfelder
+author: {
+  name: "Виктория Чижова",
+  slug: "victoria-chizhova",
+}
 image: {
   src: "/images/articles/trending-1.jpg",
   alt: "A picture of a traveler",
 }
 description: Sometimes you just run out of ideas for sample blog posts. It’s no one’s fault, it’s just the way it is.
 draft: false
-category: General
+category: {
+  name: "Полезное",
+  slug: "poleznoe"
+}
 ---
 
 - [Is anyone reading these?](#is-anyone-reading-these)

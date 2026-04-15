@@ -1,14 +1,14 @@
 ---
 // utils imports
-import { slugify } from "../js/utils";
+import { slugify, formatDate } from "../js/utils";
 
 const { title, date, category, author, image } = Astro.props;
 ---
 
 <div class="post-header-container">
   <h1>{title}</h1>
-  <div>
-    <a href={`/author/${slugify(author)}/`}>{author}</a> • <a href={`/category/${slugify(category)}/`}>{category}</a> • {date}
+  <div class="post-header-data">
+    <a href={`/author/${author.slug}/`}>{author.name}</a> • <a href={`/category/${category.slug}/`}>{category.name}</a> • {formatDate(date)}
   </div>  
 </div>
 
@@ -17,10 +17,18 @@ const { title, date, category, author, image } = Astro.props;
     border: 1px solid red;
     text-align: center;
     margin-bottom: 1rem;
+    color: var(--primary-clr-dark);
   }
   .post-header-container h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+  }
+ /*  .post-header-data {
+    font-size: 1rem;
+  } */
+  .post-header-container a {
+    color: var(--primary-clr-dark);
+    text-decoration: none;
   }
 </style>

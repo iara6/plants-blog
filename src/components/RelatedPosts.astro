@@ -15,7 +15,7 @@ const { relatedPosts } = Astro.props;
         <a href={post.url}>{post.frontmatter.title}</a>
       </h3>
       <span>
-        <a href={`/author/${slugify(post.frontmatter.author)}/`}>{post.frontmatter.author}</a> • <span>{post.frontmatter.category}</span>
+        <a href={`/author/${post.frontmatter.author.slug}/`}>{post.frontmatter.author.name}</a> • <a href={`/category/${slugify(post.frontmatter.category)}/`}>{post.frontmatter.category.name}</a> 
       </span>
     </div>
   ))
@@ -38,5 +38,6 @@ const { relatedPosts } = Astro.props;
   .related-post h3 {
     font-size: 1.2rem;
     font-weight: 600;
+    margin-top: 0.8rem;
   }
 </style>

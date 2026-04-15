@@ -1,15 +1,21 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
-title: Another title Post 3
+title: Тушим костёр правильно Post 3
 date: 2025-11-28
-author: Victoria Greenfelder
+author: {
+  name: "Виктория Чижова",
+  slug: "victoria-chizhova"
+}
 image: {
   src: "/images/articles/trending-3.jpg",
   alt: "A picture of something",
 }
 description: Sometimes really awesome and incredible.
 draft: false
-category: General
+category: {
+  name: "Полезное",
+  slug: "poleznoe"
+}
 ---
 
 - [Have you ever seen the rain?](#have-you-ever-seen-the-rain)

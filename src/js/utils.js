@@ -9,6 +9,12 @@ export function slugify(text) {
     .replace(/-+$/, '');
 }
 
+export function formatDate(date) {
+  return new Date(date).toLocaleDateString('ru-RU', {
+    timeZone: "Europe/Moscow",
+  })
+}
+
 export function formatBlogPosts(posts, {
   filterOutDrafts = true,
   filterOutFuturePosts = true,
