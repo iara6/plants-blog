@@ -1,9 +1,44 @@
 ---
 // component imports
 import MainLayout from "../../layouts/MainLayout.astro";
+import PostCard from "../../components/PostCard.astro";
 
 // utils imports
 import { formatBlogPosts } from '../../js/utils';
+
+export async function getStaticPaths() {
+  const allPosts = Object.values(
+    import.meta.glob("../pages/blog/*.md", { eager: true })
+  ); 
+  const formattedPosts = formatBlogPosts(allPosts);
+  const allAuthors = [
+    ...new Set(formattedPosts.map((post) => post.frontmatter.author.name).flat()),
+  ];
+  return allAuthors.map((author) => {
+    const authorPost = formattedPosts.filter((post) => post.frontmatter.author.name === author.name);
+    return {
+      params: { author: author.slug},
+      props: {
+        authorName: author.name,
+        posts: authorPost, 
+      }
+    }
+  })
+}
+
+const { posts, authorName } = Astro.props;
+
 ---
 
-<MainLayout></MainLayout>
+<MainLayout>
+  <div class="author-page-container" aria-label={`Posts by ${authorName}`}>
+    <h1 class="h1">Статьи автора <span>{authorName}</span></h1>
+    <div class="author-post-container">
+      {
+        posts.map((post) => (
+          <PostCard frontmatter={post.frontmatter} url={post.url} />
+        ))
+      }
+    </div>
+  </div>
+</MainLayout>

@@ -1,0 +1,46 @@
+---
+// utils imports
+import { formatDate } from "../js/utils";
+
+const { frontmatter, url, /* tagType */ } = Astro.props;
+/* const Tag = tagType; */
+
+const { title, description, date, category, author, image } = frontmatter;
+---
+
+
+
+<div class="author-post">
+  <a href={url}>
+    <img class="author-post-image" src={image.src} alt={image.alt}>
+  </a>
+  <h3>
+    <a href={url}>{title}</a>
+  </h3>
+  <span>
+    <a href={`/author/${author.slug}/`}>{author.name}</a> • <a href={`/category/${category}/`}>{category.name} • {formatDate(date)}</a> 
+  </span>
+  <p>{description}</p>
+</div>
+
+
+<style>
+  .author-post {
+    border-bottom: 1px solid rgb(153, 152, 152, 0.5);
+    padding: 1rem 0.5rem;
+  }
+  .author-post-image {
+    height: 280px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .author-post a {
+    color: var(--primary-clr-dark);
+    text-decoration: none;
+  }
+  .author-post h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0.8rem;
+  }
+</style>
