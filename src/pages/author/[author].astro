@@ -8,19 +8,24 @@ import { formatBlogPosts } from '../../js/utils';
 
 export async function getStaticPaths() {
   const allPosts = Object.values(
-    import.meta.glob("../pages/blog/*.md", { eager: true })
-  ); 
+    import.meta.glob("../../pages/blog/*.md", { eager: true })
+  );
   const formattedPosts = formatBlogPosts(allPosts);
   const allAuthors = [
-    ...new Set(formattedPosts.map((post) => post.frontmatter.author.name).flat()),
+    ...new Map(
+      formattedPosts.map((post) => [
+        post.frontmatter.author.slug,
+        post.frontmatter.author,
+      ])
+    ).values(),
   ];
   return allAuthors.map((author) => {
-    const authorPost = formattedPosts.filter((post) => post.frontmatter.author.name === author.name);
+    const authorPosts = formattedPosts.filter((post) => post.frontmatter.author.slug === author.slug);
     return {
       params: { author: author.slug},
       props: {
         authorName: author.name,
-        posts: authorPost, 
+        posts: authorPosts, 
       }
     }
   })
@@ -31,14 +36,32 @@ const { posts, authorName } = Astro.props;
 ---
 
 <MainLayout>
-  <div class="author-page-container" aria-label={`Posts by ${authorName}`}>
-    <h1 class="h1">Статьи автора <span>{authorName}</span></h1>
-    <div class="author-post-container">
-      {
-        posts.map((post) => (
-          <PostCard frontmatter={post.frontmatter} url={post.url} />
-        ))
-      }
+  <main class="content-container">
+    <h1>Статьи автора <span>{authorName}</span></h1>
+    <div class="author-page-container" aria-label={`Статьи автора ${authorName}`}>
+      
+      <div class="author-posts-container">
+        {
+          posts.map((post) => (
+            <PostCard frontmatter={post.frontmatter} url={post.url} />
+          ))
+        }
+      </div>
     </div>
-  </div>
+
+  </main>
 </MainLayout>
+
+<style>
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-clr-dark);
+    margin-bottom: 2rem;
+  }
+  .author-posts-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+</style>
