@@ -37,7 +37,7 @@ const { posts, authorName } = Astro.props;
 
 <MainLayout>
   <main class="content-container">
-    <h1>Статьи автора <span>{authorName}</span></h1>
+    <h1>Статьи автора <span class="highlight">{authorName}</span></h1>
     <div class="author-page-container" aria-label={`Статьи автора ${authorName}`}>
       
       <div class="author-posts-container">
@@ -58,6 +58,9 @@ const { posts, authorName } = Astro.props;
     font-weight: 600;
     color: var(--primary-clr-dark);
     margin-bottom: 2rem;
+  }
+  .highlight {
+    color: var(--accent-clr) !important;
   }
   .author-posts-container {
     display: grid;

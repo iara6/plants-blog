@@ -1,0 +1,65 @@
+---
+// component imports
+import MainLayout from "../../layouts/MainLayout.astro";
+import PostCard from "../../components/PostCard.astro";
+
+// utils imports
+import { formatBlogPosts } from '../../js/utils';
+
+export async function getStaticPaths() {
+  return [
+    {
+      params: { category: "poleznoe" },
+      props: { name: "Полезное" },
+    },
+    {
+      params: { category: "sovety" },
+      props: { name: "Советы" },
+    },
+  ]
+}
+
+const { category } = Astro.params;
+const { name } = Astro.props;
+
+const allPosts = Object.values(
+  import.meta.glob("../../pages/blog/*.md", { eager: true })
+);
+const formattedPosts = formatBlogPosts(allPosts);
+const categoryPosts = formattedPosts.filter((post) => post.frontmatter.category?.slug === category);
+
+---
+
+<MainLayout>
+  <main class="content-container">
+    <h1>Статьи по тегу <span class="highlight">{name.toLowerCase()}</span></h1>
+    <div class="category-page-container" aria-label={`Статьи по тегу ${name}`}>
+      
+      <div class="category-posts-container">
+        {
+          categoryPosts.map((post) => (
+            <PostCard frontmatter={post.frontmatter} url={post.url} />
+          ))
+        }
+      </div>
+    </div>
+
+  </main>
+</MainLayout>
+
+<style>
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-clr-dark);
+    margin-bottom: 2rem;
+  }
+  .highlight {
+    color: var(--accent-clr) !important;
+  }
+  .category-posts-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+</style>
