@@ -8,7 +8,7 @@ const { title, date, category, author, image } = Astro.props;
 <div class="post-header-container">
   <h1>{title}</h1>
   <div class="post-header-data">
-    <a href={`/author/${author.slug}/`}>{author.name}</a> • <a href={`/category/${category.slug}/`}>{category.name}</a> • {formatDate(date)}
+    <a href={`/author/${author.slug}/`}>{author.name}</a> • <a class="article-category" href={`/category/${category.slug}/`}>{category.name}</a> • {formatDate(date)}
   </div>  
 </div>
 

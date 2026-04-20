@@ -129,6 +129,14 @@ html::before {
   padding-left: 3rem;
 }
 
+.article-category {
+  color: #1f0f0c !important;
+  background-color: rgb(181, 242, 181);
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+
 /* .post-container__content {
 
 } */

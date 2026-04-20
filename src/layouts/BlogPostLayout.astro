@@ -6,6 +6,7 @@ import BackToTop from "../components/BackToTop.astro";
 import SlideInHeader from "../components/SlideInHeader.astro";
 import PostHeader from "../components/PostHeader.astro";
 import RelatedPosts from "../components/RelatedPosts.astro";
+import CategoryCloud from "../components/CategoryCloud.astro";
 
 // utils imports
 import { formatBlogPosts } from "../js/utils";
@@ -77,6 +78,9 @@ const relatedPosts = formattedPosts
           </aside>
           )
         }
+
+        <h2>Все категории</h2>
+        <CategoryCloud showCount={true} /> <!-- !!!!!! -->
       </div>
 
     </main>

@@ -1,0 +1,71 @@
+---
+// utils imports
+import { formatBlogPosts } from '../js/utils';
+
+const allPosts = Object.values(
+  import.meta.glob("../pages/blog/*.md", { eager: true })
+);
+const formattedPosts = formatBlogPosts(allPosts);
+
+const allCategories = formattedPosts
+  .map((category) => category.frontmatter.category);
+  /* .toLowerCase()).flat() */
+
+const processedCategories = allCategories.reduce((acc, category) => {
+  const key = category.slug;
+
+  if (!acc[key]) {
+    acc[key] = { name: category.name, count: 0 };
+  }
+
+  acc[key].count++;
+
+  return acc;
+}, {})
+
+const { showCount } = Astro.props;
+
+
+---
+
+<ul class="categories">
+  {
+    Object.entries(processedCategories).map(([slug, val]) => (
+      <li>
+        <a class="article-category" href={`/category/${slug}/`}>{val.name} {showCount && `(${val.count})`}</a>
+      </li>
+    ))
+  }
+</ul>
+
+<script>
+  import { formatBlogPosts } from '../js/utils';
+
+const allPosts = Object.values(
+  import.meta.glob("../../pages/blog/*.md", { eager: true })
+);
+const formattedPosts = formatBlogPosts(allPosts);
+
+const allCategories = formattedPosts
+  .map((category) => category.frontmatter.category);
+  /* .toLowerCase()).flat() */
+
+const processedCategories = allCategories.reduce((acc, category) => {
+  const key = category.slug;
+
+  if (!acc[key]) {
+    acc[key] = { name: category.name, count: 0 };
+  }
+
+  acc[key].count++;
+
+  return acc;
+}, {})
+
+/* const { showCount } = Astro.props; */
+
+  console.log("ALL POSTS:", allPosts.length);
+console.log("FORMATTED POSTS:", formattedPosts.length);
+console.log("CATEGORIES:", allCategories);
+console.log("PROCESSED:", processedCategories);
+</script>

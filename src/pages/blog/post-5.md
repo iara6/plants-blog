@@ -13,8 +13,8 @@ image: {
 description: Sometimes really awesome and incredible. New information.
 draft: false
 category: {
-  name: "Полезное",
-  slug: "poleznoe"
+  name: "Отдых",
+  slug: "otdyh"
 }
 ---
 
