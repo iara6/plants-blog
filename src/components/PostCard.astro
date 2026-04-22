@@ -18,7 +18,7 @@ const { title, description, date, category, author, image } = frontmatter;
     <a href={url}>{title}</a>
   </h3>
   <span>
-    <a href={`/author/${author.slug}/`}>{author.name}</a> • <a href={`/category/${category.slug}/`}>{category.name} • {formatDate(date)}</a> 
+    <a href={`/author/${author.slug}/`}>{author.name}</a> • <a href={`/category/${category.slug}/`}>{category.name}</a> • {formatDate(date)} 
   </span>
   <p class="author-post-description">{description}</p>
 </div>

@@ -70,6 +70,15 @@
         <span></span>
       </div>
 
+      <div class="header__search">
+        <form>
+          <input placeholder="" value="" type="search">
+          <button aria-label="Search" type="submit">
+            <img src="/icons/magnifying-glass.svg" alt="">
+          </button>
+        </form>
+      </div>
+
       <button class="switch-button">
         <!-- <span><i class="fa-solid fa-moon"></i></span>
         <span><i class="fa-solid fa-sun"></i></span> -->
@@ -178,9 +187,6 @@
     </li>
   </div>
 
-
- 
-  
 </header>
 
 <style>
@@ -481,6 +487,26 @@ html.dark-mode .header-bg {
 
 .show-hide-content .nav-toggle-menu__option-title i {
   transform: rotate(180deg);
+}
+
+.header__search form {
+  display: flex;
+}
+
+.header__search input {
+  padding: 0.5rem 0.7rem;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border: 1px solid black;
+}
+
+.header__search button {
+  padding: 0 0.5rem;
+  margin-left: -1px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
 }
 
 /******************
