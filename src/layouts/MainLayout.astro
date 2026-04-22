@@ -6,7 +6,7 @@ import BackToTop from "../components/BackToTop.astro";
 import SlideInHeader from "../components/SlideInHeader.astro";
 
 // style import
-import "../styles/styles.css";
+/* import "../styles/styles.css"; */
 ---
 
 <!doctype html>
@@ -15,6 +15,7 @@ import "../styles/styles.css";
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+    <link rel="stylesheet" href="/src/styles/styles.css">
 		<link rel="icon" href="public/favicon.ico" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +28,11 @@ import "../styles/styles.css";
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 		<title>Plants</title>
+    <!-- <script>
+      if (localStorage.getItem('mode') === 'true') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    </script> -->
 	</head>
 	<body>
     <SlideInHeader />
@@ -35,5 +41,28 @@ import "../styles/styles.css";
     <!-- <slot>Some Text</slot> -->
     <Footer />
     <BackToTop />
+    <script is:inline>
+      function initDarkMode() {
+        const switchBtn = document.querySelector('.switch-button');
+        if (!switchBtn) return;
+
+        let darkModeOn = JSON.parse(localStorage.getItem('mode')) || false;
+
+        if (darkModeOn) {
+          document.documentElement.classList.add('dark-mode');
+          switchBtn.classList.add('slide');
+        }
+
+        switchBtn.addEventListener('click', () => {
+          darkModeOn = !darkModeOn;
+          document.documentElement.classList.toggle('dark-mode', darkModeOn);
+          switchBtn.classList.toggle('slide', darkModeOn);
+          localStorage.setItem('mode', JSON.stringify(darkModeOn));
+        });
+      }
+      // toggle('class', condition); documentElement returns <html>
+      initDarkMode();
+      document.addEventListener('astro:page-load', initDarkMode);
+    </script>
 	</body>
 </html>
