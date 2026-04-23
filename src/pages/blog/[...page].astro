@@ -1,0 +1,80 @@
+---
+// component imports
+import MainLayout from "../../layouts/MainLayout.astro";
+import PostCard from "../../components/PostCard.astro";
+
+// utils imports
+import { formatBlogPosts } from '../../js/utils';
+
+export async function getStaticPaths({ paginate }) {
+  const allPosts = Object.values(
+    import.meta.glob("./*.md", { eager: true })
+  );
+
+  const formattedPosts = formatBlogPosts(allPosts);
+
+  return paginate(formattedPosts, { 
+    pageSize: 9 /* posts per page */
+  });
+}
+
+const { page } = Astro.props;
+console.log("PAGE:", page);
+---
+
+<MainLayout>
+  <main class="content-container">
+    <h1>Все статьи сайта</h1>
+    <div class="all-posts-container">
+      {
+        page.data.map((post) => (
+          <PostCard frontmatter={post.frontmatter} url={post.url} />
+        ))
+      }
+    </div>
+    <div class="pagination-buttons">
+      {page.url.prev && <a href={page.url.prev}>
+        <img src="/icons/left.svg" alt="">
+         Назад
+         </a>}
+      {page.url.next && <a href={page.url.next}>
+        Вперёд <img src="/icons/right.svg" alt="">
+        </a>}
+    </div>
+    <p>
+      Страница {page.currentPage} из {page.lastPage}
+    </p>
+  
+  </main>
+</MainLayout>
+
+<style>
+   h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-clr-dark);
+    margin-bottom: 2rem;
+  }
+  .all-posts-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+  .pagination-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;  
+  }
+  .pagination-buttons a {
+    background-color: var(--selection-clr);
+    color: #442C2E;
+    padding: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+   /*  width: fit-content; */
+  }
+</style>
