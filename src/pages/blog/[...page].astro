@@ -2,6 +2,7 @@
 // component imports
 import MainLayout from "../../layouts/MainLayout.astro";
 import PostCard from "../../components/PostCard.astro";
+import CategoryCloud from "../../components/CategoryCloud.astro";
 
 // utils imports
 import { formatBlogPosts } from '../../js/utils';
@@ -19,7 +20,7 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const { page } = Astro.props;
-console.log("PAGE:", page);
+
 ---
 
 <MainLayout>
@@ -44,17 +45,37 @@ console.log("PAGE:", page);
     <p>
       Страница {page.currentPage} из {page.lastPage}
     </p>
+    <h2>Все категории</h2>
+    <div class="category-cloud-container">
+      <CategoryCloud showCount={true} />
+    </div>
   
   </main>
 </MainLayout>
 
 <style>
-   h1 {
+  h1 {
     font-size: 2rem;
     font-weight: 600;
     color: var(--primary-clr-dark);
     margin-bottom: 2rem;
   }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-clr-dark);
+    margin: 2rem 0 1rem;    
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.5;
+    margin-top: 3px;
+  }
+
   .all-posts-container {
     display: grid;
     gap: 2rem;
@@ -69,12 +90,19 @@ console.log("PAGE:", page);
   .pagination-buttons a {
     background-color: var(--selection-clr);
     color: #442C2E;
-    padding: 1rem;
+    padding: 1rem 2rem;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
+    border-radius: 4px;
+    font-size: 1.1rem;
    /*  width: fit-content; */
+  }
+
+  .category-cloud-container {
+    display: flex;
+    justify-content: center;
   }
 </style>

@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-2.jpg",
   alt: "A picture of something",
 }
-description: Sometimes you just run out of ideas for sample blog posts. It’s no one’s fault, it’s just the way it is.
+description: Принимая во внимание показатели успешности, сплочённость команды профессионалов требует анализа поставленных обществом задач. Современные технологии достигли такого уровня, что граница обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.
 draft: false
 category: {
   name: "Советы",

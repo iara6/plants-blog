@@ -32,8 +32,29 @@ const { showCount } = Astro.props;
   {
     Object.entries(processedCategories).map(([slug, val]) => (
       <li>
-        <a class="article-category" href={`/category/${slug}/`}>{val.name} {showCount && `(${val.count})`}</a>
+        <a class="cloud-category" href={`/category/${slug}/`}>{val.name} {showCount && `(${val.count})`}</a>
       </li>
     ))
   }
 </ul>
+
+<style>
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 8px;
+  }
+
+  .cloud-category {
+    text-decoration: none;
+    color: #1f0f0c !important;
+    background-color: rgb(181, 242, 181);
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+</style>

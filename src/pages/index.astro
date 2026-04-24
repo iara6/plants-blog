@@ -1,14 +1,27 @@
 ---
 // component imports
 import MainLayout from '../layouts/MainLayout.astro';
+import PostCardFeatured from '../components/PostCardFeatured.astro';
 
+// utils imports
+import { formatBlogPosts } from "../js/utils";
+
+const allPosts = Object.values(
+  import.meta.glob("../pages/blog/*.md", { eager: true })
+);
+const formattedPosts = formatBlogPosts(allPosts);
+
+const [featured, ...rest] = formattedPosts; 
+
+console.log(allPosts);
+console.log(formatBlogPosts(allPosts));
 ---
 
 <!-- <MainLayout /> -->
 <MainLayout>
   <main class="content-container">
    <!--  <h1>Добрая половина выводов процветает как ни в чем не бывало - HOME PAGE</h1> -->
-    <div class="home-main__articles-container">
+    <div class="home-main__new-articles-container">
       <section class="trending-section">
         <h2>Популярное за месяц</h2>
         <div class="trending-article-container">
@@ -66,37 +79,38 @@ import MainLayout from '../layouts/MainLayout.astro';
           </div>
         </div>
       </section>
-      <section class="main-articles-section">
-        <div class="main-articles-section__highlight">
-          <div class="main-highlight-container">
-            <div class="main-highlight_img-wrapper">
+      <section class="new-articles-section">
+        <div class="new-articles-section__highlight">
+          <PostCardFeatured frontmatter={featured.frontmatter} url={featured.url} />
+          <!-- <div class="new-highlight-container">
+            <div class="new-highlight_img-wrapper">
               <img src="/images/articles/trending-1.jpg" alt="">
             </div>
             <div>
               <h3>Лучшее место на земле</h3>
-              <span class="main-highlight-description">В своём стремлении улучшить пользовательский опыт мы упускаем, что непосредственные участники технического прогресса ограничены исключительно образом мышления. Но глубокий уровень погружения играет определяющее значение для экономической целесообразности принимаемых решений.</span>
+              <span class="new-highlight-description">В своём стремлении улучшить пользовательский опыт мы упускаем, что непосредственные участники технического прогресса ограничены исключительно образом мышления. Но глубокий уровень погружения играет определяющее значение для экономической целесообразности принимаемых решений.</span>
             </div>
-          </div>
+          </div> -->
         </div>
-        <div class="main-articles-section__other">
-          <div class="main-other-container">
-            <div class="main-other_img-wrapper">
+        <div class="new-articles-section__other">
+          <div class="new-other-container">
+            <div class="new-other_img-wrapper">
               <img src="/images/articles/trending-2.jpg" alt="">
             </div>
             <div>
               <h3>Как подружиться с гусём?</h3>
             </div>
           </div>
-          <div class="main-other-container">
-            <div class="main-other_img-wrapper">
+          <div class="new-other-container">
+            <div class="new-other_img-wrapper">
               <img src="/images/articles/trending-3.jpg" alt="">
             </div>
             <div>
               <h3>Тушим костёр правильно</h3>
             </div>
           </div>
-          <div class="main-other-container">
-            <div class="main-other_img-wrapper">
+          <div class="new-other-container">
+            <div class="new-other_img-wrapper">
               <img src="/images/articles/trending-4.jpg" alt="">
             </div>
             <div>
@@ -182,7 +196,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 <style>
  
 
-  .home-main__articles-container {
+  .home-main__new-articles-container {
     display: grid;
     grid-template-columns: 0.35fr 1fr;
     gap: 2rem;
@@ -254,7 +268,7 @@ import MainLayout from '../layouts/MainLayout.astro';
     border-radius: 4px;
   } */
 
-  .main-articles-section {
+  .new-articles-section {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1.5rem;
@@ -264,7 +278,7 @@ import MainLayout from '../layouts/MainLayout.astro';
     border: 2px solid lawngreen;
   } */
  
-  .main-highlight_img-wrapper {
+  .new-highlight_img-wrapper {
     /* width: 600px; */
     width: 100%;
     height: 600px;
@@ -274,47 +288,47 @@ import MainLayout from '../layouts/MainLayout.astro';
     /* aspect-ratio: 1 / 1; */
     /* object-fit: cover; */
   }
-  .main-highlight_img-wrapper img {
+  .new-highlight_img-wrapper img {
     width: 100%;
     height: 100%;
     border-radius: 6px;
     object-fit: cover;
   }
 
-  .main-highlight-container h3 {
+  .new-highlight-container h3 {
     font-size: 2rem;
     font-weight: 600;
     margin: 1rem 0;
   }
-  .main-highlight-description {
+  .new-highlight-description {
     font-size: 1.1rem;
     font-weight: 300;
   }
 
-  .main-articles-section__other {
+  .new-articles-section__other {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     border: 1px solid red;
   }
   
-  .main-other-container {
+  .new-other-container {
     border: 1px solid hotpink;
   }
 
-  .main-other_img-wrapper {
+  .new-other_img-wrapper {
     /* width: 280px; */
     width: 100%;
     height: 230px;
   }
-  .main-other_img-wrapper img,
+  .new-other_img-wrapper img,
   .all-article_img-wrapper img {
     width: 100%;
     height: 100%;
     border-radius: 6px;
     object-fit: cover;
   }
-  .main-other-container h3,
+  .new-other-container h3,
   .all-article-container h3 {
     font-size: 1.3rem;
     font-weight: 600;
