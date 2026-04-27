@@ -2,6 +2,7 @@
 // component imports
 import MainLayout from '../layouts/MainLayout.astro';
 import PostCardFeatured from '../components/PostCardFeatured.astro';
+import PostCardSecondary from '../components/PostCardSecondary.astro';
 
 // utils imports
 import { formatBlogPosts } from "../js/utils";
@@ -13,8 +14,9 @@ const formattedPosts = formatBlogPosts(allPosts);
 
 const [featured, ...rest] = formattedPosts; 
 
-console.log(allPosts);
-console.log(formatBlogPosts(allPosts));
+const secondaryPosts = rest.slice(0, 3);
+const allOtherPosts = rest.slice(3);
+
 ---
 
 <!-- <MainLayout /> -->
@@ -92,31 +94,40 @@ console.log(formatBlogPosts(allPosts));
             </div>
           </div> -->
         </div>
-        <div class="new-articles-section__other">
-          <div class="new-other-container">
-            <div class="new-other_img-wrapper">
+        <div class="new-articles-section__secondary">
+          {
+            secondaryPosts.map((post) => (
+              <PostCardSecondary frontmatter={post.frontmatter} url={post.url} />
+            ))
+          }
+
+          
+          
+
+<!--           <div class="new-secondary-container">
+            <div class="new-secondary_img-wrapper">
               <img src="/images/articles/trending-2.jpg" alt="">
             </div>
             <div>
               <h3>Как подружиться с гусём?</h3>
             </div>
-          </div>
-          <div class="new-other-container">
-            <div class="new-other_img-wrapper">
+          </div> -->
+<!--           <div class="new-secondary-container">
+            <div class="new-secondary_img-wrapper">
               <img src="/images/articles/trending-3.jpg" alt="">
             </div>
             <div>
               <h3>Тушим костёр правильно</h3>
             </div>
           </div>
-          <div class="new-other-container">
-            <div class="new-other_img-wrapper">
+          <div class="new-secondary-container">
+            <div class="new-secondary_img-wrapper">
               <img src="/images/articles/trending-4.jpg" alt="">
             </div>
             <div>
               <h3>Советы для начинающих лесников</h3>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
     </div>
@@ -305,30 +316,30 @@ console.log(formatBlogPosts(allPosts));
     font-weight: 300;
   }
 
-  .new-articles-section__other {
+  .new-articles-section__secondary {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     border: 1px solid red;
   }
   
-  .new-other-container {
+  .new-secondary-container {
     border: 1px solid hotpink;
   }
 
-  .new-other_img-wrapper {
+  .new-secondary_img-wrapper {
     /* width: 280px; */
     width: 100%;
     height: 230px;
   }
-  .new-other_img-wrapper img,
+  .new-secondary_img-wrapper img,
   .all-article_img-wrapper img {
     width: 100%;
     height: 100%;
     border-radius: 6px;
     object-fit: cover;
   }
-  .new-other-container h3,
+  .new-secondary-container h3,
   .all-article-container h3 {
     font-size: 1.3rem;
     font-weight: 600;
