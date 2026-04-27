@@ -1,6 +1,7 @@
 ---
 // component imports
 import MainLayout from '../layouts/MainLayout.astro';
+import PostCard from '../components/PostCard.astro';
 import PostCardFeatured from '../components/PostCardFeatured.astro';
 import PostCardSecondary from '../components/PostCardSecondary.astro';
 
@@ -133,7 +134,13 @@ const allOtherPosts = rest.slice(3);
     </div>
     <div class="home-main__all-container">
       <section>
-        <div class="all-article-container">
+
+          {
+            allOtherPosts.map((post) => (
+              <PostCard frontmatter={post.frontmatter} url={post.url} />
+            ))
+          }
+        <!-- <div class="all-article-container">
           <div class="all-article_img-wrapper">
             <img src="/images/articles/trending-1.jpg" alt="">
           </div>
@@ -196,10 +203,15 @@ const allOtherPosts = rest.slice(3);
           <div> 
             <h3>Нет ничего лучше чтения на природе</h3>
           </div>
-        </div>
-        
-
+        </div> -->
+    
       </section>
+
+      <div class="all-articles-button">
+        <a href="/blog">
+          Все статьи
+        </a>
+      </div>
     </div>
   </main>
 </MainLayout>
@@ -360,6 +372,27 @@ const allOtherPosts = rest.slice(3);
     /* width: 280px; */
     width: 100%;
     height: 300px;
+  }
+
+  .all-articles-button {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    /* gap: 1rem; */  
+  }
+
+  .all-articles-button a {
+    background-color: var(--selection-clr);
+    color: #442C2E;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+   /*  width: fit-content; */
   }
   
 </style>
