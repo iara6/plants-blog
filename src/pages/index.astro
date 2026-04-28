@@ -18,6 +18,9 @@ const [featured, ...rest] = formattedPosts;
 const secondaryPosts = rest.slice(0, 3);
 const allOtherPosts = rest.slice(3);
 
+const visiblePosts = allOtherPosts.slice(0, 8);
+const hiddenPosts = allOtherPosts.slice(8, 16);
+
 ---
 
 <!-- <MainLayout /> -->
@@ -134,12 +137,23 @@ const allOtherPosts = rest.slice(3);
     </div>
     <div class="home-main__all-container">
       <section>
-
+        {
+          visiblePosts.map((post) => (
+            <PostCard frontmatter={post.frontmatter} url={post.url} />
+          ))
+        }
+        
           {
-            allOtherPosts.map((post) => (
-              <PostCard frontmatter={post.frontmatter} url={post.url} />
+            hiddenPosts.map((post) => (
+              <div class="hidden-post">
+                <PostCard frontmatter={post.frontmatter} url={post.url} />
+              </div>
             ))
           }
+        
+
+         
+          
         <!-- <div class="all-article-container">
           <div class="all-article_img-wrapper">
             <img src="/images/articles/trending-1.jpg" alt="">
@@ -207,7 +221,13 @@ const allOtherPosts = rest.slice(3);
     
       </section>
 
-      <div class="all-articles-button">
+      <div class="show-more-button">
+        <button>
+          Смотреть ещё
+        </button>
+      </div>
+
+      <div class="view-all-articles-button">
         <a href="/blog">
           Все статьи
         </a>
@@ -367,6 +387,10 @@ const allOtherPosts = rest.slice(3);
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
+  
+  .home-main__all-container .hidden-post {
+    display: none;
+  }
 
   .all-article_img-wrapper {
     /* width: 280px; */
@@ -374,14 +398,27 @@ const allOtherPosts = rest.slice(3);
     height: 300px;
   }
 
-  .all-articles-button {
+  .show-more-button {
     margin-top: 3rem;
-    display: flex;
-    justify-content: center;
-    /* gap: 1rem; */  
+    cursor: pointer;
+    margin-inline: auto;
+    width: fit-content;
+    border: 1px solid red;
   }
 
-  .all-articles-button a {
+  .view-all-articles-button {
+    display: none;
+    margin-top: 3rem;
+    justify-content: center;
+  }
+
+  .show-more-button button {
+    border: none;
+    cursor: pointer;
+  }
+
+  .view-all-articles-button a,
+  .show-more-button button {
     background-color: var(--selection-clr);
     color: #442C2E;
     padding: 1rem 2rem;
@@ -396,3 +433,15 @@ const allOtherPosts = rest.slice(3);
   }
   
 </style>
+
+<script>
+  const showMoreBtn = document.querySelector('.show-more-button');
+  const viewAllBtn = document.querySelector('.view-all-articles-button');
+  const hiddenPosts = document.querySelectorAll('.hidden-post');
+
+  showMoreBtn.addEventListener('click', () => {
+    hiddenPosts.forEach(post => post.style.display = 'block');
+    showMoreBtn.style.display = 'none';
+    viewAllBtn.style.display = 'flex';
+  });
+</script>
