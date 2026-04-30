@@ -1,0 +1,20 @@
+---
+import siteData from "../data/siteData.json";
+import jsonLDGenerator from "../js/jsonLD";
+
+const {
+  title,
+  description,
+  url = Astro.url,
+  image,
+  frontmatter,
+  robots,
+} = Astro.props;
+
+const jsonLD = jsonLDGenerator({
+  type: frontmatter ? "post" : "website",
+  post: frontmatter,
+  url,
+});
+
+---

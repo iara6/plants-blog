@@ -4,7 +4,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout>
-  <main class="content-container">
+  <main class="content-container content-container-404">
     <div class="container-404">
       <h1>
         Страница не найдена :( 
@@ -12,15 +12,26 @@ import MainLayout from "../layouts/MainLayout.astro";
       <p>
         Поищите что-то еще.
       </p>
+       <div class="home-button">
+        <a href="/">
+          Домой
+        </a>
+      </div>
     </div>
-
   </main>
 </MainLayout>
 
 <style>
+  .content-container-404 {
+    min-height: calc(100vh - 486px); /* hero + header + paddings + footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .container-404 {
     border: 1px solid red;
     padding: 2rem;
+    /* flex: 1; */
     display: grid;
     place-items: center;
   }
@@ -32,4 +43,16 @@ import MainLayout from "../layouts/MainLayout.astro";
     font-size: 1.5rem;
     font-weight: 400;
   }
+  .home-button {
+    margin-top: 3rem;
+  }
+  .home-button a {
+    background-color: var(--selection-clr);
+    color: #442C2E;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+  }
+
 </style>
