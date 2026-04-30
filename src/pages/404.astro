@@ -1,0 +1,35 @@
+---
+// component imports
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <main class="content-container">
+    <div class="container-404">
+      <h1>
+        Страница не найдена :( 
+      </h1>
+      <p>
+        Поищите что-то еще.
+      </p>
+    </div>
+
+  </main>
+</MainLayout>
+
+<style>
+  .container-404 {
+    border: 1px solid red;
+    padding: 2rem;
+    display: grid;
+    place-items: center;
+  }
+  .container-404 h1 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .container-404 p {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+</style>
