@@ -1,16 +1,19 @@
 ---
 // component imports
-import MainLayout from "../../layouts/MainLayout.astro";
-import PostCard from "../../components/PostCard.astro";
+import MainLayout from "../../../layouts/MainLayout.astro";
+import PostCard from "../../../components/PostCard.astro";
 
 // utils imports
-import { formatBlogPosts } from '../../js/utils';
+import { formatBlogPosts } from '../../../js/utils';
 
-export async function getStaticPaths() {
+export async function getStaticPaths({ paginate }) {
   const allPosts = Object.values(
-    import.meta.glob("../../pages/blog/*.md", { eager: true })
+   /*  import.meta.glob("../../../pages/blog/*.md", { eager: true }) */
+    import.meta.glob("/src/pages/blog/*.md", { eager: true })
   );
+
   const formattedPosts = formatBlogPosts(allPosts);
+
   const allAuthors = [
     ...new Map(
       formattedPosts.map((post) => [
@@ -19,19 +22,21 @@ export async function getStaticPaths() {
       ])
     ).values(),
   ];
-  return allAuthors.map((author) => {
+
+  return allAuthors.flatMap((author) => {
     const authorPosts = formattedPosts.filter((post) => post.frontmatter.author.slug === author.slug);
-    return {
+
+    return paginate(authorPosts, {
       params: { author: author.slug},
       props: {
         authorName: author.name,
-        posts: authorPosts, 
-      }
-    }
-  })
+      },
+      pageSize: 9,
+    });
+  });
 }
 
-const { posts, authorName } = Astro.props;
+const { page, posts, authorName } = Astro.props;
 
 ---
 
@@ -42,12 +47,26 @@ const { posts, authorName } = Astro.props;
       
       <div class="author-posts-container">
         {
-          posts.map((post) => (
+          page.data.map((post) => (
             <PostCard frontmatter={post.frontmatter} url={post.url} />
           ))
         }
       </div>
+
     </div>
+
+    <div class="pagination-buttons">
+      {page.url.prev && <a href={page.url.prev}>
+        <img src="/icons/left.svg" alt="">
+         Назад
+         </a>}
+      {page.url.next && <a href={page.url.next}>
+        Вперёд <img src="/icons/right.svg" alt="">
+        </a>}
+    </div>
+    <p class="page-number">
+      Страница {page.currentPage} из {page.lastPage}
+    </p>
 
   </main>
 </MainLayout>
