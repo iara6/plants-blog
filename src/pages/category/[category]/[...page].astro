@@ -2,6 +2,7 @@
 // component imports
 import MainLayout from "../../../layouts/MainLayout.astro";
 import PostCard from "../../../components/PostCard.astro";
+import CategoryCloud from "../../../components/CategoryCloud.astro";
 
 // utils imports
 import { formatBlogPosts } from '../../../js/utils';
@@ -81,7 +82,10 @@ const { page, name } = Astro.props;
     <p class="page-number">
       Страница {page.currentPage} из {page.lastPage}
     </p>
-
+    <h2 class="all-categories-h2">Все категории</h2>
+    <div class="category-cloud-container">
+      <CategoryCloud showCount={true} />
+    </div>
   </main>
 </MainLayout>
 

@@ -22,14 +22,17 @@ const { relatedPosts } = Astro.props;
 }
 
 <style>
+  .related-post:not(:first-child)  {
+    border-bottom: 1px solid rgb(153, 152, 152, 0.5);
+    padding: 0 0.5rem 1rem;
+  }
+  .related-post:not(:first-child)  {
+    padding-top: 1rem;
+  }
   .related-post-image {
     height: 280px;
     width: 100%;
     object-fit: cover;
-  }
-  .related-post {
-    border-bottom: 1px solid rgb(153, 152, 152, 0.5);
-    padding: 1rem 0.5rem;
   }
   .related-post a {
     color: var(--primary-clr-dark);

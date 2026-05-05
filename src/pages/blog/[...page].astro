@@ -45,7 +45,7 @@ const { page } = Astro.props;
     <p class="page-number">
       Страница {page.currentPage} из {page.lastPage}
     </p>
-    <h2>Все категории</h2>
+    <h2 class="all-categories-h2">Все категории</h2>
     <div class="category-cloud-container">
       <CategoryCloud showCount={true} />
     </div>
@@ -61,22 +61,10 @@ const { page } = Astro.props;
     margin-bottom: 2rem;
   }
 
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-clr-dark);
-    margin: 2rem 0 1rem;    
-    text-align: center;
-  }
-
   .all-posts-container {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   }
 
-  .category-cloud-container {
-    display: flex;
-    justify-content: center;
-  }
 </style>
