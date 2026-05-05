@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-9.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: Учитывая ключевые сценарии поведения, внедрение современных методик играет важную роль в формировании кластеризации усилий.
 draft: false
 category: {
   name: "Природа",

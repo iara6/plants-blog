@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-10.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: С другой стороны, сложившаяся структура организации создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий.
 draft: false
 category: {
   name: "Природа",

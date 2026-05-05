@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-9.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: Прежде всего, дальнейшее развитие различных форм деятельности позволяет выполнить важные задания по разработке поставленных обществом задач.
 draft: false
 category: {
   name: "Природа",

@@ -17,15 +17,21 @@ const { title, description, date, category, author, image } = frontmatter;
     <h3>
       <a href={url}>{title}</a>
     </h3>
-<!--     <span>
-      <a href={`/author/${author.slug}/`}>{author.name}</a> • <a href={`/category/${category.slug}/`}>{category.name}</a> • {formatDate(date)} 
+    <span>
+      <span class="secondary-post-date">{formatDate(date)} </span> • <a href={`/author/${author.slug}/`}>{author.name}</a>
     </span>
+<!--     
     <p class="secondary__description">{description}</p> -->
   </div>
 </div>
 
 
 <style>
+  .secondary-post {
+    color: var(--primary-clr-dark);
+    /* border-bottom: 1px solid rgb(153, 152, 152, 0.5);
+    padding-bottom: 1rem; */
+  }
   .secondary-post a {
     color: var(--primary-clr-dark);
     text-decoration: none;
@@ -33,7 +39,10 @@ const { title, description, date, category, author, image } = frontmatter;
   .secondary-post h3 {
     font-size: 1.3rem;
     font-weight: 600;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0.4rem;
+  }
+  .secondary-post-date {
+    font-size: 0.9rem;
   }
   .secondary__img-link {
     display: block;
@@ -49,5 +58,8 @@ const { title, description, date, category, author, image } = frontmatter;
   .secondary__description {
     font-size: 1.1rem;
     font-weight: 300;
+  }
+  .secondary-post span {
+    opacity: 0.9;
   }
 </style>

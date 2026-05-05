@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-11.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: Банальные, но неопровержимые выводы, а также действия представителей оппозиции являются только методом политического участия и в равной степени предоставлены сами себе!
 draft: false
 category: {
   name: "Жизнь",

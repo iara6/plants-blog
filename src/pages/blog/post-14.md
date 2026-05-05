@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-5.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: С другой стороны, граница обучения кадров позволяет оценить значение укрепления моральных ценностей.
 draft: false
 category: {
   name: "Отдых",

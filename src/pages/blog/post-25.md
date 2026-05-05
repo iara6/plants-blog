@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-5.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: Мы вынуждены отталкиваться от того, что консультация с широким активом, в своём классическом представлении.
 draft: false
 category: {
   name: "Отдых",

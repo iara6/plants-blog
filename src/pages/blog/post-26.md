@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-6.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: Внезапно, интерактивные прототипы формируют глобальную экономическую сеть и при этом ассоциативно распределены по отраслям.
 draft: false
 category: {
   name: "Отдых",

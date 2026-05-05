@@ -6,9 +6,8 @@ const { frontmatter, url /* tagType */ } = Astro.props;
 /* const Tag = tagType; */
 
 const { title, description, date, category, author, image } = frontmatter;
+
 ---
-
-
 
 <div class="featured-post">
   <a class="featured__img-link" href={url}>
@@ -27,6 +26,9 @@ const { title, description, date, category, author, image } = frontmatter;
 
 
 <style>
+  .featured-post {
+    color: var(--primary-clr-dark);
+  }
   .featured-post a {
     color: var(--primary-clr-dark);
     text-decoration: none;
@@ -34,7 +36,7 @@ const { title, description, date, category, author, image } = frontmatter;
   .featured-post h3 {
     font-size: 2rem;
     font-weight: 600;
-    margin: 1rem 0;
+    margin: 1rem 0 0.4rem;
   }
   .featured__img-link {
     display: block;
@@ -48,7 +50,8 @@ const { title, description, date, category, author, image } = frontmatter;
     object-fit: cover;
   }
   .featured__description {
-    font-size: 1.1rem;
-    font-weight: 300;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 1rem;
   }
 </style>

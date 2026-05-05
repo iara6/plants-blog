@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-8.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: Значимость этих проблем настолько очевидна, что разбавленное изрядной долей эмпатии, рациональное мышление предполагает независимые способы.
 draft: false
 category: {
   name: "Природа",

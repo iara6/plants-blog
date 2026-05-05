@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-5.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: Равным образом, социально-экономическое развитие обеспечивает актуальность. Как уже неоднократно упомянуто, реплицированные с зарубежных источников.
 draft: false
 category: {
   name: "Отдых",

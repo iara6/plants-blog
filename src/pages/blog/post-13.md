@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-13.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: "Ясность нашей позиции очевидна: синтетическое тестирование влечет за собой процесс внедрения и модернизации распределения внутренних резервов и ресурсов."
 draft: false
 category: {
   name: "Жизнь",

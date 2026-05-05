@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-7.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: Современные технологии достигли такого уровня, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу.
 draft: false
 category: {
   name: "Отдых",

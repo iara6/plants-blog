@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-4.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. Well, hello.
+description: Противоположная точка зрения подразумевает, что некоторые особенности внутренней политики набирают популярность среди определенных слоев населения.
 draft: false
 category: {
   name: "Полезное",

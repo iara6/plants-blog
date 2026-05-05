@@ -88,15 +88,6 @@ const hiddenPosts = allOtherPosts.slice(8, 16);
       <section class="new-articles-section">
         <div class="new-articles-section__highlight">
           <PostCardFeatured frontmatter={featured.frontmatter} url={featured.url} />
-          <!-- <div class="new-highlight-container">
-            <div class="new-highlight_img-wrapper">
-              <img src="/images/articles/trending-1.jpg" alt="">
-            </div>
-            <div>
-              <h3>Лучшее место на земле</h3>
-              <span class="new-highlight-description">В своём стремлении улучшить пользовательский опыт мы упускаем, что непосредственные участники технического прогресса ограничены исключительно образом мышления. Но глубокий уровень погружения играет определяющее значение для экономической целесообразности принимаемых решений.</span>
-            </div>
-          </div> -->
         </div>
         <div class="new-articles-section__secondary">
           {
@@ -104,34 +95,6 @@ const hiddenPosts = allOtherPosts.slice(8, 16);
               <PostCardSecondary frontmatter={post.frontmatter} url={post.url} />
             ))
           }
-
-          
-          
-
-<!--           <div class="new-secondary-container">
-            <div class="new-secondary_img-wrapper">
-              <img src="/images/articles/trending-2.jpg" alt="">
-            </div>
-            <div>
-              <h3>Как подружиться с гусём?</h3>
-            </div>
-          </div> -->
-<!--           <div class="new-secondary-container">
-            <div class="new-secondary_img-wrapper">
-              <img src="/images/articles/trending-3.jpg" alt="">
-            </div>
-            <div>
-              <h3>Тушим костёр правильно</h3>
-            </div>
-          </div>
-          <div class="new-secondary-container">
-            <div class="new-secondary_img-wrapper">
-              <img src="/images/articles/trending-4.jpg" alt="">
-            </div>
-            <div>
-              <h3>Советы для начинающих лесников</h3>
-            </div>
-          </div> -->
         </div>
       </section>
     </div>
@@ -336,16 +299,6 @@ const hiddenPosts = allOtherPosts.slice(8, 16);
     height: 100%;
     border-radius: 6px;
     object-fit: cover;
-  }
-
-  .new-highlight-container h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin: 1rem 0;
-  }
-  .new-highlight-description {
-    font-size: 1.1rem;
-    font-weight: 300;
   }
 
   .new-articles-section__secondary {

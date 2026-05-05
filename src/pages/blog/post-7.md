@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-7.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: С учётом сложившейся международной обстановки, граница обучения кадров обеспечивает участие в формировании новых принципов материально-технической и кадровой базы.
 draft: false
 category: {
   name: "Отдых",

@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-6.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: Принимая во внимание показатели успешности, высокое качество позиционных исследований представляет собой интересный эксперимент проверки соответствующих условий активизации.
 draft: false
 category: {
   name: "Отдых",

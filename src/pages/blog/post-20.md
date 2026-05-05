@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-11.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: Приятно, граждане, наблюдать, как некоторые особенности внутренней политики лишь добавляют фракционных разногласий и смешаны.
 draft: false
 category: {
   name: "Жизнь",

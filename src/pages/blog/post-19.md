@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-10.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: В рамках спецификации современных стандартов, многие известные личности представляют собой квинтэссенцию победы маркетинга.
 draft: false
 category: {
   name: "Природа",

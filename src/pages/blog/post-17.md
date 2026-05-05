@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-8.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: В целом, конечно, базовый вектор развития однозначно фиксирует необходимость анализа существующих паттернов поведения.
 draft: false
 category: {
   name: "Природа",

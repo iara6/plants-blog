@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-3.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible.
+description: Равным образом, постоянный количественный рост и сфера нашей активности требует анализа поставленных обществом задач.
 draft: false
 category: {
   name: "Полезное",

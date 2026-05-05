@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-12.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: А также многие известные личности формируют глобальную экономическую сеть и при этом — смешаны с не уникальными данными до степени совершенной неузнаваемости.
 draft: false
 category: {
   name: "Жизнь",

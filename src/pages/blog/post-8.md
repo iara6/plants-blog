@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-8.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: Разнообразный и богатый опыт говорит нам, что постоянное информационно-пропагандистское обеспечение нашей деятельности, а также свежий взгляд на привычные вещи.
 draft: false
 category: {
   name: "Природа",

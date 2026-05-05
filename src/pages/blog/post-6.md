@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-6.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: Современные технологии достигли такого уровня, что укрепление и развитие внутренней структуры в значительной степени.
 draft: false
 category: {
   name: "Отдых",

@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-1.jpg",
   alt: "A picture of a traveler",
 }
-description: Sometimes you just run out of ideas for sample blog posts. It’s no one’s fault, it’s just the way it is.
+description: Приятно, граждане, наблюдать, как реплицированные с зарубежных источников, современные исследования представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть разоблачены.
 draft: false
 category: {
   name: "Советы",

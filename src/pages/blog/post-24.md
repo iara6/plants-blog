@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-4.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. Well, hello.
+description: Противоположная точка зрения подразумевает, что сторонники тоталитаризма в науке, превозмогая сложившуюся непростую экономическую ситуацию.
 draft: false
 category: {
   name: "Полезное",

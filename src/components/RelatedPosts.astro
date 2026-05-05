@@ -1,6 +1,6 @@
 ---
 // utils imports
-import { slugify } from "../js/utils";
+import { slugify, formatDate } from "../js/utils";
 
 const { relatedPosts } = Astro.props;
 ---
@@ -15,32 +15,40 @@ const { relatedPosts } = Astro.props;
         <a href={post.url}>{post.frontmatter.title}</a>
       </h3>
       <span>
-        <a href={`/author/${post.frontmatter.author.slug}/`}>{post.frontmatter.author.name}</a> • <a class="article-category" href={`/category/${slugify(post.frontmatter.category.slug)}/`}>{post.frontmatter.category.name}</a> 
+        <a href={`/author/${post.frontmatter.author.slug}/`}>{post.frontmatter.author.name}</a> • {/* <a class="article-category" href={`/category/${slugify(post.frontmatter.category.slug)}/`}>{post.frontmatter.category.name}</a>*/}
+        <span class="related-post-date">{formatDate(post.frontmatter.date)}</span>
       </span>
     </div>   
   ))
 }
 
 <style>
-  .related-post:not(:first-child)  {
+  .related-post {
     border-bottom: 1px solid rgb(153, 152, 152, 0.5);
-    padding: 0 0.5rem 1rem;
+    padding-bottom: 1rem;
   }
   .related-post:not(:first-child)  {
-    padding-top: 1rem;
+    padding-top: 1.2rem;
   }
   .related-post-image {
     height: 280px;
     width: 100%;
     object-fit: cover;
+    border-radius: 6px;
   }
   .related-post a {
     color: var(--primary-clr-dark);
     text-decoration: none;
   }
   .related-post h3 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    margin-top: 0.8rem;
+    margin: 0.8rem 0 0.4rem;
+  }
+  .related-post span {
+    color: var(--primary-clr-dark);
+  }
+  .related-post-date {
+    font-size: 0.9rem;
   }
 </style>

@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-7.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible. New information.
+description: Лишь сделанные на базе интернет-аналитики выводы призывают нас к новым свершениям, которые, в свою очередь, должны быть обнародованы.
 draft: false
 category: {
   name: "Отдых",

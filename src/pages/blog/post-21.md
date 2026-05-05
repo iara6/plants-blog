@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-1.jpg",
   alt: "A picture of a traveler",
 }
-description: Sometimes you just run out of ideas for sample blog posts. It’s no one’s fault, it’s just the way it is.
+description: "Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий требует от нас анализа первоочередных требований."
 draft: false
 category: {
   name: "Советы",

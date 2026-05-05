@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
-title: Тушим костёр правильно Post 23
+title: Как правильно ухаживать за геранью Post 23
 date: 2025-11-28
 author: {
   name: "Виктория Чижова",
@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/trending-3.jpg",
   alt: "A picture of something",
 }
-description: Sometimes really awesome and incredible.
+description: Мы вынуждены отталкиваться от того, что перспективное планирование играет определяющее значение для благоприятных перспектив.
 draft: false
 category: {
   name: "Полезное",
