@@ -1,15 +1,33 @@
+@font-face {
+  font-family: 'Commissioner';
+  src: url('/fonts/commissioner-font.woff2') format('woff2');
+  font-display: swap;
+}
+
 *,
 *:after,
 *:before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font: inherit;
 }
 
 body {
- /*  background-color: var(--secondary-clr); */
+  color: var(--primary-clr-dark);
+  font-family: "Commissioner", sans-serif;
+
+/* font-family: "IBM Plex Sans", sans-serif; */
+/* font-family: "Onest", sans-serif; */
+
+/* font-family: "Golos Text", sans-serif; */
+/* font-family: "Commissioner", sans-serif; */
+/* font-family: "Geologica", sans-serif; */
+/*  background-color: var(--secondary-clr); */
 }
+
+/* h1, h2, h3 {
+  font-family: "Golos Text", sans-serif;
+} */
 
 :root {
   --primary-clr: #FEDBD0;
@@ -65,7 +83,7 @@ html {
   /* font-family: "Onest", sans-serif; */
 
  /*  font-family: "Golos Text", sans-serif; */
-  font-family: "Commissioner", sans-serif;
+  /* font-family: "Commissioner", sans-serif; */
  /* font-family: "Geologica", sans-serif; */
 
 }
@@ -129,7 +147,7 @@ html::before {
 .article-category {
   color: #1f0f0c !important;
   background-color: rgb(181, 242, 181);
-  padding: 2px 5px;
+  padding: 2px 6px;
   border-radius: 4px;
 }
 

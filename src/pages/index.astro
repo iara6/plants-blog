@@ -105,80 +105,20 @@ const hiddenPosts = allOtherPosts.slice(8, 16);
             <PostCard frontmatter={post.frontmatter} url={post.url} />
           ))
         }
-        
-          {
-            hiddenPosts.map((post) => (
-              <div class="hidden-post">
-                <PostCard frontmatter={post.frontmatter} url={post.url} />
-              </div>
-            ))
-          }
-        
+        {
+          hiddenPosts.map((post) => (
+            <div class="hidden-post">
+              <PostCard frontmatter={post.frontmatter} url={post.url} />
+            </div>
+          ))
+        }
 
-         
-          
         <!-- <div class="all-article-container">
           <div class="all-article_img-wrapper">
             <img src="/images/articles/trending-1.jpg" alt="">
           </div>
           <div> 
             <h3>Лучшее место на земле</h3>
-          </div>
-        </div>
-        <div class="all-article-container">
-          <div class="all-article_img-wrapper">
-            <img src="/images/articles/trending-2.jpg" alt="">
-          </div>
-          <div> 
-            <h3>Как подружиться с гусём?</h3>
-          </div>
-        </div>
-        <div class="all-article-container">
-          <div class="all-article_img-wrapper">
-            <img src="/images/articles/trending-3.jpg" alt="">
-          </div>
-          <div> 
-            <h3>Тушим костёр правильно</h3>
-          </div>
-        </div>
-        <div class="all-article-container">
-          <div class="all-article_img-wrapper">
-            <img src="/images/articles/trending-4.jpg" alt="">
-          </div>
-          <div> 
-            <h3>Советы для начинающих лесников</h3>
-          </div>
-        </div>
-        <div class="all-article-container">
-          <div class="all-article_img-wrapper">
-            <img src="/images/articles/trending-5.jpg" alt="">
-          </div>
-          <div> 
-            <h3>Собираем полевой букет</h3>
-          </div>
-        </div>
-        <div class="all-article-container">
-          <div class="all-article_img-wrapper">
-            <img src="/images/articles/trending-6.jpg" alt="">
-          </div>
-          <div> 
-            <h3>Простой скворечник: пошаговая инструкция</h3>
-          </div>
-        </div>
-        <div class="all-article-container">
-          <div class="all-article_img-wrapper">
-            <img src="/images/articles/trending-7.jpg" alt="">
-          </div>
-          <div> 
-            <h3>Весеннее равноденствие в жизни птиц</h3>
-          </div>
-        </div>
-        <div class="all-article-container">
-          <div class="all-article_img-wrapper">
-            <img src="/images/articles/trending-8.jpg" alt="">
-          </div>
-          <div> 
-            <h3>Нет ничего лучше чтения на природе</h3>
           </div>
         </div> -->
     
@@ -304,8 +244,8 @@ const hiddenPosts = allOtherPosts.slice(8, 16);
   .new-articles-section__secondary {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    border: 1px solid red;
+    gap: 1.5rem;
+    /* border: 1px solid red; */
   }
   
   .new-secondary-container {

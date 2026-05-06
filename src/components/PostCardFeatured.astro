@@ -18,7 +18,7 @@ const { title, description, date, category, author, image } = frontmatter;
       <a href={url}>{title}</a>
     </h3>
     <span>
-      <a href={`/author/${author.slug}/`}>{author.name}</a> • <a href={`/category/${category.slug}/`}>{category.name}</a> • {formatDate(date)} 
+      <span class="featured-post-date">{formatDate(date)}</span> • <a href={`/author/${author.slug}/`}>{author.name}</a> • <span class="article-category"><a href={`/category/${category.slug}/`}>{category.name}</a></span>
     </span>
     <p class="featured__description">{description}</p>
   </div>
@@ -26,9 +26,6 @@ const { title, description, date, category, author, image } = frontmatter;
 
 
 <style>
-  .featured-post {
-    color: var(--primary-clr-dark);
-  }
   .featured-post a {
     color: var(--primary-clr-dark);
     text-decoration: none;
@@ -48,6 +45,12 @@ const { title, description, date, category, author, image } = frontmatter;
     height: 100%;
     border-radius: 6px;
     object-fit: cover;
+  }
+  .featured-post span {
+    opacity: 0.9;
+  }
+  .featured-post-date {
+    font-size: 0.9rem;
   }
   .featured__description {
     font-size: 1.2rem;
