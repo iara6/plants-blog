@@ -4,6 +4,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import PostCardFeatured from '../components/PostCardFeatured.astro';
 import PostCardSecondary from '../components/PostCardSecondary.astro';
+import PostCardTrending from '../components/PostCardTrending.astro';
 
 // utils imports
 import { formatBlogPosts } from "../js/utils";
@@ -21,6 +22,12 @@ const allOtherPosts = rest.slice(3);
 const visiblePosts = allOtherPosts.slice(0, 8);
 const hiddenPosts = allOtherPosts.slice(8, 16);
 
+const formattedTrendingPosts = formatBlogPosts(allOtherPosts, {
+  sortByDate: false,
+});
+
+const trendingPosts = formattedTrendingPosts.slice(0, 7);
+
 ---
 
 <!-- <MainLayout /> -->
@@ -30,7 +37,7 @@ const hiddenPosts = allOtherPosts.slice(8, 16);
     <div class="home-main__new-articles-container">
       <section class="trending-section">
         <h2>Популярное за месяц</h2>
-        <div class="trending-article-container">
+        <!-- <div class="trending-article-container">
           <div class="trending-article_img-wrapper">
             <img src="/images/articles/trending-1.jpg" alt="">
           </div>
@@ -38,8 +45,18 @@ const hiddenPosts = allOtherPosts.slice(8, 16);
             <h3>Лучшее место на земле</h3>
             <span>30/05/2016</span> • <span class="article-category">Жизнь</span>
           </div>
-        </div>
-        <div class="trending-article-container">
+        </div> -->
+
+        {
+          trendingPosts.map((post) => (
+            <PostCardTrending frontmatter={post.frontmatter} url={post.url} />
+          ))
+        }
+
+
+
+
+<!--         <div class="trending-article-container">
           <div class="trending-article_img-wrapper">
             <img src="/images/articles/trending-2.jpg" alt="">
           </div>
@@ -83,7 +100,7 @@ const hiddenPosts = allOtherPosts.slice(8, 16);
             <h3>Простой скворечник: пошаговая инструкция</h3>
             <span>09/05/2016</span> • <span class="article-category">Полезное</span>
           </div>
-        </div>
+        </div> -->
       </section>
       <section class="new-articles-section">
         <div class="new-articles-section__highlight">

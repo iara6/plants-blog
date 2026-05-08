@@ -14,17 +14,21 @@ const { title, description, date, category, author, image } = frontmatter;
   </a>
   <div> 
     <h3><a href={url}>{title}</a></h3>
-    <span class="trending-post-date">{formatDate(date)}</span> • <span class="article-category"><a href={`/category/${category.slug}/`}>{category.name}</a></span>
+    <!-- <span class="trending-post-date">{formatDate(date)}</span> • --><span class="article-category"><a href={`/category/${category.slug}/`}>{category.name}</a></span>
   </div>
 </div>
 
 <style>
-   .trending-post-container {
+  .trending-post-container {
     display: flex;
     align-items: center;
     gap: 1rem;
     padding: 1rem 0;
     /* border: 2px solid hotpink; */
+  }
+  .trending-post-container a {
+    color: var(--primary-clr-dark);
+    text-decoration: none;
   }
   .trending-post_img-wrapper {
     width: 110px;
@@ -41,13 +45,11 @@ const { title, description, date, category, author, image } = frontmatter;
   .trending-post-container h3 {
     font-size: 1.1rem;
     font-weight: 500;
+    margin-bottom: 0.3rem;
   }
-
   .trending-post-container span {
-    font-size: 0.9rem;
-    opacity: 0.9;
+    font-size: 0.85rem;
+    opacity: 0.8;
   }
 
-
-  
 </style>
