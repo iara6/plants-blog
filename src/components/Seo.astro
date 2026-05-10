@@ -6,15 +6,27 @@ const {
   title,
   description,
   url = Astro.url,
-  image,
   frontmatter,
   robots,
 } = Astro.props;
 
-const jsonLD = jsonLDGenerator({
+/* const jsonLD = jsonLDGenerator({
   type: frontmatter ? "post" : "website",
   post: frontmatter,
   url,
-});
+}); */
 
 ---
+<!-- SEO -->
+<link rel="canonical" href={url} />
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="My Astro Blog" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={url} />
+
+{robots && <meta name="robots" content="noindex, nofollow" />}
+
+<!-- JSON LD -->
+<!-- <Fragment set:html={jsonLD} /> -->

@@ -1,5 +1,6 @@
 ---
 // component imports
+import MainHead from "./MainHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import BackToTop from "../components/BackToTop.astro";
@@ -12,7 +13,7 @@ import CategoryCloud from "../components/CategoryCloud.astro";
 import { formatBlogPosts } from "../js/utils";
 
 // style import
-import "../styles/styles.css";
+/* import "../styles/styles.css"; */
 
 /* const { post } = Astro.props; */
 const { frontmatter } = Astro.props;
@@ -38,22 +39,25 @@ const relatedPosts = formattedPosts
 
 <!doctype html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8" />
+  <MainHead {title} {description} {image} {frontmatter} robots={true} />
+<!-- 	<head> -->
+	<!-- 	<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-    <link rel="preload" href="/fonts/commissioner-font.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+		<!-- <link rel="icon" href="/favicon.ico" /> -->
+   <!--  <link rel="stylesheet" href="/src/styles/styles.css">
+    <link rel="preload" href="/fonts/commissioner-font.woff2" as="font" type="font/woff2" crossorigin /> -->
 		<!-- <meta name="generator" content={Astro.generator} /> -->
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-		<title>Plants</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+		<title>Plants</title> -->
+
     <!-- <script>
       if (localStorage.getItem('mode') === 'true') {
         document.documentElement.classList.add('dark-mode');
       }
     </script> -->
-	</head>
+	<!-- </head> -->
 	<body>
     <!-- <SlideInHeader /> -->
     <Header />
