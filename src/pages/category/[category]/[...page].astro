@@ -56,7 +56,10 @@ const { page, name } = Astro.props;
 
 ---
 
-<MainLayout>
+<MainLayout
+  title={`Категория: ${name}`}
+  description={`Статьи по тегу ${name.toLowerCase()}`}
+>
   <main class="content-container">
     <h1>Статьи по тегу <span class="highlight">{name?.toLowerCase()}</span></h1>
     <div class="category-page-container" aria-label={`Статьи по тегу ${name}`}>

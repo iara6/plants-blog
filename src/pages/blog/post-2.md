@@ -2,6 +2,7 @@
 layout: "../../layouts/BlogPostLayout.astro"
 title: Как подружиться с гусём? Post 2
 date: 2025-11-28
+robots: true
 author: {
   name: "Виктория Чижова",
   slug: "victoria-chizhova"

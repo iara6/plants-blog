@@ -41,7 +41,10 @@ const { page, posts, authorName } = Astro.props;
 
 ---
 
-<MainLayout>
+<MainLayout
+  title={`Автор: ${authorName}`}
+  description={`Статьи автора ${authorName}`}
+>
   <main class="content-container">
     <h1>Статьи автора <span class="highlight">{authorName}</span></h1>
     <div class="author-page-container" aria-label={`Статьи автора ${authorName}`}>

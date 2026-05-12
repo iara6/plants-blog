@@ -17,7 +17,7 @@ import { formatBlogPosts } from "../js/utils";
 
 /* const { post } = Astro.props; */
 const { frontmatter } = Astro.props;
-const { title, description, date, category, author, image } = frontmatter;
+const { title, description, date, category, author, image, robots } = frontmatter;
 
 const allPosts = Object.values(
   import.meta.glob("../pages/blog/*.md", { eager: true })
@@ -39,7 +39,7 @@ const relatedPosts = formattedPosts
 
 <!doctype html>
 <html lang="ru">
-  <MainHead {title} {description} {image} {frontmatter} robots={true} />
+  <MainHead {title} {description} {image} {frontmatter} robots={robots} />
 <!-- 	<head> -->
 	<!-- 	<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />

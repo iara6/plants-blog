@@ -2,6 +2,7 @@
 layout: "../../layouts/BlogPostLayout.astro"
 title: Лучшее место на земле Post 1
 date: 2025-11-25
+robots: true
 author: {
   name: "Виктория Чижова",
   slug: "victoria-chizhova",
