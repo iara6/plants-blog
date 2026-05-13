@@ -1,0 +1,26 @@
+---
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
+import { slugify } from "../../js/utils";
+
+const posts = Object.values(
+  import.meta.glob('./*.md', { eager: true })
+);
+
+export async function getStaticPaths() {
+  return posts.map((post) => ({
+    params: {
+      slug: slugify(post.frontmatter.title),
+    },
+    props: {
+      post,
+    },
+  }));
+}
+
+const { post } = Astro.props;
+const Content = post.default;
+---
+
+<BlogPostLayout frontmatter={post.frontmatter}>
+  <Content />
+</BlogPostLayout>

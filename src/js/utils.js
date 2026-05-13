@@ -1,4 +1,13 @@
+import { slugify as translitSlugify } from 'transliteration';
+
 export function slugify(text) {
+  return translitSlugify(text, {
+    lowercase: true,
+    separator: '-',
+  });
+}
+
+/* export function slugify(text) {
   return text
     .toString()
     .toLowerCase()
@@ -7,7 +16,7 @@ export function slugify(text) {
     .replace(/--+/g, '-')
     .replace(/^-+/, '')
     .replace(/-+$/, '');
-}
+} */
 
 export function formatDate(date) {
   return new Date(date).toLocaleDateString('ru-RU', {

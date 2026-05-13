@@ -5,7 +5,7 @@ import PostCard from "../../components/PostCard.astro";
 import CategoryCloud from "../../components/CategoryCloud.astro";
 
 // utils imports
-import { formatBlogPosts } from '../../js/utils';
+import { slugify, formatBlogPosts } from '../../js/utils';
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = Object.values(
@@ -21,6 +21,7 @@ export async function getStaticPaths({ paginate }) {
 
 const { page } = Astro.props;
 
+
 ---
 
 <MainLayout>
@@ -29,7 +30,7 @@ const { page } = Astro.props;
     <div class="all-posts-container">
       {
         page.data.map((post) => (
-          <PostCard frontmatter={post.frontmatter} url={post.url} />
+          <PostCard frontmatter={post.frontmatter} url={`/blog/${slugify(post.frontmatter.title)}`} />
         ))
       }
     </div>
