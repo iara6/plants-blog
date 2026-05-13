@@ -7,10 +7,10 @@ import PostCardSecondary from '../components/PostCardSecondary.astro';
 import PostCardTrending from '../components/PostCardTrending.astro';
 
 // utils imports
-import { formatBlogPosts } from "../js/utils";
+import { slugify, formatBlogPosts } from "../js/utils";
 
 const allPosts = Object.values(
-  import.meta.glob("../pages/blog/*.md", { eager: true })
+  import.meta.glob("../content/blog/*.md", { eager: true })
 );
 const formattedPosts = formatBlogPosts(allPosts);
 
@@ -49,7 +49,7 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
 
         {
           trendingPosts.map((post) => (
-            <PostCardTrending frontmatter={post.frontmatter} url={post.url} />
+            <PostCardTrending frontmatter={post.frontmatter} url={`/blog/${slugify(post.frontmatter.title)}`} />
           ))
         }
 
@@ -109,7 +109,7 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
         <div class="new-articles-section__secondary">
           {
             secondaryPosts.map((post) => (
-              <PostCardSecondary frontmatter={post.frontmatter} url={post.url} />
+              <PostCardSecondary frontmatter={post.frontmatter} url={`/blog/${slugify(post.frontmatter.title)}`} />
             ))
           }
         </div>
@@ -119,13 +119,13 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
       <section>
         {
           visiblePosts.map((post) => (
-            <PostCard frontmatter={post.frontmatter} url={post.url} />
+            <PostCard frontmatter={post.frontmatter} url={`/blog/${slugify(post.frontmatter.title)}`} />
           ))
         }
         {
           hiddenPosts.map((post) => (
             <div class="hidden-post">
-              <PostCard frontmatter={post.frontmatter} url={post.url} />
+              <PostCard frontmatter={post.frontmatter} url={`/blog/${slugify(post.frontmatter.title)}`} />
             </div>
           ))
         }

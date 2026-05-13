@@ -5,12 +5,12 @@ import PostCard from "../../../components/PostCard.astro";
 import CategoryCloud from "../../../components/CategoryCloud.astro";
 
 // utils imports
-import { formatBlogPosts } from '../../../js/utils';
+import { slugify, formatBlogPosts } from '../../../js/utils';
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = Object.values(
    /*  import.meta.glob("../../../pages/blog/*.md", { eager: true }) */
-    import.meta.glob("/src/pages/blog/*.md", { eager: true })
+    import.meta.glob("/src/content/blog/*.md", { eager: true })
   );
 
   const formattedPosts = formatBlogPosts(allPosts);
@@ -52,7 +52,7 @@ const { page, posts, authorName } = Astro.props;
       <div class="author-posts-container">
         {
           page.data.map((post) => (
-            <PostCard frontmatter={post.frontmatter} url={post.url} />
+            <PostCard frontmatter={post.frontmatter} url={`/blog/${slugify(post.frontmatter.title)}`} />
           ))
         }
       </div>

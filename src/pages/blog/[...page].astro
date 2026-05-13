@@ -9,7 +9,7 @@ import { slugify, formatBlogPosts } from '../../js/utils';
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = Object.values(
-    import.meta.glob("./*.md", { eager: true })
+    import.meta.glob("../../content/blog/*.md", { eager: true })
   );
 
   const formattedPosts = formatBlogPosts(allPosts);

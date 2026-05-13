@@ -1,20 +1,19 @@
 ---
-layout: "../../layouts/BlogPostLayout.astro"
-title: "Простой скворечник: пошаговая инструкция Post 15"
-date: 2025-09-12
+title: Лучшие места для наблюдения за звездами Post 13
+date: 2025-11-11
 author: {
   name: "Дмитрий Ковалев",
   slug: "dmitrij-kovalev"
 }
 image: {
-  src: "/images/articles/trending-6.jpg",
+  src: "/images/articles/trending-13.jpg",
   alt: "A picture of something",
 }
-description: Принимая во внимание показатели успешности, высокое качество позиционных исследований представляет собой интересный эксперимент проверки соответствующих условий активизации.
+description: "Ясность нашей позиции очевидна: синтетическое тестирование влечет за собой процесс внедрения и модернизации распределения внутренних резервов и ресурсов."
 draft: false
 category: {
-  name: "Отдых",
-  slug: "otdyh"
+  name: "Жизнь",
+  slug: "zhizn"
 }
 ---
 
@@ -26,7 +25,7 @@ category: {
 Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing.
 Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor nisi magna ut elit pariatur commodo.
 
-![A traveler](/images/articles/trending-6.jpg)
+![A traveler](/images/articles/trending-13.jpg)
 
 ## Just a nice title
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit tenetur natus, officiis eos eius quaerat? Beatae, deserunt! Ipsa modi nemo nihil facere enim ullam quidem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam placeat obcaecati dolore soluta praesentium rerum numquam, vitae nisi voluptatibus provident itaque dolores quod optio delectus tenetur officiis culpa nam deleniti.

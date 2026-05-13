@@ -1,20 +1,19 @@
 ---
-layout: "../../layouts/BlogPostLayout.astro"
-title: Нет ничего лучше чтения на природе Post 17
-date: 2025-09-17
+title: Собираем полевой букет Post 25
+date: 2025-11-15
 author: {
-  name: "Виктория Чижова",
-  slug: "victoria-chizhova"
+  name: "Дмитрий Ковалев",
+  slug: "dmitrij-kovalev"
 }
 image: {
-  src: "/images/articles/trending-8.jpg",
+  src: "/images/articles/trending-5.jpg",
   alt: "A picture of something",
 }
-description: В целом, конечно, базовый вектор развития однозначно фиксирует необходимость анализа существующих паттернов поведения.
+description: Мы вынуждены отталкиваться от того, что консультация с широким активом, в своём классическом представлении.
 draft: false
 category: {
-  name: "Природа",
-  slug: "priroda"
+  name: "Отдых",
+  slug: "otdyh"
 }
 ---
 
@@ -26,7 +25,7 @@ category: {
 Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing.
 Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor nisi magna ut elit pariatur commodo.
 
-![A traveler](/images/articles/trending-8.jpg)
+![A traveler](/images/articles/trending-5.jpg)
 
 ## Just a nice title
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit tenetur natus, officiis eos eius quaerat? Beatae, deserunt! Ipsa modi nemo nihil facere enim ullam quidem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam placeat obcaecati dolore soluta praesentium rerum numquam, vitae nisi voluptatibus provident itaque dolores quod optio delectus tenetur officiis culpa nam deleniti.

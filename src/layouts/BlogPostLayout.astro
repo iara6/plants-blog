@@ -20,7 +20,7 @@ const { frontmatter } = Astro.props;
 const { title, description, date, category, author, image, robots } = frontmatter;
 
 const allPosts = Object.values(
-  import.meta.glob("../pages/blog/*.md", { eager: true })
+  import.meta.glob("../content/blog/*.md", { eager: true })
 );
 
 // const allPosts = await Astro.glob("../pages/blog/*.md"); DEPRECATED
@@ -40,31 +40,10 @@ const relatedPosts = formattedPosts
 <!doctype html>
 <html lang="ru">
   <MainHead {title} {description} {image} {frontmatter} robots={robots} />
-<!-- 	<head> -->
-	<!-- 	<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
-		<!-- <link rel="icon" href="/favicon.ico" /> -->
-   <!--  <link rel="stylesheet" href="/src/styles/styles.css">
-    <link rel="preload" href="/fonts/commissioner-font.woff2" as="font" type="font/woff2" crossorigin /> -->
-		<!-- <meta name="generator" content={Astro.generator} /> -->
-    <!-- Font Awesome -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-		<title>Plants</title> -->
-
-    <!-- <script>
-      if (localStorage.getItem('mode') === 'true') {
-        document.documentElement.classList.add('dark-mode');
-      }
-    </script> -->
-	<!-- </head> -->
 	<body>
     <!-- <SlideInHeader /> -->
     <Header />
     <main class="post-container">
-<!--      {post?.data?.image && (
-  <img src={post.data.image.src} alt={post.data.image.alt} />
-)} -->
       <div class="post-container__content">
         <PostHeader {title} {date} {category} {author} />
         <slot />

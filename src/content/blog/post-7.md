@@ -1,20 +1,19 @@
 ---
-layout: "../../layouts/BlogPostLayout.astro"
-title: Как подружиться с гусём? Post 22
-date: 2025-11-28
+title: Весеннее равноденствие в жизни птиц Post 7
+date: 2025-11-17
 author: {
-  name: "Виктория Чижова",
-  slug: "victoria-chizhova"
+  name: "Дмитрий Ковалев",
+  slug: "dmitrij-kovalev"
 }
 image: {
-  src: "/images/articles/trending-2.jpg",
+  src: "/images/articles/trending-7.jpg",
   alt: "A picture of something",
 }
-description: Принимая во внимание показатели успешности, сплочённость команды профессионалов требует анализа поставленных обществом задач. Современные технологии достигли такого уровня, что граница обучения кадров обеспечивает широкому кругу (специалистов).
+description: С учётом сложившейся международной обстановки, граница обучения кадров обеспечивает участие в формировании новых принципов материально-технической и кадровой базы.
 draft: false
 category: {
-  name: "Советы",
-  slug: "sovety"
+  name: "Отдых",
+  slug: "otdyh"
 }
 ---
 
@@ -22,11 +21,11 @@ category: {
 - [Section 2](#just-a-nice-title)
 - [Section 3](#title-3)
 
-## Have you ever seen the rain?
+## Have you ever seen fire?
 Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing.
 Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor nisi magna ut elit pariatur commodo.
 
-![A traveler](/images/articles/trending-2.jpg)
+![A traveler](/images/articles/trending-7.jpg)
 
 ## Just a nice title
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit tenetur natus, officiis eos eius quaerat? Beatae, deserunt! Ipsa modi nemo nihil facere enim ullam quidem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam placeat obcaecati dolore soluta praesentium rerum numquam, vitae nisi voluptatibus provident itaque dolores quod optio delectus tenetur officiis culpa nam deleniti.

@@ -3,7 +3,7 @@
 import { formatBlogPosts } from '../js/utils';
 
 const allPosts = Object.values(
-  import.meta.glob("../pages/blog/*.md", { eager: true })
+  import.meta.glob("../content/blog/*.md", { eager: true })
 );
 const formattedPosts = formatBlogPosts(allPosts);
 

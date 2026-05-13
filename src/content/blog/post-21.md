@@ -1,32 +1,31 @@
 ---
-layout: "../../layouts/BlogPostLayout.astro"
-title: Весеннее равноденствие в жизни птиц Post 27
-date: 2025-11-17
+title: Лучшее место на земле Post 21
+date: 2025-11-25
 author: {
-  name: "Дмитрий Ковалев",
-  slug: "dmitrij-kovalev"
+  name: "Виктория Чижова",
+  slug: "victoria-chizhova",
 }
 image: {
-  src: "/images/articles/trending-7.jpg",
-  alt: "A picture of something",
+  src: "/images/articles/trending-1.jpg",
+  alt: "A picture of a traveler",
 }
-description: Лишь сделанные на базе интернет-аналитики выводы призывают нас к новым свершениям, которые, в свою очередь, должны быть обнародованы.
+description: "Наше дело не так однозначно, как может показаться: понимание сути ресурсосберегающих технологий требует от нас анализа первоочередных требований."
 draft: false
 category: {
-  name: "Отдых",
-  slug: "otdyh"
+  name: "Советы",
+  slug: "sovety"
 }
 ---
 
-- [Have you ever seen the rain?](#have-you-ever-seen-the-rain)
+- [Is anyone reading these?](#is-anyone-reading-these)
 - [Section 2](#just-a-nice-title)
 - [Section 3](#title-3)
 
-## Have you ever seen fire?
+## Is anyone reading these?
 Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing.
 Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor nisi magna ut elit pariatur commodo.
 
-![A traveler](/images/articles/trending-7.jpg)
+![A traveler](/images/articles/trending-1.jpg)
 
 ## Just a nice title
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit tenetur natus, officiis eos eius quaerat? Beatae, deserunt! Ipsa modi nemo nihil facere enim ullam quidem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam placeat obcaecati dolore soluta praesentium rerum numquam, vitae nisi voluptatibus provident itaque dolores quod optio delectus tenetur officiis culpa nam deleniti.

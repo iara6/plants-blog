@@ -2,11 +2,11 @@
 import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import { slugify } from "../../js/utils";
 
-const posts = Object.values(
-  import.meta.glob('./*.md', { eager: true })
-);
-
 export async function getStaticPaths() {
+  const posts = Object.values(
+    import.meta.glob("../../content/blog/*.md", { eager: true })
+  );
+
   return posts.map((post) => ({
     params: {
       slug: slugify(post.frontmatter.title),

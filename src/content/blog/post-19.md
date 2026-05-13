@@ -1,5 +1,4 @@
 ---
-layout: "../../layouts/BlogPostLayout.astro"
 title: Музыкальная релаксация на свежем воздухе Post 19
 date: 2025-09-24
 author: {

@@ -1,20 +1,19 @@
 ---
-layout: "../../layouts/BlogPostLayout.astro"
-title: Советы для начинающих лесников и не только Post 4
-date: 2025-11-17
+title: "Простой скворечник: пошаговая инструкция Post 26"
+date: 2025-11-12
 author: {
   name: "Дмитрий Ковалев",
   slug: "dmitrij-kovalev"
 }
 image: {
-  src: "/images/articles/trending-4.jpg",
+  src: "/images/articles/trending-6.jpg",
   alt: "A picture of something",
 }
-description: Противоположная точка зрения подразумевает, что некоторые особенности внутренней политики набирают популярность среди определенных слоев населения.
+description: Внезапно, интерактивные прототипы формируют глобальную экономическую сеть и при этом ассоциативно распределены по отраслям.
 draft: false
 category: {
-  name: "Полезное",
-  slug: "poleznoe"
+  name: "Отдых",
+  slug: "otdyh"
 }
 ---
 
@@ -22,11 +21,11 @@ category: {
 - [Section 2](#just-a-nice-title)
 - [Section 3](#title-3)
 
-## Have you ever seen mountains?
+## Have you ever seen fire?
 Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing.
 Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor nisi magna ut elit pariatur commodo.
 
-![A traveler](/images/articles/trending-4.jpg)
+![A traveler](/images/articles/trending-6.jpg)
 
 ## Just a nice title
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit tenetur natus, officiis eos eius quaerat? Beatae, deserunt! Ipsa modi nemo nihil facere enim ullam quidem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam placeat obcaecati dolore soluta praesentium rerum numquam, vitae nisi voluptatibus provident itaque dolores quod optio delectus tenetur officiis culpa nam deleniti.
