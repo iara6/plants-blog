@@ -2,8 +2,7 @@
 // utils imports
 import { formatDate } from "../js/utils";
 
-const { frontmatter, url /* tagType */ } = Astro.props;
-/* const Tag = tagType; */
+const { frontmatter, url } = Astro.props;
 
 const { title, description, date, category, author, image } = frontmatter;
 ---
@@ -51,5 +50,4 @@ const { title, description, date, category, author, image } = frontmatter;
     font-size: 0.85rem;
     opacity: 0.8;
   }
-
 </style>

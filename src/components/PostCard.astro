@@ -2,13 +2,10 @@
 // utils imports
 import { formatDate } from "../js/utils";
 
-const { frontmatter, url /* tagType */ } = Astro.props;
-/* const Tag = tagType; */
+const { frontmatter, url } = Astro.props;
 
 const { title, description, date, category, author, image } = frontmatter;
 ---
-
-
 
 <div class="author-post">
   <a href={url}>
@@ -23,7 +20,6 @@ const { title, description, date, category, author, image } = frontmatter;
   </span>
   <p class="author-post-description">{description}</p>
 </div>
-
 
 <style>
   .author-post-image {

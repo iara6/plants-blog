@@ -104,7 +104,7 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
       </section>
       <section class="new-articles-section">
         <div class="new-articles-section__highlight">
-          <PostCardFeatured frontmatter={featured.frontmatter} url={featured.url} />
+          <PostCardFeatured frontmatter={featured.frontmatter} url={`/blog/${slugify(featured.frontmatter.title)}`} />
         </div>
         <div class="new-articles-section__secondary">
           {

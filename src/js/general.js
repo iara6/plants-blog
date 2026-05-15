@@ -8,11 +8,6 @@ function initDarkMode() {
 
   let darkModeOn = JSON.parse(localStorage.getItem('mode')) || false;
 
-/*   if (darkModeOn) {
-    document.documentElement.classList.add('dark-mode');
-    switchBtn.classList.add('slide');
-  } */
-
   switchBtn.addEventListener('click', () => {
     darkModeOn = !darkModeOn;
     document.documentElement.classList.toggle('dark-mode', darkModeOn);

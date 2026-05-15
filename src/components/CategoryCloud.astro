@@ -5,11 +5,10 @@ import { formatBlogPosts } from '../js/utils';
 const allPosts = Object.values(
   import.meta.glob("../content/blog/*.md", { eager: true })
 );
+
 const formattedPosts = formatBlogPosts(allPosts);
 
-const allCategories = formattedPosts
-  .map((category) => category.frontmatter.category);
-  /* .toLowerCase()).flat() */
+const allCategories = formattedPosts.map((category) => category.frontmatter.category);
 
 const processedCategories = allCategories.reduce((acc, category) => {
   const key = category.slug;
@@ -24,8 +23,6 @@ const processedCategories = allCategories.reduce((acc, category) => {
 }, {})
 
 const { showCount } = Astro.props;
-
-
 ---
 
 <ul class="categories">
@@ -44,12 +41,10 @@ const { showCount } = Astro.props;
     flex-wrap: wrap;
     gap: 0.5rem;
   }
-
   li {
     list-style: none;
     margin-bottom: 8px;
   }
-
   .cloud-category {
     text-decoration: none;
     color: #1f0f0c !important;

@@ -1,6 +1,6 @@
 ---
 // utils imports
-import { slugify, formatDate } from "../js/utils";
+import { formatDate } from "../js/utils";
 
 const { title, date, category, author, image } = Astro.props;
 ---
@@ -14,19 +14,16 @@ const { title, date, category, author, image } = Astro.props;
 
 <style>
   .post-header-container {
-    border: 1px solid red;
     text-align: center;
     margin-bottom: 1rem;
     color: var(--primary-clr-dark);
+    /*   border: 1px solid red; */
   }
   .post-header-container h1 {
     font-size: 2.2rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
   }
- /*  .post-header-data {
-    font-size: 1rem;
-  } */
   .post-header-container a {
     color: var(--primary-clr-dark);
     text-decoration: none;
