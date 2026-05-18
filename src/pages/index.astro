@@ -27,80 +27,18 @@ const formattedTrendingPosts = formatBlogPosts(allOtherPosts, {
 });
 
 const trendingPosts = formattedTrendingPosts.slice(0, 7);
-
 ---
 
-<!-- <MainLayout /> -->
 <MainLayout>
   <main class="content-container">
-   <!--  <h1>Добрая половина выводов процветает как ни в чем не бывало - HOME PAGE</h1> -->
     <div class="home-main__new-articles-container">
       <section class="trending-section">
-        <h2>Популярное за месяц</h2>
-        <!-- <div class="trending-article-container">
-          <div class="trending-article_img-wrapper">
-            <img src="/images/articles/trending-1.jpg" alt="">
-          </div>
-          <div> 
-            <h3>Лучшее место на земле</h3>
-            <span>30/05/2016</span> • <span class="article-category">Жизнь</span>
-          </div>
-        </div> -->
-
+        <h2>Лучшее за месяц</h2>
         {
           trendingPosts.map((post) => (
             <PostCardTrending frontmatter={post.frontmatter} url={`/blog/${slugify(post.frontmatter.title)}`} />
           ))
         }
-
-
-
-
-<!--         <div class="trending-article-container">
-          <div class="trending-article_img-wrapper">
-            <img src="/images/articles/trending-2.jpg" alt="">
-          </div>
-          <div>
-            <h3>Как подружиться с гусём?</h3>
-            <span>28/05/2016</span> • <span class="article-category">Фауна</span>
-          </div>
-        </div>
-        <div class="trending-article-container">
-          <div class="trending-article_img-wrapper">
-            <img src="/images/articles/trending-3.jpg" alt="">
-          </div>
-          <div>
-            <h3>Тушим костёр правильно</h3>
-            <span>24/05/2016</span> • <span class="article-category">Отдых</span>
-          </div>
-        </div>
-        <div class="trending-article-container">
-          <div class="trending-article_img-wrapper">
-            <img src="/images/articles/trending-4.jpg" alt="">
-          </div>
-          <div>
-            <h3>Советы для начинающих лесников</h3>
-            <span>18/05/2016</span> • <span class="article-category">Полезное</span>
-          </div>
-        </div>
-        <div class="trending-article-container">
-          <div class="trending-article_img-wrapper">
-            <img src="/images/articles/trending-5.jpg" alt="">
-          </div>
-          <div>
-            <h3>Собираем полевой букет</h3>
-            <span>14/05/2016</span> • <span class="article-category">Полезное</span>
-          </div>
-        </div>
-        <div class="trending-article-container">
-          <div class="trending-article_img-wrapper">
-            <img src="/images/articles/trending-6.jpg" alt="">
-          </div>
-          <div>
-            <h3>Простой скворечник: пошаговая инструкция</h3>
-            <span>09/05/2016</span> • <span class="article-category">Полезное</span>
-          </div>
-        </div> -->
       </section>
       <section class="new-articles-section">
         <div class="new-articles-section__highlight">
@@ -129,16 +67,6 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
             </div>
           ))
         }
-
-        <!-- <div class="all-article-container">
-          <div class="all-article_img-wrapper">
-            <img src="/images/articles/trending-1.jpg" alt="">
-          </div>
-          <div> 
-            <h3>Лучшее место на земле</h3>
-          </div>
-        </div> -->
-    
       </section>
 
       <div class="show-more-button">
@@ -157,27 +85,13 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
 </MainLayout>
 
 <style>
- 
-
   .home-main__new-articles-container {
     display: grid;
     grid-template-columns: 0.35fr 1fr;
     gap: 2rem;
   }
-
- /*  h1 {
-    background-color: lightpink;
-    padding: 3rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-    font-family: "Commissioner", sans-serif;
-  } */
-
   p {
     color: var(--primary-clr-dark);
-    /* font-size: 1.5rem;  */
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     padding: 2rem 0;
   }
   .trending-section {
@@ -191,142 +105,43 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
     text-align: center;
     margin-top: 0.5rem;
   }
-  .trending-article-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    /* border: 2px solid hotpink; */
-    /* border-bottom: 2px dashed gray; */
-  }
-
-  .trending-article_img-wrapper {
-    width: 110px;
-    height: 110px;
-    /* border: 1px solid red; */
-    aspect-ratio: 1 / 1;
-    /* object-fit: cover; */
-  }
-
-  .trending-article_img-wrapper img {
-    /* add to each width="110" height="110" */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-
-  .trending-article-container h3 {
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
-  .trending-article-container span {
-    font-size: 0.85rem;
-    opacity: 0.7;
-  }
-
- /*  .article-category {
-    background-color: rgb(181, 242, 181);
-    padding: 2px 5px;
-    border-radius: 4px;
-  } */
-
   .new-articles-section {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1.5rem;
   }
-
-/*   .main-article-container {
-    border: 2px solid lawngreen;
-  } */
- 
-  .new-highlight_img-wrapper {
-    /* width: 600px; */
-    width: 100%;
-    height: 600px;
-    
-   /*  height: 110px; */
-    /* border: 1px solid red; */
-    /* aspect-ratio: 1 / 1; */
-    /* object-fit: cover; */
-  }
-  .new-highlight_img-wrapper img {
-    width: 100%;
-    height: 100%;
-    border-radius: 6px;
-    object-fit: cover;
-  }
-
   .new-articles-section__secondary {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     /* border: 1px solid red; */
   }
-  
-  .new-secondary-container {
-    border: 1px solid hotpink;
-  }
-
-  .new-secondary_img-wrapper {
-    /* width: 280px; */
-    width: 100%;
-    height: 230px;
-  }
-  .new-secondary_img-wrapper img,
-  .all-article_img-wrapper img {
-    width: 100%;
-    height: 100%;
-    border-radius: 6px;
-    object-fit: cover;
-  }
-  .new-secondary-container h3,
-  .all-article-container h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    padding: 0.5rem 0;
-  }
-
   .home-main__all-container {
     margin-top: 2rem;
   }
-
   .home-main__all-container section {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
-  
   .home-main__all-container .hidden-post {
     display: none;
   }
-
-  .all-article_img-wrapper {
-    /* width: 280px; */
-    width: 100%;
-    height: 300px;
-  }
-
   .show-more-button {
     margin-top: 3rem;
     cursor: pointer;
     margin-inline: auto;
     width: fit-content;
-    border: 1px solid red;
   }
-
   .view-all-articles-button {
     display: none;
     margin-top: 3rem;
     justify-content: center;
   }
-
   .show-more-button button {
     border: none;
     cursor: pointer;
   }
-
   .view-all-articles-button a,
   .show-more-button button {
     background-color: var(--selection-clr);
@@ -339,8 +154,16 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
     gap: 6px;
     border-radius: 4px;
     font-size: 1.1rem;
-   /*  width: fit-content; */
   }
+
+/*   @media screen and (max-width:1200px) {
+    .nav-toggle-button {
+      display: flex;
+    }
+    .menu {
+      display: none;
+    }
+  } */
   
 </style>
 

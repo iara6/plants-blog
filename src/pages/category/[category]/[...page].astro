@@ -8,14 +8,12 @@ import CategoryCloud from "../../../components/CategoryCloud.astro";
 import { slugify, formatBlogPosts } from '../../../js/utils';
 
 export async function getStaticPaths({ paginate }) {
-
   const allPosts = Object.values(
     import.meta.glob("/src/content/blog/*.md", { eager: true })
   );
 
   const formattedPosts = formatBlogPosts(allPosts);
 
-  
   return [
     {
       params: { category: "poleznoe" },
@@ -53,7 +51,6 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const { page, name } = Astro.props;
-
 ---
 
 <MainLayout
@@ -63,7 +60,6 @@ const { page, name } = Astro.props;
   <main class="content-container">
     <h1>Статьи по тегу <span class="highlight">{name?.toLowerCase()}</span></h1>
     <div class="category-page-container" aria-label={`Статьи по тегу ${name}`}>
-      
       <div class="category-posts-container">
         {
           page.data.map((post) => (

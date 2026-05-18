@@ -12,10 +12,6 @@ import CategoryCloud from "../components/CategoryCloud.astro";
 // utils imports
 import { formatBlogPosts } from "../js/utils";
 
-// style import
-/* import "../styles/styles.css"; */
-
-/* const { post } = Astro.props; */
 const { frontmatter } = Astro.props;
 const { title, description, date, category, author, image, robots } = frontmatter;
 
@@ -33,8 +29,7 @@ const relatedPosts = formattedPosts
       post.frontmatter.category.name.toLowerCase() === category.name.toLowerCase() &&
       post.frontmatter.title !== title
   )
-  .slice(0, 3);
-
+  .slice(0, 4);
 ---
 
 <!doctype html>
@@ -56,13 +51,11 @@ const relatedPosts = formattedPosts
           </aside>
           )
         }
-
         <h2 class="all-categories-h2">Все категории</h2>
         <CategoryCloud /> <!-- showCount={true}  -->
       </div>
 
     </main>
-    <!-- <slot>Some Text</slot> -->
     <Footer />
     <BackToTop />
     <script is:inline>

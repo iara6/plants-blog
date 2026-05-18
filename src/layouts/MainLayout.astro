@@ -12,9 +12,6 @@ const {
   robots = false,
   frontmatter,
 } = Astro.props;
-
-// style import
-/* import "../styles/styles.css"; */
 ---
 
 <!doctype html>
@@ -24,20 +21,10 @@ const {
   {description}
   {frontmatter}
   {robots} />
-
-	<!-- <head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="/src/styles/styles.css">
-    <link rel="preload" href="/fonts/commissioner-font.woff2" as="font" type="font/woff2" crossorigin />
-		<title>Plants</title>
-	</head> -->
 	<body>
     <SlideInHeader />
     <Header />
 		<slot />
-    <!-- <slot>Some Text</slot> -->
     <Footer />
     <BackToTop />
     <script is:inline>
