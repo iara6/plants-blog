@@ -34,11 +34,13 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
     <div class="home-main__new-articles-container">
       <section class="trending-section">
         <h2>Лучшее за месяц</h2>
-        {
-          trendingPosts.map((post) => (
-            <PostCardTrending frontmatter={post.frontmatter} url={`/blog/${slugify(post.frontmatter.title)}`} />
-          ))
-        }
+        <div class="trending-section__contents-wrapper">
+          {
+            trendingPosts.map((post) => (
+              <PostCardTrending frontmatter={post.frontmatter} url={`/blog/${slugify(post.frontmatter.title)}`} />
+            ))
+          }
+        </div>
       </section>
       <section class="new-articles-section">
         <div class="new-articles-section__highlight">
@@ -156,14 +158,43 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
     font-size: 1.1rem;
   }
 
-/*   @media screen and (max-width:1200px) {
-    .nav-toggle-button {
-      display: flex;
+  @media screen and (max-width:1200px) {
+    .home-main__new-articles-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr min-content;
+      grid-template-areas: 
+      "new"
+      "trending";
+      gap: 2rem;
     }
-    .menu {
-      display: none;
+      .new-articles-section {
+      grid-area: new;
+      /* display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.5rem; */
     }
-  } */
+     .trending-section {
+      grid-area: trending;
+      /* display: flex; */
+      /* display: none; */
+      /* padding-right: 1rem;
+      border-right: 2px dashed rgb(185, 167, 167); */
+      border-right: none;
+      border-top: 2px dashed rgb(185, 167, 167); 
+      border-bottom: 2px dashed rgb(185, 167, 167); 
+      min-width: 0;
+      padding-right: 0;
+    }
+    .trending-section__contents-wrapper {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 200px;
+      overflow-x: scroll;
+      
+      border: 1px solid red;
+  
+    }
+  }
   
 </style>
 
