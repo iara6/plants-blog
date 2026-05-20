@@ -167,35 +167,65 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
       "trending";
       gap: 2rem;
     }
-      .new-articles-section {
+    .new-articles-section {
       grid-area: new;
       /* display: grid;
       grid-template-columns: 2fr 1fr;
       gap: 1.5rem; */
     }
-     .trending-section {
+    .trending-section {
       grid-area: trending;
-      /* display: flex; */
-      /* display: none; */
-      /* padding-right: 1rem;
-      border-right: 2px dashed rgb(185, 167, 167); */
+      position: relative;
       border-right: none;
       border-top: 2px dashed rgb(185, 167, 167); 
       border-bottom: 2px dashed rgb(185, 167, 167); 
       min-width: 0;
       padding-right: 0;
     }
+     .trending-section h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+      margin: 1rem 0 0.8rem;
+    }
     .trending-section__contents-wrapper {
       display: grid;
       grid-auto-flow: column;
       grid-auto-columns: 200px;
       overflow-x: scroll;
-      
-      border: 1px solid red;
-  
+      margin-inline: -1.5rem;
+      /* border: 1px solid red; */
+    }
+    .trending-section__contents-wrapper::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      right: -1.5rem;
+      height: 100%;
+      width: 3.75rem;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0) 100%) 0% 0% no-repeat content-box content-box rgba(0, 0, 0, 0);
+      z-index: 1;
+      pointer-events: none;
     }
   }
   
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+
 </style>
 
 <script>
