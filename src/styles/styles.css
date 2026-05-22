@@ -108,42 +108,9 @@ html::before {
   margin-inline: auto;
   transition: all 250ms ease;
 }
-
-.post-container {
-  display: grid;
-  grid-template-columns: 1fr minmax(auto, 330px);
-  gap: 1.5rem;
-}
-
-/* post styles */
-
-/* .post-container h2 {
-  font-size: 2rem;
-  font-weight: 600;
+  .post-container__content h2 {
   text-align: center;
-  margin-bottom: 1rem;
-} */
-
-.post-container p {
-  padding: 1rem;
-}
-
-/* .post-img-wrapper {
-  width: 300px;
-  margin: 0 auto;
-} */
-
-.post-container img {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-}
-
-.post-container ol {
-  border: 2px solid lime;
-  padding-left: 3rem;
-}
-
+}/* **** */
 .article-category {
   color: #1f0f0c !important;
   background-color: rgb(181, 242, 181);
