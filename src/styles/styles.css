@@ -108,9 +108,22 @@ html::before {
   margin-inline: auto;
   transition: all 250ms ease;
 }
-  .post-container__content h2 {
+/* .post-container__md-text {
+  border: 2px solid hotpink;
+} */
+.post-container__md-text h2,
+.post-container__md-text p:has(img) {
   text-align: center;
-}/* **** */
+}
+.post-container__md-text p {
+  padding: 1rem 0;
+}
+.post-container__md-text p:has(img) {
+  padding: 1.2rem 0;
+}
+.post-container__md-text ul {
+  border: 2px solid lime;
+}
 .article-category {
   color: #1f0f0c !important;
   background-color: rgb(181, 242, 181);

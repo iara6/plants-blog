@@ -41,20 +41,27 @@ const relatedPosts = formattedPosts
     <main class="post-container">
       <div class="post-container__content">
         <PostHeader {title} {date} {category} {author} />
-        <slot />
+        <div class="post-container__md-text">
+          <slot />
+        </div>
       </div>
       <div class="post-container__sidebar">
-        {
-        relatedPosts.length > 0 && (
-          <aside aria-label="Related posts">
-            <RelatedPosts {relatedPosts} />
-          </aside>
-          )
-        }
-        <h2 class="all-categories-h2">Все категории</h2>
-        <CategoryCloud /> <!-- showCount={true}  -->
+        <div class="post-container__sidebar-related">
+          {
+          relatedPosts.length > 0 && (
+            <aside aria-label="Related posts">
+              <RelatedPosts {relatedPosts} />
+            </aside>
+            )
+          }
+        </div>
+        <div class="post-container__sidebar-categories">
+          <h2 class="all-categories-h2">Все категории</h2>
+          <div>
+            <CategoryCloud /> <!-- showCount={true}  -->
+          </div>
+        </div>
       </div>
-
     </main>
     <Footer />
     <BackToTop />
@@ -91,34 +98,38 @@ const relatedPosts = formattedPosts
     grid-template-columns: 1fr minmax(auto, 330px);
     gap: 1.5rem;
   }
-  /* .post-container__content h1, */
-  .post-container__content h2 {
-  text-align: center;
-}
 
-  .post-container__content :global(p) {
-    padding: 1rem 0;
-  }
   .post-container img {
     max-width: 100%;
     display: block;
     margin: 0 auto;
   }
 
-  .post-container__content :global(ul) {
-    border: 2px solid lime;
-  }
-
-  /* .post-container ol {
-    border: 2px solid lime;
-    padding-left: 3rem;
-  } */
 
 
-  @media screen and (max-width:1300px) {
+  @media screen and (max-width:1400px) {
     .post-container {
       grid-template-columns: 1fr minmax(auto, 270px);
       /* gap: 1.5rem; */
+    }
+  }
+
+  @media screen and (max-width:1200px) {
+    .post-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr min-content;
+    }
+    .post-container__md-text {
+      border: 2px solid hotpink;
+      padding: 0 2rem;
+    }
+    .post-container__sidebar-related aside {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .post-container__sidebar-categories :global(ul) {
+      justify-content: center;
     }
   }
 </style>
