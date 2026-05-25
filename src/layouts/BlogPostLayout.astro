@@ -124,6 +124,7 @@ const relatedPosts = formattedPosts
     .post-container {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr min-content;
+      gap: 0.5rem;
     }
     .post-container__md-text {
       border: 2px solid hotpink;
@@ -153,9 +154,18 @@ const relatedPosts = formattedPosts
   }
 
   @media screen and (max-width: 768px) {
-   /*  .post-container__sidebar-related aside {
-      gap: 2rem;
-      grid-template-columns: repeat(2, 1fr);
-    } */
+     .post-container__md-text {
+      padding: 0 1.5rem;
+    }
+    .post-container__sidebar-related aside {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+
+    @media screen and (max-width: 640px) {
+     .post-container__md-text {
+      padding: 0;
+    }
   }
 </style>

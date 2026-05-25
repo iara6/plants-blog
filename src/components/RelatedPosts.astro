@@ -62,12 +62,49 @@ const { relatedPosts } = Astro.props;
     }
   }
 
-   @media screen and (max-width:1200px) {
+  @media screen and (max-width:1200px) {
     .related-post {
       /* border-bottom: 1px solid rgb(153, 152, 152, 0.5); */
-      /* border: none; */
-      border: 1px solid red;
+      border: none;
+      /* border: 1px solid red; */
       padding: 0 !important;
     }
-   }
+  }
+
+  @media screen and (max-width: 768px) {
+    .related-post {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 1px solid rgb(153, 152, 152, 0.5);
+      padding: 0.5rem 0 !important;
+    }
+    .related-post__img-container {
+      width: 160px;
+      height: 160px;
+      flex-shrink: 0;
+    }
+    .related-post-image {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+   /*  .related-post {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 1px solid rgb(153, 152, 152, 0.5);
+      padding: 0.5rem 0 !important;
+    } */
+    .related-post__img-container {
+      width: 130px;
+      height: 130px;
+    }
+   /*  .related-post-image {
+      height: 100%;
+      width: 100%;
+    } */
+  }
 </style>
