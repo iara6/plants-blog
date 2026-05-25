@@ -47,6 +47,7 @@ const relatedPosts = formattedPosts
       </div>
       <div class="post-container__sidebar">
         <div class="post-container__sidebar-related">
+          <h2 class="related-h2">Читайте также</h2>
           {
           relatedPosts.length > 0 && (
             <aside aria-label="Related posts">
@@ -92,7 +93,14 @@ const relatedPosts = formattedPosts
 </html>
 
 <style>
-
+  .related-h2 {
+    display: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-clr-dark);
+    margin: 1.5rem 0;    
+    text-align: center;
+  }
   .post-container {
     display: grid;
     grid-template-columns: 1fr minmax(auto, 330px);
@@ -104,8 +112,6 @@ const relatedPosts = formattedPosts
     display: block;
     margin: 0 auto;
   }
-
-
 
   @media screen and (max-width:1400px) {
     .post-container {
@@ -123,13 +129,33 @@ const relatedPosts = formattedPosts
       border: 2px solid hotpink;
       padding: 0 2rem;
     }
+    .related-h2 {
+      display: block;
+    }
     .post-container__sidebar-related aside {
       display: grid;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+     /*  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); */
+   /*   grid-template-columns: repeat(4, minmax(240px, 1fr)); */
+     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+      /* grid-template-columns: repeat(4, minmax(0, 1fr)); */
     }
     .post-container__sidebar-categories :global(ul) {
       justify-content: center;
     }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .post-container__sidebar-related aside {
+      gap: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+   /*  .post-container__sidebar-related aside {
+      gap: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+    } */
   }
 </style>
