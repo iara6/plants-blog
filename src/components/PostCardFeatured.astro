@@ -54,4 +54,25 @@ const { title, description, date, category, author, image } = frontmatter;
     font-weight: 400;
     margin-top: 1rem;
   }
+
+  @media screen and (max-width: 768px) {
+    .featured-post h3 {
+      font-size: 1.75rem;
+      /*  font-weight: 600;
+      padding: 0.5rem 0 0.4rem; */
+    }
+    .featured__img-link {
+      height: 560px;
+    }
+    .featured-post span {
+      font-size: 0.95rem;
+    }
+    .featured-post-date {
+      font-size: 0.85rem !important;
+    }
+    .featured__description {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+  }
 </style>

@@ -194,7 +194,8 @@ html::before {
     font-size: 1.4rem;
   }
   .post-container__md-text img {
-    max-width: 400px;
+    /* max-width: 400px; */
+    width: 100%;
   } 
 }
 

@@ -211,20 +211,22 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
   }
   
 
-  /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {...}
+  @media screen and (max-width: 1024px) {
+    .home-main__new-articles-container {
+      border: 2px solid red;
+    }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {...}
+  }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...}
+  @media screen and (max-width: 768px) {
+     .home-main__new-articles-container {
+      border: 2px solid rgb(32, 10, 224);
+    }
+  }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...}
+  @media screen and (max-width: 640px) {}
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
+  @media screen and (max-width: 480px) {}
 
 </style>
 

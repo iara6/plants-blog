@@ -4,21 +4,25 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout
-  title="404"
+  title="404 - Страница не найдена"
   description="Страница не найдена"
   robots={true}
 >
   <main class="content-container content-container-404">
     <div class="container-404">
+      <h1>404</h1>
       <h1>
         Страница не найдена :( 
       </h1>
       <p>
-        Поищите что-то еще.
+        Неверно указан адрес, или такой страницы не существует. 
       </p>
+      <!-- <p>
+        Поищите что-то еще.
+      </p> -->
        <div class="home-button">
         <a href="/">
-          Домой
+          На главную
         </a>
       </div>
     </div>
@@ -39,12 +43,15 @@ import MainLayout from "../layouts/MainLayout.astro";
     place-items: center;
   }
   .container-404 h1 {
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-weight: 600;
+    text-align: center;
   }
   .container-404 p {
-    font-size: 1.5rem;
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
     font-weight: 400;
+    text-align: center;
   }
   .home-button {
     margin-top: 3rem;
@@ -55,6 +62,44 @@ import MainLayout from "../layouts/MainLayout.astro";
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 4px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-weight: 450;
+  }
+
+  @media screen and (max-width:1024px) {
+    .container-404 h1 {
+      font-size: 2rem;
+    }
+    .container-404 p {
+      font-size: 1.1rem;
+    }
+    .home-button a {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .container-404 h1 {
+      font-size: 1.9rem;
+    }
+    .container-404 p {
+      font-size: 1rem;
+    }
+    .home-button a {
+      padding: 0.8rem 1.8rem;
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .container-404 h1 {
+      font-size: 1.7rem;
+    }
+    .container-404 p {
+      font-size: 1rem;
+    }
+    .home-button a {
+      font-size: 1rem;
+    }
   }
 </style>
