@@ -199,14 +199,11 @@ html::before {
   } 
 }
 
-/* @media screen and (max-width: 480px) { 
-
+@media screen and (max-width: 480px) { 
   .post-container__md-text h2 {
     font-size: 1.2rem;
   }
 
-  .post-container__md-text img {
-    max-width: 400px;
-  } 
-} */
+  
+}
 
