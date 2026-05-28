@@ -19,8 +19,11 @@ const [featured, ...rest] = formattedPosts;
 const secondaryPosts = rest.slice(0, 3);
 const allOtherPosts = rest.slice(3);
 
-const visiblePosts = allOtherPosts.slice(0, 8);
-const hiddenPosts = allOtherPosts.slice(8, 16);
+/* const visiblePosts = allOtherPosts.slice(0, 8);
+const hiddenPosts = allOtherPosts.slice(8, 16); */
+
+const visiblePosts = allOtherPosts.slice(0, 12);
+const hiddenPosts = allOtherPosts.slice(12, 24);
 
 const formattedTrendingPosts = formatBlogPosts(allOtherPosts, {
   sortByDate: false,
@@ -123,8 +126,8 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
   }
   .home-main__all-container section {
     display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem; /* gap: 1.5rem; */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   .home-main__all-container .hidden-post {
     display: none;
@@ -227,6 +230,30 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
   @media screen and (max-width: 640px) {}
 
   @media screen and (max-width: 480px) {}
+
+
+  @media screen and (max-width: 688px) { 
+    .home-main__all-container section {
+      gap: 1rem;
+      grid-template-columns: 1fr;
+      border: 1px solid black;
+      padding: 0 4.5rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) { 
+    .home-main__all-container section {
+      border: 1px solid rgb(231, 2, 2);
+      padding: 0 3.5rem;
+    }
+  }
+
+  @media screen and (max-width: 550px) { 
+    .home-main__all-container section {
+      border: 1px solid rgb(7, 255, 20);
+      padding: 0;
+    }
+  }
 
 </style>
 

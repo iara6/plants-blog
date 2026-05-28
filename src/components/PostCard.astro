@@ -62,4 +62,25 @@ const { title, description, date, category, author, image } = frontmatter;
       font-size: 1rem;
     }
   }
+
+  @media screen and (max-width: 688px) { 
+    .author-post {
+      border-bottom: 1px solid rgb(153, 152, 152, 0.5);
+      padding-bottom: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .author-post-image {
+      height: 250px;
+    }
+  }
+
+  @media screen and (max-width: 270px) {
+    .author-post-image {
+      height: 210px;
+    }
+  }
+
+  
 </style>

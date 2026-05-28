@@ -60,7 +60,32 @@ const { page } = Astro.props;
   }
   .all-posts-container {
     display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+    /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
+
+  @media screen and (max-width: 688px) { 
+    .all-posts-container {
+      gap: 1rem;
+      grid-template-columns: 1fr;
+      border: 1px solid black;
+      padding: 0 4.5rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) { 
+    .all-posts-container {
+      border: 1px solid rgb(231, 2, 2);
+      padding: 0 3.5rem;
+    }
+  }
+
+  @media screen and (max-width: 550px) { 
+    .all-posts-container {
+      border: 1px solid rgb(7, 255, 20);
+      padding: 0;
+    }
+  }
+
 </style>
