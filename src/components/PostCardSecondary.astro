@@ -62,10 +62,66 @@ const { title, description, date, category, author, image } = frontmatter;
       padding: 0.5rem 0 0.4rem; */
     }
     .secondary__img-link {
-      height: 220px;
+      height: 210px;
     }
     .secondary-post span {
       font-size: 0.95rem;
+    }
+    .secondary-post-date {
+      font-size: 0.85rem !important;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .secondary-post {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 0 !important;
+    }
+    .secondary-post:not(:last-child) {
+      border-bottom: 1px solid rgb(153, 152, 152, 0.5);
+    }
+    .secondary__img-link {
+      width: 160px;
+      height: 160px;
+      flex-shrink: 0;
+    }
+    .secondary-post-image {
+      height: 100%;
+      width: 100%;
+    }
+    .secondary-post h3 {
+      font-size: 1.25rem;
+    }
+    .secondary-post span {
+      font-size: 0.95rem;
+    }
+    .secondary-post-date {
+      font-size: 0.9rem !important;
+    }
+   /*  .secondary-post:last-child {
+      border: none;
+    } */
+  }
+
+  @media screen and (max-width: 640px) {
+    .secondary__img-link {
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .secondary__img-link {
+      width: 120px;
+      height: 120px;
+    }
+    .secondary-post h3 {
+      font-size: 1.2rem;
+    }
+    .secondary-post span {
+      font-size: 0.9rem;
     }
     .secondary-post-date {
       font-size: 0.85rem !important;

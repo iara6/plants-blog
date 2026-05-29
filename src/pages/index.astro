@@ -126,7 +126,7 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
   }
   .home-main__all-container section {
     display: grid;
-    gap: 2rem; /* gap: 1.5rem; */
+    gap: 1.5rem; /* gap: 1.5rem; */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   .home-main__all-container .hidden-post {
@@ -227,9 +227,35 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
     }
   }
 
-  @media screen and (max-width: 640px) {}
+  @media screen and (max-width: 720px) {
+    .home-main__new-articles-container {
+      border: 2px solid hotpink; /* **!!!*** */
+    }
+    .new-articles-section {
+      /* display: grid; */
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .new-articles-section__secondary {
+      gap: 0rem;
+    }
+   
+  }
 
-  @media screen and (max-width: 480px) {}
+  @media screen and (max-width: 640px) {
+    .home-main__new-articles-container {
+      border: 2px solid yellowgreen;
+    }
+     .trending-section__contents-wrapper {
+      grid-auto-columns: 200px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .home-main__new-articles-container {
+      border: 3px solid red;
+    }
+  }
 
 
   @media screen and (max-width: 688px) { 
