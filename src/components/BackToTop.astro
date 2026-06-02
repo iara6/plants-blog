@@ -9,10 +9,12 @@
     position: fixed;
     bottom: 1.25rem;
     right: 1.25rem;
-    width: 50px;
+    width: 40px;
     filter: opacity(60%);
     transition: all 100ms linear;
-
+    /* border: 1px solid red; */ /*  */
+    border: none;
+    border-radius: 50%;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -40,6 +42,30 @@
   .back-to-top-button i {
     font-size: 2.5rem;
     color: var(--primary-clr-dark);
+  }
+
+  @media screen and (max-width: 1024px) {
+    .back-to-top-button {
+      right: 0.5rem;
+      bottom: 1rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .back-to-top-button {
+      right: 0.3rem;
+    }
+  }
+  @media screen and (max-width: 720px) {
+    .back-to-top-button {
+      width: 37px;
+    }
+    .back-to-top-button button {
+      width: 37px;
+      height: 37px;
+    }
+    .back-to-top-button i {
+      font-size: 2.1rem;
+    }
   }
 </style>
 

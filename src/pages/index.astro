@@ -218,7 +218,6 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
     .home-main__new-articles-container {
       border: 2px solid red;
     }
-
   }
 
   @media screen and (max-width: 768px) {
@@ -242,28 +241,22 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
    
   }
 
-  @media screen and (max-width: 640px) {
-    .home-main__new-articles-container {
-      border: 2px solid yellowgreen;
-    }
-     .trending-section__contents-wrapper {
-      grid-auto-columns: 200px;
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    .home-main__new-articles-container {
-      border: 3px solid red;
-    }
-  }
-
-
+  
   @media screen and (max-width: 688px) { 
     .home-main__all-container section {
       gap: 1rem;
       grid-template-columns: 1fr;
       border: 1px solid black;
       padding: 0 4.5rem;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .home-main__new-articles-container {
+      border: 2px solid yellowgreen;
+    }
+     .trending-section__contents-wrapper {
+      grid-auto-columns: 200px;
     }
   }
 
@@ -278,6 +271,12 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
     .home-main__all-container section {
       border: 1px solid rgb(7, 255, 20);
       padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .home-main__new-articles-container {
+      border: 3px solid red;
     }
   }
 
