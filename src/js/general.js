@@ -5,15 +5,10 @@
 function initDarkMode() {
   const switchBtns = document.querySelectorAll('.switch-button');
   
-
-  /* if (!switchBtn) return; */
-
   let darkModeOn = JSON.parse(localStorage.getItem('mode')) || false;
 
   switchBtns.forEach(btn => {
     btn.classList.toggle('slide', darkModeOn);
-    btn.addEventListener('click', () => {
-  console.log('clicked');
 });
 
     btn.addEventListener('click', () => {
@@ -36,9 +31,9 @@ console.log(document.querySelectorAll('.switch-button').length);
 
 // toggle('class', condition); documentElement returns <html>
 
-initDarkMode();
+/* initDarkMode();
 document.addEventListener('astro:page-load', initDarkMode);
-
+ */
 
 
 /* ******original for one btn******** */

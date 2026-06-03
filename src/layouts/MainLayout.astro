@@ -29,6 +29,28 @@ const {
     <BackToTop />
     <script is:inline>
       function initDarkMode() {
+        const switchBtns = document.querySelectorAll('.switch-button');
+  
+        let darkModeOn = JSON.parse(localStorage.getItem('mode')) || false;
+
+        switchBtns.forEach(btn => {
+          btn.classList.toggle('slide', darkModeOn);
+         
+          btn.onclick = () => {
+            darkModeOn = !darkModeOn;
+
+            document.documentElement.classList.toggle('dark-mode', darkModeOn);
+
+            switchBtns.forEach(b => {
+              b.classList.toggle('slide', darkModeOn);
+            });
+
+            localStorage.setItem('mode', JSON.stringify(darkModeOn));
+          };
+        });
+    /* console.log(document.querySelectorAll('.switch-button').length); */
+      }
+      /* function initDarkMode() {
         const switchBtn = document.querySelector('.switch-button');
         if (!switchBtn) return;
 
@@ -45,7 +67,7 @@ const {
           switchBtn.classList.toggle('slide', darkModeOn);
           localStorage.setItem('mode', JSON.stringify(darkModeOn));
         });
-      }
+      } */
       // toggle('class', condition); documentElement returns <html>
       initDarkMode();
       document.addEventListener('astro:page-load', initDarkMode);
