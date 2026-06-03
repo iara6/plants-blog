@@ -3,6 +3,47 @@
 *******************/
 
 function initDarkMode() {
+  const switchBtns = document.querySelectorAll('.switch-button');
+  
+
+  /* if (!switchBtn) return; */
+
+  let darkModeOn = JSON.parse(localStorage.getItem('mode')) || false;
+
+  switchBtns.forEach(btn => {
+    btn.classList.toggle('slide', darkModeOn);
+    btn.addEventListener('click', () => {
+  console.log('clicked');
+});
+
+    btn.addEventListener('click', () => {
+      darkModeOn = !darkModeOn;
+
+      document.documentElement.classList.toggle('dark-mode', darkModeOn);
+
+      switchBtns.forEach(b => {
+        b.classList.toggle('slide', darkModeOn);
+      });
+
+      
+      localStorage.setItem('mode', JSON.stringify(darkModeOn));
+    });
+
+  });
+console.log(document.querySelectorAll('.switch-button').length);
+}
+
+
+// toggle('class', condition); documentElement returns <html>
+
+initDarkMode();
+document.addEventListener('astro:page-load', initDarkMode);
+
+
+
+/* ******original for one btn******** */
+/* ********************************** */
+/* function initDarkMode() {
   const switchBtn = document.querySelector('.switch-button');
   if (!switchBtn) return;
 
@@ -14,11 +55,15 @@ function initDarkMode() {
     switchBtn.classList.toggle('slide', darkModeOn);
     localStorage.setItem('mode', JSON.stringify(darkModeOn));
   });
-}
+} */
 // toggle('class', condition); documentElement returns <html>
 
-initDarkMode();
-document.addEventListener('astro:page-load', initDarkMode);
+/* initDarkMode();
+document.addEventListener('astro:page-load', initDarkMode); */
+
+
+
+
 
 /****************
   COPYRIGHT DATE

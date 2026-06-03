@@ -86,6 +86,13 @@
   </div>
   
   <div class="nav-toggle-menu-container">
+    <button class="switch-button switch-button-media">
+        <!-- <span><i class="fa-solid fa-moon"></i></span>
+        <span><i class="fa-solid fa-sun"></i></span> -->
+        <span><img src="/icons/moon2.svg" alt=""></span>
+        <span><img src="/icons/sun2.svg" alt=""></span>
+        <span class="switch"></span>
+      </button>
     <li class="nav-toggle-menu__option">
       <span class="nav-toggle-menu__option-title">
         Section 1 <i class="fa-solid fa-chevron-down"></i>
@@ -468,6 +475,9 @@
 /******************
   Dark mode button 
 *******************/
+  .switch-button-media {
+    display: none;
+  }
   .switch-button {
     position: relative;
     height: 1.7rem;
@@ -515,6 +525,19 @@
     .menu {
       display: none;
     }
+  }
+
+  @media screen and (max-width: 640px) {
+    /* .home-main__new-articles-container {
+      border: 2px solid yellowgreen;
+    } */
+    .switch-button {
+      display: none;
+    }
+    .switch-button-media {
+      display: flex;
+    }
+    
   }
 </style>
 

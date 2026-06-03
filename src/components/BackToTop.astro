@@ -73,7 +73,7 @@
   const backToTopBtn = document.querySelector('.back-to-top-button');
 
   function btnVisibleOnScroll() {
-    backToTopBtn.classList.toggle('visible', window.scrollY > 100);
+    backToTopBtn.classList.toggle('visible', window.scrollY > 1000);
   };
 
   window.addEventListener('scroll', btnVisibleOnScroll);
