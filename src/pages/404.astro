@@ -20,10 +20,17 @@ import MainLayout from "../layouts/MainLayout.astro";
       <!-- <p>
         Поищите что-то еще.
       </p> -->
-       <div class="home-button">
-        <a href="/">
-          На главную
-        </a>
+      <div class="container-404-buttons">
+        <div class="home-button">
+          <a href="/">
+            На главную
+          </a>
+        </div>
+        <div class="random-post-button">
+          <a href="/blog/random">
+            Случайная статья
+          </a>
+        </div>
       </div>
     </div>
   </main>
@@ -53,10 +60,17 @@ import MainLayout from "../layouts/MainLayout.astro";
     font-weight: 400;
     text-align: center;
   }
-  .home-button {
+  .container-404-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .home-button,
+  .random-post-button {
     margin-top: 3rem;
   }
-  .home-button a {
+  .home-button a,
+  .random-post-button a {
     background-color: var(--selection-clr);
     color: #442C2E;
     padding: 1rem 2rem;
@@ -73,7 +87,8 @@ import MainLayout from "../layouts/MainLayout.astro";
     .container-404 p {
       font-size: 1.1rem;
     }
-    .home-button a {
+    .home-button a,
+    .random-post-button a {
       font-size: 1.1rem;
     }
   }
@@ -85,7 +100,8 @@ import MainLayout from "../layouts/MainLayout.astro";
     .container-404 p {
       font-size: 1rem;
     }
-    .home-button a {
+    .home-button a,
+    .random-post-button a {
       padding: 0.8rem 1.8rem;
       font-size: 1rem;
     }
@@ -98,7 +114,8 @@ import MainLayout from "../layouts/MainLayout.astro";
     .container-404 p {
       font-size: 1rem;
     }
-    .home-button a {
+    .home-button a,
+    .random-post-button a {
       font-size: 1rem;
     }
   }

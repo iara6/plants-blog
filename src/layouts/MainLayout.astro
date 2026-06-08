@@ -30,8 +30,10 @@ const {
     <script is:inline>
       function initDarkMode() {
         const switchBtns = document.querySelectorAll('.switch-button');
-  
+
         let darkModeOn = JSON.parse(localStorage.getItem('mode')) || false;
+        
+        document.documentElement.classList.toggle('dark-mode', darkModeOn);
 
         switchBtns.forEach(btn => {
           btn.classList.toggle('slide', darkModeOn);
@@ -48,9 +50,8 @@ const {
             localStorage.setItem('mode', JSON.stringify(darkModeOn));
           };
         });
-    /* console.log(document.querySelectorAll('.switch-button').length); */
       }
-      /* function initDarkMode() {
+     /*  function initDarkMode() {
         const switchBtn = document.querySelector('.switch-button');
         if (!switchBtn) return;
 

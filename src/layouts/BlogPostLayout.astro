@@ -72,6 +72,8 @@ const relatedPosts = formattedPosts
   
         let darkModeOn = JSON.parse(localStorage.getItem('mode')) || false;
 
+        document.documentElement.classList.toggle('dark-mode', darkModeOn);
+
         switchBtns.forEach(btn => {
           btn.classList.toggle('slide', darkModeOn);
          

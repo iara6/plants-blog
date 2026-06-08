@@ -1,0 +1,10 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+
+const randomPost =
+  posts[Math.floor(Math.random() * posts.length)];
+
+return Astro.redirect(`/blog/${randomPost.slug}`);
+---

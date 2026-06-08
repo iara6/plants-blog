@@ -9,24 +9,22 @@ function initDarkMode() {
 
   switchBtns.forEach(btn => {
     btn.classList.toggle('slide', darkModeOn);
-});
+  });
 
-    btn.addEventListener('click', () => {
-      darkModeOn = !darkModeOn;
+  btn.addEventListener('click', () => {
+    darkModeOn = !darkModeOn;
 
-      document.documentElement.classList.toggle('dark-mode', darkModeOn);
+    document.documentElement.classList.toggle('dark-mode', darkModeOn);
 
-      switchBtns.forEach(b => {
-        b.classList.toggle('slide', darkModeOn);
-      });
-
-      
-      localStorage.setItem('mode', JSON.stringify(darkModeOn));
+    switchBtns.forEach(b => {
+      b.classList.toggle('slide', darkModeOn);
     });
 
+    localStorage.setItem('mode', JSON.stringify(darkModeOn));
   });
-console.log(document.querySelectorAll('.switch-button').length);
-}
+};
+// console.log(document.querySelectorAll('.switch-button').length);
+
 
 
 // toggle('class', condition); documentElement returns <html>
