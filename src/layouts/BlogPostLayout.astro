@@ -99,8 +99,7 @@ const relatedPosts = formattedPosts
 
 <style>
   .post-container__md-text {
-    /* border: 1px solid green; */
-    font-size: 1.05rem; /* *** */
+    font-size: 1.05rem;
   }
   .related-h2 {
     display: none;
@@ -115,7 +114,6 @@ const relatedPosts = formattedPosts
     grid-template-columns: 1fr minmax(auto, 330px);
     gap: 1.5rem;
   }
-
   .post-container img {
     max-width: 100%;
     display: block;
@@ -125,7 +123,6 @@ const relatedPosts = formattedPosts
   @media screen and (max-width:1400px) {
     .post-container {
       grid-template-columns: 1fr minmax(auto, 270px);
-      /* gap: 1.5rem; */
     }
   }
 
@@ -136,7 +133,6 @@ const relatedPosts = formattedPosts
       gap: 0.5rem;
     }
     .post-container__md-text {
-      border: 2px solid hotpink;
       padding: 0 2rem;
     }
     .related-h2 {
@@ -163,7 +159,7 @@ const relatedPosts = formattedPosts
   }
 
   @media screen and (max-width: 768px) {
-     .post-container__md-text {
+    .post-container__md-text {
       padding: 0 1.5rem;
     }
     .post-container__sidebar-related aside {
@@ -172,8 +168,8 @@ const relatedPosts = formattedPosts
     }
   }
 
-    @media screen and (max-width: 640px) {
-     .post-container__md-text {
+  @media screen and (max-width: 640px) {
+    .post-container__md-text {
       padding: 0;
     }
   }

@@ -121,9 +121,9 @@ html::before {
 .post-container__md-text p:has(img) {
   padding: 1.2rem 0;
 }
-.post-container__md-text ul {
+/* .post-container__md-text ul {
   border: 2px solid lime;
-}
+} */
 .article-category {
   color: #1f0f0c !important;
   background-color: rgb(181, 242, 181);

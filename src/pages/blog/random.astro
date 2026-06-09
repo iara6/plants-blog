@@ -1,10 +1,17 @@
 ---
-import { getCollection } from 'astro:content';
+import { slugify } from "../../js/utils";
 
-const posts = await getCollection('blog');
+const posts = Object.values(
+  import.meta.glob("../../content/blog/*.md", { eager: true })
+);
 
-const randomPost =
-  posts[Math.floor(Math.random() * posts.length)];
-
-return Astro.redirect(`/blog/${randomPost.slug}`);
+const urls = posts.map(post =>
+  `/blog/${slugify(post.frontmatter.title)}`
+);
 ---
+
+<script define:vars={{ urls }}>
+  const randomPost = urls[Math.floor(Math.random() * urls.length)];
+
+  window.location.replace(randomPost);
+</script>
