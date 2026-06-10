@@ -6,13 +6,14 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev", 
-    "build": "astro build",
+    "dev": "astro dev",
+    "build": "astro build && pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "astro": "^6.0.2",
+    "pagefind": "^1.5.2",
     "transliteration": "^2.6.1"
   }
 }

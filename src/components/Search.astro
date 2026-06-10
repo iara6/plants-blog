@@ -30,7 +30,44 @@
 </style>
 
 <script>
-  document.getElementById("search-form").addEventListener("submit", (e) => {
+  const form = document.getElementById("search-form");
+
+  form?.addEventListener("submit", (e) => {
     e.preventDefault();
   });
 </script>
+<!-- 
+<script>
+  const form = document.getElementById("search-form");
+  const input = document.getElementById("search-input");
+  const resultsContainer = document.getElementById("search-results");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+
+  input.addEventListener("input", async () => {
+    const query = input.value.trim();
+
+    if (!query) {
+      resultsContainer.innerHTML = "";
+      return;
+    }
+
+  
+    const pagefind = await import("/pagefind/pagefind.js");
+
+    const search = await pagefind.search(query);
+    const results = await Promise.all(
+      search.results.slice(0, 5).map(result => result.data())
+    );
+
+    resultsContainer.innerHTML = results
+      .map(result => `
+        <a href="${result.url}">
+          <strong>${result.meta.title}</strong>
+          <p>${result.excerpt}</p>
+        </a>
+      `).join("");
+  });
+</script> -->
