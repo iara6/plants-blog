@@ -1,3 +1,7 @@
+---
+import Search from "./Search.astro"
+---
+
 <header>
   <div class="header-bg-wrapper">
     <img class="header-bg" src="/images/backgrounds/header-bg-webp.webp" alt="">
@@ -66,14 +70,15 @@
         <span></span>
       </div>
 
-      <div class="header__search">
-        <form>
-          <input placeholder="" value="" type="search">
+      <Search />
+      <!-- <div class="header__search">
+        <form id="search-form">
+          <input id="search-input" placeholder="Поиск" value="" type="search">
           <button aria-label="Search" type="submit">
             <img src="/icons/magnifying-glass.svg" alt="">
           </button>
         </form>
-      </div>
+      </div> -->
 
       <button class="switch-button">
         <span><img src="/icons/moon4.svg" alt=""></span>
@@ -452,7 +457,7 @@
   .show-hide-content .nav-toggle-menu__option-title i {
     transform: rotate(180deg);
   }
-  .header__search form {
+/*   .header__search form {
     display: flex;
   }
   .header__search input {
@@ -468,7 +473,7 @@
     border-top-right-radius: 10px;
     border: 1px solid black;
     cursor: pointer;
-  }
+  } */
 
 /******************
   Dark mode button 

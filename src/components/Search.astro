@@ -1,0 +1,36 @@
+<div class="header__search">
+  <form id="search-form">
+    <input id="search-input" placeholder="Поиск" value="" type="search">
+    <button aria-label="Search" type="submit">
+      <img src="/icons/magnifying-glass.svg" alt="">
+    </button>
+  </form>
+
+  <div id="search-results"></div>
+</div>
+
+<style>
+  .header__search form {
+    display: flex;
+  }
+  .header__search input {
+    padding: 0.5rem 0.7rem;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 1px solid black;
+  }
+  .header__search button {
+    padding: 0 0.5rem;
+    margin-left: -1px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  document.getElementById("search-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+</script>
