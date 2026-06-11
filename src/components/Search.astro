@@ -1,6 +1,6 @@
 <div class="header__search">
   <form id="search-form">
-    <input id="search-input" placeholder="Поиск" value="" type="search">
+    <input id="search-input" name="q" placeholder="Поиск" value="" type="search">
     <button aria-label="Search" type="submit">
       <img src="/icons/magnifying-glass.svg" alt="">
     </button>
@@ -10,6 +10,9 @@
 </div>
 
 <style>
+  .header__search {
+    width: 300px;
+  }
   .header__search form {
     display: flex;
   }
@@ -18,6 +21,7 @@
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     border: 1px solid black;
+    width: 100%;
   }
   .header__search button {
     padding: 0 0.5rem;
@@ -30,12 +34,93 @@
 </style>
 
 <script>
+  document
+    .getElementById("search-form")
+    ?.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const query =
+        document.getElementById("search-input").value;
+
+      window.location.href =
+        `/search/?q=${encodeURIComponent(query)}`;
+    });
+</script>
+
+<!-- <script>
   const form = document.getElementById("search-form");
 
   form?.addEventListener("submit", (e) => {
     e.preventDefault();
   });
-</script>
+</script> -->
+
+<!-- <script>
+  const form = document.getElementById("search-form");
+  const input = document.getElementById("search-input");
+  const resultsContainer = document.getElementById("search-results");
+
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+
+  let pagefind;
+
+  async function search(query) {
+    if (!pagefind) {
+      pagefind = await window.pagefind;
+    }
+
+    const results = await pagefind.search(query);
+
+    resultsContainer.textContent =
+      `Found ${results.results.length} results`;
+  }
+
+  input?.addEventListener("input", async () => {
+    const query = input.value.trim();
+
+    if (!query) {
+      resultsContainer.textContent = "";
+      return;
+    }
+
+    await search(query);
+  });
+</script> -->
+
+<!-- <script>
+  const input = document.getElementById("search-input");
+  const resultsContainer = document.getElementById("search-results");
+
+  let pagefind;
+
+  async function getPagefind() {
+    if (!pagefind) {
+      pagefind = await import("/pagefind/pagefind.js");
+    }
+    return pagefind;
+  }
+
+  input?.addEventListener("input", async () => {
+    const query = input.value.trim();
+
+    if (!query) {
+      resultsContainer.innerHTML = "";
+      return;
+    }
+
+    const pf = await getPagefind();
+
+    const search = await pf.search(query);
+
+    resultsContainer.innerHTML =
+      `<p>Found ${search.results.length} results</p>`;
+  });
+</script> -->
+
+
+
 <!-- 
 <script>
   const form = document.getElementById("search-form");

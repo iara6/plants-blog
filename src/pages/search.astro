@@ -1,0 +1,48 @@
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+  </head>
+
+  <body>
+    <div id="search"></div>
+
+    <!-- <script is:inline>
+      window.addEventListener("DOMContentLoaded", async () => {
+        new PagefindUI({
+          element: "#search"
+        });
+      });
+    </script> -->
+
+    <script is:inline>
+      window.addEventListener("DOMContentLoaded", async () => {
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get("q");
+
+        new PagefindUI({
+          element: "#search",
+          showSubResults: true
+        });
+
+        if (query) {
+          setTimeout(() => {
+            const input = document.querySelector(
+              "#search input"
+            );
+
+            if (input) {
+              input.value = query;
+
+              input.dispatchEvent(
+                new Event("input", { bubbles: true })
+              );
+            }
+          }, 100);
+        }
+      });
+    </script>
+
+    <script src="/pagefind/pagefind-ui.js" is:inline></script>
+  </body>
+</html>
+
