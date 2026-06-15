@@ -12,6 +12,7 @@
 <style>
   .header__search {
     width: 300px;
+    position: relative;
   }
   .header__search form {
     display: flex;
@@ -31,9 +32,79 @@
     border: 1px solid black;
     cursor: pointer;
   }
+
+#search-results {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+
+  width: 100%;
+
+  background: rgb(173, 131, 131);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  display: none;
+
+  z-index: 100;
+}
+
+.search-result {
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-result:hover {
+  background: #f3f3f3;
+}
 </style>
 
 <script>
+  const form = document.getElementById("search-form");
+  const input = document.getElementById("search-input");
+  const results = document.getElementById("search-results");
+
+  function performSearch() {
+    const query = input.value.trim();
+
+    if (!query) return;
+
+    window.location.href =
+      `/search/?q=${encodeURIComponent(query)}`;
+  }
+
+  input?.addEventListener("input", () => {
+    const query = input.value.trim();
+
+    if (!query) {
+      results.style.display = "none";
+      results.innerHTML = "";
+      return;
+    }
+
+    results.innerHTML = `
+      <div class="search-suggestion">
+        Искать «${query}»
+      </div>
+    `;
+
+    results.style.display = "block";
+  });
+
+  results?.addEventListener("click", () => {
+    performSearch();
+  });
+
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    performSearch();
+  });
+</script>
+
+<!-- <script>
   document
     .getElementById("search-form")
     ?.addEventListener("submit", (e) => {
@@ -45,7 +116,10 @@
       window.location.href =
         `/search/?q=${encodeURIComponent(query)}`;
     });
-</script>
+</script> -->
+
+
+<!-- <script src="/pagefind/pagefind.js" is:inline></script> -->
 
 <!-- <script>
   const form = document.getElementById("search-form");
