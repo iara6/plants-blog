@@ -33,36 +33,154 @@
     cursor: pointer;
   }
 
-#search-results {
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 0;
+  #search-results {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
 
-  width: 100%;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
 
-  background: rgb(173, 131, 131);
-  border: 1px solid #ddd;
-  border-radius: 10px;
+    background: rgb(173, 131, 131);
+    border: 1px solid #ddd;
+    border-radius: 10px;
 
-  display: none;
+    display: none;
 
-  z-index: 100;
-}
+    z-index: 100;
+  }
 
-.search-result {
-  display: block;
-  padding: 10px;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-}
+  .search-result {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
 
-.search-result:hover {
-  background: #f3f3f3;
-}
+  .search-result:hover {
+    background: #d0cece;
+  }
 </style>
 
-<script>
+<script is:inline>
+  let pagefind = null;
+
+  async function initPagefind() {
+    pagefind = await import("/pagefind/pagefind.js");
+  }
+
+  function debounce(fn, delay = 200) {
+    let t;
+    return (...args) => {
+      clearTimeout(t);
+      t = setTimeout(() => fn(...args), delay);
+    };
+  }
+
+ async function renderResults(results) {
+  const container = document.getElementById("search-results");
+
+  const items = results?.results ?? [];
+
+  if (!items.length) {
+    container.style.display = "none";
+    container.innerHTML = "";
+    return;
+  }
+
+  const resolved = await Promise.all(
+    items.slice(0, 5).map(async (r) => {
+      const data = await r.data();
+
+      const title =
+        data?.meta?.title ||
+        data?.title ||
+        "Untitled";
+
+      return {
+        url: r.url,
+        title
+      };
+    })
+  );
+
+  container.innerHTML = resolved
+    .map(
+      (r) => `
+        <a class="search-result" href="${r.url}">
+          ${r.title}
+        </a>
+      `
+    )
+    .join("");
+
+  container.style.display = "block";
+}
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    await initPagefind();
+
+    const input = document.getElementById("search-input");
+    const form = document.getElementById("search-form");
+    const container = document.getElementById("search-results");
+
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const query = input.value;
+      window.location.href = `/search/?q=${encodeURIComponent(query)}`;
+    });
+
+
+    const searchFn = pagefind?.search || pagefind?.default?.search;
+
+    const runSearch = debounce(async (query) => {
+      if (!query || query.trim().length < 2) {
+        container.style.display = "none";
+        return;
+      }
+
+      try {
+        const results = await pagefind.search(query);
+
+        console.log("PAGEFIND RAW RESULTS:", results);
+        console.log("FIRST ITEM:", results?.results?.[0]);
+
+        renderResults(results);
+      } catch (err) {
+        console.error("Pagefind search failed:", err);
+      }
+    }, 200);
+
+    input.addEventListener("input", (e) => {
+      runSearch(e.target.value);
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".header__search")) {
+        container.style.display = "none";
+      }
+    });
+  });
+</script>
+
+<!-- <script>
+  document
+    .getElementById("search-form")
+    ?.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const query =
+        document.getElementById("search-input").value;
+
+      window.location.href =
+        `/search/?q=${encodeURIComponent(query)}`;
+    });
+</script> -->
+
+<!-- <script>
   const form = document.getElementById("search-form");
   const input = document.getElementById("search-input");
   const results = document.getElementById("search-results");
@@ -102,21 +220,8 @@
     e.preventDefault();
     performSearch();
   });
-</script>
-
-<!-- <script>
-  document
-    .getElementById("search-form")
-    ?.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const query =
-        document.getElementById("search-input").value;
-
-      window.location.href =
-        `/search/?q=${encodeURIComponent(query)}`;
-    });
 </script> -->
+
 
 
 <!-- <script src="/pagefind/pagefind.js" is:inline></script> -->

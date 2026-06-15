@@ -14,7 +14,7 @@
       });
     </script> -->
 
-    <script is:inline>
+   <!--  <script is:inline>
       window.addEventListener("DOMContentLoaded", async () => {
         const params = new URLSearchParams(window.location.search);
         const query = params.get("q");
@@ -42,7 +42,31 @@
       });
     </script>
 
+    <script src="/pagefind/pagefind-ui.js" is:inline></script> -->
+
     <script src="/pagefind/pagefind-ui.js" is:inline></script>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get("q");
+
+    const ui = new PagefindUI({
+      element: "#search",
+      showSubResults: true
+    });
+
+    if (query) {
+      setTimeout(() => {
+        const input = document.querySelector("#search input");
+        if (input) {
+          input.value = query;
+          input.dispatchEvent(new Event("input", { bubbles: true }));
+        }
+      }, 150);
+    }
+  });
+</script>
   </body>
 </html>
 
