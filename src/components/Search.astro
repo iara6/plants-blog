@@ -59,9 +59,21 @@
     text-decoration: none;
     color: var(--primary-clr-dark);
   }
-
   :global(.search-result):hover {
     background-color: var(--secondary-clr);
+  }
+  :global(.search-show-all) {
+    display: block;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary-clr-dark);
+    opacity: 0.5;
+  }
+  :global(.search-show-all):hover {
+    background-color: var(--secondary-clr);
+    opacity: 1;
   }
 </style>
 
@@ -80,45 +92,54 @@
     };
   }
 
- async function renderResults(results) {
-  const container = document.getElementById("search-results");
+  async function renderResults(results) {
+    const container = document.getElementById("search-results");
+    const items = results?.results ?? [];
 
-  const items = results?.results ?? [];
+    if (!items.length) {
+      container.style.display = "none";
+      container.innerHTML = "";
+      return;
+    }
 
-  if (!items.length) {
-    container.style.display = "none";
-    container.innerHTML = "";
-    return;
-  }
+    const resolved = await Promise.all(
+      items.slice(0, 5).map(async (r) => {
+        const data = await r.data();
+        console.log("RESULT DATA:", data);
+        const title =
+          data?.meta?.title ||
+          data?.title ||
+          "Untitled";
 
-  const resolved = await Promise.all(
-    items.slice(0, 5).map(async (r) => {
-      const data = await r.data();
-      console.log("RESULT DATA:", data);
-      const title =
-        data?.meta?.title ||
-        data?.title ||
-        "Untitled";
+        return {
+          url: data.url || data.raw_url,
+          title
+        };
+      })
+    );
 
-      return {
-        url: data.url || data.raw_url,
-        title
-      };
-    })
-  );
+    container.innerHTML = resolved
+      .map(
+        (r) => `
+          <a class="search-result" href="${r.url}">
+            ${r.title}
+          </a>
+        `
+      )
+      .join("");
 
-  container.innerHTML = resolved
-    .map(
-      (r) => `
-        <a class="search-result" href="${r.url}">
-          ${r.title}
+    const query = document.getElementById("search-input").value;
+
+    if (items.length > 5) {
+      container.innerHTML += `
+        <a class="search-show-all" href="/search/?q=${encodeURIComponent(query)}">
+          Показать все ${items.length} результатов
         </a>
-      `
-    )
-    .join("");
+      `;
+    }
 
-  container.style.display = "block";
-}
+    container.style.display = "block";
+  }
 
   document.addEventListener("DOMContentLoaded", async () => {
     await initPagefind();
@@ -133,9 +154,6 @@
       const query = input.value;
       window.location.href = `/search/?q=${encodeURIComponent(query)}`;
     });
-
-
-    const searchFn = pagefind?.search || pagefind?.default?.search;
 
     const runSearch = debounce(async (query) => {
       if (!query || query.trim().length < 2) {
@@ -179,160 +197,4 @@
       window.location.href =
         `/search/?q=${encodeURIComponent(query)}`;
     });
-</script> -->
-
-<!-- <script>
-  const form = document.getElementById("search-form");
-  const input = document.getElementById("search-input");
-  const results = document.getElementById("search-results");
-
-  function performSearch() {
-    const query = input.value.trim();
-
-    if (!query) return;
-
-    window.location.href =
-      `/search/?q=${encodeURIComponent(query)}`;
-  }
-
-  input?.addEventListener("input", () => {
-    const query = input.value.trim();
-
-    if (!query) {
-      results.style.display = "none";
-      results.innerHTML = "";
-      return;
-    }
-
-    results.innerHTML = `
-      <div class="search-suggestion">
-        Искать «${query}»
-      </div>
-    `;
-
-    results.style.display = "block";
-  });
-
-  results?.addEventListener("click", () => {
-    performSearch();
-  });
-
-  form?.addEventListener("submit", (e) => {
-    e.preventDefault();
-    performSearch();
-  });
-</script> -->
-
-
-
-<!-- <script src="/pagefind/pagefind.js" is:inline></script> -->
-
-<!-- <script>
-  const form = document.getElementById("search-form");
-
-  form?.addEventListener("submit", (e) => {
-    e.preventDefault();
-  });
-</script> -->
-
-<!-- <script>
-  const form = document.getElementById("search-form");
-  const input = document.getElementById("search-input");
-  const resultsContainer = document.getElementById("search-results");
-
-  form?.addEventListener("submit", (e) => {
-    e.preventDefault();
-  });
-
-  let pagefind;
-
-  async function search(query) {
-    if (!pagefind) {
-      pagefind = await window.pagefind;
-    }
-
-    const results = await pagefind.search(query);
-
-    resultsContainer.textContent =
-      `Found ${results.results.length} results`;
-  }
-
-  input?.addEventListener("input", async () => {
-    const query = input.value.trim();
-
-    if (!query) {
-      resultsContainer.textContent = "";
-      return;
-    }
-
-    await search(query);
-  });
-</script> -->
-
-<!-- <script>
-  const input = document.getElementById("search-input");
-  const resultsContainer = document.getElementById("search-results");
-
-  let pagefind;
-
-  async function getPagefind() {
-    if (!pagefind) {
-      pagefind = await import("/pagefind/pagefind.js");
-    }
-    return pagefind;
-  }
-
-  input?.addEventListener("input", async () => {
-    const query = input.value.trim();
-
-    if (!query) {
-      resultsContainer.innerHTML = "";
-      return;
-    }
-
-    const pf = await getPagefind();
-
-    const search = await pf.search(query);
-
-    resultsContainer.innerHTML =
-      `<p>Found ${search.results.length} results</p>`;
-  });
-</script> -->
-
-
-
-<!-- 
-<script>
-  const form = document.getElementById("search-form");
-  const input = document.getElementById("search-input");
-  const resultsContainer = document.getElementById("search-results");
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-  });
-
-  input.addEventListener("input", async () => {
-    const query = input.value.trim();
-
-    if (!query) {
-      resultsContainer.innerHTML = "";
-      return;
-    }
-
-  
-    const pagefind = await import("/pagefind/pagefind.js");
-
-    const search = await pagefind.search(query);
-    const results = await Promise.all(
-      search.results.slice(0, 5).map(result => result.data())
-    );
-
-    resultsContainer.innerHTML = results
-      .map(result => `
-        <a href="${result.url}">
-          <strong>${result.meta.title}</strong>
-          <p>${result.excerpt}</p>
-        </a>
-      `).join("");
-  });
 </script> -->

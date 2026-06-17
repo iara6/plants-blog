@@ -1,4 +1,93 @@
+---
+// component imports
+import MainHead from "../layouts/MainHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import BackToTop from "../components/BackToTop.astro";
+
+import "../styles/styles.css";
+
+const {
+  title = "Результаты поиска",
+  description = "Невероятный сайт о прекрасных растениях и не только.",
+  robots = false,
+  frontmatter,
+} = Astro.props;
+---
+
+<!doctype html>
 <html lang="ru">
+  <MainHead
+  {title}
+  {description}
+  {frontmatter}
+  {robots}>
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+  </MainHead>
+  <body>
+    <Header />
+		<main class="content-container">
+      <div id="search"></div>
+    </main>
+    <Footer />
+    <BackToTop />
+    <script is:inline>
+      function initDarkMode() {
+        const switchBtns = document.querySelectorAll('.switch-button');
+
+        let darkModeOn = JSON.parse(localStorage.getItem('mode')) || false;
+        
+        document.documentElement.classList.toggle('dark-mode', darkModeOn);
+
+        switchBtns.forEach(btn => {
+          btn.classList.toggle('slide', darkModeOn);
+         
+          btn.onclick = () => {
+            darkModeOn = !darkModeOn;
+
+            document.documentElement.classList.toggle('dark-mode', darkModeOn);
+
+            switchBtns.forEach(b => {
+              b.classList.toggle('slide', darkModeOn);
+            });
+
+            localStorage.setItem('mode', JSON.stringify(darkModeOn));
+          };
+        });
+      }
+  
+      initDarkMode();
+      document.addEventListener('astro:page-load', initDarkMode);
+    </script>
+
+    <script src="/pagefind/pagefind-ui.js" is:inline></script>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get("q");
+
+        const ui = new PagefindUI({
+          element: "#search",
+          showSubResults: true
+        });
+
+        if (query) {
+          setTimeout(() => {
+            const input = document.querySelector("#search input");
+            if (input) {
+              input.value = query;
+              input.dispatchEvent(new Event("input", { bubbles: true }));
+            }
+          }, 150);
+        }
+      });
+    </script>
+  </body>
+</html>
+
+
+<!-- <html lang="ru">
   <head>
     <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
   </head>
@@ -6,7 +95,37 @@
   <body>
     <div id="search"></div>
 
-    <!-- <script is:inline>
+    
+
+  <script src="/pagefind/pagefind-ui.js" is:inline></script>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const query = params.get("q");
+
+      const ui = new PagefindUI({
+        element: "#search",
+        showSubResults: true
+      });
+
+      if (query) {
+        setTimeout(() => {
+          const input = document.querySelector("#search input");
+          if (input) {
+            input.value = query;
+            input.dispatchEvent(new Event("input", { bubbles: true }));
+          }
+        }, 150);
+      }
+    });
+  </script>
+  </body>
+</html>
+ -->
+
+
+<!-- <script is:inline>
       window.addEventListener("DOMContentLoaded", async () => {
         new PagefindUI({
           element: "#search"
@@ -43,30 +162,3 @@
     </script>
 
     <script src="/pagefind/pagefind-ui.js" is:inline></script> -->
-
-    <script src="/pagefind/pagefind-ui.js" is:inline></script>
-
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const params = new URLSearchParams(window.location.search);
-    const query = params.get("q");
-
-    const ui = new PagefindUI({
-      element: "#search",
-      showSubResults: true
-    });
-
-    if (query) {
-      setTimeout(() => {
-        const input = document.querySelector("#search input");
-        if (input) {
-          input.value = query;
-          input.dispatchEvent(new Event("input", { bubbles: true }));
-        }
-      }, 150);
-    }
-  });
-</script>
-  </body>
-</html>
-
