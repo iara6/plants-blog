@@ -1,21 +1,57 @@
 ---
-// component imports
-import MainHead from "../layouts/MainHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import BackToTop from "../components/BackToTop.astro";
-
+import MainLayout from "../layouts/MainLayout.astro";
 import "../styles/styles.css";
 
 const {
   title = "Результаты поиска",
-  description = "Невероятный сайт о прекрасных растениях и не только.",
+  description = "Все результаты поиска по вашему запросу",
   robots = false,
   frontmatter,
 } = Astro.props;
 ---
 
-<!doctype html>
+<MainLayout
+  {title}
+  {description}
+  {frontmatter}
+  {robots}
+>
+  <link slot="head" rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+
+  <main class="content-container">
+    <div id="search"></div>
+  </main>
+
+  <script slot="body-end" src="/pagefind/pagefind-ui.js"  is:inline></script>
+  <script slot="body-end" is:inline>
+    window.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const query = params.get("q");
+
+      const ui = new PagefindUI({
+        element: "#search",
+        showSubResults: true,
+      });
+
+      if (query) {
+        setTimeout(() => {
+          const input = document.querySelector("#search input");
+
+          if (input) {
+            input.value = query;
+            input.dispatchEvent(
+              new Event("input", { bubbles: true })
+            );
+          }
+        }, 150);
+      }
+    });
+  </script>
+</MainLayout>
+
+
+
+<!-- <!doctype html>
 <html lang="ru">
   <MainHead
   {title}
@@ -84,7 +120,7 @@ const {
       });
     </script>
   </body>
-</html>
+</html> -->
 
 
 <!-- <html lang="ru">
