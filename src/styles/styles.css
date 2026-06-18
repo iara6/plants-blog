@@ -170,6 +170,53 @@ html::before {
   display: flex;
   justify-content: center;
 }
+
+/* search.astro page */
+
+.pagefind-ui__button {
+  background-color: var(--selection-clr) !important;
+  color: var(--primary-clr-dark) !important;
+  padding: 0.7rem 2rem !important;
+  height: auto !important;
+  /* width: auto !important; */
+  width: 100% !important;
+  border-radius: 4px !important;
+  font-size: 1.1rem !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-family: "Commissioner", sans-serif !important;
+}
+.pagefind-ui__results li:last-child {
+  border-bottom: 1px solid rgb(153, 152, 152, 0.5) !important;
+}
+.pagefind-ui__result {
+  border-top: 1px solid rgb(153, 152, 152, 0.5) !important;
+}
+.pagefind-ui__result-thumb {
+  width: 150px !important;
+  max-width: 150px !important;
+  min-width: 150px !important;
+  height: 150px !important;
+  max-height: 150px !important;
+  aspect-ratio: 1 / 1 !important;
+}
+.pagefind-ui__result-image {
+  border-radius: 6px !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* <div class="pagefind-ui__result-inner svelte-4xnkmf"><p class="pagefind-ui__result-title svelte-4xnkmf"><a class="pagefind-ui__result-link svelte-4xnkmf" href="/category/sovety/">Статьи по тегу советы</a></p> <p class="pagefind-ui__result-excerpt svelte-4xnkmf">3 Item 4 Статьи по тегу <mark>советы.</mark> Как подружиться с гусём? Post</p>  </div> */
+.pagefind-ui__result-inner,
+.pagefind-ui__message,
+.pagefind-ui__search-input,
+.pagefind-ui__result-link {
+  color: var(--primary-clr-dark) !important;
+  font-family: "Commissioner", sans-serif !important;
+}
+
+ 
 @media screen and (max-width:1200px) { 
   .post-container__md-text img {
     max-width: 600px;
