@@ -134,12 +134,12 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
     margin-top: 3rem;
     cursor: pointer;
     margin-inline: auto;
-    width: fit-content;
+    /* width: fit-content; */
   }
   .view-all-articles-button {
     display: none;
     margin-top: 3rem;
-    justify-content: center;
+    /* justify-content: center; */
   }
   .show-more-button button {
     border: none;
@@ -148,15 +148,19 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
   .view-all-articles-button a,
   .show-more-button button {
     background-color: var(--selection-clr);
-    color: #442C2E;
-    padding: 1rem 2rem;
+    color: var(--primary-clr-dark);
+    /* padding: 1rem 2rem; */
+    padding: 0.7rem 2rem;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 550;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
     border-radius: 4px;
-    font-size: 1.1rem;
+    font-family: "Commissioner", sans-serif;
   }
 
   @media screen and (max-width:1200px) {

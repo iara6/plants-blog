@@ -182,6 +182,7 @@ html::before {
   width: 100% !important;
   border-radius: 4px !important;
   font-size: 1.1rem !important;
+  font-weight: 550 !important;
   border: none !important;
   cursor: pointer !important;
   font-family: "Commissioner", sans-serif !important;
@@ -190,6 +191,7 @@ html::before {
   border-bottom: 1px solid rgb(153, 152, 152, 0.5) !important;
 }
 .pagefind-ui__result {
+  align-items: center !important;
   border-top: 1px solid rgb(153, 152, 152, 0.5) !important;
 }
 .pagefind-ui__result-thumb {
@@ -215,8 +217,36 @@ html::before {
   color: var(--primary-clr-dark) !important;
   font-family: "Commissioner", sans-serif !important;
 }
+.pagefind-ui__result-link {
+  font-size: 1.2rem !important;
+  font-weight: 550 !important;
+}
+.pagefind-ui__result-excerpt {
+  font-size: 1rem !important;
+}
 
- 
+@media screen and (max-width: 640px) {
+  .pagefind-ui__result-thumb {
+    width: 130px !important;
+    max-width: 130px !important;
+    min-width: 130px !important;
+    height: 130px !important;
+    max-height: 130px !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .pagefind-ui__result-thumb {
+    width: 110px !important;
+    max-width: 110px !important;
+    min-width: 110px !important;
+    height: 110px !important;
+    max-height: 110px !important;
+  }
+}
+
+
+
+/* *************************************** */
 @media screen and (max-width:1200px) { 
   .post-container__md-text img {
     max-width: 600px;

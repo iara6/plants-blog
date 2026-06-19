@@ -42,7 +42,7 @@ const relatedPosts = formattedPosts
     <main class="post-container">
       <div class="post-container__content">
         <PostHeader {title} {date} {category} {author} />
-        <div class="post-container__md-text">
+        <div class="post-container__md-text" data-pagefind-body>
           <slot />
         </div>
       </div>
