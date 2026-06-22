@@ -32,6 +32,7 @@ body {
 :root {
   --primary-clr: #FEDBD0;
   --primary-clr-dark: #442C2E;
+  --primary-clr-dark-perm: #442C2E;
   --secondary-clr: #FEEAE6;
 
   --accent-clr: #EF476F;
@@ -125,10 +126,13 @@ html::before {
   border: 2px solid lime;
 } */
 .article-category {
-  color: #1f0f0c !important;
   background-color: rgb(181, 242, 181);
   padding: 3px 7px;
   border-radius: 4px;
+}
+
+.article-category a {
+  color: var(--primary-clr-dark-perm) !important;
 }
 
 .page-number {
