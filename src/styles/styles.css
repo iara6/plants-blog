@@ -15,7 +15,7 @@
 body {
   color: var(--primary-clr-dark);
   font-family: "Commissioner", sans-serif;
-
+  background-color: var(--secondary-clr);
 /* font-family: "IBM Plex Sans", sans-serif; */
 /* font-family: "Onest", sans-serif; */
 
@@ -30,13 +30,31 @@ body {
 } */
 
 :root {
-  --primary-clr: #FEDBD0;
+  /* --primary-clr: #FEDBD0;
   --primary-clr-dark: #442C2E;
   --primary-clr-dark-perm: #442C2E;
   --secondary-clr: #FEEAE6;
 
   --accent-clr: #EF476F;
   --accent-clr-2: #06D6A0;
+
+  --selection-clr: #bce5bc;  */
+/* ************************* */
+
+/* Primary	Deep green (#2f6b4f)
+Accent	Sage (#89a97b)
+Background	Warm ivory (#faf8f5)
+Text	Dark gray (#2e2e2e) */
+
+  --primary-clr: #a7d8a8;
+  --primary-clr-dark: #2e2e2e;
+  --primary-clr-dark-perm: #442C2E;
+  --secondary-clr: #faf8f5;
+  --secondary-cl-2: #fbf1e1;
+
+  --accent-clr: #EF476F;
+  --accent-clr-2: #fb7633;
+  --accent-clr-3: #f8c1a1;
 
   --selection-clr: #bce5bc; 
 
@@ -54,6 +72,7 @@ body {
   --primary-clr: #40170b;
   --primary-clr-dark: #d3bbbd; 
   --secondary-clr: #1f0f0c;
+  --secondary-cl-2: #432a08;
 
   --accent-clr: #b71037; 
   --accent-clr-2: #2fd7aa; 
@@ -89,7 +108,7 @@ html {
 
 }
 
-html::before {
+/* html::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -98,11 +117,11 @@ html::before {
   background-size: 600px;
   opacity: 0.4;
   z-index: -1;
-}
+} */
 
 .content-container,
 .post-container {
-  background-color: var(--secondary-clr);
+  background-color: var(--secondary-cl-2);
   max-width: var(--max-width);
   padding: 1.5rem;
   /* min-width: 1024px; */

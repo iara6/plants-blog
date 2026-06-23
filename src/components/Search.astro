@@ -1,6 +1,6 @@
 <div class="header__search">
   <form id="search-form" autocomplete="off">
-    <input id="search-input" name="q" placeholder="Поиск" value="" type="search">
+    <input id="search-input" name="q" placeholder="Поиск по сайту" value="" type="search">
     <button aria-label="Search" type="submit">
       <img src="/icons/magnifying-glass.svg" alt="">
     </button>
@@ -24,8 +24,12 @@
     border: 1px solid black;
     width: 100%;
   }
+  .header__search input:focus {
+    outline: 1px solid var(--accent-clr-2);
+  }
   .header__search button {
     padding: 0 0.5rem;
+    background-color: var(--accent-clr-3);
     margin-left: -1px;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;

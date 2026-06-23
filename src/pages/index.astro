@@ -29,7 +29,7 @@ const formattedTrendingPosts = formatBlogPosts(allOtherPosts, {
   sortByDate: false,
 });
 
-const trendingPosts = formattedTrendingPosts.slice(0, 7);
+const trendingPosts = formattedTrendingPosts.slice(0, 6);
 ---
 
 <MainLayout>
@@ -57,6 +57,9 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
           }
         </div>
       </section>
+    </div>
+    <div class="quote-section">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, animi?
     </div>
     <div class="home-main__all-container">
       <section>
@@ -92,7 +95,7 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
 <style>
   .home-main__new-articles-container {
     display: grid;
-    grid-template-columns: 0.35fr 1fr;
+    grid-template-columns: 0.4fr 1fr;
     gap: 2rem;
   }
   p {
@@ -100,7 +103,7 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
     padding: 2rem 0;
   }
   .trending-section {
-    padding-right: 1rem;
+    padding-right: 2rem;
     border-right: 2px dashed rgb(185, 167, 167);
   }
   .trending-section h2 {
@@ -112,15 +115,26 @@ const trendingPosts = formattedTrendingPosts.slice(0, 7);
   .new-articles-section {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 1.5rem;
+    gap: 2rem;
   }
   .new-articles-section__secondary {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
   }
-  .home-main__all-container {
+
+  .quote-section {
+    background-color: var(--primary-clr);
+    font-size: 2rem;
+    font-weight: 550;
+    text-align: center;
+    padding: 1.5rem 2rem;
     margin-top: 2rem;
+    margin-inline: -1.5rem;
+  }
+
+  .home-main__all-container {
+    margin-top: 2.5rem;
   }
   .home-main__all-container section {
     display: grid;
