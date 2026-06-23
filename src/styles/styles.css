@@ -149,7 +149,8 @@ html::before {
 }
 .pagination-buttons a {
   background-color: var(--selection-clr);
-  color: #442C2E;
+  color: var(--primary-clr-dark);
+  font-weight: 550;
   padding: 1rem 2rem;
   text-decoration: none;
   display: flex;
@@ -159,6 +160,9 @@ html::before {
   border-radius: 4px;
   font-size: 1.1rem;
   /*  width: fit-content; */
+}
+.pagination-icon {
+  color: var(--primary-clr-dark);
 }
 
 /* blog-page, author-page, category-page */

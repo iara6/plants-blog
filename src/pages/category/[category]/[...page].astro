@@ -3,6 +3,8 @@
 import MainLayout from "../../../layouts/MainLayout.astro";
 import PostCard from "../../../components/PostCard.astro";
 import CategoryCloud from "../../../components/CategoryCloud.astro";
+import RightArrow from "../../../components/icons/RightArrow.astro";
+import LeftArrow from "../../../components/icons/LeftArrow.astro";
 
 // utils imports
 import { slugify, formatBlogPosts } from '../../../js/utils';
@@ -71,11 +73,16 @@ const { page, name } = Astro.props;
 
     <div class="pagination-buttons">
       {page.url.prev && <a href={page.url.prev}>
-        <img src="/icons/left.svg" alt="">
+        <LeftArrow
+          class="pagination-icon"
+          aria-hidden="true" />
          Назад
          </a>}
       {page.url.next && <a href={page.url.next}>
-        Вперёд <img src="/icons/right.svg" alt="">
+        Вперёд 
+        <RightArrow
+          class="pagination-icon"
+          aria-hidden="true" />
         </a>}
     </div>
     <p class="page-number">
