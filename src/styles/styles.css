@@ -41,20 +41,33 @@ body {
   --selection-clr: #bce5bc;  */
 /* ************************* */
 
+/* lightest bg: #fef4e8 ++
+darkest green: #147063 ++
+warm light orange sand: #edbc9c ++
+warm dark orange: #d26e56 ++
+
+text dark: #101e15 ++
+text dark-medium: #81877b
+text light: #ebfbfb ++
+text light-medium: #84d4c7
+ */
+
 /* Primary	Deep green (#2f6b4f)
 Accent	Sage (#89a97b)
 Background	Warm ivory (#faf8f5)
 Text	Dark gray (#2e2e2e) */
 
-  --primary-clr: #a7d8a8;
-  --primary-clr-dark: #2e2e2e;
+  --primary-clr: #0F6358; /*  */
+  --primary-clr-dark: #101e15; /*  */
   --primary-clr-dark-perm: #442C2E;
-  --secondary-clr: #faf8f5;
-  --secondary-cl-2: #fbf1e1;
+  --secondary-clr: #fef4e8; /*  */
+  --secondary-cl-2: #fef4e8; /*  */
+
+  --text-clr-light: #f6ffff; /*  */ /* dark m */
 
   --accent-clr: #EF476F;
-  --accent-clr-2: #fb7633;
-  --accent-clr-3: #f8c1a1;
+  --accent-clr-2: #d26e56; /*  */
+  --accent-clr-3: #edbc9c;  /*  */ /* dark m */
 
   --selection-clr: #bce5bc; 
 
