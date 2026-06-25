@@ -17,7 +17,7 @@ const { relatedPosts } = Astro.props;
         <h3>
           <a href={`/blog/${slugify(post.frontmatter.title)}`}>{post.frontmatter.title}</a>
         </h3>
-        <span>
+        <span class="related-data">
           <span class="related-post-date">{formatDate(post.frontmatter.date)}</span> • <a href={`/author/${post.frontmatter.author.slug}/`}>{post.frontmatter.author.name}</a> {/* <a class="article-category" href={`/category/${slugify(post.frontmatter.category.slug)}/`}>{post.frontmatter.category.name}</a>*/}
         </span>
 
@@ -41,7 +41,7 @@ const { relatedPosts } = Astro.props;
     border-radius: 6px;
   }
   .related-post a {
-    color: var(--primary-clr-dark);
+    color: var(--text-clr-dark);
     text-decoration: none;
   }
   .related-post h3 {
@@ -49,11 +49,15 @@ const { relatedPosts } = Astro.props;
     font-weight: 600;
     margin: 0.8rem 0 0.4rem;
   }
-  .related-post span {
+  /* .related-post span {
     opacity: 0.9;
-  }
+  } */
   .related-post-date {
     font-size: 0.9rem;
+    color: var(--text-clr-dark-m);
+  }
+  .related-data a {
+    color: var(--text-clr-dark-m);
   }
 
   @media screen and (max-width:1400px) {

@@ -36,7 +36,7 @@ const { title, description, date, category, author, image } = frontmatter;
     margin-bottom: 1.1rem;
   }
   .featured-post a {
-    color: var(--primary-clr-dark);
+    color: var(--text-clr-dark);
     text-decoration: none;
   }
   .featured-post h3 {
@@ -56,10 +56,14 @@ const { title, description, date, category, author, image } = frontmatter;
     object-fit: cover;
   }
   .featured-post span {
-    opacity: 0.9;
+    color: var(--text-clr-dark-m);
+    /* opacity: 0.9; */
   }
   .featured-post-date {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+  }
+  .featured-data a {
+    color: var(--text-clr-dark-m);
   }
   .featured__description {
     font-size: 1.2rem;

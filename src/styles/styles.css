@@ -13,7 +13,7 @@
 }
 
 body {
-  color: var(--primary-clr-dark);
+  color: var(--text-clr-dark);
   font-family: "Commissioner", sans-serif;
   background-color: var(--secondary-clr);
 /* font-family: "IBM Plex Sans", sans-serif; */
@@ -47,9 +47,9 @@ warm light orange sand: #edbc9c ++
 warm dark orange: #d26e56 ++
 
 text dark: #101e15 ++
-text dark-medium: #81877b
+text dark-medium: #81877b ++
 text light: #ebfbfb ++
-text light-medium: #84d4c7
+text light-medium: #84d4c7 ++
  */
 
 /* Primary	Deep green (#2f6b4f)
@@ -58,16 +58,22 @@ Background	Warm ivory (#faf8f5)
 Text	Dark gray (#2e2e2e) */
 
   --primary-clr: #0F6358; /*  */
-  --primary-clr-dark: #101e15; /*  */
-  --primary-clr-dark-perm: #442C2E;
   --secondary-clr: #fef4e8; /*  */
   --secondary-cl-2: #fef4e8; /*  */
+  
+  /* --primary-clr-light: #0F6358; */ /*  */
+  --primary-clr-dark: #101e15; /* -- */
+  --primary-clr-dark-perm: #442C2E;
 
+  --text-clr-dark: #101e15;/*  */ /* dark m */
+  --text-clr-dark-m: #4c5345;/*  */ /* dark m */
   --text-clr-light: #f6ffff; /*  */ /* dark m */
+  --text-clr-light-m: #c5ded9;/*  */ /* dark m */
 
   --accent-clr: #EF476F;
   --accent-clr-2: #d26e56; /*  */
   --accent-clr-3: #edbc9c;  /*  */ /* dark m */
+  --accent-clr-4: #b5f2b5;
 
   --selection-clr: #bce5bc; 
 
@@ -95,7 +101,7 @@ Text	Dark gray (#2e2e2e) */
 
 ::selection {
   background-color: var(--selection-clr);
-  color: var(--primary-clr-dark);
+  color: var(--text-clr-dark);
 }
 
 /* html {
@@ -158,7 +164,7 @@ html {
   border: 2px solid lime;
 } */
 .article-category {
-  background-color: rgb(181, 242, 181);
+  background-color: var(--accent-clr-4);
   padding: 3px 7px;
   border-radius: 4px;
 }
@@ -181,7 +187,7 @@ html {
 }
 .pagination-buttons a {
   background-color: var(--selection-clr);
-  color: var(--primary-clr-dark);
+  color: var(--text-clr-dark);
   font-weight: 550;
   padding: 1rem 2rem;
   text-decoration: none;
@@ -194,7 +200,7 @@ html {
   /*  width: fit-content; */
 }
 .pagination-icon {
-  color: var(--primary-clr-dark);
+  color: var(--text-clr-dark);
 }
 
 /* blog-page, author-page, category-page */
@@ -202,7 +208,7 @@ html {
 .all-categories-h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--primary-clr-dark);
+  color: var(--text-clr-dark);
   margin: 2rem 0 1.5rem;    
   text-align: center;
 }
@@ -215,7 +221,7 @@ html {
 
 .pagefind-ui__button {
   background-color: var(--selection-clr) !important;
-  color: var(--primary-clr-dark) !important;
+  color: var(--text-clr-dark) !important;
   padding: 0.7rem 2rem !important;
   height: auto !important;
   /* width: auto !important; */
@@ -254,7 +260,7 @@ html {
 .pagefind-ui__message,
 .pagefind-ui__search-input,
 .pagefind-ui__result-link {
-  color: var(--primary-clr-dark) !important;
+  color: var(--text-clr-dark) !important;
   font-family: "Commissioner", sans-serif !important;
 }
 .pagefind-ui__result-link {

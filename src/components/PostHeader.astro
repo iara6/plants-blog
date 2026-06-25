@@ -8,7 +8,7 @@ const { title, date, category, author, image } = Astro.props;
 <div class="post-header-container">
   <h1>{title}</h1>
   <div class="post-header-data">
-    <a href={`/author/${author.slug}/`}>{author.name}</a> • <a class="article-category" href={`/category/${category.slug}/`}>{category.name}</a> • {formatDate(date)}
+    <a href={`/author/${author.slug}/`}>{author.name}</a> • <a class="article-category" href={`/category/${category.slug}/`}>{category.name}</a> • <span class="post-header-date">{formatDate(date)}</span>
   </div>  
 </div>
 
@@ -16,7 +16,7 @@ const { title, date, category, author, image } = Astro.props;
   .post-header-container {
     text-align: center;
     margin-bottom: 1rem;
-    color: var(--primary-clr-dark);
+    color: var(--text-clr-dark);
     /*   border: 1px solid red; */
   }
   .post-header-container h1 {
@@ -25,11 +25,14 @@ const { title, date, category, author, image } = Astro.props;
     margin-bottom: 0.5rem;
   }
   .post-header-container a {
-    color: var(--primary-clr-dark);
+    color: var(--text-clr-dark);
     text-decoration: none;
   }
   .post-header-container .article-category {
-    color: var(--primary-clr-dark-perm);
+    color: var(--text-clr-dark);
+  }
+  .post-header-date {
+    font-size: 0.95rem;
   }
 
    @media screen and (max-width: 768px) {
