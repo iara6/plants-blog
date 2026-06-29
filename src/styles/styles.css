@@ -66,6 +66,7 @@ Text	Dark gray (#2e2e2e) */
   --primary-clr-dark-perm: #442C2E;
 
   --text-clr-dark: #101e15;/*  */ /* dark m */
+  --text-clr-dark-perm: #101e15;
   --text-clr-dark-m: #4c5345;/*  */ /* dark m */
   --text-clr-light: #f6ffff; /*  */ /* dark m */
   --text-clr-light-m: #c5ded9;/*  */ /* dark m */
@@ -88,10 +89,13 @@ Text	Dark gray (#2e2e2e) */
 }
 
 .dark-mode {
-  --primary-clr: #40170b;
+  --primary-clr: #134443;
   --primary-clr-dark: #d3bbbd; 
-  --secondary-clr: #1f0f0c;
-  --secondary-cl-2: #432a08;
+  --secondary-clr: #220921;
+  --secondary-cl-2: #231806;
+
+  --text-clr-dark: #faecd6;
+  --text-clr-dark-m: #bcb3a6;
 
   --accent-clr: #b71037; 
   --accent-clr-2: #2fd7aa; 
@@ -174,30 +178,37 @@ html {
 }
 
 .page-number {
+  color: var(--text-clr-dark-m);
   text-align: center;
   font-size: 0.85rem;
-  opacity: 0.5;
-  margin-top: 3px;
+  /* opacity: 0.5; */
+  margin-top: 10px;
 }
 .pagination-buttons {
-  margin-top: 2rem;
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
   gap: 1rem;  
 }
 .pagination-buttons a {
-  background-color: var(--selection-clr);
+  background-color: var(--accent-clr-3);
   color: var(--text-clr-dark);
-  font-weight: 550;
+  border: 1px solid var(--text-clr-dark);
+  box-shadow: 2px 2px 0 0 var(--text-clr-dark);
+  font-weight: 500;
   padding: 1rem 2rem;
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
   border-radius: 4px;
   font-size: 1.1rem;
   /*  width: fit-content; */
+}
+.pagination-buttons a:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 var(--text-clr-dark);
 }
 .pagination-icon {
   color: var(--text-clr-dark);
@@ -216,8 +227,21 @@ html {
   display: flex;
   justify-content: center;
 }
-
+/*********************/
 /* search.astro page */
+/*********************/
+
+.pagefind-ui__search-input {
+  border: 1px solid black !important;
+}
+.pagefind-ui__message {
+  font-weight: 600 !important;
+}
+.pagefind-ui__form::before {
+  color: var(--text-clr-dark) !important;
+  width: 18px !important;
+  height: 18px !important;
+}
 
 .pagefind-ui__button {
   background-color: var(--accent-clr-3) !important;
