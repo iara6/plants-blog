@@ -153,17 +153,26 @@ const trendingPosts = formattedTrendingPosts.slice(0, 6);
   }
   .view-all-articles-button {
     display: none;
+    border-radius: 4px;
     margin-top: 3rem;
-    /* justify-content: center; */
+    border: 1px solid var(--text-clr-dark);
+    box-shadow: 3px 3px 0 0 var(--text-clr-dark);
   }
   .show-more-button button {
-    border: none;
+    /* border: none; */
+    border: 1px solid var(--text-clr-dark);
+    box-shadow: 3px 3px 0 0 var(--text-clr-dark);
     cursor: pointer;
+  }
+  .show-more-button button:hover,
+  .view-all-articles-button:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 0 0 0 var(--text-clr-dark);
   }
   .view-all-articles-button a,
   .show-more-button button {
-    background-color: var( --accent-clr-3);
-    color: var(--primary-clr-dark);
+    background-color: var(--accent-clr-3);
+    color: var(--text-clr-dark);
     /* padding: 1rem 2rem; */
     padding: 0.7rem 2rem;
     width: 100%;

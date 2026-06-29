@@ -62,7 +62,7 @@ Text	Dark gray (#2e2e2e) */
   --secondary-cl-2: #fef4e8; /*  */
   
   /* --primary-clr-light: #0F6358; */ /*  */
-  --primary-clr-dark: #101e15; /* -- */
+  --primary-clr-dark: #101e15; /* ----- */
   --primary-clr-dark-perm: #442C2E;
 
   --text-clr-dark: #101e15;/*  */ /* dark m */
@@ -220,7 +220,7 @@ html {
 /* search.astro page */
 
 .pagefind-ui__button {
-  background-color: var(--selection-clr) !important;
+  background-color: var(--accent-clr-3) !important;
   color: var(--text-clr-dark) !important;
   padding: 0.7rem 2rem !important;
   height: auto !important;
@@ -229,9 +229,15 @@ html {
   border-radius: 4px !important;
   font-size: 1.1rem !important;
   font-weight: 550 !important;
-  border: none !important;
+  /* border: none !important; */
+  border: 1px solid var(--text-clr-dark) !important;
+  box-shadow: 3px 3px 0 0 var(--text-clr-dark) !important;
   cursor: pointer !important;
   font-family: "Commissioner", sans-serif !important;
+}
+.pagefind-ui__button:hover {
+  transform: translate(3px, 3px) !important;
+  box-shadow: 0 0 0 var(--text-clr-dark) !important;
 }
 .pagefind-ui__results li:last-child {
   border-bottom: 1px solid rgb(153, 152, 152, 0.5) !important;
