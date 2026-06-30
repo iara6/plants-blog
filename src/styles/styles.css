@@ -70,9 +70,11 @@ Text	Dark gray (#2e2e2e) */
   --text-clr-dark-m: #4c5345;/*  */ /* dark m */
   --text-clr-light: #f6ffff; /*  */ /* dark m */
   --text-clr-light-m: #c5ded9;/*  */ /* dark m */
+  --category-font-weight: 400;
 
   --accent-clr: #EF476F;
-  --accent-clr-2: #d26e56; /*  */
+ /*  --accent-clr-2: #d26e56; */ /*  */
+  --accent-clr-2: #bb583f;
   --accent-clr-3: #edbc9c;  /*  */ /* dark m */
   --accent-clr-4: #b5f2b5;
 
@@ -89,16 +91,20 @@ Text	Dark gray (#2e2e2e) */
 }
 
 .dark-mode {
-  --primary-clr: #134443;
+  --primary-clr: #0a3837;
   --primary-clr-dark: #d3bbbd; 
-  --secondary-clr: #220921;
-  --secondary-cl-2: #231806;
+  --secondary-clr: #231117;
+  --secondary-cl-2: #231117;
 
   --text-clr-dark: #faecd6;
   --text-clr-dark-m: #bcb3a6;
 
-  --accent-clr: #b71037; 
-  --accent-clr-2: #2fd7aa; 
+  --category-font-weight: 450;
+
+  --accent-clr: #F92A82; 
+  --accent-clr-2: #5f57a7; 
+  --accent-clr-3: #abbb84;
+  --accent-clr-4: #bdb5ff;
 
   --selection-clr: #175217; 
 }
@@ -169,6 +175,7 @@ html {
 } */
 .article-category {
   background-color: var(--accent-clr-4);
+  font-weight: var(--category-font-weight);
   padding: 3px 7px;
   border-radius: 4px;
 }
@@ -192,7 +199,7 @@ html {
 }
 .pagination-buttons a {
   background-color: var(--accent-clr-3);
-  color: var(--text-clr-dark);
+  color: var(--text-clr-dark-perm);
   border: 1px solid var(--text-clr-dark);
   box-shadow: 2px 2px 0 0 var(--text-clr-dark);
   font-weight: 500;
@@ -211,7 +218,7 @@ html {
   box-shadow: 0 0 0 var(--text-clr-dark);
 }
 .pagination-icon {
-  color: var(--text-clr-dark);
+  color: var(--text-clr-dark-perm);
 }
 
 /* blog-page, author-page, category-page */
@@ -220,7 +227,7 @@ html {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-clr-dark);
-  margin: 2rem 0 1.5rem;    
+  margin: 2.5rem 0 1.5rem;    
   text-align: center;
 }
 .category-cloud-container {
@@ -245,7 +252,7 @@ html {
 
 .pagefind-ui__button {
   background-color: var(--accent-clr-3) !important;
-  color: var(--text-clr-dark) !important;
+  color: var(--text-clr-dark-perm) !important;
   padding: 0.7rem 2rem !important;
   height: auto !important;
   /* width: auto !important; */
