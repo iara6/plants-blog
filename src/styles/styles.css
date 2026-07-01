@@ -60,7 +60,7 @@ Text	Dark gray (#2e2e2e) */
   --primary-clr: #0F6358; /*  */
   --secondary-clr: #fef4e8; /*  */
   --secondary-cl-2: #fef4e8; /*  */
-  
+  --secondary-cl-3: #fffbf5; /* search page input bg */
   /* --primary-clr-light: #0F6358; */ /*  */
   --primary-clr-dark: #101e15; /* ----- */
   --primary-clr-dark-perm: #442C2E;
@@ -95,6 +95,7 @@ Text	Dark gray (#2e2e2e) */
   --primary-clr-dark: #d3bbbd; 
   --secondary-clr: #231117;
   --secondary-cl-2: #231117;
+  --secondary-cl-3: #d2dcba; /* search page input bg */
 
   --text-clr-dark: #faecd6;
   --text-clr-dark-m: #bcb3a6;
@@ -240,6 +241,11 @@ html {
 
 .pagefind-ui__search-input {
   border: 1px solid black !important;
+  color: var(--text-clr-dark-perm) !important;
+  background-color: var(--secondary-cl-3) !important;
+}
+.pagefind-ui__search-clear {
+  background-color: var(--secondary-cl-3) !important;
 }
 .pagefind-ui__message {
   font-weight: 600 !important;
@@ -295,7 +301,6 @@ html {
 /* <div class="pagefind-ui__result-inner svelte-4xnkmf"><p class="pagefind-ui__result-title svelte-4xnkmf"><a class="pagefind-ui__result-link svelte-4xnkmf" href="/category/sovety/">Статьи по тегу советы</a></p> <p class="pagefind-ui__result-excerpt svelte-4xnkmf">3 Item 4 Статьи по тегу <mark>советы.</mark> Как подружиться с гусём? Post</p>  </div> */
 .pagefind-ui__result-inner,
 .pagefind-ui__message,
-.pagefind-ui__search-input,
 .pagefind-ui__result-link {
   color: var(--text-clr-dark) !important;
   font-family: "Commissioner", sans-serif !important;
@@ -303,6 +308,9 @@ html {
 .pagefind-ui__result-link {
   font-size: 1.2rem !important;
   font-weight: 550 !important;
+}
+.pagefind-ui__result-link:hover {
+  text-decoration: none !important;
 }
 .pagefind-ui__result-excerpt {
   font-size: 1rem !important;

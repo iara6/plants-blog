@@ -200,7 +200,7 @@ import Search from "./Search.astro"
 **********/
   header {
     margin-bottom: 2rem;
-    border-bottom: 10px solid var(--accent-clr-3);
+    border-bottom: 8px solid var(--accent-clr-3);
   }
   .header-bg-wrapper {
     position: relative;
@@ -265,6 +265,7 @@ import Search from "./Search.astro"
     perspective: 1000px;
     z-index: 100;
     /* border: 1px solid red; */
+    cursor: pointer;
   }
   .dropdown::after {
     content: '';
@@ -272,8 +273,8 @@ import Search from "./Search.astro"
     width: 100%;
     transform: scaleX(0);
     transform-origin: bottom center;
-    height: 4px;
-    bottom: 0;
+    height: 8px;
+    bottom: -8px;
     left: 0;
     background-color: var(--accent-clr-2);
     transition: transform 250ms ease-out;
@@ -300,7 +301,7 @@ import Search from "./Search.astro"
   }
   .dropdown_menu {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 8px);
     left: 0;
     width: 100%;
     perspective: 1000px;
@@ -320,12 +321,14 @@ import Search from "./Search.astro"
     transition: all 150ms ease-out;
   }
   .dropdown_menu li:hover {
-    background-color: var(--accent-clr);
-    color: var(--secondary-clr);
+    background-color: var(--accent-clr-4);
   } 
   .dropdown_menu a { 
     /* border: 1px solid green; */
     padding: 0.5rem 1rem;
+  }
+  .dropdown_menu li:hover a {
+    color: var(--text-clr-dark-perm);
   }
 
   @keyframes growDown {
