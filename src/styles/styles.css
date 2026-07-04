@@ -70,6 +70,7 @@ Text	Dark gray (#2e2e2e) */
   --text-clr-dark-m: #4c5345;/*  */ /* dark m */
   --text-clr-light: #f6ffff; /*  */ /* dark m */
   --text-clr-light-m: #c5ded9;/*  */ /* dark m */
+  --text-clr-links: #a01d03;
   --category-font-weight: 400;
 
   --accent-clr: #EF476F;
@@ -77,6 +78,7 @@ Text	Dark gray (#2e2e2e) */
   --accent-clr-2: #bb583f;
   --accent-clr-3: #edbc9c;  /*  */ /* dark m */
   --accent-clr-4: #b5f2b5;
+  --accent-clr-5: #f1e6df; 
 
   --selection-clr: #bce5bc; 
 
@@ -99,13 +101,14 @@ Text	Dark gray (#2e2e2e) */
 
   --text-clr-dark: #faecd6;
   --text-clr-dark-m: #bcb3a6;
-
+  --text-clr-links: #b5ffc4;
   --category-font-weight: 450;
 
   --accent-clr: #F92A82; 
   --accent-clr-2: #5f57a7; 
   --accent-clr-3: #abbb84;
   --accent-clr-4: #bdb5ff;
+  --accent-clr-5: #361a24;
 
   --selection-clr: #175217; 
 }

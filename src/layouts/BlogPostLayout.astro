@@ -106,6 +106,27 @@ const relatedPosts = formattedPosts
   .post-container__md-text :global(h2) {
     font-weight: 600;
   }
+  .post-container__md-text :global(ul:first-child) {
+    /* border: 1px solid red; */
+    margin: 1rem 0;
+    padding: 0.5rem 0 0.5rem 1rem;
+    border-left: 1px solid gray;
+    background-color: var(--accent-clr-5);
+  }
+  .post-container__md-text :global(ul:first-child li) {
+    list-style: none;
+    padding: 0.1rem 0;
+  }
+
+  .post-container__md-text :global(li a) {
+    color: var(--text-clr-links);
+    text-decoration: none;
+    font-weight: 450;
+  }
+  .post-container__md-text :global(li a:hover){
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
   .related-h2 {
     display: none;
     font-size: 1.5rem;
