@@ -15,9 +15,9 @@ import Search from "./Search.astro"
         <li class="dropdown">
           <a class="section-link" href="#">Комнатные </br>растения</a>
           <ul class="dropdown_menu">
-            <li class="dropdown_item-1"><a href="#">Item 1</a></li>
-            <li class="dropdown_item-1"><a href="#">Item 2</a></li>
-            <li class="dropdown_item-1"><a href="#">Item 3</a></li>
+            <li class="dropdown_item-1"><a href="#">Список по алфавиту</a></li>
+            <li class="dropdown_item-1"><a href="#">Классификация</a></li>
+            <li class="dropdown_item-1"><a href="#">Как выбрать растение</a></li>
             <li class="dropdown_item-1"><a href="#">Item 4</a></li>
             <li class="dropdown_item-1"><a href="#">Item 5</a></li>
           </ul>
@@ -25,20 +25,20 @@ import Search from "./Search.astro"
         <li class="dropdown">
           <a class="section-link" href="#">Все об уходе</a>
           <ul class="dropdown_menu">
-            <li class="dropdown_item-1"><a href="#">Item 1</a></li>
-            <li class="dropdown_item-1"><a href="#">Item 2</a></li>
-            <li class="dropdown_item-1"><a href="#">Item 3</a></li>
-            <li class="dropdown_item-1"><a href="#">Item 4</a></li>
-            <li class="dropdown_item-1"><a href="#">Item 5</a></li>
+            <li class="dropdown_item-1"><a href="#">Посадка</a></li>
+            <li class="dropdown_item-1"><a href="#">Полив</a></li>
+            <li class="dropdown_item-1"><a href="#">Удобрение и подкормка</a></li>
+            <li class="dropdown_item-1"><a href="#">Все о разведении</a></li>
+            <li class="dropdown_item-1"><a href="#">Основные правила ухода за цветами</a></li>
           </ul>
         </li>
         <li class="dropdown">
           <a class="section-link" href="#">Здоровье</a>
           <ul class="dropdown_menu">
-            <li class="dropdown_item-1"><a href="#">Item 1</a></li>
-            <li class="dropdown_item-1"><a href="#">Item 2</a></li>
-            <li class="dropdown_item-1"><a href="#">Item 3</a></li>
-            <li class="dropdown_item-1"><a href="#">Item 4</a></li>
+            <li class="dropdown_item-1"><a href="#">Вредители комнатных растений</a></li>
+            <li class="dropdown_item-1"><a href="#">Болезни</a></li>
+            <li class="dropdown_item-1"><a href="#">Лечение</a></li>
+            <li class="dropdown_item-1"><a href="#">Как быстро реанимировать растение</a></li>
             <li class="dropdown_item-1"><a href="#">Item 5</a></li>
           </ul>
         </li>
@@ -303,6 +303,7 @@ import Search from "./Search.astro"
     position: absolute;
     top: calc(100% + 8px);
     left: 0;
+    /* max-width: 300px; */
     width: 100%;
     perspective: 1000px;
     z-index: -1;
@@ -314,6 +315,7 @@ import Search from "./Search.astro"
     transform-origin: top center;
   }
   .dropdown_menu li {
+     /* min-width: 0; */
     display: block;
     opacity: 1;
     background-color: var(--secondary-clr);
