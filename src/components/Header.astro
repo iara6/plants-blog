@@ -98,20 +98,20 @@ import Search from "./Search.astro"
       </button>
     <li class="nav-toggle-menu__option">
       <span class="nav-toggle-menu__option-title">
-        Section 1 <i class="fa-solid fa-chevron-down"></i>
+        Все об уходе <i class="fa-solid fa-chevron-down"></i>
       </span>
       <ul class="nav-toggle-div__expandable">
         <li>
-          <a href="/">Item 1</a>
+          <a href="/">Посадка</a>
         </li>
         <li>
-          <a href="/">Item 2</a>
+          <a href="/">Полив</a>
         </li>
         <li>
-          <a href="/">Item 3</a>
+          <a href="/">Удобрение и подкормка</a>
         </li>
         <li>
-          <a href="/">Item 4</a>
+          <a href="/">Основные правила ухода за цветами</a>
         </li>
       </ul>
     </li>
@@ -303,8 +303,12 @@ import Search from "./Search.astro"
     position: absolute;
     top: calc(100% + 8px);
     left: 0;
-    /* max-width: 300px; */
-    width: 100%;
+    min-width: 100%;
+     
+    width: max-content;
+    /* width: 100%;
+    max-width: 350px; */
+    /* width: fit-content; */
     perspective: 1000px;
     z-index: -1;
     box-shadow: 0px 3px 3px 3px rgb(0, 0, 0, 0.2);
@@ -315,7 +319,9 @@ import Search from "./Search.astro"
     transform-origin: top center;
   }
   .dropdown_menu li {
-     /* min-width: 0; */
+     /* white-space: normal; */
+    width: 100%;
+    max-width: 220px;
     display: block;
     opacity: 1;
     background-color: var(--secondary-clr);
@@ -383,7 +389,7 @@ import Search from "./Search.astro"
     color: var(--primary-clr-dark);
     background-color: var(--primary-clr);
     width: 100%;
-    max-height: calc(100vh - 300px);
+    max-height: calc(100vh - 220px);
     overflow-y: scroll;
 
     position: absolute;
@@ -412,6 +418,9 @@ import Search from "./Search.astro"
     transform: translateX(-30px);
     transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
   }
+  .nav-toggle-menu__option-title i {
+    margin-left: 5px;
+  }
   .nav-toggle-menu-container li:nth-child(1) .nav-toggle-menu__option-title,
   .nav-toggle-menu-container li:nth-child(1) .nav-toggle-div__expandable {
     transition-delay: 0ms;
@@ -439,18 +448,21 @@ import Search from "./Search.astro"
   .nav-toggle-div__expandable li {
     width: fit-content;
     cursor: pointer;
+    margin-left: 8px;
+    line-height: 2;
+    font-size: 1.1rem;
     /* border: 1px solid red; */
   }
   .nav-toggle-menu-container .nav-toggle-menu__option-title:hover,
   .nav-toggle-div__expandable li:hover {
-    color: rgb(108, 108, 114);
+    color: var(--accent-clr-4);
   }
   .nav-toggle-div__expandable a {
     text-decoration: none;
-    color: var(--primary-clr-dark);
+    color: var(--text-clr-light);
   }
   .nav-toggle-div__expandable a:hover {
-    color: rgb(108, 108, 114);
+    color: var(--accent-clr-4);
   }
   .nav-toggle-div__expandable {
     transform: translateX(-30px);
