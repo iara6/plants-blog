@@ -80,13 +80,23 @@ import Search from "./Search.astro"
         </form>
       </div> -->
 
-      <button class="switch-button">
-        <span><img src="/icons/moon4.svg" alt=""></span>
-        <span><img src="/icons/sun4.svg" alt=""></span>
-        <span class="switch"></span>
-      </button>
+      <div class="menu-container_buttons">
+        <div class="nav-random-dice-container">
+          <a href="/blog/random" title="Открыть случайную статью">
+            <img src="/icons/dice-light2.svg" alt="">
+          </a>
+        </div>
+  
+        <button class="switch-button">
+          <span><img src="/icons/moon4.svg" alt=""></span>
+          <span><img src="/icons/sun4.svg" alt=""></span>
+          <span class="switch"></span>
+        </button>
+      </div>
     </nav>
   </div>
+
+  
   
   <div class="nav-toggle-menu-container">
     <li class="nav-toggle-menu__option">
@@ -184,11 +194,18 @@ import Search from "./Search.astro"
         </li>
       </ul>
     </li>
-    <button class="switch-button switch-button-media">
-      <span><img src="/icons/moon4.svg" alt=""></span>
-      <span><img src="/icons/sun4.svg" alt=""></span>
-      <span class="switch"></span>
-    </button>
+    <div class="nav-toggle_buttons">
+      <button class="switch-button switch-button-media">
+        <span><img src="/icons/moon4.svg" alt=""></span>
+        <span><img src="/icons/sun4.svg" alt=""></span>
+        <span class="switch"></span>
+      </button>
+      <span class="random-dice-container">
+        <a href="/blog/random" title="Открыть случайную статью">
+          <img src="/icons/dice-light2.svg" alt="">
+        </a>
+      </span>
+    </div>
   </div>
 </header>
 
@@ -477,13 +494,41 @@ import Search from "./Search.astro"
   .show-hide-content .nav-toggle-menu__option-title i {
     transform: rotate(180deg);
   }
+  .nav-toggle_buttons {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  .random-dice-container {
+    margin-left: 10px;
+  }
+  .random-dice-container,
+  .nav-random-dice-container {
+    transition: transform 250ms ease-in-out;
+  }
+  .random-dice-container:hover,
+  .nav-random-dice-container:hover {
+    transform: rotate(35deg);
+  }
+  .nav-random-dice-container {
+    margin-right: 12px;
+  }
+  .random-dice-container img,
+  .nav-random-dice-container img  {
+    height: 24px;
+    width: 24px;
+    display: block;
+  }
+  .menu-container_buttons {
+    display: flex;
+    align-items: center;
+  }
 
 /******************
   Dark mode button 
 *******************/
   .switch-button-media {
     display: none;
-    margin-top: 1rem;
   }
   .switch-button {
     position: relative;
@@ -576,6 +621,9 @@ import Search from "./Search.astro"
       display: flex;
     }
     .menu {
+      display: none;
+    }
+    .nav-random-dice-container {
       display: none;
     }
     .switch-button {

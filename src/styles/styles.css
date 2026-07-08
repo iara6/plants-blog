@@ -70,7 +70,7 @@ Text	Dark gray (#2e2e2e) */
   --text-clr-dark-m: #4c5345;/*  */ /* dark m */
   --text-clr-light: #f6ffff; /*  */ /* dark m */
   --text-clr-light-m: #c5ded9;/*  */ /* dark m */
-  --text-clr-links: #a01d03;
+  --text-clr-links: #4d0858;
   --category-font-weight: 400;
 
   --accent-clr: #EF476F;
@@ -78,7 +78,7 @@ Text	Dark gray (#2e2e2e) */
   --accent-clr-2: #bb583f;
   --accent-clr-3: #edbc9c;  /*  */ /* dark m */
   --accent-clr-4: #b5f2b5;
-  --accent-clr-5: #f1e6df; 
+  --accent-clr-5: #fceeda; 
 
   --selection-clr: #bce5bc; 
 
