@@ -17,17 +17,16 @@ import MainLayout from "../layouts/MainLayout.astro";
       <p>
         Неверно указан адрес, или такой страницы не существует. 
       </p>
-      <!-- <p>
-        Поищите что-то еще.
-      </p> -->
       <div class="container-404-buttons">
         <div class="home-button">
           <a href="/">
+            <img src="/icons/home.svg" alt="">
             На главную
           </a>
         </div>
         <div class="random-post-button">
           <a href="/blog/random">
+            <img src="/icons/dice.svg" alt="">
             Случайная статья
           </a>
         </div>
@@ -68,16 +67,34 @@ import MainLayout from "../layouts/MainLayout.astro";
   .home-button,
   .random-post-button {
     margin-top: 3rem;
+    /* display: flex;
+    align-items: center; */
   }
   .home-button a,
   .random-post-button a {
-    background-color: var(--selection-clr);
-    color: #442C2E;
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
+    background-color: var(--accent-clr-3);
+    color: var(--text-clr-dark-perm);
+    border: 1px solid var(--text-clr-dark);
+    box-shadow: 2px 2px 0 0 var(--text-clr-dark);
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 4px;
     font-size: 1.2rem;
-    font-weight: 450;
+    font-weight: 500;
+    max-height: 57px;
+  }
+  .home-button a:hover,
+  .random-post-button a:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 0 0 0 var(--text-clr-dark);
+  } 
+  .home-button img,
+  .random-post-button img {
+    height: 32px;
+    margin-right: 6px;
   }
 
   @media screen and (max-width:1024px) {

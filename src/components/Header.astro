@@ -89,13 +89,6 @@ import Search from "./Search.astro"
   </div>
   
   <div class="nav-toggle-menu-container">
-    <button class="switch-button switch-button-media">
-        <!-- <span><i class="fa-solid fa-moon"></i></span>
-        <span><i class="fa-solid fa-sun"></i></span> -->
-        <span><img src="/icons/moon4.svg" alt=""></span>
-        <span><img src="/icons/sun4.svg" alt=""></span>
-        <span class="switch"></span>
-      </button>
     <li class="nav-toggle-menu__option">
       <span class="nav-toggle-menu__option-title">
         Все об уходе <i class="fa-solid fa-chevron-down"></i>
@@ -191,6 +184,11 @@ import Search from "./Search.astro"
         </li>
       </ul>
     </li>
+    <button class="switch-button switch-button-media">
+      <span><img src="/icons/moon4.svg" alt=""></span>
+      <span><img src="/icons/sun4.svg" alt=""></span>
+      <span class="switch"></span>
+    </button>
   </div>
 </header>
 
@@ -485,6 +483,7 @@ import Search from "./Search.astro"
 *******************/
   .switch-button-media {
     display: none;
+    margin-top: 1rem;
   }
   .switch-button {
     position: relative;
