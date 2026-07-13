@@ -14,6 +14,7 @@ export async function getStaticPaths() {
 
   return posts.map((post) => ({
     params: {
+      category: post.frontmatter.category.slug,
       slug: slugify(post.frontmatter.title),
     },
     props: {

@@ -13,19 +13,9 @@ import { slugify, formatBlogPosts } from "../js/utils";
   import.meta.glob("../content/blog/*.md", { eager: true })
 ); */
 
-const blogPosts = Object.values(
-  import.meta.glob("../content/blog/*.md", { eager: true })
+const allPosts = Object.values(
+  import.meta.glob("../content/**/*.md", { eager: true })
 );
-
-const healthPosts = Object.values(
-  import.meta.glob("../content/zdorove/*.md", { eager: true })
-);
-
-const sovetyPosts = Object.values(
-  import.meta.glob("../content/sovety/*.md", { eager: true })
-);
-
-const allPosts = [...blogPosts, ...healthPosts, ...sovetyPosts];
 
 const formattedPosts = formatBlogPosts(allPosts);
 

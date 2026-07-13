@@ -10,9 +10,14 @@ import LeftArrow from "../../../components/icons/LeftArrow.astro";
 import { slugify, formatBlogPosts } from '../../../js/utils';
 
 export async function getStaticPaths({ paginate }) {
-  const allPosts = Object.values(
+ /*  const allPosts = Object.values(
     import.meta.glob("/src/content/blog/*.md", { eager: true })
-  );
+  ); */
+
+ const allPosts = Object.values(
+  import.meta.glob("/src/content/**/*.md", { eager: true })
+);
+
 
   const formattedPosts = formatBlogPosts(allPosts);
 
@@ -69,7 +74,7 @@ const { page, name } = Astro.props;
       <div class="category-posts-container">
         {
           page.data.map((post) => (
-            <PostCard frontmatter={post.frontmatter} url={`/blog/${slugify(post.frontmatter.title)}`} />
+            <PostCard frontmatter={post.frontmatter} url={`/${post.frontmatter.category.slug}/${slugify(post.frontmatter.title)}`} />
           ))
         }
       </div>

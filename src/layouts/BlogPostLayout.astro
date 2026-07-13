@@ -16,9 +16,14 @@ import { formatBlogPosts } from "../js/utils";
 const { frontmatter } = Astro.props;
 const { title, description, date, category, author, image, robots } = frontmatter;
 
-const allPosts = Object.values(
+/* const allPosts = Object.values(
   import.meta.glob("../content/blog/*.md", { eager: true })
+); */
+
+const allPosts = Object.values(
+  import.meta.glob("../content/**/*.md", { eager: true })
 );
+
 
 // const allPosts = await Astro.glob("../pages/blog/*.md"); DEPRECATED
 const formattedPosts = formatBlogPosts(allPosts, {

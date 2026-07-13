@@ -1,12 +1,16 @@
 ---
 import { slugify } from "../../js/utils";
 
-const posts = Object.values(
+/* const posts = Object.values(
   import.meta.glob("../../content/blog/*.md", { eager: true })
+); */
+
+const posts = Object.values(
+  import.meta.glob("../../content/**/*.md", { eager: true })
 );
 
 const urls = posts.map(post =>
-  `/blog/${slugify(post.frontmatter.title)}`
+  `/${post.frontmatter.category.slug}/${slugify(post.frontmatter.title)}`
 );
 ---
 
