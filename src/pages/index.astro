@@ -9,9 +9,24 @@ import PostCardTrending from '../components/PostCardTrending.astro';
 // utils imports
 import { slugify, formatBlogPosts } from "../js/utils";
 
-const allPosts = Object.values(
+/* const allPosts = Object.values(
+  import.meta.glob("../content/blog/*.md", { eager: true })
+); */
+
+const blogPosts = Object.values(
   import.meta.glob("../content/blog/*.md", { eager: true })
 );
+
+const healthPosts = Object.values(
+  import.meta.glob("../content/zdorove/*.md", { eager: true })
+);
+
+const sovetyPosts = Object.values(
+  import.meta.glob("../content/sovety/*.md", { eager: true })
+);
+
+const allPosts = [...blogPosts, ...healthPosts, ...sovetyPosts];
+
 const formattedPosts = formatBlogPosts(allPosts);
 
 const [featured, ...rest] = formattedPosts; 
@@ -40,19 +55,19 @@ const trendingPosts = formattedTrendingPosts.slice(0, 6);
         <div class="trending-section__contents-wrapper">
           {
             trendingPosts.map((post) => (
-              <PostCardTrending frontmatter={post.frontmatter} url={`/blog/${slugify(post.frontmatter.title)}`} />
+              <PostCardTrending frontmatter={post.frontmatter} url={`/${post.frontmatter.category.slug}/${slugify(post.frontmatter.title)}`} />
             ))
           }
         </div>
       </section>
       <section class="new-articles-section">
         <div class="new-articles-section__highlight">
-          <PostCardFeatured frontmatter={featured.frontmatter} url={`/blog/${slugify(featured.frontmatter.title)}`} />
+          <PostCardFeatured frontmatter={featured.frontmatter} url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`} />
         </div>
         <div class="new-articles-section__secondary">
           {
             secondaryPosts.map((post) => (
-              <PostCardSecondary frontmatter={post.frontmatter} url={`/blog/${slugify(post.frontmatter.title)}`} />
+              <PostCardSecondary frontmatter={post.frontmatter} url={`/${post.frontmatter.category.slug}/${slugify(post.frontmatter.title)}`} />
             ))
           }
         </div>
@@ -65,13 +80,13 @@ const trendingPosts = formattedTrendingPosts.slice(0, 6);
       <section>
         {
           visiblePosts.map((post) => (
-            <PostCard frontmatter={post.frontmatter} url={`/blog/${slugify(post.frontmatter.title)}`} />
+            <PostCard frontmatter={post.frontmatter} url={`/${post.frontmatter.category.slug}/${slugify(post.frontmatter.title)}`} />
           ))
         }
         {
           hiddenPosts.map((post) => (
             <div class="hidden-post">
-              <PostCard frontmatter={post.frontmatter} url={`/blog/${slugify(post.frontmatter.title)}`} />
+              <PostCard frontmatter={post.frontmatter} url={`/${post.frontmatter.category.slug}/${slugify(post.frontmatter.title)}`} />
             </div>
           ))
         }

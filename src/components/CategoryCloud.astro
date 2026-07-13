@@ -2,9 +2,19 @@
 // utils imports
 import { formatBlogPosts } from '../js/utils';
 
-const allPosts = Object.values(
+/* const allPosts = Object.values(
+  import.meta.glob("../content/blog/*.md", { eager: true })
+); */
+
+const blogPosts = Object.values(
   import.meta.glob("../content/blog/*.md", { eager: true })
 );
+
+const healthPosts = Object.values(
+  import.meta.glob("../content/zdorove/*.md", { eager: true })
+);
+
+const allPosts = [...blogPosts, ...healthPosts];
 
 const formattedPosts = formatBlogPosts(allPosts);
 
