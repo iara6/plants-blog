@@ -71,7 +71,9 @@ Text	Dark gray (#2e2e2e) */
   --text-clr-light: #f6ffff; /*  */ /* dark m */
   --text-clr-light-m: #c5ded9;/*  */ /* dark m */
   --text-clr-links: #4d0858;
+
   --category-font-weight: 400;
+  --dropdown-shadow: 0px 3px 3px 3px rgb(0, 0, 0, 0.2);
 
   --accent-clr: #EF476F;
  /*  --accent-clr-2: #d26e56; */ /*  */
@@ -102,7 +104,9 @@ Text	Dark gray (#2e2e2e) */
   --text-clr-dark: #faecd6;
   --text-clr-dark-m: #bcb3a6;
   --text-clr-links: #b5ffc4;
+
   --category-font-weight: 450;
+  --dropdown-shadow: 0px 3px 3px 3px rgba(104, 92, 208, 0.2);
 
   --accent-clr: #F92A82; 
   --accent-clr-2: #5f57a7; 
@@ -302,6 +306,9 @@ html {
 }
 
 /* <div class="pagefind-ui__result-inner svelte-4xnkmf"><p class="pagefind-ui__result-title svelte-4xnkmf"><a class="pagefind-ui__result-link svelte-4xnkmf" href="/category/sovety/">Статьи по тегу советы</a></p> <p class="pagefind-ui__result-excerpt svelte-4xnkmf">3 Item 4 Статьи по тегу <mark>советы.</mark> Как подружиться с гусём? Post</p>  </div> */
+/* .pagefind-ui__result-title {
+  font-size: 1.4rem !important;
+} */
 .pagefind-ui__result-inner,
 .pagefind-ui__message,
 .pagefind-ui__result-link {
@@ -309,7 +316,7 @@ html {
   font-family: "Commissioner", sans-serif !important;
 }
 .pagefind-ui__result-link {
-  font-size: 1.2rem !important;
+  font-size: 1.3rem !important;
   font-weight: 550 !important;
 }
 .pagefind-ui__result-link:hover {
@@ -326,6 +333,9 @@ html {
     min-width: 130px !important;
     height: 130px !important;
     max-height: 130px !important;
+  }
+  .pagefind-ui__result-link {
+    font-size: 1.2rem !important;
   }
 }
 @media screen and (max-width: 480px) {

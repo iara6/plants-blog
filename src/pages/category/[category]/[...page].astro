@@ -46,6 +46,10 @@ export async function getStaticPaths({ paginate }) {
       params: { category: "zdorove" },
       props: { name: "Здоровье" },
     },
+    {
+      params: { category: "uhod" },
+      props: { name: "Уход" },
+    },
   ].flatMap(({ params, props }) => {
     const categoryPosts = formattedPosts.filter(
       (post) => post.frontmatter.category?.slug === params.category
