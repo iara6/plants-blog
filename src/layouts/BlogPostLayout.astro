@@ -110,19 +110,20 @@ const relatedPosts = formattedPosts
   }
   .post-container__md-text :global(h2) {
     font-weight: 600;
+    margin: 1rem 0;
   }
   .post-container__md-text :global(ul:first-child) {
     /* border: 1px solid red; */
-    margin: 1rem 0;
+    margin: 2rem 0;
     padding: 0.5rem 0 0.5rem 1rem;
     border-left: 2px solid rgb(153, 152, 152, 0.5);
     background-color: var(--accent-clr-5);
   }
   .post-container__md-text :global(ul:first-child li) {
     list-style: none;
-    padding: 0.1rem 0;
+    padding: 0.31rem 0;
+    line-height: 1.1;
   }
-
   .post-container__md-text :global(li a) {
     color: var(--text-clr-links);
     text-decoration: none;
@@ -143,7 +144,7 @@ const relatedPosts = formattedPosts
   .post-container {
     display: grid;
     grid-template-columns: 1fr minmax(auto, 330px);
-    gap: 1.5rem;
+    gap: 2rem;
   }
   .post-container img {
     max-width: 100%;
