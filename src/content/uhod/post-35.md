@@ -1,12 +1,12 @@
 ---
-title: Как избежать весеннее обострение Post 12
-date: 2025-10-13
+title: Как избежать весеннее обострение Post 35
+date: 2025-10-1
 author: {
   name: "Виктория Чижова",
   slug: "victoria-chizhova"
 }
 image: {
-  src: "/images/articles/trending-12.jpg",
+  src: "/images/articles/trending-6.jpg",
   alt: "A picture of something",
 }
 description: А также многие известные личности формируют глобальную экономическую сеть и при этом — смешаны с не уникальными данными до степени совершенной неузнаваемости.
