@@ -1,0 +1,58 @@
+---
+// component imports
+import PostCard from "./PostCard.astro";
+import PostCardFeatured from "./PostCardFeatured.astro";
+
+// utils imports
+import { slugify } from "../js/utils";
+
+const {
+  featured,
+  secondary,
+  featuredOnLeft = true,
+} = Astro.props;
+---
+
+<section class={`menu-section-articles-container ${featuredOnLeft ? "" : "reverse"}`}>
+  <div class="menu-section__highlight">
+    <PostCardFeatured
+      frontmatter={featured.frontmatter}
+      url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`}
+    />
+  </div>
+
+  <div class="menu-section__secondary">
+    {
+      secondary.map(post => (
+        <PostCard
+          frontmatter={post.frontmatter}
+          url={`/${post.frontmatter.category.slug}/${slugify(post.frontmatter.title)}`}
+        />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .menu-section-articles-container {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .menu-section__secondary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .menu-section-articles-container.reverse {
+    grid-template-columns: 2fr 1.5fr;
+  }
+  .reverse .menu-section__highlight {
+    order: 2;
+  }
+  .reverse .menu-section__secondary {
+    order: 1;
+  }
+</style>

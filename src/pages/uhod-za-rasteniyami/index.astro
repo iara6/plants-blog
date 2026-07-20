@@ -4,6 +4,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import PostCard from '../../components/PostCard.astro';
 import PostCardFeatured from '../../components/PostCardFeatured.astro';
 import PostCardSecondary from "../../components/PostCardSecondary.astro";
+import ArticleGroup from "../../components/ArticleGroup.astro";
 
 // utils imports
 import { slugify, formatBlogPosts } from "../../js/utils";
@@ -16,6 +17,30 @@ const formattedPosts = formatBlogPosts(allPosts);
 const [featured, ...rest] = formattedPosts; 
 
 const secondaryPosts = rest.slice(0, 4);
+/* ******** */
+const groups = [];
+
+for (let i = 0; i < formattedPosts.length; i += 5) {
+  const chunk = formattedPosts.slice(i, i + 5);
+
+  if (chunk.length === 0) continue;
+
+  const evenGroup = Math.floor(i / 5) % 2 === 1;
+
+  groups.push({
+    featured: evenGroup
+      ? chunk[chunk.length - 1]
+      : chunk[0],
+
+    secondary: evenGroup
+      ? chunk.slice(0, chunk.length - 1)
+      : chunk.slice(1),
+
+    featuredOnLeft: !evenGroup,
+  });
+}
+/* ********* */
+
 
 const {
   title = "Все об уходе",
@@ -34,7 +59,7 @@ const {
 >
   <main class="content-container">
     <h1>Все об уходе за домашними растениями</h1>
-    <section class="menu-section-articles-container">
+    <!-- <section class="menu-section-articles-container">
       <div class="menu-section__highlight">
         <PostCardFeatured frontmatter={featured.frontmatter} url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`} />
       </div>
@@ -45,8 +70,16 @@ const {
           ))
         }
       </div>
-    </section>
-
+    </section> -->
+    {
+      groups.map((group) => (
+        <ArticleGroup
+          featured={group.featured}
+          secondary={group.secondary}
+          featuredOnLeft={group.featuredOnLeft}
+        />
+      ))
+    }
   </main>
 </MainLayout>
 
