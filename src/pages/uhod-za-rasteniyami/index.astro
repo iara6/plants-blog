@@ -1,23 +1,19 @@
 ---
 // component imports
 import MainLayout from "../../layouts/MainLayout.astro";
-import PostCard from '../../components/PostCard.astro';
-import PostCardFeatured from '../../components/PostCardFeatured.astro';
-import PostCardSecondary from "../../components/PostCardSecondary.astro";
 import ArticleGroup from "../../components/ArticleGroup.astro";
 
 // utils imports
-import { slugify, formatBlogPosts } from "../../js/utils";
+import { formatBlogPosts } from "../../js/utils";
 
 const allPosts = Object.values(
   import.meta.glob("/src/content/uhod/*.md", { eager: true })
 );
 
 const formattedPosts = formatBlogPosts(allPosts);
-const [featured, ...rest] = formattedPosts; 
+/* const [featured, ...rest] = formattedPosts; 
+const secondaryPosts = rest.slice(0, 4); */
 
-const secondaryPosts = rest.slice(0, 4);
-/* ******** */
 const groups = [];
 
 for (let i = 0; i < formattedPosts.length; i += 5) {
@@ -39,8 +35,6 @@ for (let i = 0; i < formattedPosts.length; i += 5) {
     featuredOnLeft: !evenGroup,
   });
 }
-/* ********* */
-
 
 const {
   title = "Все об уходе",
@@ -89,16 +83,5 @@ const {
     font-weight: 600;
     color: var(--text-clr-dark);
     margin-bottom: 2rem;
-  }
-  .menu-section-articles-container {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr;
-    gap: 1.5rem;
-  }
-  .menu-section__secondary {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1.5rem;
   }
 </style>

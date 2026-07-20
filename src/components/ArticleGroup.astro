@@ -13,7 +13,7 @@ const {
 } = Astro.props;
 ---
 
-<section class={`menu-section-articles-container ${featuredOnLeft ? "" : "reverse"}`}>
+<!-- <section class={`menu-section-articles-container ${featuredOnLeft ? "" : "reverse"}`}>
   <div class="menu-section__highlight">
     <PostCardFeatured
       frontmatter={featured.frontmatter}
@@ -31,6 +31,52 @@ const {
       ))
     }
   </div>
+</section> -->
+
+
+<section class={`menu-section-articles-container ${featuredOnLeft ? "" : "reverse"}`}>
+  {
+    featuredOnLeft ? (
+      <>
+        <div class="menu-section__highlight">
+          <PostCardFeatured
+            frontmatter={featured.frontmatter}
+            url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`}
+          />
+        </div>
+        <div class="menu-section__secondary">
+          {
+            secondary.map(post => (
+              <PostCard
+                frontmatter={post.frontmatter}
+                url={`/${post.frontmatter.category.slug}/${slugify(post.frontmatter.title)}`}
+              />
+            ))
+          }
+        </div>
+      </>
+    ) : (
+      <>
+        <div class="menu-section__secondary">
+          {
+            secondary.map(post => (
+              <PostCard
+                frontmatter={post.frontmatter}
+                url={`/${post.frontmatter.category.slug}/${slugify(post.frontmatter.title)}`}
+              />
+            ))
+          }
+        </div>
+
+        <div class="menu-section__highlight">
+          <PostCardFeatured
+            frontmatter={featured.frontmatter}
+            url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`}
+          />
+        </div>
+      </>
+    )
+  }
 </section>
 
 <style>
@@ -49,10 +95,37 @@ const {
   .menu-section-articles-container.reverse {
     grid-template-columns: 2fr 1.5fr;
   }
-  .reverse .menu-section__highlight {
+ /*  .reverse .menu-section__highlight {
     order: 2;
   }
   .reverse .menu-section__secondary {
     order: 1;
+  } */
+  @media screen and (max-width:1050px) {
+    .menu-section-articles-container {
+      grid-template-columns: 1fr;
+      margin-bottom: 1.5rem;
+    }
+    .menu-section-articles-container.reverse {
+      grid-template-columns: 1fr;
+    }
+    .menu-section__highlight {
+      border: 1px solid red;
+      max-width: 70%;
+    }
+    .menu-section__highlight:nth-child(even) {
+      justify-self: end;
+    }
+  }
+  @media screen and (max-width: 686px) {
+    .menu-section__highlight {
+      border-bottom: 1px solid rgb(153, 152, 152, 0.5);
+      padding-bottom: 1rem;
+    }
+    .menu-section__secondary {
+      /* display: grid; */
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
   }
 </style>
