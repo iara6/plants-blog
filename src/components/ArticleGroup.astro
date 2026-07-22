@@ -34,16 +34,20 @@ const {
 </section> -->
 
 
-<section class={`menu-section-articles-container ${featuredOnLeft ? "" : "reverse"}`}>
+<section class={`menu-section-articles-container   
+    ${!featured ? "no-featured" : ""}
+    ${!featuredOnLeft ? "reverse" : ""}`}>
   {
     featuredOnLeft ? (
       <>
+      {featured && (
         <div class="menu-section__highlight">
           <PostCardFeatured
             frontmatter={featured.frontmatter}
             url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`}
           />
         </div>
+      )}
         <div class="menu-section__secondary">
           {
             secondary.map(post => (
@@ -68,12 +72,14 @@ const {
           }
         </div>
 
-        <div class="menu-section__highlight">
-          <PostCardFeatured
-            frontmatter={featured.frontmatter}
-            url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`}
-          />
-        </div>
+        {featured && (
+          <div class="menu-section__highlight">
+            <PostCardFeatured
+              frontmatter={featured.frontmatter}
+              url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`}
+            />
+          </div>
+        )}
       </>
     )
   }

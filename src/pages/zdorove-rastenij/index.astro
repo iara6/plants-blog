@@ -17,20 +17,29 @@ const groups = [];
 for (let i = 0; i < formattedPosts.length; i += 5) {
   const chunk = formattedPosts.slice(i, i + 5);
 
-  if (chunk.length === 0) continue;
+  const groupIndex = Math.floor(i / 5);
+  const featuredOnLeft = groupIndex % 2 === 0;
 
-  const evenGroup = Math.floor(i / 5) % 2 === 1;
+  if (chunk.length < 5) {
+    groups.push({
+      featured: null,
+      secondary: chunk,
+      featuredOnLeft,
+    });
+
+    continue;
+  }
 
   groups.push({
-    featured: evenGroup
-      ? chunk[chunk.length - 1]
-      : chunk[0],
+    featured: featuredOnLeft
+      ? chunk[0]
+      : chunk[4],
 
-    secondary: evenGroup
-      ? chunk.slice(0, chunk.length - 1)
-      : chunk.slice(1),
+    secondary: featuredOnLeft
+      ? chunk.slice(1)
+      : chunk.slice(0, 4),
 
-    featuredOnLeft: !evenGroup,
+    featuredOnLeft,
   });
 }
 
