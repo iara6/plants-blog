@@ -1,12 +1,12 @@
 ---
-title: Болезни растений
-date: 2025-11-27
+title: Болезни растений post 44
+date: 2025-11-14
 author: {
   name: "Дмитрий Ковалев",
   slug: "dmitrij-kovalev"
 }
 image: {
-  src: "/images/articles/trending-5.jpg",
+  src: "/images/articles/trending-9.jpg",
   alt: "A picture of something",
 }
 description: Равным образом, социально-экономическое развитие обеспечивает актуальность. Как уже неоднократно упомянуто, реплицированные с зарубежных источников.
