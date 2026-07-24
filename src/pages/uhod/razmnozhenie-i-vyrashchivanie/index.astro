@@ -1,0 +1,82 @@
+---
+// component imports
+import MainLayout from "../../../layouts/MainLayout.astro";
+import ArticleGroup from "../../../components/ArticleGroup.astro";
+
+// utils imports
+import { formatBlogPosts } from "../../../js/utils";
+
+const allPosts = Object.values(
+  import.meta.glob("/src/content/uhod/razmnozhenie-i-vyrashchivanie/*.md", { eager: true })
+);
+
+const formattedPosts = formatBlogPosts(allPosts);
+
+const groups = [];
+
+for (let i = 0; i < formattedPosts.length; i += 5) {
+  const chunk = formattedPosts.slice(i, i + 5);
+
+  const groupIndex = Math.floor(i / 5);
+  const featuredOnLeft = groupIndex % 2 === 0;
+
+  if (chunk.length < 5) {
+    groups.push({
+      featured: null,
+      secondary: chunk,
+      featuredOnLeft,
+    });
+
+    continue;
+  }
+
+  groups.push({
+    featured: featuredOnLeft
+      ? chunk[0]
+      : chunk[4],
+
+    secondary: featuredOnLeft
+      ? chunk.slice(1)
+      : chunk.slice(0, 4),
+
+    featuredOnLeft,
+  });
+}
+
+const {
+  title = "Размножение и выращивание",
+  description = "Все о размножении и выращивании домашних растений",
+  robots = true,
+  frontmatter,
+} = Astro.props;
+
+---
+
+<MainLayout
+  {title}
+  {description}
+  {frontmatter}
+  {robots}
+>
+  <main class="content-container">
+    <h1>Все о размножении и выращивании домашних растений</h1>
+    {
+      groups.map((group) => (
+        <ArticleGroup
+          featured={group.featured}
+          secondary={group.secondary}
+          featuredOnLeft={group.featuredOnLeft}
+        />
+      ))
+    }
+  </main>
+</MainLayout>
+
+<style>
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-clr-dark);
+    margin-bottom: 2rem;
+  }
+</style>
