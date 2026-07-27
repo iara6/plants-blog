@@ -7,7 +7,7 @@ import ArticleGroup from "../../../components/ArticleGroup.astro";
 import { formatBlogPosts } from "../../../js/utils";
 
 const allPosts = Object.values(
-  import.meta.glob("/src/content/uhod/razmnozhenie-i-vyrashchivanie/*.md", { eager: true })
+  import.meta.glob("/src/content/podbor-rastenij/po-cvetu/*.md", { eager: true })
 );
 
 const formattedPosts = formatBlogPosts(allPosts);
@@ -44,8 +44,8 @@ for (let i = 0; i < formattedPosts.length; i += 5) {
 }
 
 const {
-  title = "Размножение и выращивание",
-  description = "Все о размножении и выращивании домашних растений",
+  title = "Растения по цвету",
+  description = "Все о растениях по цвету",
   robots = true,
   frontmatter,
 } = Astro.props;
@@ -59,7 +59,7 @@ const {
   {robots}
 >
   <main class="content-container">
-    <h1>Все о размножении и выращивании домашних растений</h1>
+    <h1>Все о выборе растений по цвету</h1>
     {
       groups.map((group) => (
         <ArticleGroup

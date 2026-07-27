@@ -20,7 +20,7 @@ for (let i = 0; i < formattedPosts.length; i += 5) {
   const groupIndex = Math.floor(i / 5);
   const featuredOnLeft = groupIndex % 2 === 0;
 
-  if (chunk.length < 5) {
+  if (groupIndex > 0 && chunk.length < 5) {
     groups.push({
       featured: null,
       secondary: chunk,

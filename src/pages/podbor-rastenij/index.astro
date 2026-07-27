@@ -1,16 +1,18 @@
 ---
 // component imports
-import MainLayout from "../../../layouts/MainLayout.astro";
-import ArticleGroup from "../../../components/ArticleGroup.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import ArticleGroup from "../../components/ArticleGroup.astro";
 
 // utils imports
-import { formatBlogPosts } from "../../../js/utils";
+import { formatBlogPosts } from "../../js/utils";
 
 const allPosts = Object.values(
-  import.meta.glob("/src/content/uhod/razmnozhenie-i-vyrashchivanie/*.md", { eager: true })
+  import.meta.glob("/src/content/podbor-rastenij/*.md", { eager: true })
 );
 
 const formattedPosts = formatBlogPosts(allPosts);
+/* const [featured, ...rest] = formattedPosts; 
+const secondaryPosts = rest.slice(0, 4); */
 
 const groups = [];
 
@@ -44,8 +46,8 @@ for (let i = 0; i < formattedPosts.length; i += 5) {
 }
 
 const {
-  title = "Размножение и выращивание",
-  description = "Все о размножении и выращивании домашних растений",
+  title = "Подбор растений",
+  description = "Все об выборе домашних растений",
   robots = true,
   frontmatter,
 } = Astro.props;
@@ -59,7 +61,19 @@ const {
   {robots}
 >
   <main class="content-container">
-    <h1>Все о размножении и выращивании домашних растений</h1>
+    <h1>Все об уходе за домашними растениями</h1>
+    <!-- <section class="menu-section-articles-container">
+      <div class="menu-section__highlight">
+        <PostCardFeatured frontmatter={featured.frontmatter} url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`} />
+      </div>
+      <div class="menu-section__secondary">
+        {
+          secondaryPosts.map((post) => (
+            <PostCard frontmatter={post.frontmatter} url={`/${post.frontmatter.category.slug}/${slugify(post.frontmatter.title)}`} />
+          ))
+        }
+      </div>
+    </section> -->
     {
       groups.map((group) => (
         <ArticleGroup
