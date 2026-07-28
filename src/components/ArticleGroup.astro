@@ -1,7 +1,7 @@
 ---
 // component imports
 import PostCard from "./PostCard.astro";
-import PostCardFeatured from "./PostCardFeatured.astro";
+import PostCardFeaturedOther from "./PostCardFeaturedOther.astro";
 
 // utils imports
 import { slugify } from "../js/utils";
@@ -42,7 +42,7 @@ const {
       <>
       {featured && (
         <div class="menu-section__highlight">
-          <PostCardFeatured
+          <PostCardFeaturedOther
             frontmatter={featured.frontmatter}
             url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`}
           />
@@ -74,7 +74,7 @@ const {
 
         {featured && (
           <div class="menu-section__highlight">
-            <PostCardFeatured
+            <PostCardFeaturedOther
               frontmatter={featured.frontmatter}
               url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`}
             />
@@ -116,7 +116,7 @@ const {
       grid-template-columns: 1fr;
     }
     .menu-section__highlight {
-      border: 1px solid red;
+      /* border: 1px solid red; */
       max-width: 70%;
     }
     .menu-section__highlight:nth-child(even) {
@@ -127,6 +127,7 @@ const {
     .menu-section__highlight {
       border-bottom: 1px solid rgb(153, 152, 152, 0.5);
       padding-bottom: 1rem;
+      max-width: none;
     }
     .menu-section__secondary {
       grid-template-columns: 1fr;
