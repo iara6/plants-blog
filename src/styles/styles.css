@@ -376,13 +376,19 @@ html {
     /* max-width: 400px; */
     width: 100%;
   } 
+  .page-title {
+    font-size: 1.8rem !important;
+  }
 }
 
 @media screen and (max-width: 480px) { 
   .post-container__md-text h2 {
     font-size: 1.2rem;
   }
-
-  
+  .page-title {
+    font-size: 1.5rem !important;
+  }
 }
+
+
 

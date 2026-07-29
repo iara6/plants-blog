@@ -46,6 +46,7 @@ const {
             frontmatter={featured.frontmatter}
             url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`}
           />
+          <span><img class="plant-design" src="/images/elements/plant-design1.png"></span>
         </div>
       )}
         <div class="menu-section__secondary">
@@ -100,6 +101,10 @@ const {
   }
   .menu-section-articles-container.reverse {
     grid-template-columns: 2fr 1.5fr;
+  }
+  .plant-design {
+    width: 100%;
+    max-width: 500px;
   }
  /*  .reverse .menu-section__highlight {
     order: 2;

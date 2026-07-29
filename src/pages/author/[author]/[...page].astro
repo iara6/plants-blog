@@ -51,7 +51,7 @@ const { page, posts, authorName } = Astro.props;
   description={`Статьи автора ${authorName}`}
 >
   <main class="content-container">
-    <h1>Статьи автора <span class="highlight">{authorName}</span></h1>
+    <h1 class="page-title">Статьи автора <span class="highlight">{authorName}</span></h1>
     <div class="author-page-container" aria-label={`Статьи автора ${authorName}`}>
       <div class="author-posts-container">
         {

@@ -7,7 +7,7 @@ import ArticleGroup from "../../components/ArticleGroup.astro";
 import { formatBlogPosts } from "../../js/utils";
 
 const allPosts = Object.values(
-  import.meta.glob("/src/content/uhod/*.md", { eager: true })
+  import.meta.glob("/src/content/komnatnye-rasteniya/*.md", { eager: true })
 );
 
 const formattedPosts = formatBlogPosts(allPosts);
@@ -46,8 +46,8 @@ for (let i = 0; i < formattedPosts.length; i += 5) {
 }
 
 const {
-  title = "Все об уходе",
-  description = "Все об уходе за домашними растениями",
+  title = "Комнатные растения",
+  description = "Все о комнатных растениях",
   robots = true,
   frontmatter,
 } = Astro.props;
@@ -61,7 +61,7 @@ const {
   {robots}
 >
   <main class="content-container">
-    <h1 class="page-title">Все об уходе за домашними растениями</h1>
+    <h1 class="page-title">Все о домашних растениях</h1>
     <!-- <section class="menu-section-articles-container">
       <div class="menu-section__highlight">
         <PostCardFeatured frontmatter={featured.frontmatter} url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`} />
