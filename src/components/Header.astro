@@ -744,12 +744,8 @@ toggleBtn.addEventListener('click', () => {
   }
 });
 
-window.addEventListener('click', (event) => {
-  const clickednavToggleMenu = navToggleMenu.contains(event.target);
-  const clickedtoggleBtn = toggleBtn.contains(event.target);
-
-  if (!clickednavToggleMenu && !clickedtoggleBtn) {
-    toggleBtn.classList.remove('change');
+function closeNavToggleMenu() {
+  toggleBtn.classList.remove('change');
     navToggleMenu.classList.remove('open-nav-toggle-menu');
 
     navToggleMenuOptions.forEach(option => {
@@ -761,6 +757,22 @@ window.addEventListener('click', (event) => {
     });
 
     document.body.style.overflow = '';
+}
+
+window.addEventListener('click', (event) => {
+  const clickedNavToggleMenu = navToggleMenu.contains(event.target);
+  const clickedToggleBtn = toggleBtn.contains(event.target);
+
+  if (!clickedNavToggleMenu && !clickedToggleBtn) {
+    closeNavToggleMenu();
+  }
+});
+
+const mediaBreakpoint = window.matchMedia('(max-width:1200px)');
+
+mediaBreakpoint.addEventListener('change', (e) => {
+  if (!e.matches) {
+    closeNavToggleMenu();
   }
 });
 
