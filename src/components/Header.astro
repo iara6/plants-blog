@@ -84,12 +84,12 @@ import Search from "./Search.astro"
 
       <div class="menu-container_buttons">
         <div class="nav-random-dice-container">
-          <a href="/blog/random" title="Открыть случайную статью">
+          <a href="/blog/random" title="Случайная статья">
             <img src="/icons/dice-light2.svg" alt="">
           </a>
         </div>
   
-        <button class="switch-button">
+        <button class="switch-button" title="Ночной режим">
           <span><img src="/icons/moon4.svg" alt=""></span>
           <span><img src="/icons/sun4.svg" alt=""></span>
           <span class="switch"></span>
@@ -203,13 +203,13 @@ import Search from "./Search.astro"
       </ul>
     </li> -->
     <div class="nav-toggle_buttons">
-      <button class="switch-button switch-button-media">
+      <button class="switch-button switch-button-media" title="Ночной режим">
         <span><img src="/icons/moon4.svg" alt=""></span>
         <span><img src="/icons/sun4.svg" alt=""></span>
         <span class="switch"></span>
       </button>
       <span class="random-dice-container">
-        <a href="/blog/random" title="Открыть случайную статью">
+        <a href="/blog/random" title="Случайная статья">
           <img src="/icons/dice-light2.svg" alt="">
         </a>
       </span>
@@ -450,6 +450,7 @@ import Search from "./Search.astro"
   }
   .nav-toggle-menu__option-title i {
     margin-left: 5px;
+    font-size: 1rem;
   }
   .nav-toggle-menu-container li:nth-child(1) .nav-toggle-menu__option-title,
   .nav-toggle-menu-container li:nth-child(1) .nav-toggle-div__expandable {
@@ -526,7 +527,7 @@ import Search from "./Search.astro"
     transform: rotate(35deg);
   }
   .nav-random-dice-container {
-    margin-inline: 12px;
+    margin-inline: 14px;
   }
   .random-dice-container img,
   .nav-random-dice-container img  {
@@ -669,12 +670,24 @@ import Search from "./Search.astro"
     }
   }
 
-   @media screen and (max-width:700px) {
+  @media screen and (max-width:700px) {
+    .menu-container nav {
+      justify-content: space-between;
+    }
     .header-bg-wrapper {
       height: 120px;
     }
     .nav-toggle-menu-container {
       top: 122px;
+    }
+    .nav-toggle-menu__option-title {
+      font-size: 1.1rem !important;
+    }
+    .nav-toggle-menu__option-title i {
+      font-size: 0.9rem;
+    }
+    .nav-toggle-div__expandable li {
+      font-size: 1.05rem;
     }
   }
 

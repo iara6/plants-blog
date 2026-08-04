@@ -36,11 +36,18 @@
           <a href="/">Section 3</a>
         </li>
       </ul>
-       <button class="switch-button">
-        <span><img src="/icons/moon4.svg" alt=""></span>
-        <span><img src="/icons/sun4.svg" alt=""></span>
-        <span class="switch"></span>
-      </button>
+      <div class="footer-buttons">
+        <span class="random-dice">
+          <a href="/blog/random" title="Случайная статья">
+            <img src="/icons/dice-light2.svg" alt="">
+          </a>
+        </span>
+        <button class="switch-button" title="Ночной режим">
+            <span><img src="/icons/moon4.svg" alt=""></span>
+            <span><img src="/icons/sun4.svg" alt=""></span>
+            <span class="switch"></span>
+        </button>
+      </div>
     </div>
   </div>
 </footer>
@@ -88,7 +95,6 @@
     color: var(--accent-clr-4);
   }
   .switch-button {
-    margin-top: 1rem;
     position: relative;
     border: none;
     border-radius: 50px;
@@ -136,5 +142,24 @@
   }
   .slide .switch {
     left: 50%;
+  }
+  .footer-buttons {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  .random-dice {
+    margin-right: 14px;
+  }
+  .random-dice {
+    transition: transform 250ms ease-in-out;
+  }
+  .random-dice:hover {
+    transform: rotate(35deg);
+  }
+  .random-dice img {
+    height: 24px;
+    width: 24px;
+    display: block;
   }
 </style>
