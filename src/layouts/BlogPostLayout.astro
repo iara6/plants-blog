@@ -2,6 +2,7 @@
 // component imports
 import MainHead from "./MainHead.astro";
 import Header from "../components/Header.astro";
+import ImageModal from "../components/ImageModal.astro";
 import Footer from "../components/Footer.astro";
 import BackToTop from "../components/BackToTop.astro";
 import SlideInHeader from "../components/SlideInHeader.astro";
@@ -49,6 +50,7 @@ const relatedPosts = formattedPosts
         <PostHeader {title} {date} {category} {author} />
         <div class="post-container__md-text" data-pagefind-body>
           <slot />
+          <ImageModal />
         </div>
       </div>
       <div class="post-container__sidebar">
@@ -132,6 +134,9 @@ const relatedPosts = formattedPosts
   .post-container__md-text :global(li a:hover){
     text-decoration: underline;
     text-underline-offset: 2px;
+  }
+  .post-container__md-text :global(img) {
+    cursor: pointer;
   }
   .related-h2 {
     display: none;
