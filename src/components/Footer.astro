@@ -2,7 +2,7 @@
   <div class="footer-container">
     <div>
       <a href="/">
-        <img class="logo-img" src="/images/logos/test-logo.jpg" alt="">
+        <img class="logo-img" src="/images/logos/happy-logo-test.png" alt="">
       </a>
       <p class="copyright-info">© {new Date().getFullYear()} Ваш Цветник. Все права защищены.</p>
     </div>
@@ -70,8 +70,14 @@
   .footer-container div {
     border: 1px solid red;
   }
+  .footer-container div:first-child {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: end; */
+    align-items: center;
+  }
   footer .logo-img {
-    width: 80px;
+    width: 170px;
   }
   .copyright-info {
     font-size: 0.95rem;

@@ -65,7 +65,7 @@ const trendingPosts = formattedTrendingPosts.slice(0, 6);
       </section>
     </div>
     <div class="quote-section">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, aperiam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, animi?
+     Любите цветы, и они сделают вашу жизнь прекраснее
     </div>
     <div class="home-main__all-container">
       <section>
@@ -128,8 +128,8 @@ const trendingPosts = formattedTrendingPosts.slice(0, 6);
     flex-direction: column;
     gap: 1.5rem;
   }
-
   .quote-section {
+    position: relative;
     background-color: var(--accent-clr-3);
     color: var(--primary-clr);
     font-size: 2rem;
@@ -138,6 +138,22 @@ const trendingPosts = formattedTrendingPosts.slice(0, 6);
     padding: 1.5rem 2rem;
     margin-top: 2rem;
     margin-inline: -1.5rem;
+  }
+  .quote-section::before {
+    content: "\201C";
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    font-size: 4rem; 
+    color: #0b0000;  
+  }
+  .quote-section::after {
+    content: "\201D";
+    position: absolute;
+    right: 10px;
+    bottom: -30px;
+    font-size: 4rem; 
+    color: #0b0000; 
   }
 
   .home-main__all-container {
