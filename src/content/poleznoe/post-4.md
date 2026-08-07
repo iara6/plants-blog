@@ -17,9 +17,13 @@ category: {
 }
 ---
 
+<div class="article-navigation">
+<h3>Содержание статьи:</h3>
+
 - [Have you ever seen the rain?](#have-you-ever-seen-the-rain)
 - [Section 2](#just-a-nice-title)
 - [Section 3](#title-3)
+</div>
 
 ## Have you ever seen mountains?
 Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing.
