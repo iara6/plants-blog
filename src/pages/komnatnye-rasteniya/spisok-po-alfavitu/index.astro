@@ -59,8 +59,40 @@ const {
   {robots}
 >
   <main class="content-container">
-    <h1 class="page-title">Список домашних растений по алфавиту</h1>
-    {
+    <h1 class="page-title">Названия комнатных растений по алфавиту</h1>
+    <div class="alphabet-container">
+      <ul class="alphabet-ulist">
+        <li><a href="">А</a></li>
+        <li><a href="">Б</a></li>
+        <li><a href="">В</a></li>
+        <li><a href="">Г</a></li>
+        <li><a href="">Д</a></li>
+        <li><a href="">Е</a></li>
+        <li><a href="">Ж</a></li>
+        <li><a href="">З</a></li>
+        <li><a href="">И</a></li>
+        <li><a href="">К</a></li>
+        <li><a href="">Л</a></li>
+        <li><a href="">М</a></li>
+        <li><a href="">Н</a></li>
+        <li><a href="">О</a></li>
+        <li><a href="">П</a></li>
+        <li><a href="">Р</a></li>
+        <li><a href="">С</a></li>
+        <li><a href="">Т</a></li>
+        <li><a href="">У</a></li>
+        <li><a href="">Ф</a></li>
+        <li><a href="">Х</a></li>
+        <li><a href="">Ц</a></li>
+        <li><a href="">Ч</a></li>
+        <li><a href="">Ш</a></li>
+        <li><a href="">Э</a></li>
+        <li><a href="">Ю</a></li>
+        <li><a href="">Я</a></li>
+      </ul>
+
+    </div>
+   <!--  {
       groups.map((group) => (
         <ArticleGroup
           featured={group.featured}
@@ -68,7 +100,7 @@ const {
           featuredOnLeft={group.featuredOnLeft}
         />
       ))
-    }
+    } -->
   </main>
 </MainLayout>
 
@@ -78,5 +110,37 @@ const {
     font-weight: 600;
     color: var(--text-clr-dark);
     margin-bottom: 2rem;
+  }
+  .alphabet-ulist {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .alphabet-ulist li {
+    /* height: 3.25rem;
+    width: 3.25rem;
+    border: 1px solid rgba(153, 152, 152, 0.5);
+    margin-top: -1px;
+    margin-left: -1px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .alphabet-ulist a {
+    text-decoration: none;
+    color: var(--primary-clr-dark);
+    font-size: 1.4rem;
+    height: 3.25rem;
+    width: 3.25rem;
+    border: 1px solid rgba(153, 152, 152, 0.5);
+    margin-top: -1px;
+    margin-left: -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 150ms ease-out;
+  }
+  .alphabet-ulist a:hover {
+    background-color: var(--accent-clr-4);
   }
 </style>
