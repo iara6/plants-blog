@@ -43,6 +43,36 @@ for (let i = 0; i < formattedPosts.length; i += 5) {
   });
 }
 
+const letters = [
+  { letter: 'А', slug: 'a' },
+  { letter: 'Б', slug: 'b' },
+  { letter: 'В', slug: 'v' },
+  { letter: 'Г', slug: 'g' },
+  { letter: 'Д', slug: 'd' },
+  { letter: 'Е', slug: 'e' },
+  { letter: 'Ж', slug: 'zh' },
+  { letter: 'З', slug: 'z' },
+  { letter: 'И', slug: 'i' },
+  { letter: 'К', slug: 'k' },
+  { letter: 'Л', slug: 'l' },
+  { letter: 'М', slug: 'm' },
+  { letter: 'Н', slug: 'n' },
+  { letter: 'О', slug: 'o' },
+  { letter: 'П', slug: 'p' },
+  { letter: 'Р', slug: 'r' },
+  { letter: 'С', slug: 's' },
+  { letter: 'Т', slug: 't' },
+  { letter: 'У', slug: 'u' },
+  { letter: 'Ф', slug: 'f' },
+  { letter: 'Х', slug: 'h' },
+  { letter: 'Ц', slug: 'ts' },
+  { letter: 'Ч', slug: 'ch' },
+  { letter: 'Ш', slug: 'sh' },
+  { letter: 'Э', slug: 'eh' },
+  { letter: 'Ю', slug: 'yu' },
+  { letter: 'Я', slug: 'ya' },
+];
+
 const {
   title = "Список домашних растений по алфавиту",
   description = "Список домашних растений по алфавиту",
@@ -62,7 +92,14 @@ const {
     <h1 class="page-title">Названия комнатных растений по алфавиту</h1>
     <div class="alphabet-container">
       <ul class="alphabet-ulist">
-        <li><a href="">А</a></li>
+        {letters.map(({ letter, slug }) => (
+          <li>
+            <a href={`/komnatnye-rasteniya/spisok-po-alfavitu/${slug}/`}>
+          {letter}
+            </a>
+          </li>
+        ))}
+       <!--  <li><a href="">А</a></li>
         <li><a href="">Б</a></li>
         <li><a href="">В</a></li>
         <li><a href="">Г</a></li>
@@ -88,7 +125,7 @@ const {
         <li><a href="">Ш</a></li>
         <li><a href="">Э</a></li>
         <li><a href="">Ю</a></li>
-        <li><a href="">Я</a></li>
+        <li><a href="">Я</a></li> -->
       </ul>
 
     </div>
@@ -142,5 +179,9 @@ const {
   }
   .alphabet-ulist a:hover {
     background-color: var(--accent-clr-4);
+    color: var(--text-clr-dark-perm);
   }
 </style>
+
+
+ <!-- + MEDIA Q -->
