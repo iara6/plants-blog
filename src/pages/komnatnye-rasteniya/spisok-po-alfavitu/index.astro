@@ -129,6 +129,27 @@ const {
       </ul>
 
     </div>
+
+    <div class="alphabet-block" id="А">	
+      <span class="alphabet-block-letter">А</span>
+      <!-- <hr> -->
+      <ul class="alphabet-list">
+        <li><a href="#">Абутилон</a></li>
+        <li><a href="#">Аглаонема</a></li>
+        <li><a href="#">Адениум</a></li>
+        <li><a href="#">Азалия</a></li>
+        <li><a href="#">Акалифа</a></li>
+        <li><a href="#">Алоказия</a></li>
+        <li><a href="#">Алоэ</a></li>
+        <li><a href="#">Амариллис</a></li>
+        <li><a href="#">Антуриум</a></li>
+        <li><a href="#">Арека</a></li>
+        <li><a href="#">Аспарагус</a></li>
+        <li><a href="#">Аспидистра</a></li>
+        <li><a href="#">Аукуба</a></li>
+        <li><a href="#">Ахименес</a><li>                       			
+      </ul>
+    </div>
    <!--  {
       groups.map((group) => (
         <ArticleGroup
@@ -148,6 +169,10 @@ const {
     color: var(--text-clr-dark);
     margin-bottom: 2rem;
   }
+  .alphabet-container {
+    border: 1px solid red;
+    margin-bottom: 3.5rem;
+  }
   .alphabet-ulist {
     list-style: none;
     display: flex;
@@ -165,8 +190,9 @@ const {
   }
   .alphabet-ulist a {
     text-decoration: none;
-    color: var(--primary-clr-dark);
+    color: var(--text-clr-dark);
     font-size: 1.4rem;
+    font-weight: 450;
     height: 3.25rem;
     width: 3.25rem;
     border: 1px solid rgba(153, 152, 152, 0.5);
@@ -181,7 +207,42 @@ const {
     background-color: var(--accent-clr-4);
     color: var(--text-clr-dark-perm);
   }
+
+  .alphabet-block {
+    /* border: 1px solid green; */
+    padding-bottom: 1.5rem;
+    border-bottom: 1.5px solid rgba(153, 152, 152, 0.5);
+  }
+  .alphabet-block-letter {
+    color: var(--text-clr-dark);
+    font-size: 2.4rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .alphabet-list {
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* column-count: 3; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px 2rem;
+  }
+  .alphabet-list li {
+    /* border: 1px solid hotpink; */
+    margin-left: 1.5rem;
+    list-style: none;
+  }
+  .alphabet-list a {
+    text-decoration: none;
+    color: var(--text-clr-dark);
+    font-size: 1.1rem;
+    line-height: 1.3;
+    transition: all 150ms ease-out;
+  }
+  .alphabet-list a:hover {
+    filter: brightness(4);
+  }
 </style>
+<!-- + MEDIA Q -->
 
-
- <!-- + MEDIA Q -->
