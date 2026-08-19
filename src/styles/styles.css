@@ -185,9 +185,9 @@ html {
 .post-container__md-text p:has(img) {
   padding: 1.2rem 0;
 }
-/* .post-container__md-text ul {
-  border: 2px solid lime;
-} */
+.post-container__md-text img {
+    max-width: 600px; /* *********** */
+} 
 .article-category {
   background-color: var(--accent-clr-4);
   font-weight: var(--category-font-weight);
@@ -254,7 +254,8 @@ html {
 }
 .article-navigation li {
   list-style: none;
-  padding: 0.31rem 0;
+  padding: 0.35rem 0;
+  margin-left: 6px;
   line-height: 1.1;
   text-decoration: underline;
   text-underline-offset: 2px;
