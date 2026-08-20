@@ -4,15 +4,23 @@ import MainLayout from "../../../layouts/MainLayout.astro";
 import ArticleGroup from "../../../components/ArticleGroup.astro";
 
 // utils imports
-import { formatBlogPosts } from "../../../js/utils";
+import { formatBlogPosts, slugify } from "../../../js/utils";
 
-const allPosts = Object.values(
+/* const allPosts = Object.values(
   import.meta.glob("/src/content/komnatnye-rasteniya/spisok-po-alfavitu/*.md", { eager: true })
 );
 
-const formattedPosts = formatBlogPosts(allPosts);
+const formattedPosts = formatBlogPosts(allPosts); */
 
-const groups = [];
+const allPlants = Object.values(
+  import.meta.glob("/src/content/komnatnye-rasteniya/spisok-po-alfavitu/*/*.md", {
+    eager: true,
+  })
+);
+
+const formattedPlants = formatBlogPosts(allPlants);
+
+/* const groups = [];
 
 for (let i = 0; i < formattedPosts.length; i += 5) {
   const chunk = formattedPosts.slice(i, i + 5);
@@ -41,7 +49,7 @@ for (let i = 0; i < formattedPosts.length; i += 5) {
 
     featuredOnLeft,
   });
-}
+} */
 
 const letters = [
   { letter: 'А', slug: 'a' },
@@ -130,15 +138,47 @@ const {
 
     </div>
 
-    <div class="alphabet-block" id="А">	
+    <!-- <div class="alphabet-block" id="А">	
       <span class="alphabet-block-letter">А</span>
       <ul class="alphabet-list">
         <li><a href="#">Абутилон</a></li>
         <li><a href="#">Аглаонема</a></li>                      			
       </ul>
-    </div>
+    </div> -->
 
-    <div class="alphabet-block" id="Б">	
+    {
+  letters.map(({ letter, slug }) => {
+    const plantsForLetter = formattedPlants
+      .filter((plant) => plant.frontmatter.plant?.charAt(0).toLowerCase() === letter.toLowerCase())
+      .sort((a, b) =>
+        a.frontmatter.plant.localeCompare(b.frontmatter.plant, "ru")
+      );
+
+    if (plantsForLetter.length === 0) {
+      return null;
+    }
+
+    return (
+      <div class="alphabet-block" id={letter}>
+        <span class="alphabet-block-letter">{letter}</span>
+
+        <ul class="alphabet-list">
+          {plantsForLetter.map((plant) => (
+            <li>
+              <a
+                href={`/${plant.frontmatter.category.slug}/${slugify(plant.frontmatter.title)}`}
+              >
+                {plant.frontmatter.plant}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  })
+}
+
+    <!-- <div class="alphabet-block" id="Б">	
       <span class="alphabet-block-letter">Б</span>
       <ul class="alphabet-list">
         <li><a href="#">Баклажан</a></li>
@@ -149,9 +189,9 @@ const {
         <li><a href="#">Бересклет</a></li>
         <li><a href="#">Бонсай</a></li>                			
       </ul>
-    </div>
+    </div> -->
 
-    <div class="alphabet-block" id="В">	
+  <!--   <div class="alphabet-block" id="В">	
       <span class="alphabet-block-letter">В</span>
       <ul class="alphabet-list">
         <li><a href="#">Валериана</a></li>
@@ -161,8 +201,9 @@ const {
         <li><a href="#">Вистерия</a></li>
         <li><a href="#">Вьюнок</a></li>            			
       </ul>
-    </div>
-   <!--  {
+    </div> -->
+   
+    <!--  {
       groups.map((group) => (
         <ArticleGroup
           featured={group.featured}
