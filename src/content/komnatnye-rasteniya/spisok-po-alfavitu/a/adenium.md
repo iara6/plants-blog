@@ -1,13 +1,13 @@
 ---
-title: "Алоэ: все об уходе"
-plant: Алоэ
-date: 2025-12-02
+title: "Адениум: все об уходе"
+plant: Адениум
+date: 2025-12-03
 author: {
   name: "Дмитрий Ковалев",
   slug: "dmitrij-kovalev"
 }
 image: {
-  src: "/images/articles/aloe-vera-potted.webp",
+  src: "/images/komnatnye-rasteniya/adenium-potted.webp",
   alt: "A picture of something",
 }
 description: Равным образом, социально-экономическое развитие обеспечивает актуальность. Как уже неоднократно упомянуто, реплицированные с зарубежных источников.
@@ -30,7 +30,7 @@ category: {
 Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing.
 Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor nisi magna ut elit pariatur commodo.
 
-![Алоэ в горшке](/images/komnatnye-rasteniya/aloe-vera-potted.webp)
+![Адениум в горшке](/images/komnatnye-rasteniya/adenium-potted.webp)
 
 ## Just a nice title
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit tenetur natus, officiis eos eius quaerat? Beatae, deserunt! Ipsa modi nemo nihil facere enim ullam quidem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam placeat obcaecati dolore soluta praesentium rerum numquam, vitae nisi voluptatibus provident itaque dolores quod optio delectus tenetur officiis culpa nam deleniti.
@@ -40,7 +40,7 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit tenetur 
 3. Third item
 4. Fourth item
 
-![Алоэ](/images/komnatnye-rasteniya/aloe-vera.webp)
+![Адениум](/images/komnatnye-rasteniya/adenium.webp)
 
 ## Title 3
 
@@ -50,6 +50,6 @@ Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea eli
 Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor nisi magna ut elit pariatur commodo.
 Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing.
 
-![Листья алоэ вблизи](/images/komnatnye-rasteniya/aloe-vera-close-up.webp)
+![Цветы адениума вблизи](/images/komnatnye-rasteniya/adenium-close-up.webp)
 
 Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor nisi magna ut elit pariatur commodo.
