@@ -1,12 +1,13 @@
 ---
-title: Комнатные растения на букву Д
+title: "Бальзамин Уоллера: все о растении"
+plant: Бальзамин Уоллера
 date: 2025-11-11
 author: {
   name: "Дмитрий Ковалев",
   slug: "dmitrij-kovalev"
 }
 image: {
-  src: "/images/articles/trending-5.jpg",
+  src: "/images/komnatnye-rasteniya/adenium.webp",
   alt: "A picture of something",
 }
 description: Равным образом, социально-экономическое развитие обеспечивает актуальность. Как уже неоднократно упомянуто, реплицированные с зарубежных источников.

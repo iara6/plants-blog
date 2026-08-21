@@ -1,12 +1,13 @@
 ---
-title: Бегония
+title: "Бегония: как правильно ухаживать"
+plant: Бегония
 date: 2025-12-02
 author: {
   name: "Дмитрий Ковалев",
   slug: "dmitrij-kovalev"
 }
 image: {
-  src: "/images/articles/trending-6.jpg",
+  src: "/images/komnatnye-rasteniya/adenium-potted.webp",
   alt: "A picture of something",
 }
 description: Равным образом, социально-экономическое развитие обеспечивает актуальность. Как уже неоднократно упомянуто, реплицированные с зарубежных источников.

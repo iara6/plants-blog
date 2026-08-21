@@ -1,0 +1,242 @@
+---
+// component imports
+import MainLayout from "../../../layouts/MainLayout.astro";
+
+// utils imports
+import { formatBlogPosts, slugify } from "../../../js/utils";
+import { letters } from "../../../js/alphabet";
+
+const allPlants = Object.values(
+  import.meta.glob("/src/content/komnatnye-rasteniya/spisok-po-alfavitu/*/*.md", {
+    eager: true,
+  })
+);
+
+const formattedPlants = formatBlogPosts(allPlants);
+
+export function getStaticPaths() {
+  return letters.map(({ letter, slug }) => ({
+    params: { letter: slug },
+    props: { letter, slug },
+  }));
+}
+
+const { letter, slug } = Astro.props;
+
+const plantsForLetter = formattedPlants
+  .filter(
+    (plant) =>
+      plant.frontmatter.plant?.charAt(0).toLowerCase() ===
+      letter.toLowerCase()
+  )
+  .sort((a, b) =>
+    a.frontmatter.plant.localeCompare(b.frontmatter.plant, "ru")
+  );
+
+const {
+  title = "Список домашних растений по алфавиту",
+  description = "Список домашних растений по алфавиту",
+  robots = true,
+  frontmatter,
+} = Astro.props;
+---
+
+<MainLayout
+  {title}
+  {description}
+  {frontmatter}
+  {robots}
+>
+ <main class="content-container">
+    <h1 class="page-title">
+      Комнатные растения на букву <span>{letter}</span>
+    </h1>
+    <div class="alphabet-container">
+      <ul class="alphabet-ulist">
+        {letters.map((item) => (
+          <li>
+            <a href={`/komnatnye-rasteniya/spisok-po-alfavitu/${item.slug}/`}>
+              {item.letter}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="alphabet-block">
+      <span class="alphabet-block-letter">{letter}</span>
+
+      <ul class="alphabet-list">
+        {plantsForLetter.map((plant) => (
+          <li>
+            <a
+              href={`/${plant.frontmatter.category.slug}/${slugify(plant.frontmatter.title)}`}
+            >
+              {plant.frontmatter.plant}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="list-button">
+      <a href="/komnatnye-rasteniya/spisok-po-alfavitu/" title="Названия комнатных растений по алфавиту">
+        <img src="/icons/flower.svg" alt="">
+        Показать весь список
+      </a>
+    </div>
+
+  </main>
+</MainLayout>
+
+<style>
+ 
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-clr-dark);
+    margin-bottom: 2rem;
+  }
+  .page-title span {
+    font-size: 2.2rem;
+    color: var(--accent-clr);
+  }
+  .alphabet-container {
+    /* border: 1px solid red; */
+    margin: 2.5rem 0 3.5rem;
+  }
+  .alphabet-ulist {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .alphabet-ulist li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .alphabet-ulist a {
+    text-decoration: none;
+    color: var(--text-clr-dark);
+    font-size: 1.4rem;
+    font-weight: 450;
+    height: 3.25rem;
+    width: 3.25rem;
+    border: 1px solid rgba(153, 152, 152, 0.5);
+    margin-top: -1px;
+    margin-left: -1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 150ms ease-out;
+  }
+  .alphabet-ulist a:hover {
+    background-color: var(--accent-clr-4);
+    color: var(--text-clr-dark-perm);
+  }
+
+  .alphabet-block {
+    /* border: 1px solid green; */
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    /* border-bottom: 1.5px solid rgba(153, 152, 152, 0.5); */
+  }
+  .alphabet-block-letter {
+    /* color: var(--text-clr-dark); */
+    color: var(--text-clr-links);
+    font-size: 2.4rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .alphabet-list {
+    /* display: flex;
+    flex-wrap: wrap; */
+    column-count: 3;
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px 2rem; */
+  }
+  .alphabet-list li {
+    /* border: 1px solid hotpink; */
+    margin-left: 1.5rem;
+    list-style: none;
+    line-height: 1.8;
+  }
+  .alphabet-list a {
+    text-decoration: none;
+    color: var(--text-clr-dark);
+    font-size: 1.1rem;
+    transition: all 150ms ease-out;
+  }
+  .alphabet-list a:hover {
+    filter: brightness(4);
+  }
+
+  .list-button {
+    margin-top: 4rem;
+    width: fit-content;
+    /* margin-inline: auto; */
+  }
+  .list-button a {
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
+    background-color: var(--accent-clr-3);
+    color: var(--text-clr-dark-perm);
+    border: 1px solid var(--text-clr-dark);
+    box-shadow: 2px 2px 0 0 var(--text-clr-dark);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    max-height: 57px;
+  }
+  .list-button a:hover{
+    transform: translate(2px, 2px);
+    box-shadow: 0 0 0 var(--text-clr-dark);
+  } 
+  .list-button img {
+    height: 24px;
+    margin-right: 10px;
+  }
+
+  @media screen and (max-width:1024px) {
+    .alphabet-ulist a {
+      font-size: 1.3rem;
+      height: 3.2rem;
+      width: 3.2rem;
+    }
+  }
+  @media screen and (max-width:768px) {
+    .alphabet-list {
+      column-count: 2;
+    }
+    .alphabet-ulist a {
+      font-size: 1.2rem;
+      height: 3rem;
+      width: 3rem;
+    }
+    .alphabet-block-letter {
+      font-size: 2.3rem;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .alphabet-list li {
+      line-height: 1.9;
+    }
+    .alphabet-ulist a {
+      font-size: 1.1rem;
+      height: 2.8rem;
+      width: 2.8rem;
+    }
+    .alphabet-block-letter {
+      font-size: 2rem;
+    }
+    .alphabet-list a {
+      font-size: 1rem;
+    }
+  }
+
+</style>

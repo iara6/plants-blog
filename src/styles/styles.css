@@ -258,12 +258,13 @@ html {
   margin-left: 6px;
   line-height: 1.1;
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
 }
 .article-navigation li a:hover {
   filter: brightness(1.5) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
 }
-
 .all-categories-h2 {
   font-size: 1.5rem;
   font-weight: 600;
