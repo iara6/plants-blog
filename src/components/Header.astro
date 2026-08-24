@@ -4,7 +4,6 @@ import Search from "./Search.astro"
 
 <header>
   <div class="header-bg-wrapper">
-    <!-- <img class="header-bg" src="/images/backgrounds/header-bg-webp.webp" alt=""> -->
     <img class="header-bg" src="/images/backgrounds/bg-header-l.webp" alt="">
   </div>
   <div class="menu-container">
@@ -50,20 +49,8 @@ import Search from "./Search.astro"
             <li class="dropdown_item-1"><a href="#">Как спасти домашнее растение</a></li>
             <li class="dropdown_item-1"><a href="/zdorove-rastenij/vrediteli/">Вредители</a></li>
             <li class="dropdown_item-1"><a href="/zdorove-rastenij/bolezni/">Болезни</a></li>
-            <!-- <li class="dropdown_item-1"><a href="#">Борьба с вредителями и болезнями</a></li> -->
           </ul>
         </li>
-        
-        <!-- <li class="dropdown">
-          <a class="section-link" href="#">Интересные факты</a>
-          <ul class="dropdown_menu">
-            <li class="dropdown_item-1"><a href="#">Item 1</a></li>
-            <li class="dropdown_item-1"><a href="#">Item 2</a></li>
-            <li class="dropdown_item-1"><a href="#">Item 3</a></li>
-            <li class="dropdown_item-1"><a href="#">Item 4</a></li>
-            <li class="dropdown_item-1"><a href="#">Item 5</a></li>
-          </ul>
-        </li> -->
       </ul>
 
       <div class="nav-toggle-button">
@@ -73,14 +60,6 @@ import Search from "./Search.astro"
       </div>
 
       <Search />
-      <!-- <div class="header__search">
-        <form id="search-form">
-          <input id="search-input" placeholder="Поиск" value="" type="search">
-          <button aria-label="Search" type="submit">
-            <img src="/icons/magnifying-glass.svg" alt="">
-          </button>
-        </form>
-      </div> -->
 
       <div class="menu-container_buttons">
         <div class="nav-random-dice-container">
@@ -97,8 +76,6 @@ import Search from "./Search.astro"
       </div>
     </nav>
   </div>
-
-  
   
   <div class="nav-toggle-menu-container">
     <li class="nav-toggle-menu__option">
@@ -183,25 +160,6 @@ import Search from "./Search.astro"
         </li>
       </ul>
     </li>
-    <!-- <li class="nav-toggle-menu__option">
-      <span class="nav-toggle-menu__option-title">
-        Section 5 <i class="fa-solid fa-chevron-down"></i>
-      </span>
-      <ul class="nav-toggle-div__expandable">
-        <li>
-          <a href="/">Item 1</a>
-        </li>
-        <li>
-          <a href="/">Item 2</a>
-        </li>
-        <li>
-          <a href="/">Item 3</a>
-        </li>
-        <li>
-          <a href="/">Item 4</a>
-        </li>
-      </ul>
-    </li> -->
     <div class="nav-toggle_buttons">
       <button class="switch-button switch-button-media" title="Ночной режим">
         <span><img src="/icons/moon4.svg" alt=""></span>
@@ -232,9 +190,6 @@ import Search from "./Search.astro"
     overflow: hidden;
   }
   .header-bg-wrapper::before {
-    /* background: linear-gradient(to bottom, rgba(4, 119, 201, 0.1) 20%,rgba(124, 17, 145, 0.2) 90%); */
-
-   /*  background-image: linear-gradient(var(--accent-clr), var(--accent-clr-3)); */
     background-image: linear-gradient(var( --primary-clr), var( --primary-clr));
     opacity: 0.25;
      
@@ -275,7 +230,6 @@ import Search from "./Search.astro"
     padding: 0 3rem;
     background-color: var(--primary-clr);
     display: flex;
-    /* justify-content: space-around; */
     justify-content: space-between;
     align-items: center;
     transition: all 250ms ease;
@@ -294,7 +248,6 @@ import Search from "./Search.astro"
     font-size: 18px;
     perspective: 1000px;
     z-index: 100;
-    /* border: 1px solid red; */
     cursor: pointer;
   }
   .dropdown::after {
@@ -324,7 +277,6 @@ import Search from "./Search.astro"
     width: 100%;
   }
   .section-link {
-    /* border: 1px solid blue; */
     color: var(--text-clr-light);
     padding: 25px 40px;
     font-weight: 450;
@@ -337,9 +289,6 @@ import Search from "./Search.astro"
     min-width: 100%;
      
     width: max-content;
-    /* width: 100%;
-    max-width: 350px; */
-    /* width: fit-content; */
     perspective: 1000px;
     z-index: -1;
     box-shadow: var(--dropdown-shadow);
@@ -350,7 +299,6 @@ import Search from "./Search.astro"
     transform-origin: top center;
   }
   .dropdown_menu li {
-     /* white-space: normal; */
     width: 100%;
     max-width: 258px;
     display: block;
@@ -362,8 +310,7 @@ import Search from "./Search.astro"
   .dropdown_menu li:hover {
     background-color: var(--accent-clr-4);
   } 
-  .dropdown_menu a { 
-    /* border: 1px solid green; */
+  .dropdown_menu a {
     padding: 0.5rem 1rem;
   }
   .dropdown_menu li:hover a {
@@ -390,7 +337,6 @@ import Search from "./Search.astro"
     box-sizing: content-box;
     padding: 6px;
     cursor: pointer;
-   /*  border: 1px solid red; */
   }
   .nav-toggle-button span {
     display: block;
@@ -416,7 +362,6 @@ import Search from "./Search.astro"
   }
   .nav-toggle-menu-container {
     padding: 1rem 2rem 2rem;
-    /* border-top: 2px dashed rgb(185, 167, 167); */
     color: var(--primary-clr-dark);
     background-color: var(--primary-clr);
     width: 100%;
@@ -483,7 +428,6 @@ import Search from "./Search.astro"
     margin-left: 8px;
     line-height: 2;
     font-size: 1.1rem;
-    /* border: 1px solid red; */
   }
   .nav-toggle-menu-container .nav-toggle-menu__option-title:hover,
   .nav-toggle-div__expandable li:hover {
@@ -549,12 +493,6 @@ import Search from "./Search.astro"
   }
   .switch-button {
     position: relative;
-    /* height: 1.7rem;
-    width: 3.5rem;
-    border-radius: 0.8rem;
-    border: none;
-    background-color: rgb(23, 23, 184); */
-    /* transition: all 250ms ease-in-out; */
     border: none;
     border-radius: 50px;
     padding: 0 3px;
@@ -570,7 +508,6 @@ import Search from "./Search.astro"
     align-items: center;
     justify-content: space-around;
   } 
- 
   .switch-button:hover {
     filter: brightness(1.1);
   }
@@ -579,30 +516,15 @@ import Search from "./Search.astro"
     width: 21px;
     height: 21px;
     cursor: pointer;
-    /* filter: drop-shadow(0 -1px 1px rgb(0, 0, 0, 0.25)); */
   }
-  /* .toggle-icon {
-    width: 24px;
-    height: 24px;
-    fill: #fff;
-    filter: drop-shadow(0 -1px 1px rgb(0, 0, 0, 0.25));
-  } */
   .switch {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 10;
-  /*   width: 50%;
-    height: 100%;
-    border-radius: 0.8rem;
-    background-color: var(--selection-clr);
-    outline: 1px solid green;
-    transition: all 250ms ease-out;
-     */
     cursor: pointer;
 
     border-radius: 50%;
-    /* width: 28px; */
     width: 50%;
     height: 28px;
     background-image: url('/images/backgrounds/wood-pattern.png');
@@ -612,7 +534,6 @@ import Search from "./Search.astro"
       inset 0 1px 1px rgb(255, 255, 255, 0.75),
       inset 0 -1px 4px #b75301,
       0 1px 4px rgb(0, 0, 0, 0.75);
-    /* transition-duration: .4s; */
     transition: all 250ms ease-out;
   }
   .slide .switch {
@@ -661,7 +582,6 @@ import Search from "./Search.astro"
       display: flex;
     }
   }
-
   @media screen and (max-width:900px) {
     .header-bg-wrapper {
       height: 160px;
@@ -670,7 +590,6 @@ import Search from "./Search.astro"
       top: 162px;
     }
   }
-
   @media screen and (max-width:700px) {
     .menu-container nav {
       justify-content: space-between;
@@ -691,12 +610,6 @@ import Search from "./Search.astro"
       font-size: 1.05rem;
     }
   }
-
-/*   @media screen and (max-width: 640px) {
-    .home-main__new-articles-container {
-      border: 2px solid yellowgreen;
-    } 
-  } */
 </style>
 
 <script>
@@ -747,17 +660,17 @@ toggleBtn.addEventListener('click', () => {
 
 function closeNavToggleMenu() {
   toggleBtn.classList.remove('change');
-    navToggleMenu.classList.remove('open-nav-toggle-menu');
+  navToggleMenu.classList.remove('open-nav-toggle-menu');
 
-    navToggleMenuOptions.forEach(option => {
-      option.classList.remove('translateX');
-    });
+  navToggleMenuOptions.forEach(option => {
+    option.classList.remove('translateX');
+  });
 
-    navToggleInsideOptions.forEach(option => {
-      option.classList.remove('translateX');
-    });
+  navToggleInsideOptions.forEach(option => {
+    option.classList.remove('translateX');
+  });
 
-    document.body.style.overflow = '';
+  document.body.style.overflow = '';
 }
 
 window.addEventListener('click', (event) => {

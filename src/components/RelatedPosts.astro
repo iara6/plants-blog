@@ -20,7 +20,6 @@ const { relatedPosts } = Astro.props;
         <span class="related-data">
           <span class="related-post-date">{formatDate(post.frontmatter.date)}</span> • <a href={`/author/${post.frontmatter.author.slug}/`}>{post.frontmatter.author.name}</a> {/* <a class="article-category" href={`/category/${slugify(post.frontmatter.category.slug)}/`}>{post.frontmatter.category.name}</a>*/}
         </span>
-
       </div>
     </div>   
   ))
@@ -49,9 +48,6 @@ const { relatedPosts } = Astro.props;
     font-weight: 600;
     margin: 0.8rem 0 0.4rem;
   }
-  /* .related-post span {
-    opacity: 0.9;
-  } */
   .related-post-date {
     font-size: 0.9rem;
     color: var(--text-clr-dark-m);
@@ -65,16 +61,12 @@ const { relatedPosts } = Astro.props;
       height: 270px;
     }
   }
-
   @media screen and (max-width:1200px) {
     .related-post {
-      /* border-bottom: 1px solid rgb(153, 152, 152, 0.5); */
       border: none;
-      /* border: 1px solid red; */
       padding: 0 !important;
     }
   }
-
   @media screen and (max-width: 768px) {
     .related-post {
       display: flex;
@@ -95,14 +87,12 @@ const { relatedPosts } = Astro.props;
       width: 100%;
     }
   }
-
   @media screen and (max-width: 640px) {
     .related-post__img-container {
       width: 130px;
       height: 130px;
     }
   }
-  
   @media screen and (max-width: 480px) {
     .related-post__img-container {
       width: 115px;
@@ -110,7 +100,6 @@ const { relatedPosts } = Astro.props;
     }
      .related-post h3 {
       font-size: 1.2rem;
-      /* margin: 0.8rem 0 0.4rem; */
     }
     .related-post span {
       font-size: 0.9rem;
@@ -119,4 +108,5 @@ const { relatedPosts } = Astro.props;
       font-size: 0.85rem;
     }
   }
+  
 </style>

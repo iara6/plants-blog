@@ -17,7 +17,6 @@ const { title, date, category, author, image } = Astro.props;
     text-align: center;
     margin-bottom: 1rem;
     color: var(--text-clr-dark);
-    /*   border: 1px solid red; */
   }
   .post-header-container h1 {
     font-size: 2.2rem;
@@ -35,17 +34,15 @@ const { title, date, category, author, image } = Astro.props;
     font-size: 0.95rem;
   }
 
-   @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     .post-header-container h1 {
       font-size: 2rem;
-     /*  font-weight: 600;
-      margin-bottom: 0.5rem; */
     }
   }
-    @media screen and (max-width: 640px) { 
-      .post-header-container h1 {
+  @media screen and (max-width: 640px) { 
+    .post-header-container h1 {
       font-size: 1.6rem; 
     }
-
   }
+
 </style>

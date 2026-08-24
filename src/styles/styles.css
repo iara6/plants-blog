@@ -22,57 +22,21 @@ body {
 /* font-family: "Golos Text", sans-serif; */
 /* font-family: "Commissioner", sans-serif; */
 /* font-family: "Geologica", sans-serif; */
-/*  background-color: var(--secondary-clr); */
 }
 
-/* h1, h2, h3 {
-  font-family: "Golos Text", sans-serif;
-} */
-
 :root {
-  /* --primary-clr: #FEDBD0;
-  --primary-clr-dark: #442C2E;
+  --primary-clr: #0F6358;
+  --primary-clr-dark: #101e15;
   --primary-clr-dark-perm: #442C2E;
-  --secondary-clr: #FEEAE6;
-
-  --accent-clr: #EF476F;
-  --accent-clr-2: #06D6A0;
-
-  --selection-clr: #bce5bc;  */
-/* ************************* */
-
-/* lightest bg: #fef4e8 ++
-darkest green: #147063 ++
-warm light orange sand: #edbc9c ++
-warm dark orange: #d26e56 ++
-
-text dark: #101e15 ++
-text dark-medium: #81877b ++
-text light: #ebfbfb ++
-text light-medium: #84d4c7 ++
- */
-
-/* Primary	Deep green (#2f6b4f)
-Accent	Sage (#89a97b)
-Background	Warm ivory (#faf8f5)
-Text	Dark gray (#2e2e2e) */
-
-/* complementary #7f340d 
-https://colorkit.co/color/0f6358/ */
-
-  --primary-clr: #0F6358; /*  */
-  --secondary-clr: #fef4e8; /*  */
-  --secondary-cl-2: #fef4e8; /*  */
+  --secondary-clr: #fef4e8;
+  --secondary-cl-2: #fef4e8;
   --secondary-cl-3: #fffbf5; /* search page input bg */
-  /* --primary-clr-light: #0F6358; */ /*  */
-  --primary-clr-dark: #101e15; /* ----- */
-  --primary-clr-dark-perm: #442C2E;
 
-  --text-clr-dark: #101e15;/*  */ /* dark m */
+  --text-clr-dark: #101e15;
   --text-clr-dark-perm: #101e15;
-  --text-clr-dark-m: #4c5345;/*  */ /* dark m */
-  --text-clr-light: #f6ffff; /*  */ /* dark m */
-  --text-clr-light-m: #c5ded9;/*  */ /* dark m */
+  --text-clr-dark-m: #4c5345;
+  --text-clr-light: #f6ffff;
+  --text-clr-light-m: #c5ded9;
   --text-clr-links: #4d0858;
 
   --category-font-weight: 400;
@@ -81,24 +45,16 @@ https://colorkit.co/color/0f6358/ */
   --trending-section-gradient-2: rgba(254, 244, 232, 0.3) 40%;
 
   --accent-clr: #EF476F;
- /*  --accent-clr-2: #d26e56; */ /*  */
   --accent-clr-2: #bb583f;
-  --accent-clr-3: #edbc9c;  /*  */ /* dark m */
+  --accent-clr-3: #edbc9c;
   --accent-clr-4: #b5f2b5;
   --accent-clr-5: #fceeda; 
 
   --selection-clr: #bce5bc; 
 
- /*  --primary-clr: #356859;
-  --primary-clr-2: #37966F;
-  --primary-clr-3: #B9E4C9;
-  --secondary-clr: #FD5523;
-  --clr: #FFFBE6; */
-
   --max-width: 1440px;
   --content-width: 1280px;
 }
-
 .dark-mode {
   --primary-clr: #0a3837;
   --primary-clr-dark: #d3bbbd; 
@@ -129,52 +85,21 @@ https://colorkit.co/color/0f6358/ */
   color: var(--text-clr-dark);
 }
 
-/* html {
-  scroll-behavior: smooth;
-  background-color: var(--secondary-clr); 
-  background-image: url("/icons/seamless.jpg");
-  background-repeat: repeat;
-  background-size: 600px;
-  background-blend-mode: multiply;
-} */
-
 html {
   scroll-behavior: smooth;
   background-color: var(--secondary-clr);
   position: relative;
   transition: all 250ms ease;
- /*  font-family: "IBM Plex Sans", sans-serif; */
-  /* font-family: "Onest", sans-serif; */
-
- /*  font-family: "Golos Text", sans-serif; */
-  /* font-family: "Commissioner", sans-serif; */
- /* font-family: "Geologica", sans-serif; */
-
 }
-
-/* html::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: url("/images/backgrounds/seamless.jpg");
-  background-repeat: repeat;
-  background-size: 600px;
-  opacity: 0.4;
-  z-index: -1;
-} */
 
 .content-container,
 .post-container {
   background-color: var(--secondary-cl-2);
   max-width: var(--max-width);
   padding: 1.5rem;
-  /* min-width: 1024px; */
   margin-inline: auto;
   transition: all 250ms ease;
 }
-/* .post-container__md-text {
-  border: 2px solid hotpink;
-} */
 .post-container__md-text h2,
 .post-container__md-text p:has(img) {
   text-align: center;
@@ -186,7 +111,7 @@ html {
   padding: 1.2rem 0;
 }
 .post-container__md-text img {
-    max-width: 600px; /* *********** */
+  max-width: 600px; /* *********** */
 } 
 .article-category {
   background-color: var(--accent-clr-4);
@@ -194,16 +119,13 @@ html {
   padding: 3px 7px;
   border-radius: 4px;
 }
-
 .article-category a {
   color: var(--primary-clr-dark-perm) !important;
 }
-
 .page-number {
   color: var(--text-clr-dark-m);
   text-align: center;
   font-size: 0.85rem;
-  /* opacity: 0.5; */
   margin: 10px 0 3rem;
 }
 .pagination-buttons {
@@ -226,7 +148,6 @@ html {
   gap: 8px;
   border-radius: 4px;
   font-size: 1.1rem;
-  /*  width: fit-content; */
 }
 .pagination-buttons a:hover {
   transform: translate(2px, 2px);
@@ -238,8 +159,9 @@ html {
 
 /************************/
 /* BlogPostLayout.astro */
-/************************/
+/*****************************************/
 /* blog-page, author-page, category-page */
+/*****************************************/
 
 .article-navigation {
   margin: 2rem 0;
@@ -276,6 +198,7 @@ html {
   display: flex;
   justify-content: center;
 }
+
 /*********************/
 /* search.astro page */
 /*********************/
@@ -290,24 +213,22 @@ html {
 }
 .pagefind-ui__message {
   font-weight: 600 !important;
+  font-size: 1rem !important;
 }
 .pagefind-ui__form::before {
   color: var(--text-clr-dark) !important;
   width: 18px !important;
   height: 18px !important;
 }
-
 .pagefind-ui__button {
   background-color: var(--accent-clr-3) !important;
   color: var(--text-clr-dark-perm) !important;
   padding: 0.7rem 2rem !important;
   height: auto !important;
-  /* width: auto !important; */
   width: 100% !important;
   border-radius: 4px !important;
   font-size: 1.1rem !important;
   font-weight: 550 !important;
-  /* border: none !important; */
   border: 1px solid var(--text-clr-dark) !important;
   box-shadow: 3px 3px 0 0 var(--text-clr-dark) !important;
   cursor: pointer !important;
@@ -338,11 +259,6 @@ html {
   height: 100% !important;
   object-fit: cover !important;
 }
-
-/* <div class="pagefind-ui__result-inner svelte-4xnkmf"><p class="pagefind-ui__result-title svelte-4xnkmf"><a class="pagefind-ui__result-link svelte-4xnkmf" href="/category/sovety/">Статьи по тегу советы</a></p> <p class="pagefind-ui__result-excerpt svelte-4xnkmf">3 Item 4 Статьи по тегу <mark>советы.</mark> Как подружиться с гусём? Post</p>  </div> */
-/* .pagefind-ui__result-title {
-  font-size: 1.4rem !important;
-} */
 .pagefind-ui__result-inner,
 .pagefind-ui__message,
 .pagefind-ui__result-link {
@@ -401,7 +317,6 @@ html {
   .article-navigation {
     width: 100%;
   }
-
   .post-container__md-text img {
     max-width: 450px;
   } 
@@ -411,14 +326,12 @@ html {
     font-size: 1.4rem;
   }
   .post-container__md-text img {
-    /* max-width: 400px; */
     width: 100%;
   } 
   .page-title {
     font-size: 1.8rem !important;
   }
 }
-
 @media screen and (max-width: 480px) { 
   .post-container__md-text h2 {
     font-size: 1.2rem;
@@ -427,6 +340,4 @@ html {
     font-size: 1.5rem !important;
   }
 }
-
-
 
