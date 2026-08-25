@@ -4,36 +4,99 @@
       <a href="/">
         <img class="logo-img" src="/images/logos/happy-logo-test.png" alt="">
       </a>
+      <ul>
+        <li>
+          <a href="#">О нас</a>
+        </li>
+        <li>
+          <a href="#">Контакты</a>
+        </li>
+      </ul>
       <p class="copyright-info">© {new Date().getFullYear()} Ваш Цветник. Все права защищены.</p>
     </div>
 
     <div class="footer-nav">
       <ul>
         <li>
-          <a href="/komnatnye-rasteniya/">Комнатные растения</a>
+          <a class="nav-section-link" href="/komnatnye-rasteniya/">Комнатные растения</a>
         </li>
         <li>
-          <a href="/podbor-rastenij/">Подбор растений</a>
+          <a href="/komnatnye-rasteniya/spisok-po-alfavitu/">Список по алфавиту</a>
         </li>
         <li>
-          <a href="/uhod/">Уход</a>
+          <a href="/komnatnye-rasteniya/klassifikaciya/">Классификация</a>
         </li>
         <li>
-          <a href="/zdorove-rastenij/">Здоровье</a>
+          <a href="/komnatnye-rasteniya/polza-i-vred/">Польза и вред</a>
+        </li>
+        <li>
+          <a href="/komnatnye-rasteniya/interesnoe/">Интересное</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-nav">
+      <ul>
+        <li>
+          <a class="nav-section-link" href="/podbor-rastenij/">Подбор растений</a>
+        </li>
+        <li>
+          <a href="#">Как выбрать комнатное растение</a>
+        </li>
+        <li>
+          <a href="/podbor-rastenij/po-forme-i-razmeru/">По форме и размеру</a>
+        </li>
+        <li>
+          <a href="/podbor-rastenij/po-potrebnostyam-v-uhode/">По потребностям в уходе</a>
+        </li>
+        <li>
+          <a href="/podbor-rastenij/po-cvetu/">По цвету</a>
+        </li>
+        <li>
+          <a href="/podbor-rastenij/po-forme-listev/">По форме листьев</a>
+        </li>
+        <li>
+          <a href="/podbor-rastenij/dlya-raznyh-pomeshchenij/">Для разных помещений</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-nav">
+      <ul>
+        <li>
+          <a class="nav-section-link" href="/uhod/">Уход</a>
+        </li>
+        <li>
+          <a href="#">Основные правила ухода</a>
+        </li>
+        <li>
+          <a href="/uhod/posadka-i-peresadka/">Посадка и пересадка</a>
+        </li>
+        <li>
+          <a href="/uhod/poliv-i-vlazhnost/">Полив и влажность</a>
+        </li>
+        <li>
+          <a href="/uhod/udobrenie-i-podkormka/">Удобрение и подкормка</a>
+        </li>
+        <li>
+          <a href="/uhod/razmnozhenie-i-vyrashchivanie/">Размножение и выращивание</a>
         </li>
       </ul>
     </div>
   
-    <div>
+    <div class="footer-nav">
       <ul>
         <li>
-          <a href="/">Section 1</a>
+          <a class="nav-section-link" href="/zdorove-rastenij/">Здоровье</a>
         </li>
         <li>
-          <a href="/">Section 2</a>
+          <a href="#">Как спасти домашнее растение</a>
         </li>
         <li>
-          <a href="/">Section 3</a>
+          <a href="/zdorove-rastenij/vrediteli/">Вредители</a>
+        </li>
+        <li>
+          <a href="/zdorove-rastenij/bolezni/">Болезни</a>
         </li>
       </ul>
       <div class="footer-buttons">
@@ -56,7 +119,6 @@
   footer {
     background-color: var(--primary-clr);
     color: var(--text-clr-light);
-    font-size: 1.125rem; /* 18px */
     padding: 2rem;
     margin-top: 2rem;
     border-top: 8px solid var(--accent-clr-3);
@@ -64,12 +126,17 @@
   }
   .footer-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     column-gap: 2rem;
   }
   .footer-container div {
     border: 1px solid red;
   }
+  .footer-nav:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  } 
   .footer-container div:first-child {
     display: flex;
     flex-direction: column;
@@ -86,13 +153,20 @@
     list-style: none;
   }
   footer li {
-    padding: 0.2rem 0;
+    padding: 0.35rem 0;
+  }
+  .footer-nav li:first-child {
+    margin-bottom: 6px;
   }
   footer a {
     text-decoration: none;
     color: var(--text-clr-light);
-    font-size: 1.125rem; /* 18px */
+    font-weight: 300;
     transition: all 250ms ease;
+  }
+  .nav-section-link {
+    font-size: 1.125rem;
+    font-weight: 450 !important;
   }
   footer li a:hover {
     color: var(--accent-clr-4);
@@ -145,7 +219,8 @@
     left: 50%;
   }
   .footer-buttons {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    padding: 1rem 0;
     display: flex;
     align-items: center;
   }
