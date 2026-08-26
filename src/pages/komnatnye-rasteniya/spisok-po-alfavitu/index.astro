@@ -5,12 +5,7 @@ import ArticleGroup from "../../../components/ArticleGroup.astro";
 
 // utils imports
 import { formatBlogPosts, slugify } from "../../../js/utils";
-
-/* const allPosts = Object.values(
-  import.meta.glob("/src/content/komnatnye-rasteniya/spisok-po-alfavitu/*.md", { eager: true })
-);
-
-const formattedPosts = formatBlogPosts(allPosts); */
+import { letters } from "../../../js/alphabet";
 
 const allPlants = Object.values(
   import.meta.glob("/src/content/komnatnye-rasteniya/spisok-po-alfavitu/*/*.md", {
@@ -19,67 +14,6 @@ const allPlants = Object.values(
 );
 
 const formattedPlants = formatBlogPosts(allPlants);
-
-/* const groups = [];
-
-for (let i = 0; i < formattedPosts.length; i += 5) {
-  const chunk = formattedPosts.slice(i, i + 5);
-
-  const groupIndex = Math.floor(i / 5);
-  const featuredOnLeft = groupIndex % 2 === 0;
-
-  if (groupIndex > 0 && chunk.length < 5) {
-    groups.push({
-      featured: null,
-      secondary: chunk,
-      featuredOnLeft,
-    });
-
-    continue;
-  }
-
-  groups.push({
-    featured: featuredOnLeft
-      ? chunk[0]
-      : chunk[4],
-
-    secondary: featuredOnLeft
-      ? chunk.slice(1)
-      : chunk.slice(0, 4),
-
-    featuredOnLeft,
-  });
-} */
-
-const letters = [
-  { letter: 'А', slug: 'a' },
-  { letter: 'Б', slug: 'b' },
-  { letter: 'В', slug: 'v' },
-  { letter: 'Г', slug: 'g' },
-  { letter: 'Д', slug: 'd' },
-  { letter: 'Е', slug: 'e' },
-  { letter: 'Ж', slug: 'zh' },
-  { letter: 'З', slug: 'z' },
-  { letter: 'И', slug: 'i' },
-  { letter: 'К', slug: 'k' },
-  { letter: 'Л', slug: 'l' },
-  { letter: 'М', slug: 'm' },
-  { letter: 'Н', slug: 'n' },
-  { letter: 'О', slug: 'o' },
-  { letter: 'П', slug: 'p' },
-  { letter: 'Р', slug: 'r' },
-  { letter: 'С', slug: 's' },
-  { letter: 'Т', slug: 't' },
-  { letter: 'У', slug: 'u' },
-  { letter: 'Ф', slug: 'f' },
-  { letter: 'Х', slug: 'h' },
-  { letter: 'Ц', slug: 'ts' },
-  { letter: 'Ч', slug: 'ch' },
-  { letter: 'Ш', slug: 'sh' },
-  { letter: 'Э', slug: 'eh' },
-  { letter: 'Ю', slug: 'yu' },
-  { letter: 'Я', slug: 'ya' },
-];
 
 const {
   title = "Список домашних растений по алфавиту",
@@ -118,7 +52,7 @@ const {
       </ul>
     </div> -->
 
-    {
+  {
   letters.map(({ letter, slug }) => {
     const plantsForLetter = formattedPlants
       .filter((plant) => plant.frontmatter.plant?.charAt(0).toLowerCase() === letter.toLowerCase())
@@ -162,18 +96,6 @@ const {
         <li><a href="#">Бонсай</a></li>                			
       </ul>
     </div> -->
-
-  <!--   <div class="alphabet-block" id="В">	
-      <span class="alphabet-block-letter">В</span>
-      <ul class="alphabet-list">
-        <li><a href="#">Валериана</a></li>
-        <li><a href="#">Ванда</a></li>
-        <li><a href="#">Венерина мухоловка</a></li>
-        <li><a href="#">Виллоу</a></li>
-        <li><a href="#">Вистерия</a></li>
-        <li><a href="#">Вьюнок</a></li>            			
-      </ul>
-    </div> -->
    
     <!--  {
       groups.map((group) => (
@@ -195,7 +117,6 @@ const {
     margin-bottom: 2rem;
   }
   .alphabet-container {
-    /* border: 1px solid red; */
     margin: 2.5rem 0 3.5rem;
   }
   .alphabet-ulist {
@@ -227,15 +148,12 @@ const {
     background-color: var(--accent-clr-4);
     color: var(--text-clr-dark-perm);
   }
-
   .alphabet-block {
-    /* border: 1px solid green; */
     margin-top: 1.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 1.5px solid rgba(153, 152, 152, 0.5);
   }
   .alphabet-block-letter {
-    /* color: var(--text-clr-dark); */
     color: var(--text-clr-links);
     font-size: 2.4rem;
     font-weight: 500;
@@ -243,15 +161,12 @@ const {
     margin-bottom: 1.5rem;
   }
   .alphabet-list {
-    /* display: flex;
-    flex-wrap: wrap; */
     column-count: 3;
     /* display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px 2rem; */
   }
   .alphabet-list li {
-    /* border: 1px solid hotpink; */
     margin-left: 1.5rem;
     list-style: none;
     line-height: 1.8;
@@ -303,7 +218,5 @@ const {
     }
   }
 
-
 </style>
-<!-- + MEDIA Q -->
 
