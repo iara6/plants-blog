@@ -11,12 +11,11 @@ import MainLayout from "../layouts/MainLayout.astro";
   <main class="content-container">
     <div class="privacy-container">
       <h1>Политика в отношении обработки персональных данных</h1>
-      <p>Дата последнего обновления: [дата]</p>
       <p>
         Настоящая Политика в отношении обработки персональных данных (далее — Политика) разработана в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных» и иными применимыми нормативными правовыми актами Российской Федерации.
       </p>
       <p>
-        Политика определяет порядок обработки персональных данных посетителей сайта Happy Plant, расположенного по адресу https://happyplant.ru (далее — Сайт), а также меры по обеспечению безопасности персональных данных.
+        Политика определяет порядок обработки персональных данных посетителей сайта Happy Plant, расположенного по адресу <span class="bold">https://happyplant.ru</span> (далее — Сайт), а также меры по обеспечению безопасности персональных данных.
       </p>
 
       <span class="policy-title">1. Общие положения</span>
@@ -27,7 +26,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         [ФИО оператора полностью / наименование организации]
       </p>
       <p>
-        Контактный адрес электронной почты: contact@happyplant.ru
+        Контактный адрес электронной почты: <span class="bold">contact@happyplant.ru</span>
       </p>
       <p>Далее — Оператор.</p>
 
@@ -56,7 +55,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <span class="policy-title">2. Персональные данные</span>
       <span class="policy-subtitle">2.1. Обращения по электронной почте</span>
       <p>
-        Если посетитель самостоятельно направляет обращение на адрес contact@happyplant.ru, Оператор может обрабатывать:
+        Если посетитель самостоятельно направляет обращение на адрес <span class="bold">contact@happyplant.ru</span>, Оператор может обрабатывать:
       </p>
       <ul>
         <li>адрес электронной почты;</li>
@@ -201,7 +200,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         <li>обжаловать действия или бездействие Оператора в уполномоченный орган или в судебном порядке;</li>
         <li>осуществлять иные права, предусмотренные законодательством Российской Федерации.</li>
       </ul>
-      <p>Для реализации своих прав субъект персональных данных может обратиться к Оператору: contact@happyplant.ru</p>
+      <p>Для реализации своих прав субъект персональных данных может обратиться к Оператору: <span class="bold">contact@happyplant.ru</span></p>
 
       <span class="policy-title">12. Уничтожение персональных данных</span>
       <p>Персональные данные уничтожаются при достижении целей обработки, истечении установленного срока хранения, отзыве согласия в случаях, когда дальнейшая обработка не имеет иного законного основания, либо при наступлении иных предусмотренных законодательством оснований.</p>
@@ -210,13 +209,18 @@ import MainLayout from "../layouts/MainLayout.astro";
       <span class="policy-title">13. Заключительные положения</span>
       <p>Настоящая Политика действует до её замены новой редакцией.</p>
       <p>Оператор вправе вносить изменения в Политику в связи с изменением законодательства Российской Федерации, функциональности Сайта или используемых информационных сервисов.</p>
-      <p>Актуальная версия Политики размещается по адресу: https://happyplant.ru/privacy-policy</p>
-      <p>По вопросам, связанным с обработкой персональных данных, можно обратиться к Оператору: contact@happyplant.ru</p>
+      <p>Актуальная версия Политики размещается по адресу: <span class="bold">https://happyplant.ru/privacy-policy</span></p>
+      <p>По вопросам, связанным с обработкой персональных данных, можно обратиться к Оператору: <span class="bold">contact@happyplant.ru</span></p>
+      <p>Дата последнего обновления: [дата]</p>
     </div>
   </main>
 </MainLayout>
 
 <style>
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
   .privacy-container {
     max-width: 1200px;
     margin-inline: auto;
@@ -224,13 +228,13 @@ import MainLayout from "../layouts/MainLayout.astro";
   }
   .policy-title {
     display: block;
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     font-weight: 600;
     margin-top: 0.8rem;
   }
   .policy-subtitle {
     display: block;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 550;
     margin-top: 0.5rem;
   }
@@ -238,6 +242,10 @@ import MainLayout from "../layouts/MainLayout.astro";
     margin: 0.5rem 0;
   }
   li {
+    margin: 0.5rem 0;
     list-style-type: none;
+  }
+  .bold {
+    font-weight: 550;
   }
 </style>
