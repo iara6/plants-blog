@@ -165,7 +165,7 @@ html {
 
 .article-navigation {
   margin: 2rem 0;
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem 1.575rem 0.8rem 1.2rem;
   border: 1px solid rgb(153, 152, 152, 0.5);
   background-color: var(--accent-clr-5);
   width: fit-content;
