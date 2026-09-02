@@ -10,10 +10,6 @@ import LeftArrow from "../../components/icons/LeftArrow.astro";
 import { slugify, formatBlogPosts } from '../../js/utils';
 
 export async function getStaticPaths({ paginate }) {
- /*  const allPosts = Object.values(
-    import.meta.glob("../../content/blog/*.md", { eager: true })
-  ); */
-
   const allPosts = Object.values(
   import.meta.glob("../../content/**/*.md", { eager: true })
 );
