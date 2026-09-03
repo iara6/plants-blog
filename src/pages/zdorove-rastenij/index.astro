@@ -7,7 +7,7 @@ import ArticleGroup from "../../components/ArticleGroup.astro";
 import { formatBlogPosts } from "../../js/utils";
 
 const allPosts = Object.values(
-  import.meta.glob("/src/content/zdorove/*.md", { eager: true })
+  import.meta.glob("/src/content/zdorove/**/*.md", { eager: true })
 );
 
 const formattedPosts = formatBlogPosts(allPosts);
