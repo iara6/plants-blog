@@ -10,6 +10,7 @@ const {
   featured,
   secondary,
   featuredOnLeft = true,
+  postCount
 } = Astro.props;
 ---
 
@@ -25,7 +26,11 @@ const {
             frontmatter={featured.frontmatter}
             url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`}
           />
-          <span><img class="plant-design" src="/images/elements/plant-design1.png"></span>
+          {postCount >= 3 && (
+            <span>
+              <img class="plant-design" src="/images/elements/plant-design1.png" />
+            </span>
+          )}
         </div>
       )}
         <div class="menu-section__secondary">
@@ -58,6 +63,7 @@ const {
               frontmatter={featured.frontmatter}
               url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`}
             />
+            <span><img class="plant-design2" src="/images/elements/plant-design1.png"></span>
           </div>
         )}
       </>
@@ -80,9 +86,13 @@ const {
   .menu-section-articles-container.reverse {
     grid-template-columns: 2fr 1.5fr;
   }
-  .plant-design {
+  .plant-design,
+  .plant-design2 {
     width: 100%;
     max-width: 500px;
+  }
+  .plant-design2 {
+    transform: scale(-1, 1);
   }
 
   @media screen and (max-width:1050px) {
