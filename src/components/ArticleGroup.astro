@@ -9,8 +9,7 @@ import { slugify } from "../js/utils";
 const {
   featured,
   secondary,
-  featuredOnLeft = true,
-  postCount
+  featuredOnLeft = true
 } = Astro.props;
 ---
 
@@ -26,11 +25,7 @@ const {
             frontmatter={featured.frontmatter}
             url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`}
           />
-          {postCount >= 3 && (
-            <span>
-              <img class="plant-design" src="/images/elements/plant-design1.png" />
-            </span>
-          )}
+          <span><img class="plant-design" src="/images/elements/plant-design1.png"></span>
         </div>
       )}
         <div class="menu-section__secondary">
