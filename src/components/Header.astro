@@ -9,7 +9,8 @@ import Search from "./Search.astro"
   <div class="menu-container">
     <nav>
       <a href="/">
-        <img class="logo-img" src="/images/logos/l1og1.png" alt="">
+        <img class="logo-img" src="/images/logos/logo-main-s.png" alt="">
+        <img class="logo-img-other" src="/images/logos/logo-other-s.png" alt="">
       </a>
       <ul class="menu">
         <li class="dropdown">
@@ -204,9 +205,13 @@ import Search from "./Search.astro"
   html.dark-mode .header-bg {
     filter: brightness(70%) saturate(0.9) blur(1px);
   }
-  .logo-img {
-    width: 160px;
+  .logo-img,
+  .logo-img-other {
+    width: 150px;
     display: block;
+  }
+  .logo-img-other {
+    display: none;
   }
   .menu-container {
     position: relative;
@@ -227,7 +232,7 @@ import Search from "./Search.astro"
     z-index: 5;
     bottom: 0;
     width: 100%;
-    padding: 0 3rem;
+    padding: 0 7rem;
     background-color: var(--primary-clr);
     display: flex;
     justify-content: space-between;
@@ -278,7 +283,7 @@ import Search from "./Search.astro"
   }
   .section-link {
     color: var(--text-clr-light);
-    padding: 25px 40px;
+    padding: 30px 35px;
     font-weight: 450;
     white-space: nowrap;
   }
@@ -540,10 +545,22 @@ import Search from "./Search.astro"
     left: 50%;
   }
 
+  @media screen and (max-width:1500px) {
+    .menu-container nav {
+      padding: 0 3rem;
+    }   
+  }
   @media screen and (max-width:1400px) {
+    .logo-img {
+      display: none;
+    }
+    .logo-img-other {
+      display: block;
+      width: 135px;
+    }
     .section-link {
       padding: 25px 25px;
-    }   
+    }
   }
   @media screen and (max-width:1300px) {
     .menu-container nav {
@@ -559,8 +576,8 @@ import Search from "./Search.astro"
       /* padding: 0 1.5rem; */
       justify-content: space-around;
     }
-    .logo-img {
-      width: 60px;
+    .logo-img-other {
+      width: 120px;
     }
     .nav-toggle-menu-container {
       top: 202px;
@@ -594,6 +611,9 @@ import Search from "./Search.astro"
     .menu-container nav {
       justify-content: space-between;
     }
+    .logo-img-other {
+      width: 100px;
+    }
     .header-bg-wrapper {
       height: 120px;
     }
@@ -608,6 +628,14 @@ import Search from "./Search.astro"
     }
     .nav-toggle-div__expandable li {
       font-size: 1.05rem;
+    }
+  }
+  @media screen and (max-width:500px) {
+    .logo-img-other {
+      width: 80px;
+    }
+    .menu-container nav {
+      padding-inline: 1rem;
     }
   }
 </style>

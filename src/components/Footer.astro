@@ -1,8 +1,8 @@
 <footer>
   <div class="footer-container">
-    <div>
-      <a href="/">
-        <img class="logo-img" src="/images/logos/happy-logo-test.png" alt="">
+    <div class="footer-column-1">
+      <a class="footer-logo-link" href="/">
+        <img class="logo-img" src="/images/logos/logo-main-s.png" alt="">
       </a>
       <ul>
         <li>
@@ -146,8 +146,11 @@
     flex-direction: column;
     justify-content: space-between;
   } 
-  footer .logo-img {
-    width: 170px;
+  .logo-img {
+    width: 175px;
+  }
+  .footer-column-1 ul {
+    margin-top: 0.725rem;
   }
   footer ul {
     list-style: none;
@@ -264,6 +267,9 @@
     footer {
       padding: 2rem 3rem 1rem;
     }
+    .logo-img {
+      width: 150px;
+    }
   }
   @media screen and (max-width:1200px) {
     footer {
@@ -271,6 +277,9 @@
     }
     .footer-container {
       grid-template-columns: 1fr 1fr 1fr;
+    }
+    .logo-img {
+      width: 130px;
     }
   }
   @media screen and (max-width:900px) {
@@ -290,6 +299,9 @@
     .footer-container {
       grid-template-columns: 1fr 1fr;
       /* row-gap: 1rem; */
+    }
+    .logo-img {
+      width: 120px;
     }
   }
   @media screen and (max-width:500px) {
