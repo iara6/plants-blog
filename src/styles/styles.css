@@ -110,9 +110,13 @@ html {
 .post-container__md-text p:has(img) {
   padding: 1.2rem 0;
 }
+
 .post-container__md-text img {
-  max-width: 600px; /* *********** */
+  max-width: 100%; /* *********** */
 } 
+/* .post-container__md-text > img:first-child {
+  width: 100% !important;
+} */
 .article-category {
   background-color: var(--accent-clr-4);
   font-weight: var(--category-font-weight);
@@ -181,6 +185,10 @@ html {
   line-height: 1.1;
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+.article-navigation li a {
+  /* font-size: 1rem; */
+  font-weight: 400 !important;
 }
 .article-navigation li a:hover {
   filter: brightness(1.5) !important;

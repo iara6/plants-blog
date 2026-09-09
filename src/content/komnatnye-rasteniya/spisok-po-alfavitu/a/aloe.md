@@ -10,7 +10,7 @@ image: {
   src: "/images/articles/aloe-vera-potted.webp",
   alt: "A picture of something",
 }
-description: Равным образом, социально-экономическое развитие обеспечивает актуальность. Как уже неоднократно упомянуто, реплицированные с зарубежных источников.
+description: В лесу листья имеют особое значение, потому что одни из них лежат на земле, другие находятся высоко над головой, а третьи только начинают раскрываться из маленьких зелёных почек.
 draft: false
 category: {
   name: "Комнатные растения",
@@ -18,22 +18,27 @@ category: {
 }
 ---
 
+![Уход за алоэ](/images/komnatnye-rasteniya/aloe-vera-info.png)
+
 <div class="article-navigation">
 <h3>Содержание статьи:</h3>
 
-- [Have you ever seen the rain?](#have-you-ever-seen-the-rain)
-- [Section 2](#just-a-nice-title)
-- [Section 3](#title-3)
+- [Тихое утро в саду](#тихое-утро-в-саду)
+- [Деревья и ветер](#деревья-и-ветер)
+- [Цветочная поляна](#цветочная-поляна)
+- [Невероятная жизнь домашних растений](#невероятная-жизнь-домашних-растений)
+- [После дождя](#после-дождя)
+- [Свежий осенний воздух](#свежий-осенний-воздух)
+- [А причем тут, собственно, алоэ?](#а-причем-тут-собственно-алоэ)
 </div>
 
-## Have you ever seen fire?
-Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing.
-Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor nisi magna ut elit pariatur commodo.
+## Тихое утро в саду
+Природа начинается там, где зелёный лист встречается с утренним воздухом, а тонкая ветка дерева медленно покачивается над травой. Иногда кажется, что растения растут совершенно беспричинно, выбирая направление света и забывая о времени. Рядом с ними появляются маленькие цветы, жёлтые, белые и почти синие, и каждый из них словно хранит собственное тихое настроение. Ветер проходит между стеблями, оставляя после себя едва заметное движение, которое продолжается ещё несколько секунд.
 
 ![Алоэ в горшке](/images/komnatnye-rasteniya/aloe-vera-potted.webp)
 
-## Just a nice title
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit tenetur natus, officiis eos eius quaerat? Beatae, deserunt! Ipsa modi nemo nihil facere enim ullam quidem!Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam placeat obcaecati dolore soluta praesentium rerum numquam, vitae nisi voluptatibus provident itaque dolores quod optio delectus tenetur officiis culpa nam deleniti.
+## Деревья и ветер
+В лесу листья имеют особое значение, потому что одни из них лежат на земле, другие находятся высоко над головой, а третьи только начинают раскрываться из маленьких зелёных почек. Среди корней можно увидеть мох, который растёт там, где достаточно влаги и мало причин торопиться. Иногда возле камня появляется папоротник, иногда рядом с ним вырастает незнакомый росток, и лес становится похож на место, где всё происходит одновременно. Деревья стоят рядом, но каждое из них смотрит в свою сторону.
 
 1. First item
 2. Second item
@@ -42,14 +47,32 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit tenetur 
 
 ![Алоэ](/images/komnatnye-rasteniya/aloe-vera.webp)
 
-## Title 3
+## Цветочная поляна
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, ea enim fuga dolorum officia adipisci quasi similique illum quibusdam doloribus facilis alias eligendi nobis libero nemo minima eveniet voluptatum? Obcaecati quae magnam quam magni perferendis quasi necessitatibus repudiandae corporis quidem omnis labore odit tenetur, ex inventore voluptatibus eligendi, mollitia possimus.
+Цветы особенно заметны в те дни, когда солнце светит не слишком ярко. Розовые лепестки становятся немного прозрачными, белые цветы отражают небо, а красные напоминают о чём-то далёком и совершенно необязательном. В саду один цветок может распуститься утром, другой вечером, и между ними возникает небольшая пауза, которую трудно заметить. Пчёлы прилетают к цветам без всякого объяснения, собирают пыльцу и улетают, оставляя сад таким же, каким он был до их появления.
 
-Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing.
-Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor nisi magna ut elit pariatur commodo.
-Ipsum adipisicing exercitation dolor pariatur labore qui. Culpa cupidatat ea elit eiusmod tempor ea qui dolor Lorem laborum adipisicing.
+У каждого растения есть своё время, хотя время растений отличается от времени человека. Семя долго находится в земле, затем появляется тонкий стебель, после чего возникают листья, которые постепенно становятся шире. Никто не знает, почему один росток оказывается сильнее другого, но оба продолжают тянуться вверх, если рядом есть вода и свет. Иногда дождь меняет направление травы, а после нескольких солнечных дней она снова поднимается и становится почти незаметной среди других растений.
 
 ![Листья алоэ вблизи](/images/komnatnye-rasteniya/aloe-vera-close-up.webp)
 
-Ad ea laboris qui cupidatat deserunt culpa. Nulla ex velit adipisicing proident fugiat deserunt sunt eu adipisicing sint incididunt quis qui. Nulla fugiat labore duis ullamco reprehenderit excepteur laboris tempor ullamco aliquip laborum aliqua. Est tempor nisi magna ut elit pariatur commodo.
+На поляне можно встретить множество оттенков зелёного, которые трудно назвать одинаковыми. Светлая трава растёт возле тёмного кустарника, между ними лежат сухие листья, а над всем этим находятся ветви старой берёзы. Где-то неподалёку может быть ручей, хотя его не видно, и вода продолжает двигаться между камнями, как будто знает дорогу заранее. В природе вообще много вещей, которые происходят без объявления: раскрывается бутон, падает лист, созревает ягода, и пространство постепенно становится другим.
+
+## Невероятная жизнь домашних растений
+
+Когда наступает вечер, растения почти не меняются, но всё вокруг кажется иным. Цветы закрываются или просто становятся менее заметными, листья темнеют, а трава принимает цвет прохладного воздуха. Вдалеке остаются деревья, между которыми проходит ветер, и где-то среди веток продолжает жить маленькая птица. Ночь приходит постепенно, не отделяя одно состояние природы от другого, и утром всё снова начинается с листьев, цветов, влаги на земле и случайного солнечного света.
+
+## После дождя
+
+После дождя сад становится немного тяжелее, чем был до него. Листья покрываются водой, лепестки пригибаются к земле, а дорожки приобретают тёмный цвет. На поверхности одной лужи может плавать маленький лист, который ветер переносит от края к краю, не выбирая конечного направления. Через некоторое время облака расходятся, и солнце снова освещает цветы, будто дождя вообще не существовало.
+
+![Листья алоэ вблизи](/images/komnatnye-rasteniya/adenium-potted.webp)
+
+## Свежий осенний воздух
+Утро приходит в сад раньше, чем раскрываются первые цветы, и поэтому розовые бутоны некоторое время остаются задумчивыми. На листьях лежат капли воды, которые отражают небо, хотя само небо в них помещается только частично. Возле старой клумбы растёт трава, и некоторые её стебли наклоняются к земле без видимой причины. Иногда между ними появляется маленький белый цветок, который вчера ещё был зелёным и поэтому не обращал на себя внимания.
+
+![Листья алоэ вблизи](/images/komnatnye-rasteniya/adenium-close-up.webp)
+
+## А причем тут, собственно, алоэ?
+На цветочной поляне каждый цветок занимает столько места, сколько ему необходимо для собственного существования. Жёлтые соцветия находятся ближе к солнцу, фиолетовые растут возле камней, а маленькие голубые цветы почти теряются в траве. Иногда над поляной пролетает бабочка и выбирает цветок совершенно случайным образом, хотя со стороны кажется, что у неё есть определённый план. После её ухода лепестки продолжают колыхаться, как будто помнят направление полёта.
+
+Под землёй растения продолжают расти, даже если сверху ничего интересного не происходит. Корни переплетаются с камнями, тонкими корешками других растений и частицами старой почвы. Где-то находится семя, которое ещё не решило, когда ему следует проснуться, а рядом уже появился молодой росток. Вода медленно проходит между слоями земли, и благодаря этому корни получают то, чего не могут получить от одного только солнечного света.
