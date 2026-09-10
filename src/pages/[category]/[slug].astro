@@ -1,5 +1,5 @@
 ---
-import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
+import BlogPostArticleLayout from "../../layouts/BlogPostArticleLayout.astro";
 import { slugify } from "../../js/utils";
 
 export async function getStaticPaths() {
@@ -27,6 +27,6 @@ const { post } = Astro.props;
 const Content = post.default;
 ---
 
-<BlogPostLayout frontmatter={post.frontmatter}>
+<BlogPostArticleLayout frontmatter={post.frontmatter}>
   <Content />
-</BlogPostLayout>
+</BlogPostArticleLayout>

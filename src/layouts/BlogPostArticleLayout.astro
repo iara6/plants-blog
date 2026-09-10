@@ -1,0 +1,226 @@
+---
+// component imports
+import MainHead from "./MainHead.astro";
+import Header from "../components/Header.astro";
+import ImageModal from "../components/ImageModal.astro";
+import Footer from "../components/Footer.astro";
+import BackToTop from "../components/BackToTop.astro";
+import SlideInHeader from "../components/SlideInHeader.astro";
+import PostHeader from "../components/PostHeader.astro";
+import RelatedPosts from "../components/RelatedPosts.astro";
+import CategoryCloud from "../components/CategoryCloud.astro";
+import "../styles/styles.css";
+
+// utils imports
+import { formatBlogPosts } from "../js/utils";
+
+const { frontmatter } = Astro.props;
+const { title, description, date, category, author, image, robots } = frontmatter;
+
+/* const allPosts = Object.values(
+  import.meta.glob("../content/blog/*.md", { eager: true })
+); */
+
+const allPosts = Object.values(
+  import.meta.glob("../content/**/*.md", { eager: true })
+);
+
+
+// const allPosts = await Astro.glob("../pages/blog/*.md"); DEPRECATED
+const formattedPosts = formatBlogPosts(allPosts, {
+  sortByDate: false,
+});
+const relatedPosts = formattedPosts
+  .filter(
+    (post) =>
+      post.frontmatter.category.name.toLowerCase() === category.name.toLowerCase() &&
+      post.frontmatter.title !== title
+  )
+  .slice(0, 4);
+---
+
+<!doctype html>
+<html lang="ru">
+  <MainHead {title} {description} {image} {frontmatter} robots={robots} />
+	<body>
+    <!-- <SlideInHeader /> -->
+    <Header />
+    <main class="article-post-container">
+      <div class="post-container__content">
+        <PostHeader {title} {date} {category} {author} />
+        <div class="post-container__md-text" data-pagefind-body>
+          <slot />
+          <ImageModal />
+        </div>
+      </div>
+      <div class="post-container__sidebar">
+        <div class="post-container__sidebar-related">
+          <h2 class="related-h2">Читайте также</h2>
+          {
+          relatedPosts.length > 0 && (
+            <aside aria-label="Related posts">
+              <RelatedPosts {relatedPosts} />
+            </aside>
+            )
+          }
+        </div>
+        <div class="post-container__sidebar-categories">
+          <h2 class="all-categories-h2">Все категории</h2>
+          <div>
+            <CategoryCloud /> <!-- showCount={true}  -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+    <BackToTop />
+    <script is:inline>
+      function initDarkMode() {
+        const switchBtns = document.querySelectorAll('.switch-button');
+  
+        let darkModeOn = JSON.parse(localStorage.getItem('mode')) || false;
+
+        document.documentElement.classList.toggle('dark-mode', darkModeOn);
+
+        switchBtns.forEach(btn => {
+          btn.classList.toggle('slide', darkModeOn);
+         
+          btn.onclick = () => {
+            darkModeOn = !darkModeOn;
+
+            document.documentElement.classList.toggle('dark-mode', darkModeOn);
+
+            switchBtns.forEach(b => {
+              b.classList.toggle('slide', darkModeOn);
+            });
+
+            localStorage.setItem('mode', JSON.stringify(darkModeOn));
+          };
+        });
+      }
+      
+      initDarkMode();
+      document.addEventListener('astro:page-load', initDarkMode);
+    </script>
+    <script>
+      import "../js/copy-source.js";
+    </script>
+	</body>
+</html>
+
+<style>
+  .post-container__md-text {
+    font-size: 1.05rem;
+   /*  border: 2px solid red; */
+  }
+  .post-container__md-text :global(h2) {
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+  .post-container__md-text :global(li a) {
+    color: var(--text-clr-links);
+    text-decoration: none;
+    font-weight: 450;
+  }
+  .post-container__md-text :global(li a:hover){
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .post-container__md-text :global(img) {
+    cursor: pointer;
+    max-width: none;
+    width: 100%;
+    /* border-radius: 6px; */
+  }
+ /*  .post-container__md-text p:has(img):first-of-type img {
+    max-width: none;
+    width: 100%;
+    border-radius: 6px;
+  } */
+  .related-h2 {
+    display: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-clr-dark);
+    margin: 1rem 0 1.5rem;    
+    text-align: center;
+  }
+  .article-post-container {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 300px);
+    gap: 1.5rem;
+    max-width: 1112px;
+    margin-inline: auto;
+    background-color: var(--secondary-cl-2);
+    transition: all 250ms ease;
+  }
+  .article-post-container img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  .post-container__sidebar {
+    padding-top: 5.375rem; /* !!!! */
+  }
+  .post-container__sidebar-related {
+    margin-bottom: 3.5rem;
+  }
+  
+  @media screen and (max-width:1400px) {
+    .article-post-container {
+      grid-template-columns: 1fr minmax(auto, 270px);
+    }
+  }
+
+  @media screen and (max-width:1200px) {
+    .article-post-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr min-content;
+      gap: 0.5rem;
+    }
+    .post-container__md-text {
+      padding: 0 2rem;
+    }
+    .related-h2 {
+      display: block;
+    }
+     .post-container__sidebar {
+      padding-top: 0;
+    }
+    .post-container__sidebar-related aside {
+      display: grid;
+      gap: 1rem;
+     /*  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); */
+   /*   grid-template-columns: repeat(4, minmax(240px, 1fr)); */
+     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+      /* grid-template-columns: repeat(4, minmax(0, 1fr)); */
+    }
+    .post-container__sidebar-categories :global(ul) {
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .post-container__sidebar-related aside {
+      gap: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .post-container__md-text {
+      padding: 0 1.5rem;
+    }
+    .post-container__sidebar-related aside {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .post-container__md-text {
+      padding: 0;
+    }
+  }
+</style>
