@@ -128,10 +128,11 @@ const relatedPosts = formattedPosts
   }
   .post-container__md-text :global(img) {
     cursor: pointer;
-    max-width: none;
-    width: 100%;
+    /* max-width: none;
+    width: 100%; */
     /* border-radius: 6px; */
   }
+  
  /*  .post-container__md-text p:has(img):first-of-type img {
     max-width: none;
     width: 100%;
@@ -148,7 +149,7 @@ const relatedPosts = formattedPosts
   .article-post-container {
     display: grid;
     grid-template-columns: 1fr minmax(auto, 300px);
-    gap: 1.5rem;
+    gap: 2rem;
     max-width: 1112px;
     margin-inline: auto;
     background-color: var(--secondary-cl-2);
@@ -178,7 +179,15 @@ const relatedPosts = formattedPosts
       grid-template-columns: 1fr;
       grid-template-rows: 1fr min-content;
       gap: 0.5rem;
+      max-width: 900px;
+      /* border: 2px solid red; */
     }
+    /* .article-post-container img {
+      width: 100%;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    } */
     .post-container__md-text {
       padding: 0 2rem;
     }
@@ -218,9 +227,9 @@ const relatedPosts = formattedPosts
     }
   }
 
-  @media screen and (max-width: 640px) {
-    .post-container__md-text {
-      padding: 0;
+ /*  @media screen and (max-width: 640px) {
+    .post-container__md-text p {
+      padding: 0 1rem;
     }
-  }
+  } */
 </style>
