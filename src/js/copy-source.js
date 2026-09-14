@@ -5,7 +5,7 @@ document.addEventListener('copy', (event) => {
 
   const canonicalUrl = document.querySelector('link[rel="canonical"]')?.href || window.location.href;
 
-  const copiedContent = `${selection}\n\nИсточник: ${canonicalUrl} © Сайт Цветов`;
+  const copiedContent = `${selection}\n\nИсточник: ${canonicalUrl} © Foliaria`;
 
   event.clipboardData?.setData("text/plain", copiedContent);
   event.preventDefault();
