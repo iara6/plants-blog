@@ -26,6 +26,7 @@ const {
             url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`}
           />
           <span><img class="plant-design" src="/images/elements/plant-design1.png"></span>
+          
         </div>
       )}
         <div class="menu-section__secondary">
@@ -54,11 +55,11 @@ const {
 
         {featured && (
           <div class="menu-section__highlight">
+            <span><img class="plant-design2" src="/images/elements/plant-design2.png"></span>
             <PostCardFeaturedOther
               frontmatter={featured.frontmatter}
               url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`}
             />
-            <span><img class="plant-design2" src="/images/elements/plant-design1.png"></span>
           </div>
         )}
       </>
@@ -69,7 +70,7 @@ const {
 <style>
   .menu-section-articles-container {
     display: grid;
-    grid-template-columns: 1.5fr 2fr;
+    grid-template-columns: 1.3fr 2fr;
     gap: 1.5rem;
     margin-bottom: 2rem;
   }
@@ -79,19 +80,23 @@ const {
     gap: 1.5rem;
   }
   .menu-section-articles-container.reverse {
-    grid-template-columns: 2fr 1.5fr;
+    grid-template-columns: 2fr 1.3fr;
   }
+
   .plant-design,
   .plant-design2 {
-    width: 100%;
-    max-width: 500px;
+    display: none;
+    /* width: 100%; */
+    width: 280px;
+    padding-top: 2rem;
   }
-  .plant-design2 {
+ /*  .plant-design2 {
     transform: scale(-1, 1);
-  }
+  } */
 
   @media screen and (max-width:1050px) {
     .menu-section-articles-container {
+      border: 2px solid red;
       grid-template-columns: 1fr;
       margin-bottom: 1.5rem;
     }
@@ -99,10 +104,23 @@ const {
       grid-template-columns: 1fr;
     }
     .menu-section__highlight {
-      max-width: 70%;
+      /* max-width: 70%; */
+      display: flex;
+      gap: 1rem;
     }
     .menu-section__highlight:nth-child(even) {
       justify-self: end;
+    }
+    .plant-design,
+    .plant-design2 {
+      display: block;
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    .plant-design,
+    .plant-design2 {
+      width: 250px;
+      padding-top: 2rem;
     }
   }
   @media screen and (max-width: 686px) {
@@ -111,9 +129,15 @@ const {
       padding-bottom: 1rem;
       max-width: none;
     }
+   /*  .plant-design,
+    .plant-design2 {
+      width: 200px;
+      padding-top: 2rem;
+    } */
     .menu-section__secondary {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
     }
   }
 </style>
+
