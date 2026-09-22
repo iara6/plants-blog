@@ -8,10 +8,11 @@ const {
   robots = false,
   frontmatter,
 } = Astro.props;
+
 ---
 
 <MainLayout
-  {title}
+  title={title}
   {description}
   {frontmatter}
   {robots}
@@ -26,9 +27,13 @@ const {
   <script slot="body-end" is:inline>
     window.addEventListener("DOMContentLoaded", () => {
       const params = new URLSearchParams(window.location.search);
-      const query = params.get("q");
+      const query = params.get("q")?.trim();
 
-      const ui = new PagefindUI({
+      if (query) {
+        document.title = `Результаты поиска по запросу «${query}»`;
+      }
+
+      new PagefindUI({
         element: "#search",
         showSubResults: true,
       });
