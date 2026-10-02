@@ -248,6 +248,9 @@ html {
   border-radius: 5px;
   border-right: 6px solid var(--accent-clr-4); */
 }
+.source-link {
+  color: var(--text-clr-links);
+}
 .all-categories-h2 {
   font-size: 1.5rem;
   font-weight: 600;
