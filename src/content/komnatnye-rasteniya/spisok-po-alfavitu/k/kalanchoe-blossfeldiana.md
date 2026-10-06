@@ -7,7 +7,7 @@ author: {
   slug: "victoria-chizhova",
 }
 image: {
-  src: "/images/komnatnye-rasteniya/ficus-lyrata-potted.webp",
+  src: "/images/komnatnye-rasteniya/kalanchoe-blossfeldiana-potted.webp",
   alt: "Каланхое Блоссфельда",
 }
 description: Равным образом, социально-экономическое развитие обеспечивает актуальность. Как уже неоднократно упомянуто, реплицированные с зарубежных источников.
@@ -17,7 +17,7 @@ category: {
   slug: "komnatnye-rasteniya"
 }
 ---
-![Уход за каланхое Блоссфельда](/images/komnatnye-rasteniya/ficus-lyrata-info.webp)
+![Уход за каланхое Блоссфельда](/images/komnatnye-rasteniya/kalanchoe-blossfeldiana-info.webp)
 
 <div class="article-navigation">
 <h3>СОДЕРЖАНИЕ СТАТЬИ:</h3>
@@ -35,3 +35,5 @@ category: {
 - [Вредители](#вредители)
 - [Основные проблемы и их причины](#Основные-проблемы-и-их-причины)
 </div>
+
+![Каланхое Блоссфельда](/images/komnatnye-rasteniya/kalanchoe-blossfeldiana-flowers.webp)
