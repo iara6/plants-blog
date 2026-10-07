@@ -17,6 +17,9 @@ category: {
   slug: "komnatnye-rasteniya"
 }
 ---
+
+![Уход за броваллией](/images/komnatnye-rasteniya/browallia-speciosa-info.webp)
+
 <div class="article-navigation">
 <h3>Содержание статьи:</h3>
 
@@ -29,8 +32,6 @@ category: {
 <!-- - [Пересадка] -->
 <!-- - [Болезни и вредители](#болезни-и-вредители) -->
 </div>
-
-![Уход за броваллией](/images/komnatnye-rasteniya/browallia-speciosa-info.webp)
 
 Броваллия красивая — это небольшое растение, отличающееся яркими звездообразными цветками. Обычно эти цветки имеют насыщенный пурпурно-синий цвет с белой серединкой, однако встречаются и белые сорта. 
 
@@ -53,7 +54,12 @@ category: {
 
 Несколько часов мягкого утреннего или позднего послеполуденного солнца могут пойти растению на пользу. Однако сильные прямые солнечные лучи, проникающие через южное окно, могут быть губительны, особенно летом. В таком случае используйте тюлевые шторы или солнцезащитную пленку.
 
-![Броваллия вблизи](/images/komnatnye-rasteniya/browallia-speciosa-close-up1.webp)
+![Цветки броваллии вблизи](/images/komnatnye-rasteniya/browallia-speciosa-flowers.webp)
+
+<div class="photo-credit">
+Фото: James St. John, <a href="https://commons.wikimedia.org/wiki/File:Browallia_speciosa_(bush_violet)_2_(38776942744).jpg">Wikimedia Commons</a>,
+лицензия <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+</div>
 
 ## Полив и влажность
 
@@ -98,7 +104,7 @@ category: {
 ![Цветок броваллии вблизи](/images/komnatnye-rasteniya/browallia-speciosa-close-up.jpg)
 
 <div class="photo-credit">
-Фото: C T Johansson, <a href="https://commons.wikimedia.org/wiki/File:IMG_7246-Browallia_speciosa.jpg">Wikimedia Commons</a>, лицензия <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+Фото: C T Johansson, <a href="https://commons.wikimedia.org/wiki/File:IMG_7246-Browallia_speciosa.jpg">Wikimedia Commons</a>, лицензия <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>
 </div>
 
 ## Грунт

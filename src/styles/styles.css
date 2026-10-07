@@ -227,7 +227,7 @@ html {
   text-underline-offset: 3px !important;
 }
 .photo-credit {
-  margin-top: -0.8rem;
+  margin-top: -0.5rem;
   font-size: 0.85rem;
   color: var(--text-clr-dark-m);
   opacity: 0.95;
