@@ -11,9 +11,6 @@ const allPosts = Object.values(
 );
 
 const formattedPosts = formatBlogPosts(allPosts);
-/* const [featured, ...rest] = formattedPosts; 
-const secondaryPosts = rest.slice(0, 4); */
-
 const groups = [];
 
 for (let i = 0; i < formattedPosts.length; i += 5) {
@@ -62,18 +59,6 @@ const {
 >
   <main class="content-container">
     <h1 class="page-title">Все о домашних растениях</h1>
-    <!-- <section class="menu-section-articles-container">
-      <div class="menu-section__highlight">
-        <PostCardFeatured frontmatter={featured.frontmatter} url={`/${featured.frontmatter.category.slug}/${slugify(featured.frontmatter.title)}`} />
-      </div>
-      <div class="menu-section__secondary">
-        {
-          secondaryPosts.map((post) => (
-            <PostCard frontmatter={post.frontmatter} url={`/${post.frontmatter.category.slug}/${slugify(post.frontmatter.title)}`} />
-          ))
-        }
-      </div>
-    </section> -->
     {
       groups.map((group) => (
         <ArticleGroup
