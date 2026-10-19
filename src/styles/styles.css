@@ -134,7 +134,9 @@ html {
  /*  border: 2px solid hotpink; */
   margin: 0 0 0.5rem 1rem;
 }
-
+.post-container__md-text li {
+  font-weight: 500;
+}
 .post-container__md-text li::marker {
   color: var(--accent-clr-2);
 }
@@ -247,6 +249,9 @@ html {
   /* border-left: 6px solid var(--accent-clr-4);
   border-radius: 5px;
   border-right: 6px solid var(--accent-clr-4); */
+}
+.article-bold-text {
+  font-weight: 500;
 }
 .source-link {
   color: var(--text-clr-links);
