@@ -59,7 +59,7 @@ category: {
 
 <div class="photo-credit">
 Диффенбахия Камилла. Фото: Forest & Kim Starr, <a href="https://commons.wikimedia.org/wiki/File:Starr_080117-1527_Dieffenbachia_maculata.jpg">Wikimedia Commons</a>,
-лицензия <a href="https://creativecommons.org/licenses/by/3.0/deed.en">CC BY 3.0</a>.
+лицензия <a href="https://creativecommons.org/licenses/by/3.0/deed.en">CC BY 3.0</a>
 </div>
 
 <span class="article-bold-text">Тропик Сноу (Tropic Snow)</span> — сорт с крупными листьями, темно-зелеными краями и светлыми перистыми узорами, расходящимися от центральной жилки. По сравнению с компактными разновидностями он может достигать значительно большей высоты.
@@ -76,13 +76,35 @@ category: {
 
 <span class="article-bold-text">Камуфляж (Camouflage)</span> отличается пестрой листвой с контрастными оттенками зеленого и разбросанными по поверхности светлыми пятнами. В отличие от сортов с четко выраженной светлой серединой листа, его узор выглядит более сложным и неоднородным.
 
-<span class="article-bold-text">Хило (Hilo)</span> обычно имеет темно-зеленые листья с более светлыми зелеными пятнами и заметными бледными прожилками. Такое сочетание оттенков создает выразительный рисунок и подчеркивает рельеф листьев.
+![Диффенбахия Камуфляж](/images/komnatnye-rasteniya/dieffenbachia-camouflage.webp)
+
+<div class="photo-credit">
+Диффенбахия Камуфляж. Фото: Piotrus, <a href="https://commons.wikimedia.org/wiki/File:Phipps_-_131.JPG">Wikimedia Commons</a>,
+лицензия <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
+</div>
+
+<!-- <span class="article-bold-text">Хило (Hilo)</span> обычно имеет темно-зеленые листья с более светлыми зелеными пятнами и заметными бледными прожилками. Такое сочетание оттенков создает выразительный рисунок и подчеркивает рельеф листьев. -->
 
 <span class="article-bold-text">Тропик Марианна (Tropic Marianne)</span> — эффектный сорт с широкими листьями преимущественно бледно-желтого или кремового цвета с зеленой каймой. Благодаря светлой окраске он особенно выразительно смотрится рядом с комнатными растениями с более темными листьями.
+
+<span class="article-bold-text">Грин Мэджик (Green Magic)</span> отличается удлиненными темно-зелеными листьями с кремово-белой центральной жилкой. В отличие от более пестрых разновидностей, его листья почти лишены пятен, благодаря чему растение выглядит сдержанно и элегантно.
+
+![Диффенбахия Тропик Марианна и Грин Мэджик](/images/komnatnye-rasteniya/dieffenbachia-tropic-marianne-and-green-magic.webp)
+
+<div class="photo-credit">
+Диффенбахия Тропик Марианна (слева) и Грин Мэджик (справа)
+</div>
 
 <span class="article-bold-text">Экзотика (Exotica)</span> привлекает внимание кремовыми листьями с многочисленными зелеными пятнами и контрастными зелеными краями. Пестрый рисунок придает растению декоративность и делает его заметным элементом интерьера.
 
 <span class="article-bold-text">Рефлектор (Reflector)</span> — сорт с темно-зелеными листьями, украшенными мелкими лимонно- и желто-зелеными пятнами. Светлая центральная жилка подчеркивает выразительный рисунок и делает окраску листвы еще более заметной.
+
+![Диффенбахия Рефлектор](/images/komnatnye-rasteniya/dieffenbachia-reflector.webp)
+
+<div class="photo-credit">
+Диффенбахия Рефлектор. Фото: teflteachermark Teacher, <a href="https://identify.plantnet.org/k-world-flora/observations/1026464833">Pl@ntNet</a>,
+лицензия <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</div>
 
 <span class="article-bold-text">Стар Брайт (Star Bright)</span> отличается сравнительно узкими, заостренными листьями золотисто-зеленого оттенка с контрастными темно-зелеными пятнами. 
 
