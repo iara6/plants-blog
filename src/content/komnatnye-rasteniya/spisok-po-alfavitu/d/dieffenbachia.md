@@ -72,7 +72,24 @@ category: {
 
 <span class="article-bold-text">Компакта (Compacta)</span> — невысокий, густо облиственный сорт с кремовыми или бледно-желтыми центрами листьев, украшенными зелеными вкраплениями. Благодаря своей компактности он отлично подходит для размещения на полках и в небольших помещениях.
 
+<span class="article-bold-text">Рефлектор (Reflector)</span> — сорт с темно-зелеными листьями, украшенными мелкими лимонно- и желто-зелеными пятнами. Светлая центральная жилка подчеркивает выразительный рисунок и делает окраску листвы еще более заметной.
+
 <span class="article-bold-text">Тики (Tiki)</span> — сорт с необычным сочетанием зеленых, серебристых и кремовых оттенков. Сложный рисунок на листьях придает растению выразительный вид и делает его особенно привлекательным для любителей растений.
+<!-- https://identify.plantnet.org/ru/k-world-flora/observations/1008711734 -->
+
+![Диффенбахия Рефлектор и Тики](/images/komnatnye-rasteniya/dieffenbachia-reflector-and-tiki.webp)
+
+<div class="photo-credit">
+Диффенбахия Рефлектор (слева). Фото: <a href="https://identify.plantnet.org/k-world-flora/observations/1026464833">teflteachermark Teacher</a>
+</div>
+
+<div class="photo-credit">
+Диффенбахия Тики (справа). Фото: <a href="https://identify.plantnet.org/ru/k-world-flora/observations/1008711734">Tammy Crook</a>
+</div>
+
+<div class="photo-credit">
+Изображения обрезаны, лицензия <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</div>
 
 <span class="article-bold-text">Камуфляж (Camouflage)</span> отличается пестрой листвой с контрастными оттенками зеленого и разбросанными по поверхности светлыми пятнами. В отличие от сортов с четко выраженной светлой серединой листа, его узор выглядит более сложным и неоднородным.
 
@@ -96,19 +113,13 @@ category: {
 </div>
 
 <span class="article-bold-text">Экзотика (Exotica)</span> привлекает внимание кремовыми листьями с многочисленными зелеными пятнами и контрастными зелеными краями. Пестрый рисунок придает растению декоративность и делает его заметным элементом интерьера.
+<!-- https://identify.plantnet.org/ru/k-world-flora/observations/1025224474 -->
 
-<span class="article-bold-text">Рефлектор (Reflector)</span> — сорт с темно-зелеными листьями, украшенными мелкими лимонно- и желто-зелеными пятнами. Светлая центральная жилка подчеркивает выразительный рисунок и делает окраску листвы еще более заметной.
-
-![Диффенбахия Рефлектор](/images/komnatnye-rasteniya/dieffenbachia-reflector.webp)
-
-<div class="photo-credit">
-Диффенбахия Рефлектор. Фото: teflteachermark Teacher, <a href="https://identify.plantnet.org/k-world-flora/observations/1026464833">Pl@ntNet</a>,
-лицензия <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
-</div>
 
 <span class="article-bold-text">Стар Брайт (Star Bright)</span> отличается сравнительно узкими, заостренными листьями золотисто-зеленого оттенка с контрастными темно-зелеными пятнами. 
 
-<!-- Dieffenbachia oerstedii 'Green Magic' -->
+<!-- https://identify.plantnet.org/ru/k-world-flora/observations/1030474530 -->
+
 
 ## Температура
 Диффенбахия предпочитает теплые условия и стабильную температуру в пределах 18–24 °C. Она может переносить небольшие колебания температуры, однако длительное воздействие холода замедляет рост и может привести к увяданию и пожелтению листьев. Поэтому не размещайте растение на холодных сквозняках, рядом с часто открывающимися входными дверями или под кондиционером.
