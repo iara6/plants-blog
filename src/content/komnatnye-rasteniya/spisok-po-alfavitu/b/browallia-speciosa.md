@@ -57,8 +57,7 @@ category: {
 ![Цветки броваллии вблизи](/images/komnatnye-rasteniya/browallia-speciosa-flowers.webp)
 
 <div class="photo-credit">
-Фото: James St. John, <a href="https://commons.wikimedia.org/wiki/File:Browallia_speciosa_(bush_violet)_2_(38776942744).jpg">Wikimedia Commons</a>,
-лицензия <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+Фото: <a href="https://commons.wikimedia.org/wiki/File:Browallia_speciosa_(bush_violet)_2_(38776942744).jpg">James St. John</a> — <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
 </div>
 
 ## Полив и влажность
@@ -104,7 +103,7 @@ category: {
 ![Цветок броваллии вблизи](/images/komnatnye-rasteniya/browallia-speciosa-close-up.jpg)
 
 <div class="photo-credit">
-Фото: C T Johansson, <a href="https://commons.wikimedia.org/wiki/File:IMG_7246-Browallia_speciosa.jpg">Wikimedia Commons</a>, лицензия <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>
+Фото: <a href="https://commons.wikimedia.org/wiki/File:IMG_7246-Browallia_speciosa.jpg">C T Johansson</a> — <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>
 </div>
 
 ## Грунт

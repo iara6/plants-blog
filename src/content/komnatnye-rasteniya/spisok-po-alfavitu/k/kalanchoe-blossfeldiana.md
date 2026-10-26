@@ -79,8 +79,7 @@ category: {
 ![Каланхое Блоссфельда в горшках](/images/komnatnye-rasteniya/kalanchoe-blossfeldiana-plants-potted.webp)
 
 <div class="photo-credit">
-Фото: Yercaud-elango, <a href="https://commons.wikimedia.org/wiki/File:Kalanchoe_blossfeldiana(Cultivars)-8-anna_park-yercaud-salem-India.jpg">Wikimedia Commons</a>,
-лицензия <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+Фото: <a href="https://commons.wikimedia.org/wiki/File:Kalanchoe_blossfeldiana(Cultivars)-8-anna_park-yercaud-salem-India.jpg">Yercaud-elango</a> — <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
 </div>
 
 ## Цветение
@@ -107,8 +106,7 @@ category: {
 
 
 <div class="photo-credit">
-Фото: Hatem Moushir, <a href="https://commons.wikimedia.org/wiki/File:Kalanchoe_blossfeldiana_by_Hatem_Moushir_in_Cairo_Nasrcity_2.jpg">Wikimedia Commons</a>,
-лицензия <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+Фото: <a href="https://commons.wikimedia.org/wiki/File:Kalanchoe_blossfeldiana_by_Hatem_Moushir_in_Cairo_Nasrcity_2.jpg">Hatem Moushir</a> — <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 </div>
 
 ## Обрезка

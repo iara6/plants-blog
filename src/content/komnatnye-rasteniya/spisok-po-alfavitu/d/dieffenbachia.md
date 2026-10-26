@@ -58,8 +58,7 @@ category: {
 ![Диффенбахия Камилла](/images/komnatnye-rasteniya/dieffenbachia-camille.webp)
 
 <div class="photo-credit">
-Диффенбахия Камилла. Фото: Forest & Kim Starr, <a href="https://commons.wikimedia.org/wiki/File:Starr_080117-1527_Dieffenbachia_maculata.jpg">Wikimedia Commons</a>,
-лицензия <a href="https://creativecommons.org/licenses/by/3.0/deed.en">CC BY 3.0</a>
+Диффенбахия Камилла. Фото: <a href="https://commons.wikimedia.org/wiki/File:Starr_080117-1527_Dieffenbachia_maculata.jpg">Forest & Kim Starr</a> — <a href="https://creativecommons.org/licenses/by/3.0/deed.en">CC BY 3.0</a>
 </div>
 
 <span class="article-bold-text">Тропик Сноу (Tropic Snow)</span> — сорт с крупными листьями, темно-зелеными краями и светлыми перистыми узорами, расходящимися от центральной жилки. По сравнению с компактными разновидностями он может достигать значительно большей высоты.
@@ -80,15 +79,15 @@ category: {
 ![Диффенбахия Рефлектор и Тики](/images/komnatnye-rasteniya/dieffenbachia-reflector-and-tiki.webp)
 
 <div class="photo-credit">
-Диффенбахия Рефлектор (слева). Фото: <a href="https://identify.plantnet.org/k-world-flora/observations/1026464833">teflteachermark Teacher</a>
+Диффенбахия Рефлектор (слева). Фото: <a href="https://identify.plantnet.org/k-world-flora/observations/1026464833">teflteachermark Teacher</a> — <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 </div>
 
 <div class="photo-credit">
-Диффенбахия Тики (справа). Фото: <a href="https://identify.plantnet.org/ru/k-world-flora/observations/1008711734">Tammy Crook</a>
+Диффенбахия Тики (справа). Фото: <a href="https://identify.plantnet.org/ru/k-world-flora/observations/1008711734">Tammy Crook</a> — <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 </div>
 
 <div class="photo-credit">
-Изображения обрезаны, лицензия <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+Изображения обрезаны
 </div>
 
 <span class="article-bold-text">Камуфляж (Camouflage)</span> отличается пестрой листвой с контрастными оттенками зеленого и разбросанными по поверхности светлыми пятнами. В отличие от сортов с четко выраженной светлой серединой листа, его узор выглядит более сложным и неоднородным.
@@ -96,8 +95,7 @@ category: {
 ![Диффенбахия Камуфляж](/images/komnatnye-rasteniya/dieffenbachia-camouflage.webp)
 
 <div class="photo-credit">
-Диффенбахия Камуфляж. Фото: Piotrus, <a href="https://commons.wikimedia.org/wiki/File:Phipps_-_131.JPG">Wikimedia Commons</a>,
-лицензия <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
+Диффенбахия Камуфляж. Фото: <a href="https://commons.wikimedia.org/wiki/File:Phipps_-_131.JPG">Piotrus</a> — <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
 </div>
 
 <!-- <span class="article-bold-text">Хило (Hilo)</span> обычно имеет темно-зеленые листья с более светлыми зелеными пятнами и заметными бледными прожилками. Такое сочетание оттенков создает выразительный рисунок и подчеркивает рельеф листьев. -->
