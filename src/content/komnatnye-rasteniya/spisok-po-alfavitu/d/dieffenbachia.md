@@ -110,7 +110,7 @@ category: {
 Диффенбахия Тропик Марианна (слева) и Грин Мэджик (справа)
 </div>
 
-<span class="article-bold-text">Экзотика (Exotica)</span> привлекает внимание кремовыми листьями с многочисленными зелеными пятнами и контрастными зелеными краями. Пестрый рисунок придает растению декоративность и делает его заметным элементом интерьера.
+<!-- <span class="article-bold-text">Экзотика (Exotica)</span> привлекает внимание кремовыми листьями с многочисленными зелеными пятнами и контрастными зелеными краями. Пестрый рисунок придает растению декоративность и делает его заметным элементом интерьера. -->
 <!-- https://identify.plantnet.org/ru/k-world-flora/observations/1025224474 -->
 
 
@@ -118,6 +118,21 @@ category: {
 
 <!-- https://identify.plantnet.org/ru/k-world-flora/observations/1030474530 -->
 
+<!-- https://identify.plantnet.org/k-world-flora/observations/1016074687 -->
+
+<!--  Dieffenbachia White Etna или White Blizzard -->
+<!-- https://identify.plantnet.org/k-world-flora/observations/1005526409 -->
+
+![Диффенбахия Рефлектор и Тики](/images/komnatnye-rasteniya/
+dieffenbachia-star-bright-and-white-etna.webp)
+
+<div class="photo-credit">
+Диффенбахия Стар Брайт (слева). Фото: <a href="https://identify.plantnet.org/k-world-flora/observations/1026464833">teflteachermark Teacher</a> — <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</div>
+
+<div class="photo-credit">
+Диффенбахия Уайт Близзард/Уайт Этна (справа). Фото: <a href="https://identify.plantnet.org/ru/k-world-flora/observations/1008711734">Tammy Crook</a> — <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</div>
 
 ## Температура
 Диффенбахия предпочитает теплые условия и стабильную температуру в пределах 18–24 °C. Она может переносить небольшие колебания температуры, однако длительное воздействие холода замедляет рост и может привести к увяданию и пожелтению листьев. Поэтому не размещайте растение на холодных сквозняках, рядом с часто открывающимися входными дверями или под кондиционером.
