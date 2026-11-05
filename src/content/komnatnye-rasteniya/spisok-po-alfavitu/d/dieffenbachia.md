@@ -18,7 +18,15 @@ category: {
   slug: "komnatnye-rasteniya"
 }
 ---
-![Уход за каланхое Блоссфельда](/images/komnatnye-rasteniya/dieffenbachia-info.webp)
+<div class="plant-info-img">
+
+![Уход за диффенбахией](/images/komnatnye-rasteniya/dieffenbachia-info.webp)
+</div>
+<div class="plant-info-img-mobile">
+
+![Диффенбахия](/images/komnatnye-rasteniya/dieffenbachia-info1.webp)
+![Уход за диффенбахией](/images/komnatnye-rasteniya/dieffenbachia-info2.webp)
+</div>
 
 <div class="article-navigation">
 <h3>СОДЕРЖАНИЕ СТАТЬИ:</h3>

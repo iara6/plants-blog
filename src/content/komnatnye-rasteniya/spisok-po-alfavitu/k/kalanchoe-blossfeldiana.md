@@ -17,7 +17,19 @@ category: {
   slug: "komnatnye-rasteniya"
 }
 ---
+<div class="plant-info-img">
+
 ![Уход за каланхое Блоссфельда](/images/komnatnye-rasteniya/kalanchoe-blossfeldiana-info.webp)
+
+</div>
+
+<div class="plant-info-img-mobile">
+
+![Каланхое Блоссфельда](/images/komnatnye-rasteniya/kalanchoe-blossfeldiana-info1.webp)
+![Уход за каланхое Блоссфельда](/images/komnatnye-rasteniya/kalanchoe-blossfeldiana-info2.webp)
+
+</div>
+
 
 <div class="article-navigation">
 <h3>СОДЕРЖАНИЕ СТАТЬИ:</h3>

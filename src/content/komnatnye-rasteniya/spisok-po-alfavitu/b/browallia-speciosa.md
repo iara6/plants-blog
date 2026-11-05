@@ -17,8 +17,16 @@ category: {
   slug: "komnatnye-rasteniya"
 }
 ---
+<div class="plant-info-img">
 
 ![Уход за броваллией](/images/komnatnye-rasteniya/browallia-speciosa-info.webp)
+</div>
+
+<div class="plant-info-img-mobile">
+
+![Броваллия](/images/komnatnye-rasteniya/browallia-speciosa-info1.webp)
+![Уход за броваллией](/images/komnatnye-rasteniya/browallia-speciosa-info2.webp)
+</div>
 
 <div class="article-navigation">
 <h3>Содержание статьи:</h3>

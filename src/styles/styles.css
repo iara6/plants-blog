@@ -228,6 +228,9 @@ html {
   text-decoration: underline !important;
   text-underline-offset: 3px !important;
 }
+.plant-info-img-mobile {
+  display: none;
+}
 .photo-credit {
   margin-top: -0.5rem;
   margin-bottom: 1rem;
@@ -412,6 +415,12 @@ html {
   }
 }
 @media screen and (max-width: 480px) { 
+  .plant-info-img {
+    display: none;
+  }
+  .plant-info-img-mobile {
+    display: block;
+  }
   .post-container__md-text h2 {
     font-size: 1.2rem;
   }

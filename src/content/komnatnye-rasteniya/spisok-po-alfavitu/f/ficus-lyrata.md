@@ -18,7 +18,16 @@ category: {
   slug: "komnatnye-rasteniya"
 }
 ---
+<div class="plant-info-img">
+
 ![Уход за фикусом лировидным](/images/komnatnye-rasteniya/ficus-lyrata-info.webp)
+</div>
+
+<div class="plant-info-img-mobile">
+
+![Фикус лировидный](/images/komnatnye-rasteniya/ficus-lyrata-info1.webp)
+![Уход за фикусом лировидным](/images/komnatnye-rasteniya/ficus-lyrata-info2.webp)
+</div>
 
 <div class="article-navigation">
 <h3>СОДЕРЖАНИЕ СТАТЬИ:</h3>

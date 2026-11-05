@@ -18,7 +18,23 @@ category: {
   slug: "komnatnye-rasteniya"
 }
 ---
+<div class="plant-info-img">
+
 ![Уход за гипоэстесом](/images/komnatnye-rasteniya/hypoestes-info.webp)
+
+</div>
+
+<div class="plant-info-img-mobile">
+
+![Гипоэстес](/images/komnatnye-rasteniya/hypoestes-info1.webp)
+![Уход за гипоэстесом](/images/komnatnye-rasteniya/hypoestes-info2.webp)
+</div>
+
+<!-- <img
+  src="/images/komnatnye-rasteniya/hypoestes-info.webp"
+  alt="Уход за гипоэстесом"
+  class="plant-image"
+/> -->
 
 <div class="article-navigation">
 <h3>СОДЕРЖАНИЕ СТАТЬИ:</h3>
