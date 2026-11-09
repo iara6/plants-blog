@@ -37,7 +37,8 @@ body {
   --text-clr-dark-m: #4c5345;
   --text-clr-light: #f6ffff;
   --text-clr-light-m: #c5ded9;
-  --text-clr-links: #4d0858;
+  /* --text-clr-links: #7a058d; */
+  --text-clr-links: #894e00;
 
   --category-font-weight: 400;
   --dropdown-shadow: 0px 3px 3px 3px rgb(0, 0, 0, 0.2);
