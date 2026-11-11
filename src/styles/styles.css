@@ -127,6 +127,10 @@ html {
 .post-container__md-text h2 {
   margin: 0.7rem 0 0.5rem !important;
 } 
+.post-container__md-text h3 {
+  margin: 0.7rem 0 0.5rem;
+  font-weight: 600;
+} 
 .post-container__md-text img {
   /* max-width: 600px; */
   width: 100%;
@@ -211,6 +215,7 @@ html {
   font-size: 1.05rem;
   font-weight: 550;
   margin-bottom: 0.5rem;
+  margin-top: 0;
 }
 .article-navigation li {
   list-style: none;
