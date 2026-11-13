@@ -220,13 +220,11 @@ html {
 .article-navigation li {
   list-style: none;
   padding: 0.2rem 0;
-  /* margin-left: 6px; */
   line-height: 1.1;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 .article-navigation li a {
-  /* font-size: 1rem; */
   font-weight: 400 !important;
 }
 .article-navigation li a:hover {

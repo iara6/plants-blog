@@ -6,8 +6,8 @@ author: {
   slug: "dmitrij-kovalev",
 }
 image: {
-  src: "/images/komnatnye-rasteniya/hypoestes-leaves.webp",
-  alt: "Гипоэстес",
+  src: "/images/articles/low-maintenance-plants.webp",
+  alt: "Филодендрон сердцелистный, хлорофитум и замиокулькас",
 }
 description: Почему гипоэстес вытягивается, а его стебли становятся тонкими и редкими? Разберемся в причинах этой проблемы и расскажем, как вернуть растению пышную форму и стимулировать здоровый рост.
 
@@ -21,7 +21,7 @@ category: {
 Лучшие комнатные растения для начинающих
 
 
-![Листья гипоэстеса вблизи](/images/komnatnye-rasteniya/hypoestes-leaves.webp)
+![Филодендрон сердцелистный, хлорофитум и замиокулькас](/images/articles/low-maintenance-plants.webp)
 
 <a class="source-link" href="/komnatnye-rasteniya/gipoestes-polnoe-rukovodstvo-po-uhodu">Гипоэстес</a> привлекает внимание яркой густой листвой и компактной кустистой формой. Однако со временем его стебли могут вытягиваться, становиться тонкими, а листья — оставаться преимущественно на верхушках стеблей. Из-за этого растение теряет пышность и выглядит менее аккуратно. К счастью, существует несколько способов восстановить его декоративный вид и стимулировать более здоровый и компактный рост.
 
@@ -43,12 +43,20 @@ category: {
 ## Монстера Monstera deliciosa
 ## Бегония Begonia semperflorens
 ## Гипоэстес Polka dot plants/Hypoestes phyllostachya +
-## Диффенбахия Dieffenbachia
-## Суккуленты
- # Хавортия
+## Диффенбахия Dieffenbachia +
+## Филодендрон Philodendron
 
+
+## Фикус каучуконосный RUBBER PLANT/Ficus elastica
+## Эпипремнум золотистый (Golden Pothos)/Epipremnum aureum
+## Юкка (Yucca)
+## Папоротниковая пальма / Fern palm
 ## Хамедорея
 ## Калли́зия души́стая, или Золото́й ус
 
 ## Каланхоэ - Каланхоэ Блоссфельда +
 ## Сциндапсус
+
+## Суккуленты и кактусы
+ # Хавортия
+
