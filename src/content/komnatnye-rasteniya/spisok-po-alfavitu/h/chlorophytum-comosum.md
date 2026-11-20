@@ -60,14 +60,43 @@ category: {
 ## Популярные сорта
 
 Сорта хлорофитума различаются окраской листьев, расположением полос, формой и характером роста. Большинство из них неприхотливы и требуют примерно одинакового ухода, однако одни сорта отличаются компактностью, другие — необычными кудрявыми листьями или более выразительной окраской.
-
+ 
 <span class="article-bold-text">Виттатум (<i>Vittatum</i>)</span> — один из самых популярных сортов хлорофитума. Его длинные дугообразно изогнутые зеленые листья украшает широкая белая или кремовая полоса по центру. Благодаря свисающим листьям сорт особенно эффектно смотрится в подвесных кашпо.
+
+![Хлорофитум Виттатум](/images/komnatnye-rasteniya/chlorophytum-vittatum.webp)
+
+<div class="photo-credit">
+Хлорофитум Виттатум
+</div>
 
 <span class="article-bold-text">Вариегатум (<i>Variegatum</i>)</span> — сорт с темно-зелеными листьями и белой или кремовой каймой по краям. Контрастная окраска придает растению выразительный вид. Листья у него обычно короче, а розетка компактнее, чем у сорта 'Vittatum'.
 
+![Хлорофитум Вариегатум](/images/komnatnye-rasteniya/chlorophytum-variegatum.webp)
+
+<div class="photo-credit">
+Хлорофитум Вариегатум
+</div>
+
 <span class="article-bold-text">Бонни (<i>Bonnie</i>)</span> — необычный сорт с закрученными, спиралевидными листьями зеленого цвета с кремовыми полосами. Благодаря компактным размерам хорошо подходит для небольших помещений, украшения полок, столов и рабочих мест.
 
+![Хлорофитум Бонни](/images/komnatnye-rasteniya/chlorophytum-bonnie.webp)
+
+<div class="photo-credit">
+Хлорофитум Бонни
+</div>
+
+<div class="photo-credit">
+Фото: <a href="https://commons.wikimedia.org/wiki/File:Chlorophytum_%27Bonnie%27.jpg">Mokkie</a> — <a class="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 Unported</a>
+</div>
+
 <span class="article-bold-text">Океан (<i>Ocean</i>)</span> — компактный сорт хлорофитума с относительно короткими широкими листьями. Их зеленая середина обрамлена светло-кремовыми краями. Аккуратная форма и контрастная окраска делают этот сорт особенно подходящим для небольших горшков.
+
+<!-- https://identify.plantnet.org/k-world-flora/species/Chlorophytum%20comosum%20(Thunb.)%20Jacques/data/galleries -->
+
+
+<!-- https://identify.plantnet.org/k-world-flora/observations/1015333724 irish -->
+<!-- https://identify.plantnet.org/k-world-flora/observations/1015768240 -->
+<!-- https://identify.plantnet.org/k-world-flora/observations/1014172263   this --> 
 
 <span class="article-bold-text">Милки Вэй (<i>Milky Way</i>)</span> — сорт с широкой белой или кремовой полосой в центре листа и зелеными краями. Светлая окраска придаёт растению более яркий вид и выделяет его среди других разновидностей хлорофитума.
 
