@@ -94,6 +94,15 @@ category: {
 
 <span class="article-bold-text">Океан (<i>Ocean</i>)</span> — компактный сорт хлорофитума с относительно короткими широкими листьями. Их зеленая середина обрамлена светло-кремовыми краями. Аккуратная форма и контрастная окраска делают этот сорт особенно подходящим для небольших горшков.
 
+![Хлорофитум Океан](/images/komnatnye-rasteniya/chlorophytum-comosum-ocean.webp)
+
+<div class="photo-credit">
+Хлорофитум Океан
+</div>
+
+
+<!-- https://identify.plantnet.org/k-world-flora/observations/1011714474 -->
+
 <!-- https://identify.plantnet.org/k-world-flora/species/Chlorophytum%20comosum%20(Thunb.)%20Jacques/data/galleries -->
 
 
@@ -101,9 +110,27 @@ category: {
 <!-- https://identify.plantnet.org/k-world-flora/observations/1015768240 -->
 <!-- https://identify.plantnet.org/k-world-flora/observations/1014172263   this --> 
 
-<span class="article-bold-text">Милки Вэй (<i>Milky Way</i>)</span> — сорт с широкой белой или кремовой полосой в центре листа и зелеными краями. Светлая окраска придаёт растению более яркий вид и выделяет его среди других разновидностей хлорофитума.
+<span class="article-bold-text">Милки Вэй (<i>Milky Way</i>)</span> — сорт с широкой белой или кремовой полосой в центре листа и зелеными краями. Светлая окраска придает растению более яркий вид и выделяет его среди других разновидностей хлорофитума.
+
+![Хлорофитум Милки Вэй](/images/komnatnye-rasteniya/chlorophytum-comosum-milky-way.webp)
+
+<div class="photo-credit">
+Хлорофитум Милки Вэй
+</div>
+
+<div class="photo-credit">
+Фото: <a href="https://commons.wikimedia.org/wiki/File:Chlorophyttum_comosum_milky_way-bsi-yercaud-salem-India.JPG">Yercaud-elango</a> — <a class="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</div>
+
 
 <span class="article-bold-text">Гавайский (<i>Hawaiian</i>)</span> — отличается необычной пестролистностью с сочетанием нескольких оттенков зеленого. Листья выглядят слегка мерцающими, а по мере взросления растения контраст между оттенками может становиться менее выраженным.
+
+![Хлорофитум Милки Вэй](/images/komnatnye-rasteniya/chlorophytum-comosum-hawaiian.webp)
+
+<div class="photo-credit">
+Хлорофитум Гавайский
+</div>
+
 
 <span class="article-bold-text">Вайт Страйп (<i>White Stripe</i>)</span> — сорт с узкой белой или кремовой полосой, проходящей вдоль центра зеленого листа. По мере взросления листья могут становиться более однотонными, поэтому окраска растения постепенно меняется.
 

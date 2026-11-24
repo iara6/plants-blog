@@ -96,8 +96,6 @@ category: {
 Фото: <a href="https://identify.plantnet.org/k-world-flora/observations/1024779791">azua felix</a> — <a class="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 </div>
 
-
-
 <span class="article-bold-text">Рефлектор (Reflector)</span> — сорт с темно-зелеными листьями, украшенными мелкими лимонно- и желто-зелеными пятнами. Светлая центральная жилка подчеркивает выразительный рисунок и делает окраску листвы еще более заметной.
 
 <span class="article-bold-text">Тики (Tiki)</span> — сорт с необычным сочетанием зеленых, серебристых и кремовых оттенков. Сложный рисунок на листьях придает растению выразительный вид и делает его особенно привлекательным для любителей растений.
