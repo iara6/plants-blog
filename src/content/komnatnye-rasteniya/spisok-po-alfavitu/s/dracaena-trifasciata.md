@@ -19,14 +19,14 @@ category: {
 ---
 <div class="plant-info-img">
 
-![Уход за каланхое Блоссфельда](/images/komnatnye-rasteniya/kalanchoe-blossfeldiana-info.webp)
+![Уход за драценой трехполосной](/images/komnatnye-rasteniya/dracaena-trifasciata-info.webp)
 
 </div>
 
 <div class="plant-info-img-mobile">
 
-![Каланхое Блоссфельда](/images/komnatnye-rasteniya/kalanchoe-blossfeldiana-info1.webp)
-![Уход за каланхое Блоссфельда](/images/komnatnye-rasteniya/kalanchoe-blossfeldiana-info2.webp)
+![Драцена трехполосная](/images/komnatnye-rasteniya/dracaena-trifasciata-info1.webp)
+![Уход за драценой трехполосной](/images/komnatnye-rasteniya/dracaena-trifasciata-info2.webp)
 
 </div>
 
@@ -62,6 +62,14 @@ category: {
 ## Популярные сорта
 
 Драцена трехполосная имеет множество сортов, которые отличаются формой, размером и окраской листьев, а также особенностями роста. Требования к уходу у них в целом одинаковые, но разнообразие внешнего вида позволяет подобрать подходящий вариант практически для любого интерьера.
+
+<span class="article-bold-text">Лауренти (<i>Laurentii</i>)</span> — один из самых узнаваемых сортов. У нее длинные прямостоячие темно-зеленые листья с поперечными полосами более светлого оттенка и выразительной золотисто-желтой каймой.
+
+<span class="article-bold-text">Хани (<i>Hahnii</i>)</span> — компактный карликовый сорт. Его короткие широкие листья собраны в плотную розетку, напоминающую воронку. Темно-зеленая листва украшена более светлыми поперечными полосами.
+
+<span class="article-bold-text">Голден Хани (<i>Golden Hahnii</i>)</span> — еще один карликовый сорт с компактной розеткой. От обычного Hahnii он отличается яркой окраской листьев: вдоль них чередуются золотисто-желтые и зеленые полосы.
+
+<span class="article-bold-text">Бентельс Сенсейшн (<i>Bantel’s Sensation</i>)</span> — элегантный сорт, который иногда называют «белой сансевиерией». Его узкие прямостоячие листья украшены контрастными белыми или кремовыми продольными полосами на темно-зеленом фоне.
 
 
 
